@@ -8,12 +8,10 @@ export function middleware(request) {
 
   // 클라이언트의 언어 선호도 확인
   let headers = request.headers;
-  console.log(headers);
   let languages = new Negotiator({ headers }).languages();
   if (languages.length === 1 && languages[0] === "*") {
     languages = ["ko"];
   }
-  console.log("lan:", languages);
   let preferredLocale = match(languages, locales, defaultLocale);
 
   // URL 경로에서 로케일 확인
