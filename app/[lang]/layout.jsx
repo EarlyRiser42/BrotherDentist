@@ -71,7 +71,7 @@ export default function RootLayout({ children, lang }) {
       <Head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Head>
       <body>
         <Header />
