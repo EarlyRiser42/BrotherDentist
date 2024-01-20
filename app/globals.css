@@ -2,19 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-rgb: 0, 0, 0;
-  }
-}
-
+/* 기본적인 라이트 모드 스타일 */
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
+  @apply text-black bg-white;
 }
+
+/* 다크 모드에서 적용될 스타일 */
+.dark body {
+  @apply text-white bg-black;
+}
+
