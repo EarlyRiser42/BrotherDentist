@@ -1,10 +1,9 @@
-import Navigation from "./navigation";
+import Navigation, {NavigationIcon} from "./navigation";
 
 export default function Header({ lang }) {
   return (
     <div>
-      <div></div>
-      <Navigation />
+      <NavigationIcon/>
     </div>
   );
 }

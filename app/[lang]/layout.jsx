@@ -1,8 +1,9 @@
 import localFont from "next/font/local";
 import "../globals.css";
 import Head from "next/head";
-import Header from "../@components/header";
-import Footer from "../@components/footer";
+import Header from "../(components)/header";
+import Footer from "../(components)/footer";
+import RecoilRootProvider from '../(Recoil)/recoilRootProvider'
 
 // 한글 폰트
 const NanumSquare = localFont({
@@ -74,9 +75,11 @@ export default function RootLayout({ children, lang }) {
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Head>
       <body>
+      <RecoilRootProvider>
         <Header />
         {children}
         <Footer />
+      </RecoilRootProvider>
       </body>
     </html>
   );
