@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const DropdownMenu = ({ navigation }) => {
+const Navigation = ({ navigation }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
@@ -34,4 +34,4 @@ const DropdownMenu = ({ navigation }) => {
     );
 };
 
-export default DropdownMenu;
+export default Navigation;
