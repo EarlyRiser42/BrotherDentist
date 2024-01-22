@@ -1,28 +1,20 @@
 'use client';
-
-import { FiSun, FiMoon } from 'react-icons/fi';
-import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
-import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import { DummyIcon, MoonIcon, SunIcon } from '../Icons/Icons';
 
-export default function ThemeSwitch() {
-    const [mounted, setMounted] = useState(false);
+export default function ToggleDarkMode() {
     const { setTheme, resolvedTheme } = useTheme();
+    const [isMounted, setIsMounted] = useState(false);
 
-    useEffect(() => setMounted(true), []);
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
 
-    if (!mounted)
-        return (
-            <Image
-                src="data:image/svg+xml;base64,PHN2ZyBzdHJva2U9IiNGRkZGRkYiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMCIgdmlld0JveD0iMCAwIDI0IDI0IiBoZWlnaHQ9IjIwMHB4IiB3aWR0aD0iMjAwcHgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiB4PSIyIiB5PSIyIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjIiIHJ4PSIyIj48L3JlY3Q+PC9zdmc+Cg=="
-                width={50}
-                height={50}
-                sizes="50x50"
-                alt="Loading Light/Dark Toggle"
-                priority={false}
-                title="Loading Light/Dark Toggle"
-            />
-        );
+    // 클라이언트 사이드에서만 아이콘 렌더링
+    if (!isMounted) {
+        return <DummyIcon />;
+    }
 
     return (
         <button
@@ -32,9 +24,9 @@ export default function ThemeSwitch() {
             aria-label="Toggle Theme"
         >
             {resolvedTheme === 'dark' ? (
-                <FiSun className={'w-6 h-6 text-white'} />
+                <SunIcon className={'w-6 h-6 text-white'} />
             ) : (
-                <FiMoon className={'w-6 h-6 text-black'} />
+                <MoonIcon className={'w-6 h-6 text-black'} />
             )}
         </button>
     );

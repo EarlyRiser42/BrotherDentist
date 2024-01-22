@@ -1,39 +1,39 @@
 'use client';
+import { usePathname, useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import { DummyIcon, ToggleEn, ToggleKr } from '../Icons/Icons';
 
-import { AiOutlineGlobal } from 'react-icons/ai';
-import { useState, useEffect } from 'react';
-import Image from 'next/image';
+export default function ToggleLanguage({ lang }) {
+    const router = useRouter();
+    const pathname = usePathname();
+    const [isMounted, setIsMounted] = useState(false);
 
-export default function ToggleLanguage() {
-    const [mounted, setMounted] = useState(false);
-    const { setTheme, resolvedTheme } = useTheme();
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
 
-    useEffect(() => setMounted(true), []);
+    // 클라이언트 사이드에서만 아이콘 렌더링
+    if (!isMounted) {
+        return <DummyIcon />;
+    }
 
-    if (!mounted)
-        return (
-            <Image
-                src="data:image/svg+xml;base64,PHN2ZyBzdHJva2U9IiNGRkZGRkYiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMCIgdmlld0JveD0iMCAwIDI0IDI0IiBoZWlnaHQ9IjIwMHB4IiB3aWR0aD0iMjAwcHgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiB4PSIyIiB5PSIyIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjIiIHJ4PSIyIj48L3JlY3Q+PC9zdmc+Cg=="
-                width={50}
-                height={50}
-                sizes="50x50"
-                alt="Loading Light/Dark Toggle"
-                priority={false}
-                title="Loading Light/Dark Toggle"
-            />
-        );
-
+    // 언어 변경 함수
+    const toggleLanguage = () => {
+        const newLocale = router.locale === 'ko' ? 'en-US' : 'ko';
+        router.push({
+            pathname: router.pathname,
+            query: router.query,
+            locale: newLocale,
+        });
+    };
+    console.log(lang);
+    // 현재 로케일을 기반으로 언어 토글 버튼을 렌더링합니다.
     return (
-        <button
-            onClick={() =>
-                setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
-            }
-            aria-label="Toggle Theme"
-        >
-            {resolvedTheme === 'dark' ? (
-                <FiSun className={'w-6 h-6 text-white'} />
+        <button onClick={toggleLanguage} aria-label="Toggle Language">
+            {lang === 'ko' ? (
+                <ToggleEn className={'w-6 h-6 text-black'} />
             ) : (
-                <FiMoon className={'w-6 h-6 text-black'} />
+                <ToggleKr className={'w-6 h-6 text-white'} />
             )}
         </button>
     );

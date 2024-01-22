@@ -1,32 +1,42 @@
-import { match } from "@formatjs/intl-localematcher";
-import Negotiator from "negotiator";
+import { match } from '@formatjs/intl-localematcher';
+import Negotiator from 'negotiator';
+
+let locales = ['en-US', 'en', 'ko']
+
+// Get the preferred locale, similar to the above or using a library
+function getLocale(request) {
+    let headers = { 'accept-language': 'en-US,en;q=0.5' }
+    let languages = new Negotiator({ headers }).languages()
+    if (languages.length === 1 && languages[0] === '*') {
+        languages = ['ko'];
+    }
+    let locales = ['en-US', 'en', 'ko']
+    let defaultLocale = 'ko'
+
+    match(languages, locales, defaultLocale) // -> 'ko' }
 
 export function middleware(request) {
-  // 지원되는 로케일 목록
-  let locales = ["en-US", "en", "ko"];
-  let defaultLocale = "ko";
+    // Check if there is any supported locale in the pathname
+    const { pathname } = request.nextUrl
+    const pathnameHasLocale = locales.some(
+        (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+    )
 
-  // 클라이언트의 언어 선호도 확인
-  let headers = request.headers;
-  let languages = new Negotiator({ headers }).languages();
-  if (languages.length === 1 && languages[0] === "*") {
-    languages = ["ko"];
-  }
-  let preferredLocale = match(languages, locales, defaultLocale);
+    if (pathnameHasLocale) return
 
-  // URL 경로에서 로케일 확인
-  const { pathname } = request.nextUrl;
-  const pathnameHasLocale = locales.some(
-    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`,
-  );
-
-  if (pathnameHasLocale) return;
-
-  // 리다이렉트: 선호 로케일이 URL 경로에 포함되지 않은 경우
-  request.nextUrl.pathname = `/${preferredLocale}${pathname}`;
-  return Response.redirect(request.nextUrl);
+    // Redirect if there is no locale
+    const locale = getLocale(request)
+    request.nextUrl.pathname = `/${locale}${pathname}`
+    // e.g. incoming request is /products
+    // The new URL is now /en-US/products
+    return Response.redirect(request.nextUrl)
 }
 
 export const config = {
-  matcher: ["/((?!_next).*)"],
-};
+    matcher: [
+        // Skip all internal paths (_next)
+        '/((?!_next).*)',
+        // Optional: only run on root (/) URL
+        // '/'
+    ],
+}
