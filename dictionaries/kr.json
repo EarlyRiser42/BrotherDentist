@@ -1,0 +1,46 @@
+{
+  "navigation": {
+    "about": "소개",
+    "services": {
+      "title": "진료 과목",
+      "subServices": {
+        "implant": "임플란트",
+        "prosthodontics": "보철",
+        "cosmeticDentistry": "치아성형"
+      }
+    },
+    "reservation": "예약하기"
+  },
+  "page": {
+    "home": {
+      "title": "혁플란트 치과",
+      "description": "혁플란트 치과 홈페이지"
+    },
+    "about": {
+      "title": "소개",
+      "description": "혁플란트 치과에 대한 소개 페이지입니다."
+    },
+    "services": {
+      "title": "진료 과목",
+      "description": "우리 치과의 다양한 진료 과목에 대해 알아보세요.",
+      "subServices": {
+        "implant": {
+          "title": "임플란트",
+          "description": "임플란트에 대한 정보를 제공합니다."
+        },
+        "prosthodontics": {
+          "title": "보철",
+          "description": "보철 치료에 대한 정보를 제공합니다."
+        },
+        "cosmeticDentistry": {
+          "title": "치아성형",
+          "description": "치아성형 서비스에 대해 알아보세요."
+        }
+      }
+    },
+    "reservation": {
+      "title": "예약하기",
+      "description": "치과 예약을 위한 페이지입니다."
+    }
+  }
+}

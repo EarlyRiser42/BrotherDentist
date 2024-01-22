@@ -1,9 +1,8 @@
 'use client';
-
 import { useRecoilState } from 'recoil';
-import { NavigationState } from '../../atoms/atoms';
+import { NavigationState } from '@/atoms/atoms';
 
-export default function NavigationIcon() {
+export default function NavigationIcon({}) {
     const [navOpen, setNavOpen] = useRecoilState(NavigationState);
     const toggleNav = () => setNavOpen(!navOpen);
     return (

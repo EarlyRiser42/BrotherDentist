@@ -1,0 +1,46 @@
+{
+  "navigation": {
+    "about": "About",
+    "services": {
+      "title": "Services",
+      "subServices": {
+        "implant": "Implant",
+        "prosthodontics": "Prosthodontics",
+        "cosmeticDentistry": "Cosmetic Dentistry"
+      }
+    },
+    "reservation": "Reservation"
+  },
+  "page": {
+    "home": {
+      "title": "Hyuk Implant Clinic",
+      "description": "Welcome to the Hyuk Implant Clinic Homepage"
+    },
+    "about": {
+      "title": "About Us",
+      "description": "Learn more about Hyuk Implant Clinic."
+    },
+    "services": {
+      "title": "Our Services",
+      "description": "Discover the variety of services we offer at our clinic.",
+      "subServices": {
+        "implant": {
+          "title": "Implants",
+          "description": "Learn about our implant services."
+        },
+        "prosthodontics": {
+          "title": "Prosthodontics",
+          "description": "Information about our prosthodontics treatments."
+        },
+        "cosmeticDentistry": {
+          "title": "Cosmetic Dentistry",
+          "description": "Explore our cosmetic dentistry services."
+        }
+      }
+    },
+    "reservation": {
+      "title": "Make a Reservation",
+      "description": "Schedule your appointment with us."
+    }
+  }
+}

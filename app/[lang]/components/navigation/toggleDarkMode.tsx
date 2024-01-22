@@ -1,7 +1,7 @@
 'use client';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
-import { DummyIcon, MoonIcon, SunIcon } from '../Icons/Icons';
+import { DummyIcon, MoonIcon, SunIcon } from '@/components/Icons/Icons';
 
 export default function ToggleDarkMode() {
     const { setTheme, resolvedTheme } = useTheme();
