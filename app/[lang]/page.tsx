@@ -9,18 +9,18 @@ export default async function Home({
 }: {
     params: { lang: Locale };
 }) {
-    const { page, navigation } = await getDictionary(lang);
+    const { page, header, footer } = await getDictionary(lang);
 
     return (
         <>
-            <Header lang={lang} navigation={navigation} />
+            <Header lang={lang} header={header} />
             <section className="py-24">
                 <div className="flex min-h-screen flex-col items-center justify-between p-24">
                     <h1 className="text-3xl font-bold">{page.home.title}</h1>
                     <p className="text-gray-500">{page.home.description}</p>
                 </div>
             </section>
-            <Footer />
+            <Footer footer={footer} />
         </>
     );
 }

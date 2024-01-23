@@ -15,7 +15,7 @@ interface HeaderProps {
 }
 
 // 모바일 환경에서 네비게이션 바
-const MobileNavBar = ({ lang, navigation }) => {
+const MobileNavBar = ({ lang, header }) => {
     const [navOpen, setNavOpen] = useState(false);
 
     const handleClick = () => {
@@ -28,7 +28,7 @@ const MobileNavBar = ({ lang, navigation }) => {
     };
 
     return (
-        <nav className="flex justify-between items-center w-full bg-white dark:bg-black py-3 fixed border-b">
+        <nav className="flex justify-between items-center w-full bg-white dark:bg-black py-3 fixed border-gray-300 dark:border-white dark:border-opacity-30">
             <div className="flex items-center w-10/12 mx-4 h-1/20">
                 {lang === 'ko' ? <LogoKo /> : <LogoEn />}
             </div>
@@ -36,7 +36,7 @@ const MobileNavBar = ({ lang, navigation }) => {
                 lang={lang}
                 isMobile={true}
                 navOpen={navOpen}
-                navigation={navigation}
+                header={header}
             />
             <NavigationIcon navOpen={navOpen} onClick={() => handleClick()} />
         </nav>
@@ -44,10 +44,10 @@ const MobileNavBar = ({ lang, navigation }) => {
 };
 
 // 데스크톱 환경에서 네비게이션 바
-const DesktopNavBar = ({ lang, navigation }) => (
-    <nav className="flex justify-around items-center w-full bg-white dark:bg-black py-3 fixed border-b">
+const DesktopNavBar = ({ lang, header }) => (
+    <nav className="flex justify-around items-center w-full bg-white dark:bg-black py-3 fixed border-b border-gray dark:border-gray">
         {lang === 'ko' ? <LogoKo /> : <LogoEn />}
-        <Navigation lang={lang} isMobile={false} navigation={navigation} />
+        <Navigation lang={lang} isMobile={false} header={header} />
         <div className="flex justify-between items-center w-5p">
             <ToggleLanguage lang={lang} />
             <ToggleDarkMode />
@@ -55,12 +55,12 @@ const DesktopNavBar = ({ lang, navigation }) => (
     </nav>
 );
 
-export default function Header({ lang, navigation }: HeaderProps) {
+export default function Header({ lang, header }: HeaderProps) {
     const isMobile = useIsMobile();
 
     return isMobile ? (
-        <MobileNavBar lang={lang} navigation={navigation} />
+        <MobileNavBar lang={lang} header={header} />
     ) : (
-        <DesktopNavBar lang={lang} navigation={navigation} />
+        <DesktopNavBar lang={lang} header={header} />
     );
 }

@@ -1,5 +1,5 @@
 {
-  "navigation": {
+  "header": {
     "about": "소개",
     "services": {
       "title": "진료 과목",
@@ -46,5 +46,14 @@
       "title": "예약하기",
       "description": "치과 예약을 위한 페이지입니다."
     }
+  },
+  "footer": {
+    "address" : "주소: 충남 서천군 비인면 비인보건지소",
+    "dentalName" : "의료기관 명칭: 혁플란트치과",
+    "services": "진료과목: 치과",
+    "owner": "대표자: 최인혁",
+    "BusinessRegistrationNumber" : "사업자등록번호: 000-0000-0000",
+    "emailAddress": "EMAIL: hyukPlant@gmail.com",
+    "telephoneNumber": "TEL: 02) 000-0000"
   }
 }

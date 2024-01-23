@@ -7,7 +7,7 @@ import Image from 'next/image';
 import kakaoTalkPng from '@/public/kakaotalk.png';
 import useOnClickOutside from '@/components/hooks/useOnclickOutsdie';
 
-const Navigation = ({ lang, isMobile, navOpen, navigation }) => {
+const Navigation = ({ lang, isMobile, navOpen, header }) => {
     const [isOpen, setIsOpen] = useState(false);
     const navRef = useRef(null);
     useOnClickOutside(navRef, () => setIsOpen(false));
@@ -24,7 +24,7 @@ const Navigation = ({ lang, isMobile, navOpen, navigation }) => {
             <ul className="flex flex-col justify-start lg:justify-evenly w-11/12 h-4/5 lg:h-auto lg:w-3/5 ml-0 lg:flex-row text-2xl lg:text-lg">
                 <Link href={`/${lang}`}>
                     <li className="md:mr-4 cursor-pointer text-black dark:text-white hover:font-bold mt-5 lg:mt-0 mb-10 lg:mb-0">
-                        {navigation.about}
+                        {header.about}
                     </li>
                 </Link>
                 <li
@@ -33,7 +33,7 @@ const Navigation = ({ lang, isMobile, navOpen, navigation }) => {
                     ref={navRef}
                 >
                     <div className="flex justify-start items-center w-full">
-                        {navigation.services.title}
+                        {header.services.title}
                         <div className="ml-3">
                             <ArrowBottom />
                         </div>
@@ -44,21 +44,18 @@ const Navigation = ({ lang, isMobile, navOpen, navigation }) => {
                         >
                             <Link href={`${lang}/implant`}>
                                 <li className="cursor-pointer rounded-3xl lg:rounded-none bg-gray-300 dark:bg-gray-600 lg:bg-black lg:dark:bg-white text-black dark:text-white lg:text-white lg:dark:text-black hover:font-bold py-2 lg:py-0 px-4 lg:px-0 lg:bg-transparent font-normal mt-4 mb-4 lg:mt-0 lg:mb-0">
-                                    {navigation.services.subServices.implant}
+                                    {header.services.subServices.implant}
                                 </li>
                             </Link>
                             <Link href={`${lang}/prosthodontics`}>
                                 <li className="cursor-pointer rounded-3xl lg:rounded-none bg-gray-300 dark:bg-gray-600 lg:bg-black lg:dark:bg-white text-black dark:text-white lg:text-white lg:dark:text-black hover:font-bold py-2 lg:py-0 px-4 lg:px-0 font-normal mb-4 lg:mb-0">
-                                    {
-                                        navigation.services.subServices
-                                            .prosthodontics
-                                    }
+                                    {header.services.subServices.prosthodontics}
                                 </li>
                             </Link>
                             <Link href={`${lang}/cosmeticDentistry`}>
                                 <li className="cursor-pointer rounded-3xl lg:rounded-none bg-gray-300 dark:bg-gray-600 lg:bg-black lg:dark:bg-white text-black dark:text-white lg:text-white lg:dark:text-black hover:font-bold py-2 lg:py-0 px-4 lg:px-0 lg:bg-transparent font-normal mb-0">
                                     {
-                                        navigation.services.subServices
+                                        header.services.subServices
                                             .cosmeticDentistry
                                     }
                                 </li>
@@ -69,7 +66,7 @@ const Navigation = ({ lang, isMobile, navOpen, navigation }) => {
                 <li className="cursor-pointer text-black dark:text-white hover:font-bold">
                     <Link href={`${lang}/reservation`}>
                         {' '}
-                        {navigation.reservation}
+                        {header.reservation}
                     </Link>
                 </li>
             </ul>
@@ -77,7 +74,7 @@ const Navigation = ({ lang, isMobile, navOpen, navigation }) => {
                 <div className="flex justify-between items-center w-11/12 h-15/100">
                     <div className="flex justify-start items-center w-4/5 h-2/5">
                         <button className="bg-black dark:bg-white text-white dark:text-black rounded-3xl w-20 min-w-16 h-full mr-5%">
-                            {navigation.buttons.login}
+                            {header.buttons.login}
                         </button>
                         <button className="bg-yellow rounded-3xl w-2/5 min-w-28 max-w-28 h-full flex items-center justify-start">
                             <Image
@@ -89,7 +86,7 @@ const Navigation = ({ lang, isMobile, navOpen, navigation }) => {
                             />
                             <span className="text-black">
                                 {' '}
-                                {navigation.buttons.consult}
+                                {header.buttons.consult}
                             </span>
                         </button>
                     </div>

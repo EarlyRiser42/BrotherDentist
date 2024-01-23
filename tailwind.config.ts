@@ -19,6 +19,7 @@ const config: Config = {
             },
             colors: {
                 yellow: '#FAE100',
+                gray: '#333333',
             },
             width: {
                 '5p': '5%',

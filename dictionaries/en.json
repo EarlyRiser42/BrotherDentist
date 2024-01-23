@@ -1,5 +1,5 @@
 {
-  "navigation": {
+  "header": {
     "about": "About",
     "services": {
       "title": "Services",
@@ -46,5 +46,14 @@
       "title": "Make a Reservation",
       "description": "Schedule your appointment with us."
     }
+  },
+  "footer": {
+    "address" : "Address: Biin Health Center, Biin-myeon, Seocheon-gun, Chungnam",
+    "dentalName" : "Medical Institution Name: HyukPlant Dental Clinic",
+    "services": "Medical Services: Dental",
+    "owner": "Representative: Choi In-hyuk",
+    "BusinessRegistrationNumber" : "Business Registration Number: 000-0000-0000",
+    "emailAddress": "EMAIL: hyukPlant@gmail.com",
+    "telephoneNumber": "TEL: 02) 000-0000"
   }
 }
