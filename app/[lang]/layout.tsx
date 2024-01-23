@@ -15,7 +15,7 @@ export default function RootLayout({
     params: { lang: Locale };
 }) {
     const metadata = {
-        title: '혁플란트 치과',
+        title: 'HyukPlant',
         description: '혁플란트 치과 홈페이지 소개 페이지',
     };
 

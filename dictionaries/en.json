@@ -9,7 +9,11 @@
         "cosmeticDentistry": "Cosmetic Dentistry"
       }
     },
-    "reservation": "Reservation"
+    "reservation": "Reservation",
+    "buttons": {
+      "login": "Login",
+      "consult": "Consult"
+    }
   },
   "page": {
     "home": {
