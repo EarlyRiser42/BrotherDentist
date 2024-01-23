@@ -1,13 +1,16 @@
 import { useEffect, useRef, useState } from 'react';
-import { ArrowBottom, LogoEn, LogoKo } from '@/components/Icons/Icons';
+import { ArrowBottom } from '@/components/Icons/Icons';
 import ToggleLanguage from '@/app/[lang]/components/navigation/toggleLanguage';
 import ToggleDarkMode from '@/app/[lang]/components/navigation/toggleDarkMode';
 import Link from 'next/link';
 import Image from 'next/image';
 import kakaoTalkPng from '@/public/kakaotalk.png';
 import useOnClickOutside from '@/components/hooks/useOnclickOutsdie';
+import { useTheme } from 'next-themes';
+import { LogoEn, LogoKo } from '@/components/Icons/Logos';
 
 const Navigation = ({ lang, isMobile, navOpen, header }) => {
+    const { resolvedTheme } = useTheme();
     const [isOpen, setIsOpen] = useState(false);
     const navRef = useRef(null);
     useOnClickOutside(navRef, () => setIsOpen(false));

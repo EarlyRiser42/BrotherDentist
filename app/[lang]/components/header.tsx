@@ -2,11 +2,10 @@
 import ToggleDarkMode from './navigation/toggleDarkMode';
 import ToggleLanguage from './navigation/toggleLanguage';
 import { Locale } from '@/i18n.config';
-import { useRecoilValue } from 'recoil';
 import { useIsMobile } from '@/components/hooks/useIsMobile';
 import Navigation from '@/app/[lang]/components/navigation/navigation';
 import NavigationIcon from '@/app/[lang]/components/navigation/navigationIcon';
-import { LogoEn, LogoKo } from '@/components/Icons/Icons';
+import { LogoEn, LogoKo } from '@/components/Icons/Logos';
 import { useEffect, useState } from 'react';
 
 interface HeaderProps {
