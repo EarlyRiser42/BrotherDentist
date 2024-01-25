@@ -51,23 +51,23 @@ export default async function Home({
                             className="absolute flex justify-center items-center inset-0 w-4/5 h-1/10 z-10 text-center pt-1 mt-1 bg-violet-100 rounded-full
                             cs:w-3/4 cmd:h-8/10 clg:h-13/100 cxl:h-15/100"
                         >
-                            <span className="text-sm cs:text-base sm:text-2xl lg:text-3xl font-bold text-white">
+                            <span className="text-xs cs:text-sm sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-white">
                                 {page.home.p0}
                             </span>
                         </div>
                         <div className="absolute left-2 top-16 w-50vw z-10 cs:left-4 sm:top-32 xl:left-20 xl:top-44">
-                            <h1 className="text-2xl cs:text-3xl sm:text-5xl lg:text-8xl font-bold text-white ">
+                            <h1 className="text-2xl cs:text-3xl sm:text-5xl lg:text-7xl font-bold text-white ">
                                 {page.home.p1}
                                 <br />
                                 {page.home.p2}
                             </h1>
                         </div>
-                        <div className="absolute left-2 top-32 w-50vw z-10 cs:left-4 cs:top-36 sm:top-64 lg:top-80 xl:left-20 xl:top-98">
-                            <h4 className="text-lg cs:text-xl sm:text-3xl lg:text-4xl font-bold text-white">
+                        <div className="absolute left-2 top-32 w-50vw z-10 cs:left-4 cs:top-36 sm:top-64 lg:top-80 xl:left-20 xl:top-88 cxl:top-96">
+                            <h4 className="text-lg cs:text-xl sm:text-3xl lg:text-4xl xl:text-4xl font-bold text-white">
                                 {page.home.p3}
                             </h4>
                         </div>
-                        <div className="absolute left-2 top-44 w-50vw z-10 cs:left-4 cs:top-48 sm:top-80 lg:top-96 xl:left-20 xl:top-100">
+                        <div className="absolute left-2 top-44 w-50vw z-10 cs:left-4 cs:top-48 sm:top-80 lg:top-96 xl:left-20 xl:top-98 cxl:top-100">
                             <p className="text-xs cs:text-sm sm:text-2xl lg:text-3xl text-white leading-relaxed ">
                                 {page.home.p4}
                                 <br />
@@ -91,6 +91,7 @@ export default async function Home({
                             }}
                             width={305}
                             height={362}
+                            priority={true}
                             sizes="100vw"
                         />
                     </div>

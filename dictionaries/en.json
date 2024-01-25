@@ -19,13 +19,13 @@
     "home": {
       "title": "Hyukplant Dental Clinic",
       "description": "Welcome to Hyukplant Dental Clinic Website",
-      "p1": "Everything about",
-      "p2": "Implants",
-      "p3": "Rich clinical experience.",
-      "p4": "Caring for thousands of patients has built",
-      "p5": "Trust and experience as our foundation",
-      "p6": "We provide the best treatment.",
-      "p7":     "For implants, it's Hyukplant"
+      "p0": "Implant Expertise",
+      "p1": "All About",
+      "p2": "Implants.",
+      "p3": "Vast Clinical Exp.",
+      "p4": "Treated Thousands",
+      "p5": "With Trust &",
+      "p6": "Experience, Best Care."
     },
     "services": {
       "title": "Our Services",
