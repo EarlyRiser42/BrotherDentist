@@ -17,12 +17,15 @@
   },
   "page": {
     "home": {
-      "title": "Hyuk Implant Clinic",
-      "description": "Welcome to the Hyuk Implant Clinic Homepage"
-    },
-    "about": {
-      "title": "About Us",
-      "description": "Learn more about Hyuk Implant Clinic."
+      "title": "Hyukplant Dental Clinic",
+      "description": "Welcome to Hyukplant Dental Clinic Website",
+      "p1": "Everything about",
+      "p2": "Implants",
+      "p3": "Rich clinical experience.",
+      "p4": "Caring for thousands of patients has built",
+      "p5": "Trust and experience as our foundation",
+      "p6": "We provide the best treatment.",
+      "p7":     "For implants, it's Hyukplant"
     },
     "services": {
       "title": "Our Services",

@@ -7,7 +7,7 @@ export const LogoKo = () => {
     const { resolvedTheme } = useTheme();
     useEffect(() => {
         setFillColor(resolvedTheme === 'dark' ? '#FFFFFF' : '#000000');
-    }, []);
+    }, [resolvedTheme]);
 
     return (
         <Link href={'/ko'}>
@@ -33,7 +33,7 @@ export const LogoEn = () => {
     const { resolvedTheme } = useTheme();
     useEffect(() => {
         setFillColor(resolvedTheme === 'dark' ? '#FFFFFF' : '#000000');
-    }, []);
+    }, [resolvedTheme]);
 
     return (
         <Link href={'/en'}>

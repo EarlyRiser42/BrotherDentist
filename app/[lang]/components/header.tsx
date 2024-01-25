@@ -27,7 +27,7 @@ const MobileNavBar = ({ lang, header }) => {
     };
 
     return (
-        <nav className="flex justify-between items-center w-full bg-white dark:bg-black py-3 fixed border-gray-300 dark:border-white dark:border-opacity-30">
+        <nav className="flex justify-between items-center w-full bg-white dark:bg-black py-3 sticky inset-0 border-gray-300 dark:border-white dark:border-opacity-30 z-50">
             <div className="flex items-center w-10/12 mx-4 h-1/20">
                 {lang === 'ko' ? <LogoKo /> : <LogoEn />}
             </div>
@@ -44,7 +44,7 @@ const MobileNavBar = ({ lang, header }) => {
 
 // 데스크톱 환경에서 네비게이션 바
 const DesktopNavBar = ({ lang, header }) => (
-    <nav className="flex justify-around items-center w-full bg-white dark:bg-black py-3 fixed border-b border-gray dark:border-gray">
+    <nav className="flex justify-around items-center w-full h-10vh  bg-white dark:bg-black py-3 sticky inset-0  z-50">
         {lang === 'ko' ? <LogoKo /> : <LogoEn />}
         <Navigation lang={lang} isMobile={false} header={header} />
         <div className="flex justify-between items-center w-5p">
