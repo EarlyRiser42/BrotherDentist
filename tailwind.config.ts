@@ -48,6 +48,7 @@ const config: Config = {
                 sm: '600px',
                 cxl: '1400px',
                 clg: '1000px',
+                '500': '400px',
                 '300': '280px',
                 '150': '140px',
             },
