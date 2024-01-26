@@ -11,7 +11,7 @@ const config: Config = {
         extend: {
             screens: {
                 cs: '412px',
-                cmd: '766px',
+                sm: '640px',
                 clg: '1024px',
                 cxl: '1440px',
             },
@@ -27,8 +27,7 @@ const config: Config = {
                 yellow: '#FAE100',
                 gray: '#333333',
                 blue: '#A3CFCD',
-                'yellow-200': '#FDE68A',
-                'blue-800': '#1E40AF',
+                hero: '#01123E',
             },
             spacing: {
                 '18': '4.5rem',
@@ -46,14 +45,17 @@ const config: Config = {
             },
             minWidth: {
                 cs: '400px',
-                cmd: '740px',
+                sm: '600px',
                 cxl: '1400px',
                 clg: '1000px',
+                '300': '280px',
+                '150': '140px',
             },
             height: {
                 '1/20': '5%',
                 '8/10': '8%',
                 '1/10': '10%',
+                '11/100': '11%',
                 '13/100': '13%',
                 '15/100': '15%',
                 '48/100': '48%',
