@@ -1,11 +1,6 @@
-import { useTheme } from 'next-themes';
-
 export const DummyIcon = () => <div className="w-6 h-6 opacity-0"></div>;
 
 export const ToggleEn = () => {
-    const { resolvedTheme } = useTheme();
-    const strokeColor = resolvedTheme === 'dark' ? '#FFFFFF' : '#000000';
-
     return (
         <svg
             className="w-6 h-6"
@@ -22,14 +17,14 @@ export const ToggleEn = () => {
                 <g
                     data-v-41fcfff3=""
                     strokeWidth="1.35px"
-                    stroke={strokeColor}
+                    className="stroke-black dark:stroke-white"
                     fill="none"
                 >
                     <path
                         data-v-41fcfff3=""
                         d="M19.353 9.914c0 5.213-4.226 9.438-9.438 9.438-5.213 0-9.438-4.225-9.438-9.438C.477 4.702 4.702.477 9.915.477c5.212 0 9.438 4.225 9.438 9.437z"
                         transform="translate(-1402 -23) translate(1358 23) translate(44) translate(2 2)"
-                        stroke={strokeColor}
+                        className="stroke-black dark:stroke-white"
                         fill="none"
                         strokeWidth="1.35px"
                     ></path>{' '}
@@ -38,7 +33,7 @@ export const ToggleEn = () => {
                         strokeLinejoin="round"
                         d="M13.662 9.914c0 5.213-3.748 9.438-3.748 9.438s-3.747-4.225-3.747-9.438c0-5.212 3.747-9.437 3.747-9.437s3.748 4.225 3.748 9.437z"
                         transform="translate(-1402 -23) translate(1358 23) translate(44) translate(2 2)"
-                        stroke={strokeColor}
+                        className="stroke-black dark:stroke-white"
                         fill="none"
                         strokeWidth="1.35px"
                     ></path>
@@ -46,7 +41,7 @@ export const ToggleEn = () => {
                         data-v-41fcfff3=""
                         d="M.876 7.018L18.952 7.018M.876 12.811L18.952 12.811"
                         transform="translate(-1402 -23) translate(1358 23) translate(44) translate(2 2)"
-                        stroke={strokeColor}
+                        className="stroke-black dark:stroke-white"
                         fill="none"
                         strokeWidth="1.35px"
                     ></path>
@@ -57,9 +52,6 @@ export const ToggleEn = () => {
 };
 
 export const ToggleKr = () => {
-    const { resolvedTheme } = useTheme();
-    const strokeColor = resolvedTheme === 'dark' ? '#FFFFFF' : '#000000';
-
     return (
         <svg
             className="w-6 h-6"
@@ -83,7 +75,7 @@ export const ToggleKr = () => {
                         data-v-ef6c51ca=""
                         d="M19.353 9.914c0 5.213-4.226 9.438-9.438 9.438-5.213 0-9.438-4.225-9.438-9.438C.477 4.702 4.702.477 9.915.477c5.212 0 9.438 4.225 9.438 9.437z"
                         transform="translate(-1375 -169) translate(79.5 145) translate(1248 24) translate(50 2)"
-                        stroke={strokeColor}
+                        className="stroke-black dark:stroke-white"
                         fill="none"
                         strokeWidth="1.5px"
                     ></path>
@@ -91,7 +83,7 @@ export const ToggleKr = () => {
                         data-v-ef6c51ca=""
                         d="M19.205 11.52c-.451-2.769-2.357-4.129-4.643-4.227-2.434-.023-3.491 1.71-4.267 2.615l-.594.69c-1.361 1.238-2.384 1.633-3.876 1.588C2.897 12.153.888 9.456.888 7.224"
                         transform="translate(-1375 -169) translate(79.5 145) translate(1248 24) translate(50 2)"
-                        stroke={strokeColor}
+                        className="stroke-black dark:stroke-white"
                         fill="none"
                         strokeWidth="1.5px"
                     ></path>
@@ -163,9 +155,6 @@ export const MoonIcon = () => (
 );
 
 export const ArrowBottom = () => {
-    const { resolvedTheme } = useTheme();
-    const strokeColor = resolvedTheme === 'dark' ? '#FFFFFF' : '#000000';
-
     return (
         <svg
             xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -188,11 +177,38 @@ export const ArrowBottom = () => {
                     data-v-6692773c=""
                     d="M8 3L4.5 6 1 3"
                     transform="translate(-891 -972) translate(670 145) translate(24 817) translate(142 4) translate(55 6)"
-                    className="stroke"
-                    stroke={strokeColor}
+                    className="stroke-black dark:stroke-white"
                     fill="none"
                 ></path>
             </g>
+        </svg>
+    );
+};
+
+export const ArrowRight = () => {
+    return (
+        <svg
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+            data-v-42492cb5=""
+            data-v-8285c134=""
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 64 64"
+            fill="none"
+            className="btn_arr_big w-6 h-6 sm:w-8 sm:h-8 clg:w-10 clg:h-10 cxl:w-12 cxl:h-12"
+        >
+            <circle
+                data-v-42492cb5=""
+                cx="32"
+                cy="31.9961"
+                r="32"
+                fill="black"
+                className="fill-black dark:fill-white"
+            ></circle>
+            <path
+                data-v-42492cb5=""
+                d="M34.9292 25.5325L33.515 26.9467L38.1748 31.6065L23 31.6074V33.6015L38.1748 33.6005L33.515 38.2604L34.9292 39.6746L42.0002 32.6035L34.9292 25.5325Z"
+                className="fill-white dark:fill-black"
+            ></path>
         </svg>
     );
 };

@@ -25,7 +25,10 @@
       "p3": "Vast Clinical Exp.",
       "p4": "Treated Thousands",
       "p5": "With Trust &",
-      "p6": "Experience, Best Care."
+      "p6": "Experience, Best Care.",
+      "button1": "Reserve",
+      "button2": "Consult",
+      "button3": "Call"
     },
     "services": {
       "title": "Our Services",
