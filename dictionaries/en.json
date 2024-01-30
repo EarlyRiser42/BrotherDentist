@@ -9,7 +9,13 @@
         "cosmeticDentistry": "Cosmetic Dentistry"
       }
     },
-    "reservation": "Reservation",
+    "community": {
+      "title": "Community",
+      "subCommunity": {
+        "beforeAfter": "Before&After Photos",
+        "review": "Handwritten Reviews"
+      }
+    },
     "buttons": {
       "login": "Login",
       "consult": "Consult"

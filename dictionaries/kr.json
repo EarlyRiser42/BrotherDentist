@@ -9,7 +9,13 @@
         "cosmeticDentistry": "치아성형"
       }
     },
-    "reservation": "예약하기",
+    "community": {
+      "title": "커뮤니티",
+      "subCommunity": {
+        "beforeAfter": "전후사진",
+        "review": "자필후기"
+      }
+    },
     "buttons": {
       "login": "로그인",
       "consult": "상담하기"

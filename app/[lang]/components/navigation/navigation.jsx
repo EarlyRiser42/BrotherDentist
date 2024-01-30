@@ -6,14 +6,16 @@ import Link from 'next/link';
 import Image from 'next/image';
 import kakaoTalkPng from '@/public/kakaotalk.png';
 import useOnClickOutside from '@/components/hooks/useOnclickOutsdie';
-import { useTheme } from 'next-themes';
 import { LogoEn, LogoKo } from '@/components/Icons/Logos';
 
 const Navigation = ({ lang, isMobile, navOpen, header }) => {
-    const { resolvedTheme } = useTheme();
-    const [isOpen, setIsOpen] = useState(false);
-    const navRef = useRef(null);
-    useOnClickOutside(navRef, () => setIsOpen(false));
+    const [isImplantOpen, setIsImplantOpen] = useState(false);
+    const implantRef = useRef(null);
+    useOnClickOutside(implantRef, () => setIsImplantOpen(false));
+
+    const [isCommunityOpen, setIsCommunityOpen] = useState(false);
+    const communityRef = useRef(null);
+    useOnClickOutside(communityRef, () => setIsCommunityOpen(false));
 
     return (
         <div
@@ -31,9 +33,9 @@ const Navigation = ({ lang, isMobile, navOpen, header }) => {
                     </li>
                 </Link>
                 <li
-                    className={`md:mr-4 relative cursor-pointer text-black dark:text-white hover:font-bold ${isOpen ? 'font-bold' : ''} mb-10 lg:mb-0 flex flex-col lg:flex-row items-start lg:items-center`}
-                    onClick={() => setIsOpen(!isOpen)}
-                    ref={navRef}
+                    className={`md:mr-4 relative cursor-pointer text-black dark:text-white hover:font-bold ${isImplantOpen ? 'font-bold' : ''} mb-10 lg:mb-0 flex flex-col lg:flex-row items-start lg:items-center`}
+                    onClick={() => setIsImplantOpen(!isImplantOpen)}
+                    ref={implantRef}
                 >
                     <div className="flex justify-start items-center w-full">
                         {header.services.title}
@@ -41,7 +43,7 @@ const Navigation = ({ lang, isMobile, navOpen, header }) => {
                             <ArrowBottom />
                         </div>
                     </div>
-                    {isOpen && (
+                    {isImplantOpen && (
                         <ul
                             className={`bg-white dark:bg-black relative  lg:top-10 lg:absolute ${lang === 'en' ? 'w-100 lg:-left-40' : 'w-56 lg:-left-20'} h-auto lg:h-12 lg:rounded-3xl flex flex-col lg:flex-row lg:justify-evenly items-start lg:items-center lg:bg-black lg:dark:bg-white lg:animate-fadeIn animate-slideDown`}
                         >
@@ -66,11 +68,33 @@ const Navigation = ({ lang, isMobile, navOpen, header }) => {
                         </ul>
                     )}
                 </li>
-                <li className="cursor-pointer text-black dark:text-white hover:font-bold">
-                    <Link href={`${lang}/reservation`}>
-                        {' '}
-                        {header.reservation}
-                    </Link>
+                <li
+                    className={`md:mr-4 relative cursor-pointer text-black dark:text-white hover:font-bold ${isCommunityOpen ? 'font-bold' : ''} mb-10 lg:mb-0 flex flex-col lg:flex-row items-start lg:items-center`}
+                    onClick={() => setIsCommunityOpen(!isCommunityOpen)}
+                    ref={communityRef}
+                >
+                    <div className="flex justify-start items-center w-full">
+                        {header.community.title}
+                        <div className="ml-3">
+                            <ArrowBottom />
+                        </div>
+                    </div>
+                    {isCommunityOpen && (
+                        <ul
+                            className={`bg-white dark:bg-black relative  lg:top-10 lg:absolute ${lang === 'en' ? 'w-100 lg:-left-40' : 'w-56 lg:-left-20'} h-auto lg:h-12 lg:rounded-3xl flex flex-col lg:flex-row lg:justify-evenly items-start lg:items-center lg:bg-black lg:dark:bg-white lg:animate-fadeIn animate-slideDown`}
+                        >
+                            <Link href={`${lang}/beforeAfter`}>
+                                <li className="cursor-pointer rounded-3xl lg:rounded-none bg-gray-300 dark:bg-gray-600 lg:bg-black lg:dark:bg-white text-black dark:text-white lg:text-white lg:dark:text-black hover:font-bold py-2 lg:py-0 px-4 lg:px-0 lg:bg-transparent font-normal mt-4 mb-4 lg:mt-0 lg:mb-0">
+                                    {header.community.subCommunity.beforeAfter}
+                                </li>
+                            </Link>
+                            <Link href={`${lang}/review`}>
+                                <li className="cursor-pointer rounded-3xl lg:rounded-none bg-gray-300 dark:bg-gray-600 lg:bg-black lg:dark:bg-white text-black dark:text-white lg:text-white lg:dark:text-black hover:font-bold py-2 lg:py-0 px-4 lg:px-0 font-normal mb-4 lg:mb-0">
+                                    {header.community.subCommunity.review}
+                                </li>
+                            </Link>
+                        </ul>
+                    )}
                 </li>
             </ul>
             {isMobile && (
