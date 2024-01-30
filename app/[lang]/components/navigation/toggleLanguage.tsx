@@ -5,7 +5,11 @@ import { useEffect, useState } from 'react';
 import { DummyIcon, ToggleEn, ToggleKr } from '@/components/Icons/Icons';
 import { Locale } from '@/i18n.config';
 
-export default function ToggleLanguage({ lang }: Locale) {
+interface LocaleProps {
+    lang: 'ko' | 'en';
+}
+
+export default function ToggleLanguage({ lang }: LocaleProps) {
     const pathname = usePathname();
     const [isMounted, setIsMounted] = useState(false);
 
@@ -29,11 +33,11 @@ export default function ToggleLanguage({ lang }: Locale) {
         <button aria-label="Toggle Language">
             {lang === 'ko' ? (
                 <Link href={redirectedPathName('en')}>
-                    <ToggleEn className={'w-6 h-6 text-black'} />
+                    <ToggleEn />
                 </Link>
             ) : (
                 <Link href={redirectedPathName('ko')}>
-                    <ToggleKr className={'w-6 h-6 text-white'} />
+                    <ToggleKr />
                 </Link>
             )}
         </button>

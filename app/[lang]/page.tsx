@@ -65,7 +65,6 @@ export default async function Home({
                             muted
                             loop
                             playsInline
-                            type="video/mp4"
                         />
                     </div>
                 </div>

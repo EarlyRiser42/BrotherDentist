@@ -23,11 +23,7 @@ export default function ToggleDarkMode() {
             }
             aria-label="Toggle Theme"
         >
-            {resolvedTheme === 'dark' ? (
-                <SunIcon className={'w-6 h-6 text-white'} />
-            ) : (
-                <MoonIcon className={'w-6 h-6 text-black'} />
-            )}
+            {resolvedTheme === 'dark' ? <SunIcon /> : <MoonIcon />}
         </button>
     );
 }

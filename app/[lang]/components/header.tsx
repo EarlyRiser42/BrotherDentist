@@ -10,7 +10,7 @@ import { useEffect, useState } from 'react';
 
 interface HeaderProps {
     lang: Locale;
-    navigation?: any;
+    header?: any;
 }
 
 export default function Header({ lang, header }: HeaderProps) {
