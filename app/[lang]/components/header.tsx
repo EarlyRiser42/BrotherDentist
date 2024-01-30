@@ -2,7 +2,7 @@
 import ToggleDarkMode from './navigation/toggleDarkMode';
 import ToggleLanguage from './navigation/toggleLanguage';
 import { Locale } from '@/i18n.config';
-import { useIsMobile } from '@/components/hooks/useIsMobile';
+
 import Navigation from '@/app/[lang]/components/navigation/navigation';
 import NavigationIcon from '@/app/[lang]/components/navigation/navigationIcon';
 import { LogoEn, LogoKo } from '@/components/Icons/Logos';
@@ -13,8 +13,7 @@ interface HeaderProps {
     navigation?: any;
 }
 
-// 모바일 환경에서 네비게이션 바
-const MobileNavBar = ({ lang, header }) => {
+export default function Header({ lang, header }: HeaderProps) {
     const [navOpen, setNavOpen] = useState(false);
 
     const handleClick = () => {
@@ -27,39 +26,27 @@ const MobileNavBar = ({ lang, header }) => {
     };
 
     return (
-        <nav className="flex justify-between items-center w-full bg-white dark:bg-black py-3 sticky inset-0 border-gray-300 dark:border-white dark:border-opacity-30 z-50">
-            <div className="flex items-center w-10/12 mx-4 h-1/20">
+        <nav
+            className="sticky inset-0 z-50 bg-white dark:bg-black py-3 flex items-center justify-between w-full border-gray-300 dark:border-white dark:border-opacity-30
+    lg:justify-around lg:h-10vh"
+        >
+            <div className="h-1/20 w-7/12 flex items-center ml-4 lg:ml-0 lg:w-auto">
                 {lang === 'ko' ? <LogoKo /> : <LogoEn />}
             </div>
-            <Navigation
-                lang={lang}
-                isMobile={true}
-                navOpen={navOpen}
-                header={header}
-            />
-            <NavigationIcon navOpen={navOpen} onClick={() => handleClick()} />
+
+            <div className="lg:hidden flex justify-center items-center w-1/6">
+                <NavigationIcon
+                    navOpen={navOpen}
+                    onClick={() => handleClick()}
+                />
+            </div>
+
+            <Navigation lang={lang} header={header} />
+
+            <div className="hidden lg:flex justify-between items-center w-5/100 min-w-20">
+                <ToggleLanguage lang={lang} />
+                <ToggleDarkMode />
+            </div>
         </nav>
-    );
-};
-
-// 데스크톱 환경에서 네비게이션 바
-const DesktopNavBar = ({ lang, header }) => (
-    <nav className="flex justify-around items-center w-full h-10vh  bg-white dark:bg-black py-3 sticky inset-0  z-50">
-        {lang === 'ko' ? <LogoKo /> : <LogoEn />}
-        <Navigation lang={lang} isMobile={false} header={header} />
-        <div className="flex justify-between items-center w-5p">
-            <ToggleLanguage lang={lang} />
-            <ToggleDarkMode />
-        </div>
-    </nav>
-);
-
-export default function Header({ lang, header }: HeaderProps) {
-    const isMobile = useIsMobile();
-
-    return isMobile ? (
-        <MobileNavBar lang={lang} header={header} />
-    ) : (
-        <DesktopNavBar lang={lang} header={header} />
     );
 }

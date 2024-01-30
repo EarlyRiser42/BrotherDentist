@@ -2,7 +2,7 @@
 export default function NavigationIcon({ navOpen, onClick }) {
     return (
         <div
-            className="flex flex-col ml-20 w-1/12 h-12 max-w-10 justify-center items-center relative rounded-full bg-white dark:bg-black cursor-pointer"
+            className="flex flex-col ml-4 sm:ml-12 w-1/12 h-12 max-w-10 justify-center items-center relative rounded-full bg-white dark:bg-black cursor-pointer"
             onClick={onClick}
         >
             <span

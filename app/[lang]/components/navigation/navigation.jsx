@@ -8,7 +8,7 @@ import kakaoTalkPng from '@/public/kakaotalk.png';
 import useOnClickOutside from '@/components/hooks/useOnclickOutsdie';
 import { LogoEn, LogoKo } from '@/components/Icons/Logos';
 
-const Navigation = ({ lang, isMobile, navOpen, header }) => {
+const Navigation = ({ lang, navOpen, header }) => {
     const [isImplantOpen, setIsImplantOpen] = useState(false);
     const implantRef = useRef(null);
     useOnClickOutside(implantRef, () => setIsImplantOpen(false));
@@ -21,11 +21,9 @@ const Navigation = ({ lang, isMobile, navOpen, header }) => {
         <div
             className={`flex flex-col lg:flex lg:flex-row justify-start lg:justify-evenly items-center w-screen lg:w-3/4 h-screen h-dvh lg:h-full absolute inset-0 lg:relative bg-white dark:bg-black ${navOpen ? 'block animate-navIn' : 'hidden'} lg:block lg:animate-none`}
         >
-            {isMobile && (
-                <div className="w-11/12 mt-5 mx-auto h-1/20">
-                    {lang === 'ko' ? <LogoKo /> : <LogoEn />}
-                </div>
-            )}
+            <div className="w-11/12 mt-5 mx-auto h-1/20 lg:hidden">
+                {lang === 'ko' ? <LogoKo /> : <LogoEn />}
+            </div>
             <ul className="flex flex-col justify-start lg:justify-evenly w-11/12 h-4/5 lg:h-auto lg:w-3/5 ml-0 lg:flex-row text-2xl lg:text-lg">
                 <Link href={`/${lang}`}>
                     <li className="md:mr-4 cursor-pointer text-black dark:text-white hover:font-bold mt-5 lg:mt-0 mb-10 lg:mb-0">
@@ -97,32 +95,31 @@ const Navigation = ({ lang, isMobile, navOpen, header }) => {
                     )}
                 </li>
             </ul>
-            {isMobile && (
-                <div className="flex justify-between items-center w-11/12 h-15/100">
-                    <div className="flex justify-start items-center w-4/5 h-2/5">
-                        <button className="bg-black dark:bg-white text-white dark:text-black rounded-3xl w-20 min-w-16 h-full mr-5%">
-                            {header.buttons.login}
-                        </button>
-                        <button className="bg-yellow rounded-3xl w-2/5 min-w-28 max-w-28 h-full flex items-center justify-start">
-                            <Image
-                                src={kakaoTalkPng}
-                                alt={'Add KakaoCh'}
-                                width={40}
-                                height={40}
-                                className="ml-1"
-                            />
-                            <span className="text-black">
-                                {' '}
-                                {header.buttons.consult}
-                            </span>
-                        </button>
-                    </div>
-                    <div className="flex justify-between items-center w-1/5 max-w-20">
-                        <ToggleLanguage lang={lang} />
-                        <ToggleDarkMode />
-                    </div>
+
+            <div className="flex justify-between items-center w-11/12 h-15/100 clg:hidden">
+                <div className="flex justify-start items-center w-4/5 h-2/5">
+                    <button className="bg-black dark:bg-white text-white dark:text-black rounded-3xl w-20 min-w-16 min-h-8 h-full mr-5%">
+                        {header.buttons.login}
+                    </button>
+                    <button className="bg-yellow rounded-3xl w-2/5 min-w-28 max-w-28 min-h-8 h-full flex items-center justify-start">
+                        <Image
+                            src={kakaoTalkPng}
+                            alt={'Add KakaoCh'}
+                            width={40}
+                            height={40}
+                            className="ml-1"
+                        />
+                        <span className="text-black">
+                            {' '}
+                            {header.buttons.consult}
+                        </span>
+                    </button>
                 </div>
-            )}
+                <div className="flex justify-between items-center w-1/5 max-w-20">
+                    <ToggleLanguage lang={lang} />
+                    <ToggleDarkMode />
+                </div>
+            </div>
         </div>
     );
 };
