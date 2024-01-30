@@ -35,6 +35,8 @@ const config: Config = {
             colors: {
                 yellow: '#FAE100',
                 gray: '#333333',
+                gray_300: '#D1D5DB',
+                gray_600: '#4B5563',
                 hero_gray: '#F3F3F3',
                 blue: '#A3CFCD',
                 green: '#4DD964',
@@ -78,6 +80,7 @@ const config: Config = {
                 '48/100': '48%',
                 '9/10': '90%',
                 '10vh': '10vh',
+                '20vh': '20vh',
                 '40vh': '40vh',
                 '50vh': '50vh',
                 '60vh': '60vh',
