@@ -17,7 +17,7 @@ const config: Config = {
             },
             backgroundImage: {
                 'hero-gradient':
-                    'linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%)',
+                    'linear-gradient(135deg, #5335cf 0%, #de005e 25%, #f66e48 50%, #de005e 75%, #5335cf 100%)',
                 'green-to-yellow':
                     'linear-gradient(to right top, #72C58F, #63CE8A, #95C546)',
                 'yellow-to-yellow':
@@ -26,7 +26,8 @@ const config: Config = {
                     'linear-gradient(to right top, #E16861, #DF8558, #FBCB50)',
             },
             backgroundSize: {
-                '200-auto': '200% auto',
+                '400': '400%',
+                '100%auto': '100% auto',
             },
             margin: {
                 '5%': '5%',
@@ -34,10 +35,13 @@ const config: Config = {
             colors: {
                 yellow: '#FAE100',
                 gray: '#333333',
+                hero_gray: '#F3F3F3',
                 blue: '#A3CFCD',
+                green: '#4DD964',
                 hero: '#01123E',
             },
             spacing: {
+                '9': '2.1rem',
                 '18': '4.5rem',
                 '30': '7.5rem',
                 '88': '22rem',
@@ -49,6 +53,7 @@ const config: Config = {
                 '1/10': '10%',
                 '15/100': '15%',
                 '7/10': '70%',
+                '96/100': '96%',
                 '9/10': '90%',
                 '100': '26rem',
                 '50vw': '50vw',
@@ -73,14 +78,17 @@ const config: Config = {
                 '48/100': '48%',
                 '9/10': '90%',
                 '10vh': '10vh',
-                '90vh': '90vh',
                 '40vh': '40vh',
+                '50vh': '50vh',
+                '60vh': '60vh',
+                '90vh': '90vh',
             },
             minHeight: {
                 '330': '330px',
                 '420': '420px',
                 '170': '170px',
                 '120': '120px',
+                '80': '80px',
             },
             keyframes: {
                 navIn: {
@@ -100,7 +108,7 @@ const config: Config = {
                     '100%': { transform: 'translateY(0)', opacity: 1 },
                 },
                 textClip: {
-                    '100%': { 'background-position': '200% center' },
+                    '100%': { 'background-position': '400%' },
                 },
             },
             animation: {
@@ -109,7 +117,7 @@ const config: Config = {
                 slideDown: 'slideDown 0.3s ease-out forwards',
                 fadeIn: 'fadeIn 0.2s ease-out',
                 fadeInHero: 'fadeIn 1.2s ease-out',
-                textClip: 'textClip 2s linear infinite',
+                textClip: 'textClip 10s linear infinite',
             },
         },
     },

@@ -1,3 +1,4 @@
+'use client';
 export default function NavigationIcon({ navOpen, onClick }) {
     return (
         <div

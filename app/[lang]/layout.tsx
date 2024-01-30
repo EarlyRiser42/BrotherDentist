@@ -1,7 +1,5 @@
 import '../globals.css';
 import Head from 'next/head';
-import Header from './components/header';
-import Footer from './components/footer';
 import Providers from '../../components/provider/Providers';
 import { Locale, i18n } from '@/i18n.config';
 import { NanumSquare, NanumSquareOTF } from '@/fonts/fonts';
