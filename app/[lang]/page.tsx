@@ -25,7 +25,7 @@ export default async function Home({
                         className="before:block before:w-6 before:h-6 before:absolute before:top-0 before:-right-6 before:bg-[url('../public/lava_before.svg')] before:dark:bg-[url('../public/lava_before_dark.svg')] before:bg-no-repeat before:bg-center before:bg-100%auto
                         after:block after:bg-transparent after:w-6 after:h-6 after:absolute after:-bottom-6 after:left-0 after:bg-[url('../public/lava_before.svg')] after:dark:bg-[url('../public/lava_before_dark.svg')] after:bg-no-repeat after:bg-center after:bg-100%auto
                         top-0 absolute flex justify-start items-start w-2/4 h-15/100 text-center bg-white dark:bg-black rounded-br-3xl
-                        cs:w-1/2 cs:h-15/100 sm:w-2/5 sm:h-1/10 z-20"
+                        cs:w-1/2 cs:h-15/100 sm:w-2/5 sm:h-1/10 z-10"
                     >
                         <div className="flex justify-center items-center w-96/100 h-4/5 bg-black dark:bg-white rounded-3xl">
                             <span className="text-sm cs:text-base sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-transparent bg-hero-gradient bg-400 bg-clip-text animate-textClip">
@@ -33,7 +33,7 @@ export default async function Home({
                             </span>
                         </div>
                     </div>
-                    <div className="flex flex-col justify-evenly w-50vw h-3/5 absolute left-2 top-12 cs:left-4 cs:top-16 sm:top-20 sm:left-8 clg:left-12 clg:top-32 z-10 ">
+                    <div className="flex flex-col justify-evenly w-50vw h-3/5 absolute left-2 top-12 cs:left-4 cs:top-16 sm:top-20 sm:left-8 clg:left-8 clg:top-24 z-10 ">
                         <div className="w-full">
                             <h1 className="text-2xl cs:text-3xl sm:text-5xl lg:text-7xl font-bold  font-bold text-white">
                                 {page.home.p1}
