@@ -19,7 +19,7 @@ const Navigation = ({ lang, navOpen, navAnimation, header }) => {
 
     return (
         <div
-            className={`flex flex-col lg:flex lg:flex-row justify-start lg:justify-evenly items-center w-screen lg:w-3/4 h-screen h-vh h-dvh lg:h-full absolute inset-0 lg:relative bg-white dark:bg-black ${navAnimation} ${navOpen ? 'block' : 'hidden'} lg:block lg:animate-none`}
+            className={`flex flex-col lg:flex lg:flex-row justify-start lg:justify-evenly items-center w-screen lg:w-3/4 h-screen h-dvh lg:h-full absolute inset-0 lg:relative bg-white dark:bg-black ${navAnimation} ${navOpen ? 'block' : 'hidden'} lg:block lg:animate-none`}
         >
             <div className="w-11/12 mt-5 mx-auto h-1/20 lg:hidden">
                 {lang === 'ko' ? <LogoKo /> : <LogoEn />}
