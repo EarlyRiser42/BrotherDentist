@@ -90,12 +90,12 @@ export default function ImageSlider({ images }) {
                         >
                             {index === imageIndex ? (
                                 <IoEllipseSharp
-                                    className="fill-current text-white"
+                                    className="fill-current"
                                     aria-hidden
                                 />
                             ) : (
                                 <IoEllipseOutline
-                                    className="fill-current text-white"
+                                    className="fill-current"
                                     aria-hidden
                                 />
                             )}
