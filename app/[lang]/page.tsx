@@ -16,7 +16,12 @@ export default async function Home({
     return (
         <>
             <Header lang={lang} header={header} />
-            <section className="flex flex-col lg:flex-row w-full h-50vh cs:h-60vh sm:h-90vh items-center clg:items-start justify-center my-4">
+            <section
+                className="flex flex-col justify-center my-4 items-center w-full min-h-96 h-50vh h-50dvh
+            cs:h-60vh cs:h-60dvh
+            sm:min-h-640 sm:h-90vh sm:h-90dvh
+            lg:flex-row clg:items-start "
+            >
                 <div
                     className="flex items-center justify-start w-9/10 h-9/10 rounded-2xl relative
                     cs:min-w-cs sm:min-w-sm clg:w-7/10 clg:min-w-clg cxl:w-cxl"
@@ -56,11 +61,14 @@ export default async function Home({
                             </p>
                         </div>
                     </div>
-                    <div className="w-full h-full rounded-3xl relative">
+                    <div
+                        className="w-full h-full min-h-64 rounded-3xl relative
+                    sm:min-h-480"
+                    >
                         <video
                             className="rounded-3xl absolute w-full h-full object-fill overflow-clip"
-                            src="https://firebasestorage.googleapis.com/v0/b/loginform-6747a.appspot.com/o/a5f465de-6a21-4281-bd70-2bb3b63c453c.mp4?alt=media&token=ba77131e-ffb9-4695-8ccf-ea4909f5fc57"
-                            poster="https://firebasestorage.googleapis.com/v0/b/loginform-6747a.appspot.com/o/hero%20(1).webp?alt=media&token=7ef8785e-bf65-465a-a50d-00b5e58c384d"
+                            src="https://firebasestorage.googleapis.com/v0/b/loginform-6747a.appspot.com/o/dental_hero_final.mp4?alt=media&token=0c8b3fee-71ef-451a-8650-61e0167a2bb7"
+                            poster="https://firebasestorage.googleapis.com/v0/b/loginform-6747a.appspot.com/o/1.webp?alt=media&token=763f4314-465e-4551-9c9c-e77012b27209"
                             autoPlay
                             muted
                             loop
