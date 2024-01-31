@@ -5,30 +5,39 @@ export default function footer({ footer }) {
                 <div className="flex flex-col items-center justify-center space-y-4 text-center">
                     <div className="space-y-2">
                         <div>
-                            <span className="text-xs text-gray_600 lg:text-sm">
+                            <span className="text-xs text-gray_600 dark:text-gray_300 lg:text-sm">
                                 {footer.owner}
                             </span>
-                            <span className="text-gray_300"> | </span>
-                            <span className="text-xs text-gray_600 lg:text-sm">
+                            <span className="text-gray_300 dark:text-gray_600">
+                                {' '}
+                                |{' '}
+                            </span>
+                            <span className="text-xs text-gray_600 dark:text-gray_300 lg:text-sm">
                                 {footer.dentalName}
                             </span>
                         </div>
 
                         <div>
-                            <span className="text-xs text-gray_600 lg:text-sm">
+                            <span className="text-xs text-gray_600 dark:text-gray_300 lg:text-sm">
                                 {footer.services}
                             </span>
-                            <span className="text-gray_300"> | </span>
-                            <span className="text-xs text-gray_600 lg:text-sm">
+                            <span className="text-gray_300 dark:text-gray_600">
+                                {' '}
+                                |{' '}
+                            </span>
+                            <span className="text-xs text-gray_600 dark:text-gray_300 lg:text-sm">
                                 {footer.BusinessRegistrationNumber}
                             </span>
                         </div>
                         <div>
-                            <span className="text-xs text-gray_600 lg:text-sm">
+                            <span className="text-xs text-gray_600 dark:text-gray_300 lg:text-sm">
                                 {footer.telephoneNumber}
                             </span>
-                            <span className="text-gray_300"> | </span>
-                            <span className="text-xs text-gray_600 lg:text-sm">
+                            <span className="text-gray_300 dark:text-gray_600">
+                                {' '}
+                                |{' '}
+                            </span>
+                            <span className="text-xs text-gray_600 dark:text-gray_300 lg:text-sm">
                                 {footer.emailAddress}
                             </span>
                         </div>
