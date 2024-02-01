@@ -3,9 +3,12 @@ import type { Config } from 'tailwindcss';
 const config: Config = {
     corePlugins: undefined,
     content: [
-        './pages/**/*.{js,ts,jsx,tsx,mdx}',
-        './app/**/*.{js,ts,jsx,tsx,mdx}',
-        './components/**/*.{js,ts,jsx,tsx,mdx}',
+        './pages/**/*.{js,ts,jsx,tsx}',
+        './app/**/*.{js,ts,jsx,tsx}',
+        './components/**/*.{js,ts,jsx,tsx}',
+        './components/page/**/*.{js,ts,jsx,tsx}',
+        './components/navigation/**/*.{js,ts,jsx,tsx}',
+        './components/atoms/**/*.{js,ts,jsx,tsx}',
     ],
     theme: {
         extend: {
@@ -24,6 +27,13 @@ const config: Config = {
                     'linear-gradient(to right top, #FAE100, #FBCB50, #FBCB50)',
                 'red-to-yellow':
                     'linear-gradient(to right top, #E16861, #DF8558, #FBCB50)',
+                'gray-to-white': 'linear-gradient(to right, #333333, #FFFFFF)',
+                'hero_gray-to-black':
+                    'linear-gradient(to right, #F3F3F3, #000000)',
+                'gray-to-white-bottom':
+                    'linear-gradient(to bottom, #333333, #FFFFFF)',
+                'hero_gray-to-black-bottom':
+                    'linear-gradient(to bottom, #F3F3F3, #000000)',
             },
             backgroundSize: {
                 '400': '400%',
@@ -31,6 +41,16 @@ const config: Config = {
             },
             margin: {
                 '5%': '5%',
+            },
+            fontSize: {
+                xxs: [
+                    '0.7rem',
+                    {
+                        lineHeight: '1rem',
+                        letterSpacing: '-0.05em',
+                        fontWeight: '400',
+                    },
+                ],
             },
             colors: {
                 yellow: '#FAE100',
@@ -41,6 +61,7 @@ const config: Config = {
                 blue: '#A3CFCD',
                 green: '#4DD964',
                 hero: '#01123E',
+                beige: '#F3EEE9',
             },
             spacing: {
                 '9': '2.1rem',
@@ -65,10 +86,11 @@ const config: Config = {
                 sm: '600px',
                 clg: '700px',
                 cxl: '1400px',
-                '700': '400px',
-                '500': '400px',
-                '300': '220px',
                 '150': '140px',
+                '300': '220px',
+                '500': '400px',
+                '700': '400px',
+                '970': '970px',
             },
             height: {
                 '1/20': '5%',
@@ -85,14 +107,20 @@ const config: Config = {
                 '50vh': '50vh',
                 '60vh': '60vh',
                 '90vh': '90vh',
+                '20dvh': '20dvh',
+                '30dvh': '35dvh',
+                '40dvh': '40dvh',
                 '50dvh': '50dvh',
                 '60dvh': '60dvh',
+                '70dvh': '70dvh',
                 '90dvh': '90dvh',
             },
             minHeight: {
                 '80': '80px',
                 '120': '120px',
                 '170': '170px',
+                '250': '250px',
+                '280': '280px',
                 '330': '330px',
                 '420': '420px',
                 '480': '480px',

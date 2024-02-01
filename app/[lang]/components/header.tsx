@@ -20,13 +20,11 @@ export default function Header({ lang, header }: HeaderProps) {
         if (!navOpen) {
             setAnimation('animate-navIn');
             setNavOpen(true);
-            document.body.style.overflow = 'hidden';
         } else {
             setAnimation('animate-navOut');
             setTimeout(() => {
                 setNavOpen(false);
             }, 300);
-            document.body.style.overflow = '';
         }
     };
 
