@@ -24,9 +24,9 @@ export default function ImageSlider({ page, careers }) {
     return (
         <section
             aria-label="Image Slider"
-            className="relative flex flex-col justify-center items-center my-8 w-full min-h-250 h-65dvh
+            className="relative flex flex-col justify-center items-center my-8 w-full min-h-480 h-65dvh
             cs:h-75dvh
-            sm:min-h-480 sm:h-25dvh sm:my-16
+            sm:min-h-560 sm:h-25dvh sm:my-16
             lg:my-4 cxl:my-0 cxl:min-h-640 cxl:h-75vh"
         >
             <div className="flex flex-col items-center w-full mb-2 cs:mb-4">
@@ -39,8 +39,7 @@ export default function ImageSlider({ page, careers }) {
             </div>
             <div className="w-9/10 h-4/5 flex overflow-hidden clg:w-88/100 clg:min-w-970 clg:max-w-1250 cxl:w-85/100">
                 <div
-                    className="flex w-full rounded-3xl bg-hero_gray-to-black dark:bg-gray-to-white transition-transform duration-500 ease-in-out
-                    sm:bg-hero_gray-to-black-bottom sm:dark:bg-gray-to-white-bottom"
+                    className="flex w-full rounded-3xl transition-transform duration-500 ease-in-out"
                     style={{
                         transform: `translateX(${-imageIndex * 100}%)`,
                     }}
@@ -48,10 +47,11 @@ export default function ImageSlider({ page, careers }) {
                     {careers.map(({ url, alt, title, details }, index) => (
                         <div
                             key={index}
-                            className="flex flex-col h-full min-w-full rounded-3xl sm:flex-row"
+                            className="flex flex-col h-full min-w-full rounded-3xl sm:flex-row bg-dark_gray-to-black dark:bg-gray-to-white
+                            sm:bg-dark_gray-to-black-bottom sm:dark:bg-gray-to-white-bottom"
                         >
                             <div
-                                className="flex justify-center w-full h-1/2 rounded-br-3xl rounded-t-3xl bg-hero_gray dark:bg-gray
+                                className="flex justify-center w-full h-1/2 rounded-br-3xl rounded-t-3xl bg-dark_gray dark:bg-gray
                             sm:w-1/2 sm:h-full sm:rounded-l-3xl"
                             >
                                 <Image

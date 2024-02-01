@@ -3,8 +3,9 @@ import { getDictionary } from '@/dictionaries/dictionary';
 import Header from '@/app/[lang]/components/header';
 import React from 'react';
 import Footer from '@/app/[lang]/components/footer';
-import Hero from '@/app/[lang]/components/page/hero';
-import ImageSlider from '@/app/[lang]/components/page/imageSlider.tsx';
+import Hero from '@/app/[lang]/components/pageComponents/hero';
+import ImageSlider from '@/app/[lang]/components/pageComponents/imageSlider.tsx';
+import ProSection from '@/app/[lang]/components/pageComponents/proSection';
 import portrait1 from '../../public/portrait1.png';
 import portrait2 from '../../public/portrait2.png';
 
@@ -34,6 +35,7 @@ export default async function Home({
             <Header lang={lang} header={header} />
             <Hero page={page} />
             <ImageSlider page={page} careers={CAREERS} />
+            <ProSection page={page} />
             <Footer footer={footer} />
         </>
     );

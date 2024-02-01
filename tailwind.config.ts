@@ -6,8 +6,8 @@ const config: Config = {
         './pages/**/*.{js,ts,jsx,tsx}',
         './app/**/*.{js,ts,jsx,tsx}',
         './components/**/*.{js,ts,jsx,tsx}',
-        './components/page/**/*.{js,ts,jsx,tsx}',
-        './components/navigation/**/*.{js,ts,jsx,tsx}',
+        './components/pageComponents/**/*.{js,ts,jsx,tsx}',
+        './components/headerComponents/**/*.{js,ts,jsx,tsx}',
         './components/atoms/**/*.{js,ts,jsx,tsx}',
     ],
     theme: {
@@ -17,6 +17,17 @@ const config: Config = {
                 sm: '640px',
                 clg: '1024px',
                 cxl: '1440px',
+            },
+            colors: {
+                yellow: '#FAE100',
+                gray: '#333333',
+                dark_gray: '#F3F3F3',
+                gray_300: '#D1D5DB',
+                gray_600: '#4B5563',
+                blue: '#A3CFCD',
+                green: '#4DD964',
+                hero: '#01123E',
+                beige: '#F3EEE9',
             },
             backgroundImage: {
                 'hero-gradient':
@@ -28,11 +39,11 @@ const config: Config = {
                 'red-to-yellow':
                     'linear-gradient(to right top, #E16861, #DF8558, #FBCB50)',
                 'gray-to-white': 'linear-gradient(to right, #333333, #FFFFFF)',
-                'hero_gray-to-black':
+                'dark_gray-to-black':
                     'linear-gradient(to right, #F3F3F3, #000000)',
                 'gray-to-white-bottom':
                     'linear-gradient(to bottom, #333333, #FFFFFF)',
-                'hero_gray-to-black-bottom':
+                'dark_gray-to-black-bottom':
                     'linear-gradient(to bottom, #F3F3F3, #000000)',
             },
             backgroundSize: {
@@ -52,17 +63,7 @@ const config: Config = {
                     },
                 ],
             },
-            colors: {
-                yellow: '#FAE100',
-                gray: '#333333',
-                gray_300: '#D1D5DB',
-                gray_600: '#4B5563',
-                hero_gray: '#F3F3F3',
-                blue: '#A3CFCD',
-                green: '#4DD964',
-                hero: '#01123E',
-                beige: '#F3EEE9',
-            },
+
             spacing: {
                 '9': '2.1rem',
                 '18': '4.5rem',
@@ -131,6 +132,7 @@ const config: Config = {
                 '330': '330px',
                 '420': '420px',
                 '480': '480px',
+                '560': '560px',
                 '640': '640px',
             },
             keyframes: {

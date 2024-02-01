@@ -1,10 +1,10 @@
 'use client';
-import ToggleDarkMode from './navigation/toggleDarkMode';
-import ToggleLanguage from './navigation/toggleLanguage';
+import ToggleDarkMode from './headerComponents/toggleDarkMode';
+import ToggleLanguage from './headerComponents/toggleLanguage';
 import { Locale } from '@/i18n.config';
 
-import Navigation from '@/app/[lang]/components/navigation/navigation';
-import NavigationIcon from '@/app/[lang]/components/navigation/navigationIcon';
+import Navigation from '@/app/[lang]/components/headerComponents/navigation';
+import NavigationIcon from '@/app/[lang]/components/headerComponents/navigationIcon';
 import { LogoEn, LogoKo } from '@/components/Icons/Logos';
 import { useEffect, useState } from 'react';
 

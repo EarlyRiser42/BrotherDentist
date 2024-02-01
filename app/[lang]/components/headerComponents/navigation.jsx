@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { ArrowBottom } from '@/components/Icons/Icons';
-import ToggleLanguage from '@/app/[lang]/components/navigation/toggleLanguage';
-import ToggleDarkMode from '@/app/[lang]/components/navigation/toggleDarkMode';
+import ToggleLanguage from '@/app/[lang]/components/headerComponents/toggleLanguage';
+import ToggleDarkMode from '@/app/[lang]/components/headerComponents/toggleDarkMode';
 import Link from 'next/link';
 import Image from 'next/image';
 import kakaoTalkPng from '@/public/kakaotalk.png';

@@ -54,7 +54,7 @@ export default function Hero({ page }) {
                     sm:min-h-480"
                 >
                     <video
-                        className="rounded-3xl absolute w-full h-full object-fill"
+                        className="rounded-3xl absolute w-full h-full object-fill overflow-clip"
                         src="https://firebasestorage.googleapis.com/v0/b/loginform-6747a.appspot.com/o/dental_hero_final.mp4?alt=media&token=0c8b3fee-71ef-451a-8650-61e0167a2bb7"
                         poster="https://firebasestorage.googleapis.com/v0/b/loginform-6747a.appspot.com/o/1.webp?alt=media&token=763f4314-465e-4551-9c9c-e77012b27209"
                         autoPlay
@@ -91,7 +91,7 @@ export default function Hero({ page }) {
                         <ArrowRight />
                     </div>
                 </div>
-                <div className="aspect-ratio w-full aspect-w-1 aspect-h-1 rounded-2xl relative bg-hero_gray dark:bg-gray hover:font-bold">
+                <div className="aspect-ratio w-full aspect-w-1 aspect-h-1 rounded-2xl relative bg-dark_gray dark:bg-gray hover:font-bold">
                     <span
                         className="mt-4 ml-4 inline-block relative text-black dark:text-white
                         sm:text-lg lg:text-xl xl:text-2xl"
