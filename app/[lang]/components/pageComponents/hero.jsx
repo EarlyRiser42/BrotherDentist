@@ -1,5 +1,7 @@
 import { ArrowRight } from '@/components/Icons/Icons';
 import React from 'react';
+import VideoComponent from '@/app/[lang]/components/pageComponents/VideoComponent';
+import { Suspense } from 'react';
 
 export default function Hero({ page }) {
     return (
@@ -53,15 +55,9 @@ export default function Hero({ page }) {
                     className="w-full h-full min-h-64 rounded-3xl relative
                     sm:min-h-480"
                 >
-                    <video
-                        className="rounded-3xl absolute w-full h-full object-fill overflow-clip"
-                        src="https://firebasestorage.googleapis.com/v0/b/loginform-6747a.appspot.com/o/dental_hero_final.mp4?alt=media&token=0c8b3fee-71ef-451a-8650-61e0167a2bb7"
-                        poster="https://firebasestorage.googleapis.com/v0/b/loginform-6747a.appspot.com/o/1.webp?alt=media&token=763f4314-465e-4551-9c9c-e77012b27209"
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                    />
+                    <Suspense fallback={<div className="bg-white"></div>}>
+                        <VideoComponent />
+                    </Suspense>
                 </div>
             </div>
             <div
