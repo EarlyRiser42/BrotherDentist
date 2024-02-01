@@ -2,8 +2,6 @@
 import { useState } from 'react';
 import { IoIosArrowForward } from 'react-icons/io';
 import { IoIosArrowBack } from 'react-icons/io';
-import { IoEllipseSharp } from 'react-icons/io5';
-import { IoEllipseOutline } from 'react-icons/io5';
 import Image from 'next/image';
 
 export default function ImageSlider({ careers }) {
@@ -26,15 +24,20 @@ export default function ImageSlider({ careers }) {
     return (
         <section
             aria-label="Image Slider"
-            className="relative flex justify-center items-center my-8 w-full min-h-250 h-60dvh
-            cs:h-70dvh
-            sm:min-h-480 sm:h-20dvh sm:my-16
-            lg:my-4 cxl:my-0 cxl:min-h-640 cxl:h-70vh"
+            className="relative flex flex-col justify-center items-center my-8 w-full min-h-250 h-65dvh
+            cs:h-75dvh
+            sm:min-h-480 sm:h-25dvh sm:my-16
+            lg:my-4 cxl:my-0 cxl:min-h-640 cxl:h-75vh"
         >
-            <div
-                className="w-9/10 h-9/10 flex overflow-hidden clg:w-4/5 clg:min-w-970
-            "
-            >
+            <div className="flex flex-col items-center w-full mb-2 cs:mb-4">
+                <h1 className="font-bold mb-1 w-9/10 text-lg sm:text-xl lg:text-2xl lg:w-4/5 cxl:text-3xl">
+                    의료진 소개
+                </h1>
+                <h4 className="font-medium w-9/10 text-base sm:text-lg lg:text-xl lg:w-4/5 cxl:text-2xl">
+                    당신의 주치의를 만나보세요.
+                </h4>
+            </div>
+            <div className="w-9/10 h-4/5 flex overflow-hidden clg:w-88/100 clg:min-w-970 clg:max-w-1250 cxl:w-85/100">
                 <div
                     className="flex w-full rounded-3xl bg-hero_gray-to-black dark:bg-gray-to-white transition-transform duration-500 ease-in-out
                     sm:bg-hero_gray-to-black-bottom sm:dark:bg-gray-to-white-bottom"
@@ -61,7 +64,7 @@ export default function ImageSlider({ careers }) {
                             </div>
                             <div
                                 className="w-full h-1/2 flex flex-col justify-center items-center rounded-tl-3xl rounded-b-3xl bg-black dark:bg-white
-                            sm:w-1/2 sm:h-full sm:rounded-r-3xl sm:justify-start"
+                             sm:w-1/2 sm:h-full sm:rounded-r-3xl sm:justify-start"
                             >
                                 <div className="w-9/10 flex flex-col justify-center items-start mb-4 sm:mt-12">
                                     {p1 &&

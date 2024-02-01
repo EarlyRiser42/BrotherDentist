@@ -5,8 +5,8 @@ import React from 'react';
 import Footer from '@/app/[lang]/components/footer';
 import Hero from '@/app/[lang]/components/page/hero';
 import ImageSlider from '@/app/[lang]/components/page/imageSlider.tsx';
-import test from '../../public/portrait_body.png';
-import test2 from '../../public/kakaotalk.png';
+import portrait1 from '../../public/portrait1.png';
+import portrait2 from '../../public/portrait2.png';
 
 export default async function Home({
     params: { lang },
@@ -16,8 +16,8 @@ export default async function Home({
     const { page, header, footer } = await getDictionary(lang);
     const CAREERS = [
         {
-            url: test,
-            alt: 'careerOne',
+            url: portrait1,
+            alt: 'portraitOne',
             p1: ['대표원장', '최인혁'],
             p2: [
                 '서울대학교 치과대학 입학 희망',
@@ -26,10 +26,22 @@ export default async function Home({
                 '오스템 AIC Implant 고급과정 수료',
                 '오스템 AIC Implant Sinus Surgery Course',
                 '오스템 AIC OneGuide Advanced Course',
-                '(전) 충청남도 서천군 보건지소 치과대표 공중보건의사',
+                '(전) 충청남도 서천군 보건소 치과대표 공중보건의사',
             ],
         },
-        { url: test2, alt: 'careerTwo' },
+        {
+            url: portrait2,
+            alt: 'portraitTwo',
+            p1: ['부원장', '스티븐'],
+            p2: [
+                '서울대학교 치과대학 졸업',
+                '대한 임플란트학회 준회원',
+                '대한 치과보철학회 준회원',
+                '오스템 AIC Implant 고급과정 수료',
+                '오스템 AIC Implant Sinus Surgery Course',
+                '오스템 AIC OneGuide Advanced Course',
+            ],
+        },
     ];
 
     return (
