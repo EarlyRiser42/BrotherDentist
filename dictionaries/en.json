@@ -34,7 +34,28 @@
       "p6": "Experience, Best Care.",
       "button1": "Reserve",
       "button2": "Consult",
-      "button3": "Address"
+      "button3": "Address",
+      "ImageSlider_h1": "Meet Our Medical Team",
+      "ImageSlider_h4": "Meet Your Primary Care Physician.",
+      "portraitOneTitle": ["Principal Dentist", "Choi In-hyuk"],
+      "portraitOneDetails": [
+        "Aspires to enter Seoul National University College of Dentistry",
+        "Regular member of the Korean Academy of Implantology",
+        "Regular member of the Korean Academy of Prosthodontics",
+        "Completed advanced course in Osstem AIC Implant",
+        "Osstem AIC Implant Sinus Surgery Course",
+        "Osstem AIC OneGuide Advanced Course",
+        "Former public health dentist at Seocheon County Health Center, Chungcheongnam-do"
+      ],
+      "portraitTwoTitle": ["Vice Principal", "Steven"],
+      "portraitTwoDetails": [
+        "Graduated from Seoul National University College of Dentistry",
+        "Associate member of the Korean Academy of Implantology",
+        "Associate member of the Korean Academy of Prosthodontics",
+        "Completed advanced course in Osstem AIC Implant",
+        "Osstem AIC Implant Sinus Surgery Course",
+        "Osstem AIC OneGuide Advanced Course"
+      ]
     },
     "services": {
       "title": "Our Services",

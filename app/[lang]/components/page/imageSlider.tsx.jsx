@@ -4,7 +4,7 @@ import { IoIosArrowForward } from 'react-icons/io';
 import { IoIosArrowBack } from 'react-icons/io';
 import Image from 'next/image';
 
-export default function ImageSlider({ careers }) {
+export default function ImageSlider({ page, careers }) {
     const [imageIndex, setImageIndex] = useState(0);
 
     function showNextImage() {
@@ -31,10 +31,10 @@ export default function ImageSlider({ careers }) {
         >
             <div className="flex flex-col items-center w-full mb-2 cs:mb-4">
                 <h1 className="font-bold mb-1 w-9/10 text-lg sm:text-xl lg:text-2xl lg:w-4/5 cxl:text-3xl">
-                    의료진 소개
+                    {page.home.ImageSlider_h1}
                 </h1>
                 <h4 className="font-medium w-9/10 text-base sm:text-lg lg:text-xl lg:w-4/5 cxl:text-2xl">
-                    당신의 주치의를 만나보세요.
+                    {page.home.ImageSlider_h4}
                 </h4>
             </div>
             <div className="w-9/10 h-4/5 flex overflow-hidden clg:w-88/100 clg:min-w-970 clg:max-w-1250 cxl:w-85/100">
@@ -45,7 +45,7 @@ export default function ImageSlider({ careers }) {
                         transform: `translateX(${-imageIndex * 100}%)`,
                     }}
                 >
-                    {careers.map(({ url, alt, p1, p2 }, index) => (
+                    {careers.map(({ url, alt, title, details }, index) => (
                         <div
                             key={index}
                             className="flex flex-col h-full min-w-full rounded-3xl sm:flex-row"
@@ -67,8 +67,8 @@ export default function ImageSlider({ careers }) {
                              sm:w-1/2 sm:h-full sm:rounded-r-3xl sm:justify-start"
                             >
                                 <div className="w-9/10 flex flex-col justify-center items-start mb-4 sm:mt-12">
-                                    {p1 &&
-                                        p1.map((text, idx) => (
+                                    {title &&
+                                        title.map((text, idx) => (
                                             <span
                                                 key={idx}
                                                 className={
@@ -82,8 +82,8 @@ export default function ImageSlider({ careers }) {
                                         ))}
                                 </div>
                                 <div className="w-9/10 flex flex-col justify-center items-start">
-                                    {p2 &&
-                                        p2.map((text, idx) => (
+                                    {details &&
+                                        details.map((text, idx) => (
                                             <span
                                                 key={idx}
                                                 className="text-xs text-white dark:text-black cs:text-sm sm:text-base sm:mb-2 cxl:mb-4"
