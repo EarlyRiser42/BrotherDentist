@@ -27,7 +27,7 @@ module.exports = {
         // sets the Content-Disposition header (inline or attachment)
         contentDispositionType: 'inline',
         // limit of 50 objects
-        remotePatterns: [],
+        remotePatterns: [{ protocol: 'https', hostname: '**' }],
         // when true, every image will be unoptimized
         unoptimized: false,
     },
