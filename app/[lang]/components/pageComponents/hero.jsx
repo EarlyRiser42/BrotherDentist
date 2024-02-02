@@ -7,7 +7,7 @@ export default function Hero({ page }) {
     return (
         <section
             aria-label="Hero"
-            className="flex flex-col justify-center my-4 items-center w-full h-80
+            className="flex flex-col justify-center my-4 items-center w-full h-96
             cs:h-410 sm:h-586
             lg:flex-row clg:items-start cxl:h-650"
         >
@@ -64,7 +64,7 @@ export default function Hero({ page }) {
                     cs:min-h-120 cs:mt-4 cs:h-2/5 cs:min-w-cs sm:min-w-sm sm:min-h-170 sm:gap-x-4
                     clg:grid-cols-1 clg:grid-rows-3 clg:ml-6 clg:gap-y-6 clg:min-w-300 clg:mt-0 clg:h-9/10 clg:w-1/10"
             >
-                <div className="aspect-square rounded-2xl relative bg-green hover:font-bold cs:aspect-[4/3] clg:aspect-auto">
+                <div className="aspect-[4/3] rounded-2xl relative bg-green hover:font-bold cmd:aspect-auto ">
                     <span
                         className="mt-4 ml-4 inline-block text-black dark:text-white
                         sm:text-lg lg:text-xl xl:text-2xl"
@@ -75,7 +75,7 @@ export default function Hero({ page }) {
                         <ArrowRight />
                     </div>
                 </div>
-                <div className="aspect-square rounded-2xl relative bg-yellow hover:font-bold cs:aspect-[4/3] clg:aspect-auto">
+                <div className="aspect-[4/3] rounded-2xl relative bg-yellow hover:font-bold cmd:aspect-auto">
                     <span
                         className="mt-4 ml-4 inline-block relative text-black dark:text-white
                         sm:text-lg lg:text-xl xl:text-2xl"
@@ -86,7 +86,7 @@ export default function Hero({ page }) {
                         <ArrowRight />
                     </div>
                 </div>
-                <div className="aspect-square  rounded-2xl relative bg-dark_gray dark:bg-gray hover:font-bold cs:aspect-[4/3] clg:aspect-auto">
+                <div className="aspect-[4/3]  rounded-2xl relative bg-dark_gray dark:bg-gray hover:font-bold cmd:aspect-auto ">
                     <span
                         className="mt-4 ml-4 inline-block relative text-black dark:text-white
                         sm:text-lg lg:text-xl xl:text-2xl"

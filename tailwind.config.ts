@@ -15,6 +15,7 @@ const config: Config = {
             screens: {
                 cs: '412px',
                 sm: '640px',
+                cmd: '800px',
                 clg: '1024px',
                 cxl: '1440px',
             },
@@ -23,10 +24,12 @@ const config: Config = {
             },
             colors: {
                 yellow: '#FAE100',
+                light_gray: '#F9FAFB',
                 gray: '#333333',
                 dark_gray: '#F3F3F3',
                 gray_300: '#D1D5DB',
                 gray_600: '#4B5563',
+                light_blue: '#38B6FF',
                 blue: '#A3CFCD',
                 green: '#4DD964',
                 hero: '#01123E',
@@ -41,13 +44,10 @@ const config: Config = {
                     'linear-gradient(to right top, #FAE100, #FBCB50, #FBCB50)',
                 'red-to-yellow':
                     'linear-gradient(to right top, #E16861, #DF8558, #FBCB50)',
-                'gray-to-white': 'linear-gradient(to right, #333333, #FFFFFF)',
-                'dark_gray-to-black':
-                    'linear-gradient(to right, #F3F3F3, #000000)',
-                'gray-to-white-bottom':
-                    'linear-gradient(to bottom, #333333, #FFFFFF)',
-                'dark_gray-to-black-bottom':
-                    'linear-gradient(to bottom, #F3F3F3, #000000)',
+                'light_gray-to-light_blue':
+                    'linear-gradient(to right, #F9FAFB, #38B6FF)',
+                'light_gray-to-light_blue-bottom':
+                    'linear-gradient(to bottom, #F9FAFB, #38B6FF)',
             },
             backgroundSize: {
                 '400': '400%',
@@ -100,6 +100,7 @@ const config: Config = {
                 '1250': '1250px',
             },
             height: {
+                '360': '22rem',
                 '330': '25rem',
                 '410': '30rem',
                 '490': '35rem',
