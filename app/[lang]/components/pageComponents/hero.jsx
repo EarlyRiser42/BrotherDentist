@@ -8,7 +8,7 @@ export default function Hero({ page }) {
         <section
             aria-label="Hero"
             className="flex flex-col justify-center my-4 items-center w-full h-80
-            cs:h-480 sm:h-600
+            cs:h-410 sm:h-586
             lg:flex-row clg:items-start cxl:h-650"
         >
             <div

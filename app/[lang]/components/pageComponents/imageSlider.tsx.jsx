@@ -24,10 +24,8 @@ export default function ImageSlider({ page, careers }) {
     return (
         <section
             aria-label="Image Slider"
-            className="relative flex flex-col justify-center items-center my-8 w-full min-h-480 h-65dvh
-            cs:h-75dvh
-            sm:min-h-560 sm:h-25dvh sm:my-16
-            lg:my-4 cxl:my-0 cxl:min-h-640 cxl:h-75vh"
+            className="relative flex flex-col justify-center items-center mt-12 w-full 570
+            cs:mt-0 cs:h-650 sm:mt-1 sm:h-570 clg:h-490 cxl:h-570"
         >
             <div className="flex flex-col items-center w-full mb-2 cs:mb-4">
                 <h1 className="font-bold mb-1 w-9/10 text-lg sm:text-xl lg:text-2xl lg:w-4/5 cxl:text-3xl">
@@ -51,7 +49,7 @@ export default function ImageSlider({ page, careers }) {
                             sm:bg-dark_gray-to-black-bottom sm:dark:bg-gray-to-white-bottom"
                         >
                             <div
-                                className="flex justify-center w-full h-1/2 rounded-br-3xl rounded-t-3xl bg-dark_gray dark:bg-gray
+                                className="flex justify-center items-end w-full h-1/2 rounded-br-3xl rounded-t-3xl bg-dark_gray dark:bg-gray
                             sm:w-1/2 sm:h-full sm:rounded-l-3xl"
                             >
                                 <Image
@@ -59,14 +57,14 @@ export default function ImageSlider({ page, careers }) {
                                     alt={alt}
                                     width={183}
                                     height={217}
-                                    className="object-fill w-3/5 h-full cs:w-3/5 sm:w-full clg:w-3/5"
+                                    className="object-fill w-3/5 h-full cs:w-3/5 sm:w-full sm:h-9/10 clg:w-3/5"
                                 />
                             </div>
                             <div
                                 className="w-full h-1/2 flex flex-col justify-center items-center rounded-tl-3xl rounded-b-3xl bg-black dark:bg-white
-                             sm:w-1/2 sm:h-full sm:rounded-r-3xl sm:justify-start"
+                             sm:w-1/2 sm:h-full sm:rounded-r-3xl "
                             >
-                                <div className="w-9/10 flex flex-col justify-center items-start mb-4 sm:mt-12">
+                                <div className="w-9/10 flex flex-col justify-center items-start mb-4">
                                     {title &&
                                         title.map((text, idx) => (
                                             <span
