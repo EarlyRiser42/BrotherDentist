@@ -51,7 +51,7 @@ export default function Hero({ page }) {
                     </div>
                 </div>
                 <div
-                    className="w-full h-full min-h-64 rounded-3xl relative
+                    className="w-full h-full rounded-3xl relative inline-block
                     sm:min-h-480"
                 >
                     <Suspense fallback={<div className="bg-white"></div>}>
