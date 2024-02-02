@@ -7,10 +7,9 @@ export default function Hero({ page }) {
     return (
         <section
             aria-label="Hero"
-            className="flex flex-col justify-center my-4 items-center w-full min-h-330 h-40dvh
-            cs:h-70dvh
-            sm:min-h-640 sm:h-90dvh
-            lg:flex-row clg:items-start "
+            className="flex flex-col justify-center my-4 items-center w-full h-80
+            cs:h-480 sm:h-600
+            lg:flex-row clg:items-start cxl:h-650"
         >
             <div
                 className="flex items-center justify-start w-9/10 h-9/10 rounded-2xl relative
@@ -61,11 +60,11 @@ export default function Hero({ page }) {
                 </div>
             </div>
             <div
-                className="w-9/10 h-1/5 grid grid-cols-3 grid-rows-1 gap-x-2 mt-4 min-h-80
-                    cs:min-h-120 cs:mt-8 cs:h-2/5 cs:min-w-cs sm:min-w-sm sm:min-h-170 sm:gap-x-4
+                className="w-9/10 h-1/5 grid grid-cols-3 grid-rows-1 gap-x-2 mt-2 min-h-80
+                    cs:min-h-120 cs:mt-4 cs:h-2/5 cs:min-w-cs sm:min-w-sm sm:min-h-170 sm:gap-x-4
                     clg:grid-cols-1 clg:grid-rows-3 clg:ml-6 clg:gap-y-6 clg:min-w-300 clg:mt-0 clg:h-9/10 clg:w-1/10"
             >
-                <div className="aspect-ratio w-full aspect-w-1 aspect-h-1 rounded-2xl relative bg-green hover:font-bold">
+                <div className="aspect-square rounded-2xl relative bg-green hover:font-bold cs:aspect-[4/3] clg:aspect-auto">
                     <span
                         className="mt-4 ml-4 inline-block text-black dark:text-white
                         sm:text-lg lg:text-xl xl:text-2xl"
@@ -76,7 +75,7 @@ export default function Hero({ page }) {
                         <ArrowRight />
                     </div>
                 </div>
-                <div className="aspect-ratio w-full aspect-w-1 aspect-h-1 rounded-2xl relative bg-yellow hover:font-bold">
+                <div className="aspect-square rounded-2xl relative bg-yellow hover:font-bold cs:aspect-[4/3] clg:aspect-auto">
                     <span
                         className="mt-4 ml-4 inline-block relative text-black dark:text-white
                         sm:text-lg lg:text-xl xl:text-2xl"
@@ -87,7 +86,7 @@ export default function Hero({ page }) {
                         <ArrowRight />
                     </div>
                 </div>
-                <div className="aspect-ratio w-full aspect-w-1 aspect-h-1 rounded-2xl relative bg-dark_gray dark:bg-gray hover:font-bold">
+                <div className="aspect-square  rounded-2xl relative bg-dark_gray dark:bg-gray hover:font-bold cs:aspect-[4/3] clg:aspect-auto">
                     <span
                         className="mt-4 ml-4 inline-block relative text-black dark:text-white
                         sm:text-lg lg:text-xl xl:text-2xl"
