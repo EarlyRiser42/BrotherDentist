@@ -27,11 +27,11 @@ export default function ImageSlider({ page, careers }) {
             className="relative flex flex-col justify-start items-center w-full h-490 mt-16
             cs:h-650 cs:mt-12 sm:h-570 sm:mt-8 clg:h-490 cxl:h-570"
         >
-            <div className="flex flex-col items-center w-full mb-2 cs:mb-4">
-                <h1 className="font-bold mb-1 w-9/10 text-lg sm:text-xl lg:text-2xl lg:w-4/5 cxl:text-3xl">
+            <div className="flex flex-col items-center w-9/10 mb-2 cs:mb-4">
+                <h1 className="font-bold mb-1 w-full text-2xl sm:text-3xl lg:text-4xl lg:w-4/5 cxl:text-5xl">
                     {page.home.ImageSlider_h1}
                 </h1>
-                <h4 className="font-medium w-9/10 text-base sm:text-lg lg:text-xl lg:w-4/5 cxl:text-2xl">
+                <h4 className="font-medium w-full text-xl sm:text-2xl lg:text-3xl lg:w-4/5 cxl:text-4xl">
                     {page.home.ImageSlider_h4}
                 </h4>
             </div>
@@ -114,7 +114,7 @@ export default function ImageSlider({ page, careers }) {
                     aria-hidden
                 />
             </button>
-            <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 cs:bottom-8 clg:-bottom-2 cxl:-bottom-2">
+            <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-2 sm:bottom-2 cs:bottom-8 clg:-bottom-2 cxl:-bottom-2">
                 {careers.map((_, index) => (
                     <button
                         key={index}
