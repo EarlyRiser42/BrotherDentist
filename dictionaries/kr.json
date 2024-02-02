@@ -18,7 +18,7 @@
     },
     "buttons": {
       "login": "로그인",
-      "consult": "상담하기"
+      "signUp": "회원가입"
     }
   },
   "page": {

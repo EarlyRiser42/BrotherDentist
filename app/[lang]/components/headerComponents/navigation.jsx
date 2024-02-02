@@ -98,22 +98,18 @@ const Navigation = ({ lang, navOpen, navAnimation, header }) => {
 
             <div className="flex justify-between items-center w-11/12 h-15/100 clg:hidden">
                 <div className="flex justify-start items-center w-4/5 h-2/5">
-                    <button className="bg-black dark:bg-white text-white dark:text-black rounded-3xl w-20 min-w-16 min-h-8 h-full mr-5%">
-                        {header.buttons.login}
-                    </button>
-                    <button className="bg-yellow rounded-3xl w-2/5 min-w-28 max-w-28 min-h-8 h-full flex items-center justify-start">
-                        <Image
-                            src={kakaoTalkPng}
-                            alt={'Add KakaoCh'}
-                            width={40}
-                            height={40}
-                            className="ml-1"
-                        />
-                        <span className="text-black">
-                            {' '}
-                            {header.buttons.consult}
-                        </span>
-                    </button>
+                    <Link href={`${lang}/login`}>
+                        <button className="bg-black dark:bg-white text-white dark:text-black rounded-3xl w-20 min-w-16 min-h-8 h-full mr-5%">
+                            {header.buttons.login}
+                        </button>
+                    </Link>
+                    <Link href={`${lang}/signup`}>
+                        <button className="bg-light_blue rounded-3xl w-2/5 min-w-28 max-w-28 min-h-8 h-full flex items-center justify-center">
+                            <span className="text-white  dark:text-black">
+                                {header.buttons.signUp}
+                            </span>
+                        </button>
+                    </Link>
                 </div>
                 <div className="flex justify-between items-center w-1/5 max-w-20">
                     <ToggleLanguage lang={lang} />
