@@ -24,7 +24,7 @@ export default function ImageSlider({ page, careers }) {
     return (
         <section
             aria-label="Image Slider"
-            className="relative flex flex-col justify-start items-center w-full 570 mt-16
+            className="relative flex flex-col justify-start items-center w-full h-490 mt-16
             cs:h-650 cs:mt-12 sm:h-570 sm:mt-8 clg:h-490 cxl:h-570"
         >
             <div className="flex flex-col items-center w-full mb-2 cs:mb-4">
@@ -45,11 +45,10 @@ export default function ImageSlider({ page, careers }) {
                     {careers.map(({ url, alt, title, details }, index) => (
                         <div
                             key={index}
-                            className="flex flex-col h-full min-w-full rounded-3xl sm:flex-row bg-light_gray-to-light_blue
-                            sm:bg-light_gray-to-light_blue-bottom "
+                            className="flex flex-col h-full min-w-full rounded-3xl sm:flex-row bg-light_gray"
                         >
                             <div
-                                className="flex justify-center items-end w-full h-1/2 rounded-br-3xl rounded-t-3xl bg-light_gray
+                                className="flex justify-center items-end w-full h-1/2 rounded-t-3xl bg-light_gray
                             sm:w-1/2 sm:h-full sm:rounded-l-3xl"
                             >
                                 <Image
@@ -61,8 +60,8 @@ export default function ImageSlider({ page, careers }) {
                                 />
                             </div>
                             <div
-                                className="w-full h-1/2 flex flex-col justify-center items-center rounded-tl-3xl rounded-b-3xl bg-light_blue
-                             sm:w-1/2 sm:h-full sm:rounded-r-3xl "
+                                className="w-full h-1/2 flex flex-col justify-center items-center rounded-3xl bg-light_blue
+                             sm:w-1/2 sm:h-full"
                             >
                                 <div className="w-9/10 flex flex-col justify-center items-start mb-4">
                                     {title &&
@@ -71,8 +70,8 @@ export default function ImageSlider({ page, careers }) {
                                                 key={idx}
                                                 className={
                                                     idx === 0
-                                                        ? 'text-sm font-bold text-black dark:text-white mb-2 cs:text-base sm:text-lg'
-                                                        : 'text-xs text-black dark:text-white cs:text-sm sm:text-base'
+                                                        ? 'text-sm font-bold text-white  mb-2 cs:text-base sm:text-lg'
+                                                        : 'text-xs text-white cs:text-sm sm:text-base'
                                                 }
                                             >
                                                 {text}
@@ -84,7 +83,7 @@ export default function ImageSlider({ page, careers }) {
                                         details.map((text, idx) => (
                                             <span
                                                 key={idx}
-                                                className="text-xs text-black dark:text-white cs:text-sm sm:text-base sm:mb-2 cxl:mb-4"
+                                                className="text-xs text-white cs:text-sm sm:text-base sm:mb-2 cxl:mb-4"
                                             >
                                                 {text}
                                             </span>
@@ -115,7 +114,7 @@ export default function ImageSlider({ page, careers }) {
                     aria-hidden
                 />
             </button>
-            <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 flex gap-2 cs:bottom-8 clg:-bottom-6">
+            <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 cs:bottom-8 clg:-bottom-2 cxl:-bottom-2">
                 {careers.map((_, index) => (
                     <button
                         key={index}

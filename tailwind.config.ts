@@ -29,7 +29,7 @@ const config: Config = {
                 dark_gray: '#F3F3F3',
                 gray_300: '#D1D5DB',
                 gray_600: '#4B5563',
-                light_blue: '#38B6FF',
+                light_blue: '#0287FF',
                 blue: '#A3CFCD',
                 green: '#4DD964',
                 hero: '#01123E',
@@ -45,9 +45,9 @@ const config: Config = {
                 'red-to-yellow':
                     'linear-gradient(to right top, #E16861, #DF8558, #FBCB50)',
                 'light_gray-to-light_blue':
-                    'linear-gradient(to right, #F9FAFB, #38B6FF)',
+                    'linear-gradient(to right, #F9FAFB, #0287FF)',
                 'light_gray-to-light_blue-bottom':
-                    'linear-gradient(to bottom, #F9FAFB, #38B6FF)',
+                    'linear-gradient(to bottom, #F9FAFB, #0287FF)',
             },
             backgroundSize: {
                 '400': '400%',

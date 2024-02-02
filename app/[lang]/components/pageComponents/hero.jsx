@@ -66,7 +66,7 @@ export default function Hero({ page }) {
             >
                 <div className="aspect-[4/3] rounded-2xl relative bg-green hover:font-bold cmd:aspect-auto ">
                     <span
-                        className="mt-4 ml-4 inline-block text-black dark:text-white
+                        className="mt-2 ml-2 inline-block text-black dark:text-white cs:mt-4 cs:ml-4
                         sm:text-lg lg:text-xl xl:text-2xl"
                     >
                         {page.home.button1}
@@ -77,7 +77,7 @@ export default function Hero({ page }) {
                 </div>
                 <div className="aspect-[4/3] rounded-2xl relative bg-yellow hover:font-bold cmd:aspect-auto">
                     <span
-                        className="mt-4 ml-4 inline-block relative text-black dark:text-white
+                        className="mt-2 ml-2 inline-block relative text-black dark:text-white cs:mt-4 cs:ml-4
                         sm:text-lg lg:text-xl xl:text-2xl"
                     >
                         {page.home.button2}
@@ -86,9 +86,9 @@ export default function Hero({ page }) {
                         <ArrowRight />
                     </div>
                 </div>
-                <div className="aspect-[4/3]  rounded-2xl relative bg-dark_gray dark:bg-gray hover:font-bold cmd:aspect-auto ">
+                <div className="aspect-[4/3] rounded-2xl relative bg-dark_gray dark:bg-gray hover:font-bold cmd:aspect-auto ">
                     <span
-                        className="mt-4 ml-4 inline-block relative text-black dark:text-white
+                        className="mt-2 ml-2 inline-block relative text-black dark:text-white cs:mt-4 cs:ml-4
                         sm:text-lg lg:text-xl xl:text-2xl"
                     >
                         {page.home.button3}
