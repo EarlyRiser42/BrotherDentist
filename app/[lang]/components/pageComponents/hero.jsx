@@ -7,7 +7,7 @@ export default function Hero({ page }) {
     return (
         <section
             aria-label="Hero"
-            className="flex flex-col justify-center my-4 items-center w-full min-h-96 h-50dvh
+            className="flex flex-col justify-center my-4 items-center w-full min-h-330 h-40dvh
             cs:h-70dvh
             sm:min-h-640 sm:h-90dvh
             lg:flex-row clg:items-start "

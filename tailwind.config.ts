@@ -115,6 +115,7 @@ const config: Config = {
                 '20dvh': '20dvh',
                 '30dvh': '35dvh',
                 '40dvh': '40dvh',
+                '45dvh': '45dvh',
                 '50dvh': '50dvh',
                 '60dvh': '60dvh',
                 '65dvh': '65dvh',
