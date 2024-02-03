@@ -90,7 +90,7 @@ export default function ImageSlider({ page, careers }) {
                                             </span>
                                         ))}
                                 </div>
-                                <div className="w-9/10 flex flex-col justify-center items-start space-y-1">
+                                <div className="w-9/10 flex flex-col justify-center items-start">
                                     {details &&
                                         details.map((text, idx) => (
                                             <span
