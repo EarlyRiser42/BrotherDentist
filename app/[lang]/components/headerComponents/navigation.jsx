@@ -98,8 +98,8 @@ const Navigation = ({ lang, navOpen, navAnimation, header }) => {
 
             <div className="flex justify-between items-center w-11/12 h-15/100 clg:hidden">
                 <div className="flex justify-start items-center w-4/5 h-2/5">
-                    <Link href={`${lang}/login`}>
-                        <button className="bg-black dark:bg-white text-white dark:text-black rounded-3xl w-20 min-w-16 min-h-8 h-full mr-5%">
+                    <Link href={`${lang}/login`} className="mr-5%">
+                        <button className="bg-black dark:bg-white text-white dark:text-black rounded-3xl w-20 min-w-16 min-h-8 h-full ">
                             {header.buttons.login}
                         </button>
                     </Link>
