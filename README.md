@@ -12,8 +12,8 @@
 - feat (feature): 새로운 기능 추가
 - fix (bug fix): 버그 수정
 - docs (documentation): 내부 문서 추가/수정
-- design : CSS 등 디자인 추가/수정
-- style (formatting, missing semi colons, …): 코드 스타일 수정
+- style : CSS 등 디자인 추가/수정
+- design (formatting, missing semi colons, …): 코드 스타일 수정
 - refactor: 코드 리팩토링
 - test (when adding missing tests): 테스트 추가/수정
 - chore (maintain): 빌드 관련 코드 수정
@@ -27,6 +27,5 @@
 ### Github Action 사용:
 Continuous Integration : Dev의 에러가 없을 경우 main으로 자동 통합
 
-### Netlify 사용
-
+### Vercel 사용
 Continuous Delivery : main 브랜치 자동 배포
