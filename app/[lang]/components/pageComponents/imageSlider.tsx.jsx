@@ -27,7 +27,7 @@ export default function ImageSlider({ page, careers }) {
             className="relative flex flex-col justify-start items-center w-full h-490 mt-16
             cs:h-650 cs:mt-12 sm:h-570 sm:mt-8 clg:h-490 cxl:h-570"
         >
-            <div className="flex flex-col items-center w-9/10 mb-2 cs:mb-4">
+            <div className="flex flex-col items-start w-9/10 mb-6 cs:mb-12 clg:min-w-970 clg:max-w-1250 cxl:w-85/100">
                 <h1 className="font-bold mb-1 w-full text-2xl sm:text-3xl lg:text-4xl lg:w-4/5 cxl:text-5xl">
                     {page.home.ImageSlider_h1}
                 </h1>
@@ -45,22 +45,34 @@ export default function ImageSlider({ page, careers }) {
                     {careers.map(({ url, alt, title, details }, index) => (
                         <div
                             key={index}
-                            className="flex flex-col h-full min-w-full rounded-3xl sm:flex-row bg-light_gray"
+                            className="flex flex-col h-full min-w-full rounded-3xl sm:flex-row"
                         >
                             <div
-                                className="flex justify-center items-end w-full h-1/2 rounded-t-3xl bg-light_gray
-                            sm:w-1/2 sm:h-full sm:rounded-l-3xl"
+                                className="w-full h-2/6 relative flex justify-center items-end rounded-3xl mb-4 bg-light_gray
+                                cs:h-2/5 sm:hidden"
                             >
                                 <Image
-                                    src={url}
+                                    src={url[1]}
                                     alt={alt}
-                                    width={183}
-                                    height={217}
-                                    className="object-fill w-3/5 h-full cs:w-3/5 sm:w-full sm:h-9/10 clg:w-3/5"
+                                    width={1642} // 이미지의 원본 너비
+                                    height={1489} // 이미지의 원본 높이
+                                    className="object-fill w-3/5 h-full cs:w-3/5"
                                 />
                             </div>
                             <div
-                                className="w-full h-1/2 flex flex-col justify-center items-center rounded-3xl bg-light_blue
+                                className="hidden justify-center items-end w-full h-1/2 rounded-3xl bg-light_gray
+                            sm:flex sm:w-1/2 sm:h-full"
+                            >
+                                <Image
+                                    src={url[0]}
+                                    alt={alt}
+                                    width={1830}
+                                    height={2170}
+                                    className="object-fill w-full h-9/10 clg:w-3/5"
+                                />
+                            </div>
+                            <div
+                                className="w-full h-4/6 flex flex-col justify-center items-center rounded-3xl bg-light_blue cs:h-3/5
                              sm:w-1/2 sm:h-full"
                             >
                                 <div className="w-9/10 flex flex-col justify-center items-start mb-4">
@@ -78,7 +90,7 @@ export default function ImageSlider({ page, careers }) {
                                             </span>
                                         ))}
                                 </div>
-                                <div className="w-9/10 flex flex-col justify-center items-start">
+                                <div className="w-9/10 flex flex-col justify-center items-start space-y-1">
                                     {details &&
                                         details.map((text, idx) => (
                                             <span
@@ -96,7 +108,7 @@ export default function ImageSlider({ page, careers }) {
             </div>
             <button
                 onClick={showPrevImage}
-                className="block absolute top-0 bottom-0 left-0 sm:left-2  cursor-pointer"
+                className="block absolute top-0 bottom-0 left-0 sm:top-4 sm:left-2 cursor-pointer"
                 aria-label="View Previous Image"
             >
                 <IoIosArrowBack
@@ -106,7 +118,7 @@ export default function ImageSlider({ page, careers }) {
             </button>
             <button
                 onClick={showNextImage}
-                className="block absolute top-0 bottom-0 right-0 sm:right-2 cursor-pointer"
+                className="block absolute top-0 bottom-0 right-0 sm:top-4 sm:right-2 cursor-pointer"
                 aria-label="View Next Image"
             >
                 <IoIosArrowForward
@@ -114,7 +126,7 @@ export default function ImageSlider({ page, careers }) {
                     aria-hidden
                 />
             </button>
-            <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-2 sm:bottom-2 cs:bottom-8 clg:-bottom-2 cxl:-bottom-2">
+            <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-2  cs:bottom-8 sm:-bottom-2 clg:-bottom-4 cxl:-bottom-6">
                 {careers.map((_, index) => (
                     <button
                         key={index}
