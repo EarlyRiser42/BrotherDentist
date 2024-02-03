@@ -1,7 +1,8 @@
 {
   "metadata": {
     "icon" : "/en/favicon.ico",
-    "open_graph" : "https://firebasestorage.googleapis.com/v0/b/loginform-6747a.appspot.com/o/og_en.png?alt=media&token=3f633592-cc27-4529-b50b-80e51ca5cea4"
+    "open_graph" : "https://firebasestorage.googleapis.com/v0/b/loginform-6747a.appspot.com/o/og_en.png?alt=media&token=754c7252-9792-4722-bce8-60f017af0dda",
+    "open_graph_alt" : "https://firebasestorage.googleapis.com/v0/b/loginform-6747a.appspot.com/o/og_en_alt.png?alt=media&token=1187a9df-b189-4d96-bd89-bc02c09acbe3"
   },
   "header": {
     "about": "About",
