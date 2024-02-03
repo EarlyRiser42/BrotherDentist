@@ -8,7 +8,7 @@ export default function proSection({ page }) {
             aria-label="Image Slider"
             className="flex flex-col justify-start items-center w-full h-auto mt-20 cxl:mt-32"
         >
-            <div className="flex flex-col items-center w-9/10">
+            <div className="flex flex-col items-start w-9/10 mb-6 cs:mb-12 clg:min-w-970 clg:max-w-1250 cxl:w-85/100">
                 <h1 className="font-bold mb-1 w-full text-2xl sm:text-3xl lg:text-4xl lg:w-4/5 cxl:text-5xl">
                     {page.home.proSection_h1}
                 </h1>

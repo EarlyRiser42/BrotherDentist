@@ -1,4 +1,8 @@
 {
+  "metadata": {
+    "icon" : "/favicon.ico",
+    "open_graph" : "https://firebasestorage.googleapis.com/v0/b/loginform-6747a.appspot.com/o/og_ko.png?alt=media&token=cf18d3d8-5838-4960-84d5-edade1d001f9"
+  },
   "header": {
     "about": "소개",
     "services": {
@@ -23,7 +27,7 @@
   },
   "page": {
     "home": {
-      "title": "혁플란트 치과",
+      "title": "혁플란트치과",
       "description": "혁플란트 치과 홈페이지",
       "p0": "임플란트 전문",
       "p1": "임플란트의",
