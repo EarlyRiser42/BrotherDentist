@@ -35,7 +35,7 @@ export default function ImageSlider({ page, careers }) {
                     {page.home.ImageSlider_h4}
                 </h4>
             </div>
-            <div className="w-96/100 h-4/5 flex overflow-hidden cs:w-9/10 clg:w-88/100 clg:min-w-940 clg:max-w-1250 cxl:w-85/100">
+            <div className="w-full h-4/5 flex overflow-hidden cs:w-9/10 clg:w-88/100 clg:min-w-940 clg:max-w-1250 cxl:w-85/100">
                 <div
                     className="flex w-full h-full rounded-3xl transition-transform duration-500 ease-in-out "
                     style={{
@@ -45,9 +45,9 @@ export default function ImageSlider({ page, careers }) {
                     {careers.map(({ url, alt, title, details }, index) => (
                         <div
                             key={index}
-                            className="flex flex-row h-full min-w-full rounded-3xl sm:flex-row relative bg-light_gray"
+                            className="flex flex-row h-full min-w-full rounded-3xl sm:flex-row relative"
                         >
-                            <div className="w-4/6 h-full flex flex-col justify-center items-center rounded-l-3xl absolute left-2 z-[2]">
+                            <div className="w-4/6 h-full flex flex-col justify-center items-center cs:rounded-l-3xl absolute left-2 z-[2]">
                                 <div className="w-9/10 flex flex-col justify-center items-start mb-4">
                                     {title &&
                                         title.map((text, idx) => (
@@ -75,7 +75,7 @@ export default function ImageSlider({ page, careers }) {
                                         ))}
                                 </div>
                             </div>
-                            <div className="flex absolute right-0 justify-center items-end w-1/2 h-full rounded-r-3xl bg-light_blue">
+                            <div className="flex absolute right-0 justify-center items-end w-1/2 h-full cs:rounded-r-3xl bg-light_blue">
                                 <Image
                                     src={url[0]}
                                     alt={alt}

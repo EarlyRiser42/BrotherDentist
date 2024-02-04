@@ -30,14 +30,14 @@ export default function proSection({ page }) {
                         (span, index) => (
                             <span
                                 key={index}
-                                className="text-base mb-1 sm:text-lg lg:text-xl lg:w-3/4 cxl:text-2xl"
+                                className="text-base mb-0.5 lg:mb-1 sm:text-lg lg:text-xl lg:w-3/4 cxl:text-2xl"
                             >
                                 {span}
                             </span>
                         ),
                     )}
                 </div>
-                <div className="relative w-full h-72 rounded-3xl mt-8 cs:h-80 sm:h-96 cmd:h-410 clg:ml-6 clg:w-1/2 clg:mt-0 clg:h-full">
+                <div className="relative w-full h-72 rounded-3xl mt-4  cs:h-80 sm:h-96 cmd:h-410 clg:ml-6 clg:w-1/2 clg:mt-0 clg:h-full">
                     <Image className="rounded-3xl" src={pro1} alt="pro1" fill />
                 </div>
             </div>
@@ -53,14 +53,14 @@ export default function proSection({ page }) {
                         (span, index) => (
                             <span
                                 key={index}
-                                className="text-base mb-1 sm:text-lg lg:text-xl lg:w-3/4 cxl:text-2xl"
+                                className="text-base mb-0.5 lg:mb-1 sm:text-lg lg:text-xl lg:w-3/4 cxl:text-2xl"
                             >
                                 {span}
                             </span>
                         ),
                     )}
                 </div>
-                <div className="relative w-full h-72 rounded-3xl mt-8 cs:h-80 sm:h-96 cmd:h-410 clg:ml-6 clg:w-1/2 clg:mt-0 clg:h-full clg:order-1 clg:ml-0">
+                <div className="relative w-full h-72 rounded-3xl mt-4  cs:h-80 sm:h-96 cmd:h-410 clg:ml-6 clg:w-1/2 clg:mt-0 clg:h-full clg:order-1 clg:ml-0">
                     <Image className="rounded-3xl" src={pro2} alt="pro1" fill />
                 </div>
             </div>
@@ -76,14 +76,14 @@ export default function proSection({ page }) {
                         (span, index) => (
                             <span
                                 key={index}
-                                className="text-base mb-1 sm:text-lg lg:text-xl lg:w-3/4 cxl:text-2xl"
+                                className="text-base mb-0.5 lg:mb-1 sm:text-lg lg:text-xl lg:w-3/4 cxl:text-2xl"
                             >
                                 {span}
                             </span>
                         ),
                     )}
                 </div>
-                <div className="relative w-full h-72 rounded-3xl mt-8 cs:h-80 sm:h-96 cmd:h-410 clg:ml-6 clg:w-1/2 clg:mt-0 clg:h-full">
+                <div className="relative w-full h-72 rounded-3xl mt-4  cs:h-80 sm:h-96 cmd:h-410 clg:ml-6 clg:w-1/2 clg:mt-0 clg:h-full">
                     <Image className="rounded-3xl" src={pro3} alt="pro1" fill />
                 </div>
             </div>

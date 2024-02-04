@@ -12,7 +12,7 @@ export default function Hero({ page }) {
             lg:flex-row clg:items-start cxl:h-650"
         >
             <div
-                className="flex items-center justify-start w-9/10 h-9/10 rounded-2xl relative
+                className="flex items-center justify-start w-9/10 h-9/10 rounded-3xl relative
                     cs:min-w-cs sm:min-w-sm clg:w-7/10 clg:min-w-clg"
             >
                 <div
