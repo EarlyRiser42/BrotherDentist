@@ -61,7 +61,38 @@
         "Completed advanced course in Osstem AIC Implant",
         "Osstem AIC Implant Sinus Surgery Course",
         "Osstem AIC OneGuide Advanced Course"
-      ]
+      ],
+      "proSection": {
+        "proSection_h1": "The Unique Hyukplant",
+        "proSection_h4": "Only at Hyukplant.",
+        "advancedTechAndEquipment": {
+          "h4": "Cutting-edge Technology and Equipment",
+          "spans": [
+            "With hospital-grade medical equipment,",
+            "Experience more precise and effective treatment.",
+            "Minimizing discomfort during treatment,",
+            "Ensuring quick recovery with minimal discomfort."
+          ]
+        },
+        "customizedTreatment": {
+          "h4": "Customized Treatment",
+          "spans": [
+            "For every patient,",
+            "Considering the specific condition,",
+            "Achieving the most suitable treatment outcome."
+          ]
+        },
+        "professionalMedicalTeam": {
+          "h4": "Professional Medical Team and Systematic Management",
+          "spans": [
+            "Based on extensive experience and expertise,",
+            "Providing the highest quality of care.",
+            "Through a systematic management process before and after treatment,",
+            "Ensuring safe and comfortable treatment."
+          ]
+        }
+      }
+
     },
     "services": {
       "title": "Our Services",

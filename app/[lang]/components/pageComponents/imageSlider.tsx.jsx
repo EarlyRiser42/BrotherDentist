@@ -25,9 +25,9 @@ export default function ImageSlider({ page, careers }) {
         <section
             aria-label="Image Slider"
             className="relative flex flex-col justify-start items-center w-full h-330 mt-16
-            cs:h-410 cs:mt-12 sm:h-570 sm:mt-8 clg:h-490 cxl:h-570"
+            cs:h-410 cs:mt-24 sm:h-570 sm:mt-32 clg:h-490 cxl:h-570"
         >
-            <div className="flex flex-col items-start w-9/10 h-1/5 mb-6 clg:min-w-970 clg:max-w-1250 cxl:w-85/100">
+            <div className="flex flex-col justify-center w-9/10 h-1/5 clg:min-w-940 clg:max-w-1250 cxl:w-85/100">
                 <h1 className="font-bold mb-1 w-full text-2xl sm:text-3xl lg:text-4xl lg:w-4/5 cxl:text-5xl">
                     {page.home.ImageSlider_h1}
                 </h1>
@@ -35,9 +35,9 @@ export default function ImageSlider({ page, careers }) {
                     {page.home.ImageSlider_h4}
                 </h4>
             </div>
-            <div className="w-96/100 h-4/5 flex overflow-hidden sm:w-9/10 clg:w-88/100 clg:min-w-970 clg:max-w-1250 cxl:w-85/100">
+            <div className="w-96/100 h-4/5 flex overflow-hidden cs:w-9/10 clg:w-88/100 clg:min-w-940 clg:max-w-1250 cxl:w-85/100">
                 <div
-                    className="flex w-full h-full rounded-3xl transition-transform duration-500 ease-in-out bg-light_gray"
+                    className="flex w-full h-full rounded-3xl transition-transform duration-500 ease-in-out "
                     style={{
                         transform: `translateX(${-imageIndex * 100}%)`,
                     }}
@@ -45,7 +45,7 @@ export default function ImageSlider({ page, careers }) {
                     {careers.map(({ url, alt, title, details }, index) => (
                         <div
                             key={index}
-                            className="flex flex-row h-full min-w-full rounded-3xl sm:flex-row relative"
+                            className="flex flex-row h-full min-w-full rounded-3xl sm:flex-row relative bg-light_gray"
                         >
                             <div className="w-4/6 h-full flex flex-col justify-center items-center rounded-l-3xl absolute left-2 z-[2]">
                                 <div className="w-9/10 flex flex-col justify-center items-start mb-4">

@@ -36,8 +36,8 @@ export default async function Home({
         <>
             <Header lang={lang} header={header} />
             <Hero page={page} />
-            <ImageSlider page={page} careers={CAREERS} />
             <ProSection page={page} />
+            <ImageSlider page={page} careers={CAREERS} />
             <Footer footer={footer} />
         </>
     );

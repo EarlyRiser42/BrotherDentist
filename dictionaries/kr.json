@@ -66,8 +66,37 @@
         "오스템 AIC Implant Sinus Surgery Course",
         "오스템 AIC OneGuide Advanced Course"
       ],
-      "proSection_h1": "혁플란트만의 특별함",
-      "proSection_h4": "오직 혁플란트만이."
+      "proSection": {
+        "proSection_h1": "혁플란트만의 특별함",
+        "proSection_h4": "오직 혁플란트만이.",
+        "advancedTechAndEquipment": {
+          "h4": "최첨단 기술력과 첨단장비",
+          "spans": [
+            "대학병원급 의료장비로",
+            "더 정밀하고 효과적인 치료를 받아보세요.",
+            "치료의 불편함을 최소화하고",
+            "빠른 회복과 최소한의 불편함을 제공합니다."
+          ]
+        },
+        "customizedTreatment": {
+          "h4": "개인 맞춤형 치료",
+          "spans": [
+            "각 환자마다",
+            "구체적인 상태를 고려하여",
+            "가장 적합한 치료결과를 달성합니다."
+          ]
+        },
+        "professionalMedicalTeam": {
+          "h4": "전문 의료진과 체계적 관리",
+          "spans": [
+            "광범휘한 경험과 전문지식을 바탕으로",
+            "최상의 치료를 제공합니다.",
+            "치료 전, 후로 체계적인 관리 프로세스를 통해",
+            "안전하고 편안한 치료를 제공합니다."
+          ]
+        }
+      }
+
     },
     "services": {
       "title": "진료 과목",
