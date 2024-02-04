@@ -24,10 +24,10 @@ export default function ImageSlider({ page, careers }) {
     return (
         <section
             aria-label="Image Slider"
-            className="relative flex flex-col justify-start items-center w-full h-490 mt-16
-            cs:h-650 cs:mt-12 sm:h-570 sm:mt-8 clg:h-490 cxl:h-570"
+            className="relative flex flex-col justify-start items-center w-full h-330 mt-16
+            cs:h-410 cs:mt-12 sm:h-570 sm:mt-8 clg:h-490 cxl:h-570"
         >
-            <div className="flex flex-col items-start w-9/10 mb-6 cs:mb-12 clg:min-w-970 clg:max-w-1250 cxl:w-85/100">
+            <div className="flex flex-col items-start w-9/10 h-1/5 mb-6 clg:min-w-970 clg:max-w-1250 cxl:w-85/100">
                 <h1 className="font-bold mb-1 w-full text-2xl sm:text-3xl lg:text-4xl lg:w-4/5 cxl:text-5xl">
                     {page.home.ImageSlider_h1}
                 </h1>
@@ -35,9 +35,9 @@ export default function ImageSlider({ page, careers }) {
                     {page.home.ImageSlider_h4}
                 </h4>
             </div>
-            <div className="w-9/10 h-4/5 flex overflow-hidden clg:w-88/100 clg:min-w-970 clg:max-w-1250 cxl:w-85/100">
+            <div className="w-96/100 h-4/5 flex overflow-hidden sm:w-9/10 clg:w-88/100 clg:min-w-970 clg:max-w-1250 cxl:w-85/100">
                 <div
-                    className="flex w-full rounded-3xl transition-transform duration-500 ease-in-out"
+                    className="flex w-full h-full rounded-3xl transition-transform duration-500 ease-in-out bg-light_gray"
                     style={{
                         transform: `translateX(${-imageIndex * 100}%)`,
                     }}
@@ -45,36 +45,9 @@ export default function ImageSlider({ page, careers }) {
                     {careers.map(({ url, alt, title, details }, index) => (
                         <div
                             key={index}
-                            className="flex flex-col h-full min-w-full rounded-3xl sm:flex-row"
+                            className="flex flex-row h-full min-w-full rounded-3xl sm:flex-row relative"
                         >
-                            <div
-                                className="w-full h-2/6 relative flex justify-center items-end rounded-3xl mb-4 bg-light_gray
-                                cs:h-2/5 sm:hidden"
-                            >
-                                <Image
-                                    src={url[1]}
-                                    alt={alt}
-                                    width={1642} // 이미지의 원본 너비
-                                    height={1489} // 이미지의 원본 높이
-                                    className="object-fill w-3/5 h-full cs:w-3/5"
-                                />
-                            </div>
-                            <div
-                                className="hidden justify-center items-end w-full h-1/2 rounded-3xl bg-light_gray
-                            sm:flex sm:w-1/2 sm:h-full"
-                            >
-                                <Image
-                                    src={url[0]}
-                                    alt={alt}
-                                    width={1830}
-                                    height={2170}
-                                    className="object-fill w-full h-9/10 clg:w-3/5"
-                                />
-                            </div>
-                            <div
-                                className="w-full h-4/6 flex flex-col justify-center items-center rounded-3xl bg-light_blue cs:h-3/5
-                             sm:w-1/2 sm:h-full"
-                            >
+                            <div className="w-4/6 h-full flex flex-col justify-center items-center rounded-l-3xl absolute left-2 z-[2]">
                                 <div className="w-9/10 flex flex-col justify-center items-start mb-4">
                                     {title &&
                                         title.map((text, idx) => (
@@ -82,8 +55,8 @@ export default function ImageSlider({ page, careers }) {
                                                 key={idx}
                                                 className={
                                                     idx === 0
-                                                        ? 'text-sm font-bold text-white  mb-2 cs:text-base sm:text-lg'
-                                                        : 'text-xs text-white cs:text-sm sm:text-base'
+                                                        ? 'text-sm font-bold text-black dark:text-white  mb-2 cs:text-base sm:text-lg'
+                                                        : 'text-xs text-black dark:text-white cs:text-sm sm:text-base'
                                                 }
                                             >
                                                 {text}
@@ -95,12 +68,21 @@ export default function ImageSlider({ page, careers }) {
                                         details.map((text, idx) => (
                                             <span
                                                 key={idx}
-                                                className="text-xs text-white cs:text-sm sm:text-base sm:mb-2 cxl:mb-4"
+                                                className="text-xxs text-black dark:text-white cs:text-xs cs:mb-1 sm:text-base sm:mb-2 cxl:mb-3"
                                             >
                                                 {text}
                                             </span>
                                         ))}
                                 </div>
+                            </div>
+                            <div className="flex absolute right-0 justify-center items-end w-1/2 h-full rounded-r-3xl bg-light_blue">
+                                <Image
+                                    src={url[0]}
+                                    alt={alt}
+                                    width={1830}
+                                    height={2170}
+                                    className="object-fill w-full h-9/10 clg:w-3/5 "
+                                />
                             </div>
                         </div>
                     ))}
@@ -108,7 +90,7 @@ export default function ImageSlider({ page, careers }) {
             </div>
             <button
                 onClick={showPrevImage}
-                className="block absolute top-0 bottom-0 left-0 sm:top-4 sm:left-2 cursor-pointer"
+                className="block absolute top-12 bottom-0 left-0 sm:top-4 sm:left-2 cursor-pointer"
                 aria-label="View Previous Image"
             >
                 <IoIosArrowBack
@@ -118,7 +100,7 @@ export default function ImageSlider({ page, careers }) {
             </button>
             <button
                 onClick={showNextImage}
-                className="block absolute top-0 bottom-0 right-0 sm:top-4 sm:right-2 cursor-pointer"
+                className="block absolute top-12 bottom-0 right-0 sm:top-4 sm:right-2 cursor-pointer"
                 aria-label="View Next Image"
             >
                 <IoIosArrowForward
@@ -126,7 +108,7 @@ export default function ImageSlider({ page, careers }) {
                     aria-hidden
                 />
             </button>
-            <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-2  cs:bottom-8 sm:-bottom-2 clg:-bottom-4 cxl:-bottom-6">
+            <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
                 {careers.map((_, index) => (
                     <button
                         key={index}

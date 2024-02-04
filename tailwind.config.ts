@@ -44,6 +44,8 @@ const config: Config = {
                     'linear-gradient(to right top, #FAE100, #FBCB50, #FBCB50)',
                 'red-to-yellow':
                     'linear-gradient(to right top, #E16861, #DF8558, #FBCB50)',
+                'light_blue-to-blue':
+                    'linear-gradient(to right, #00F0FF, #2463EB)',
                 'light_gray-to-light_blue':
                     'linear-gradient(to right, #F9FAFB, #0287FF)',
                 'light_gray-to-light_blue-bottom':
@@ -61,7 +63,7 @@ const config: Config = {
                     '0.7rem',
                     {
                         lineHeight: '1rem',
-                        letterSpacing: '-0.05em',
+                        letterSpacing: '-0.08em',
                         fontWeight: '400',
                     },
                 ],
@@ -162,6 +164,9 @@ const config: Config = {
                 '480': '480px',
                 '560': '560px',
                 '640': '640px',
+            },
+            zIndex: {
+                '2': '2',
             },
             keyframes: {
                 navIn: {
