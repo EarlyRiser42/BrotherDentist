@@ -195,6 +195,11 @@ const config: Config = {
                 textClip: {
                     '100%': { 'background-position': '400%' },
                 },
+                balloonAppear: {
+                    '0%': { transform: 'scale(1)' },
+                    '50%': { transform: 'scale(1.2)' },
+                    '100%': { transform: 'scale(1)' },
+                },
             },
             animation: {
                 navIn: 'navIn 0.3s ease-out',
@@ -203,6 +208,7 @@ const config: Config = {
                 fadeIn: 'fadeIn 0.2s ease-out',
                 fadeInHero: 'fadeIn 1.2s ease-out',
                 textClip: 'textClip 10s linear infinite',
+                balloonAppear: 'balloonAppear 0.5s ease-in-out forwards',
             },
         },
     },

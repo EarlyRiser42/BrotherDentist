@@ -20,12 +20,19 @@ import pfp16 from '@/public/balloon (16).jpg';
 import pfp17 from '@/public/balloon (17).jpg';
 
 export default function SpeechBalloon({ page }) {
+    // 숫자 애니메이션
     const [countFront, setCountFront] = useState(10);
     const [countBack, setCountBack] = useState(122);
     const counterRef = useRef(null);
     const speed = 20;
     const targetFront = 213;
     const targetBack = 289;
+
+    // 말풍선 애니메이션
+    const [showGroupOne, setShowGroupOne] = useState(false);
+    const [showGroupTwo, setShowGroupTwo] = useState(false);
+    const [showGroupThree, setShowGroupThree] = useState(false);
+    const [showGroupFour, setShowGroupFour] = useState(false);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -85,6 +92,49 @@ export default function SpeechBalloon({ page }) {
         };
     }, []);
 
+    useEffect(() => {
+        const createObserver = (ref, setShow, threshold) => {
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            setShow(true);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                {
+                    root: null,
+                    rootMargin: '-30%',
+                    threshold,
+                },
+            );
+
+            if (ref.current) {
+                observer.observe(ref.current);
+            }
+
+            return () => {
+                if (ref.current) {
+                    observer.unobserve(ref.current);
+                }
+            };
+        };
+
+        // 각 그룹별 다른 threshold 값
+        const cleanupOne = createObserver(counterRef, setShowGroupOne, 0.1);
+        const cleanupTwo = createObserver(counterRef, setShowGroupTwo, 0.4);
+        const cleanupThree = createObserver(counterRef, setShowGroupThree, 0.7);
+        const cleanupFour = createObserver(counterRef, setShowGroupFour, 0.9);
+
+        return () => {
+            cleanupOne();
+            cleanupTwo();
+            cleanupThree();
+            cleanupFour();
+        };
+    }, []);
+
     return (
         <section
             aria-label="speechBalloon"
@@ -92,7 +142,7 @@ export default function SpeechBalloon({ page }) {
             cs:h-330 cs:mt-24 sm:h-410 sm:mt-32 clg:h-490 cxl:h-570"
         >
             <div
-                className="w-9/10 h-full bg-light_blue relative rounded-3xl flex justify-center items-center overflow-hidden
+                className="w-full h-full relative bg-light_blue cs:rounded-3xl flex justify-center items-center overflow-hidden
             cs:w-9/10 clg:w-88/100 clg:min-w-940 clg:max-w-1250 cxl:w-85/100"
             >
                 <div
@@ -113,62 +163,76 @@ export default function SpeechBalloon({ page }) {
                         </span>
                     </h2>
                 </div>
-                <Balloon
-                    img={pfp1}
-                    balloon={page.home.speechBalloon.balloons[0]}
-                    position={{ top: '5%', left: '-10%' }}
-                />
-                <Balloon
-                    img={pfp2}
-                    balloon={page.home.speechBalloon.balloons[1]}
-                    position={{ top: '22%', left: '10%' }}
-                />
-                <Balloon
-                    img={pfp3}
-                    balloon={page.home.speechBalloon.balloons[2]}
-                    position={{ top: '-3%', left: '20%' }}
-                />
-                <Balloon
-                    img={pfp4}
-                    balloon={page.home.speechBalloon.balloons[3]}
-                    position={{ top: '17%', left: '65%' }}
-                />
-                <Balloon
-                    img={pfp5}
-                    balloon={page.home.speechBalloon.balloons[4]}
-                    position={{ top: '4%', left: '90%' }}
-                />
-                <Balloon
-                    img={pfp6}
-                    balloon={page.home.speechBalloon.balloons[5]}
-                    position={{ top: '60%', left: '-15%' }}
-                />
-                <Balloon
-                    img={pfp7}
-                    balloon={page.home.speechBalloon.balloons[6]}
-                    position={{ top: '59%', left: '82%' }}
-                />
-                <Balloon
-                    img={pfp8}
-                    balloon={page.home.speechBalloon.balloons[7]}
-                    position={{ top: '39%', left: '80%' }}
-                />
-                <Balloon
-                    img={pfp9}
-                    balloon={page.home.speechBalloon.balloons[8]}
-                    position={{ top: '72%', left: '45%' }}
-                />
-                <Balloon
-                    img={pfp10}
-                    balloon={page.home.speechBalloon.balloons[9]}
-                    position={{ top: '80%', left: '1%' }}
-                />
-                <Balloon
-                    img={pfp11}
-                    balloon={page.home.speechBalloon.balloons[10]}
-                    position={{ top: '85%', left: '60%' }}
-                />
-                <div className="hidden sm:block">
+                <div
+                    className={`${showGroupOne ? 'block w-full h-full' : 'hidden'} absolute`}
+                >
+                    <Balloon
+                        img={pfp1}
+                        balloon={page.home.speechBalloon.balloons[0]}
+                        position={{ top: '5%', left: '-10%' }}
+                    />
+                    <Balloon
+                        img={pfp2}
+                        balloon={page.home.speechBalloon.balloons[1]}
+                        position={{ top: '22%', left: '10%' }}
+                    />
+                    <Balloon
+                        img={pfp3}
+                        balloon={page.home.speechBalloon.balloons[2]}
+                        position={{ top: '-3%', left: '20%' }}
+                    />
+                    <Balloon
+                        img={pfp4}
+                        balloon={page.home.speechBalloon.balloons[3]}
+                        position={{ top: '17%', left: '65%' }}
+                    />
+                </div>
+                <div
+                    className={`${showGroupTwo ? 'block w-full h-full' : 'hidden'} absolute`}
+                >
+                    <Balloon
+                        img={pfp5}
+                        balloon={page.home.speechBalloon.balloons[4]}
+                        position={{ top: '4%', left: '90%' }}
+                    />
+                    <Balloon
+                        img={pfp6}
+                        balloon={page.home.speechBalloon.balloons[5]}
+                        position={{ top: '60%', left: '-15%' }}
+                    />
+                    <Balloon
+                        img={pfp7}
+                        balloon={page.home.speechBalloon.balloons[6]}
+                        position={{ top: '59%', left: '82%' }}
+                    />
+                    <Balloon
+                        img={pfp8}
+                        balloon={page.home.speechBalloon.balloons[7]}
+                        position={{ top: '39%', left: '80%' }}
+                    />
+                </div>
+                <div
+                    className={`${showGroupThree ? 'block w-full h-full' : 'hidden'} absolute`}
+                >
+                    <Balloon
+                        img={pfp9}
+                        balloon={page.home.speechBalloon.balloons[8]}
+                        position={{ top: '72%', left: '45%' }}
+                    />
+                    <Balloon
+                        img={pfp10}
+                        balloon={page.home.speechBalloon.balloons[9]}
+                        position={{ top: '80%', left: '1%' }}
+                    />
+                    <Balloon
+                        img={pfp11}
+                        balloon={page.home.speechBalloon.balloons[10]}
+                        position={{ top: '85%', left: '60%' }}
+                    />
+                </div>
+                <div
+                    className={`${showGroupFour ? 'hidden sm:block w-full h-full' : 'hidden'} absolute`}
+                >
                     <Balloon
                         img={pfp12}
                         balloon={page.home.speechBalloon.balloons[11]}
@@ -217,7 +281,7 @@ const Balloon = ({ img, balloon, position }) => {
 
     return (
         <div
-            className="absolute flex bg-white rounded-3xl w-40 h-auto py-1 shadow-speechBalloon"
+            className="absolute flex bg-white rounded-3xl w-40 h-auto py-1 shadow-speechBalloon animate-balloonAppear"
             style={style}
         >
             <div className="w-10 h-10 flex justify-center items-center ml-2">
