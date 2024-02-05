@@ -23,8 +23,8 @@ export default function SpeechBalloon({ page }) {
     const [countFront, setCountFront] = useState(10);
     const [countBack, setCountBack] = useState(122);
     const counterRef = useRef(null);
-    const speed = 500;
-    const targetFront = 31;
+    const speed = 20;
+    const targetFront = 213;
     const targetBack = 289;
 
     useEffect(() => {
@@ -40,7 +40,7 @@ export default function SpeechBalloon({ page }) {
                             setCountFront((prevCount) => {
                                 const updatedCount = prevCount + incrementFront;
                                 if (updatedCount < targetFront) {
-                                    setTimeout(updateCountFront, 10);
+                                    setTimeout(updateCountFront, 30);
                                     return updatedCount;
                                 } else {
                                     return targetFront;
@@ -53,7 +53,7 @@ export default function SpeechBalloon({ page }) {
                             setCountBack((prevCount) => {
                                 const updatedCount = prevCount + incrementBack;
                                 if (updatedCount < targetBack) {
-                                    setTimeout(updateCountBack, 10);
+                                    setTimeout(updateCountBack, 30);
                                     return updatedCount;
                                 } else {
                                     return targetBack;
@@ -67,7 +67,11 @@ export default function SpeechBalloon({ page }) {
                     }
                 });
             },
-            { threshold: 0.6 },
+            {
+                root: null,
+                rootMargin: '-30%',
+                threshold: 0.6,
+            },
         );
 
         if (counterRef.current) {
@@ -84,11 +88,11 @@ export default function SpeechBalloon({ page }) {
     return (
         <section
             aria-label="speechBalloon"
-            className="flex flex-col justify-start items-center w-full h-330 mt-16
-            cs:h-410 cs:mt-24 sm:h-570 sm:mt-32 clg:h-490 cxl:h-570"
+            className="flex flex-col justify-start items-center w-full h-360 mt-20
+            cs:h-330 cs:mt-24 sm:h-410 sm:mt-32 clg:h-490 cxl:h-570"
         >
             <div
-                className="w-9/10 h-4/5 bg-light_blue relative rounded-3xl flex justify-center items-center overflow-hidden
+                className="w-9/10 h-full bg-light_blue relative rounded-3xl flex justify-center items-center overflow-hidden
             cs:w-9/10 clg:w-88/100 clg:min-w-940 clg:max-w-1250 cxl:w-85/100"
             >
                 <div
