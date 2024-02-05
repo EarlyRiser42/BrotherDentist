@@ -95,8 +95,30 @@
             "안전하고 편안한 치료를 제공합니다."
           ]
         }
+      },
+      "speechBalloon": {
+        "h1": "치료한 환자 수",
+        "h2": "명",
+        "balloons": [
+          { "nickname": "빛나라", "message": "즐거운 방문!" },
+          { "nickname": "청량", "message": "항상 신선해요" },
+          { "nickname": "믿음소", "message": "가족도 믿어요" },
+          { "nickname": "밝은미소", "message": "미소가 밝아져요" },
+          { "nickname": "친절한닥터", "message": "친절해요" },
+          { "nickname": "클린투스", "message": "치아가 깨끗!" },
+          { "nickname": "편안함", "message": "편안한 치료" },
+          { "nickname": "무서움없음", "message": "두렵지 않아요" },
+          { "nickname": "건강유지", "message": "건강을 지켜요" },
+          { "nickname": "위켄드", "message": "주말도 감사" },
+          { "nickname": "자신감", "message": "자신감 UP" },
+          { "nickname": "클린하트", "message": "마음도 깨끗" },
+          { "nickname": "민트", "message": "민트향 최고!" },
+          { "nickname": "맑은날", "message": "상쾌한 기분" },
+          { "nickname": "바른관리", "message": "건강해져요" },
+          { "nickname": "힐링", "message": "힐링이에요" },
+          { "nickname": "새날미소", "message": "새날의 미소" }
+        ]
       }
-
     },
     "services": {
       "title": "진료 과목",

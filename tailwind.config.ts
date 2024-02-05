@@ -68,6 +68,7 @@ const config: Config = {
                         fontWeight: '400',
                     },
                 ],
+                '10xl': '10rem',
             },
 
             spacing: {
@@ -169,6 +170,10 @@ const config: Config = {
             },
             zIndex: {
                 '2': '2',
+                '5': '5',
+            },
+            boxShadow: {
+                speechBalloon: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
             },
             keyframes: {
                 navIn: {

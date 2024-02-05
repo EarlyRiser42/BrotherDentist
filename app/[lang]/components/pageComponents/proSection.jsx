@@ -7,7 +7,7 @@ import pro3 from '@/public/pro3.jpg';
 export default function proSection({ page }) {
     return (
         <section
-            aria-label="Image Slider"
+            aria-label="proSection"
             className="flex flex-col justify-start items-center w-full h-auto mt-20 cxl:mt-32"
         >
             <div className="flex flex-col items-start w-9/10 clg:min-w-970 clg:max-w-1250 cxl:w-85/100">
@@ -38,7 +38,13 @@ export default function proSection({ page }) {
                     )}
                 </div>
                 <div className="relative w-full h-72 rounded-3xl mt-4 cs:h-80 sm:h-96 cmd:h-410 clg:ml-6 clg:w-1/2 clg:mt-0 clg:h-full">
-                    <Image className="rounded-3xl" src={pro1} alt="pro1" fill />
+                    <Image
+                        className="rounded-3xl"
+                        src={pro1}
+                        alt="pro1"
+                        fill
+                        sizes="(max-width: 1024px) 50vw, 100vw"
+                    />
                 </div>
             </div>
             <div
@@ -61,7 +67,13 @@ export default function proSection({ page }) {
                     )}
                 </div>
                 <div className="relative w-full h-72 rounded-3xl mt-4  cs:h-80 sm:h-96 cmd:h-410 clg:ml-6 clg:w-1/2 clg:mt-0 clg:h-full clg:order-1 clg:ml-0">
-                    <Image className="rounded-3xl" src={pro2} alt="pro1" fill />
+                    <Image
+                        className="rounded-3xl"
+                        src={pro2}
+                        alt="pro1"
+                        fill
+                        sizes="(max-width: 1024px) 50vw, 100vw"
+                    />
                 </div>
             </div>
             <div
@@ -84,7 +96,13 @@ export default function proSection({ page }) {
                     )}
                 </div>
                 <div className="relative w-full h-72 rounded-3xl mt-4  cs:h-80 sm:h-96 cmd:h-410 clg:ml-6 clg:w-1/2 clg:mt-0 clg:h-full">
-                    <Image className="rounded-3xl" src={pro3} alt="pro1" fill />
+                    <Image
+                        className="rounded-3xl"
+                        src={pro3}
+                        alt="pro1"
+                        fill
+                        sizes="(max-width: 1024px) 50vw, 100vw"
+                    />
                 </div>
             </div>
         </section>

@@ -6,6 +6,7 @@ import Footer from '@/app/[lang]/components/footer';
 import Hero from '@/app/[lang]/components/pageComponents/hero';
 import ImageSlider from '@/app/[lang]/components/pageComponents/imageSlider.tsx';
 import ProSection from '@/app/[lang]/components/pageComponents/proSection';
+import SpeechBalloon from '@/app/[lang]/components/pageComponents/speechBalloon';
 import portrait1 from '../../public/portrait1.png';
 import portrait1_upper from '../../public/portrait1_upper.png';
 import portrait2 from '../../public/portrait2.png';
@@ -37,6 +38,7 @@ export default async function Home({
             <Header lang={lang} header={header} />
             <Hero page={page} />
             <ProSection page={page} />
+            <SpeechBalloon page={page} />
             <ImageSlider page={page} careers={CAREERS} />
             <Footer footer={footer} />
         </>

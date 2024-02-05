@@ -45,7 +45,7 @@ export default function ImageSlider({ page, careers }) {
                     {careers.map(({ url, alt, title, details }, index) => (
                         <div
                             key={index}
-                            className="flex flex-row h-full min-w-full rounded-3xl sm:flex-row relative bg-dark_blue"
+                            className="flex flex-row h-full min-w-full cs:rounded-3xl sm:flex-row relative bg-dark_blue"
                         >
                             <div className="w-4/6 h-full flex flex-col justify-center items-center cs:rounded-l-3xl absolute left-2 z-[2]">
                                 <div className="w-9/10 flex flex-col justify-center items-start mb-4">
@@ -83,6 +83,7 @@ export default function ImageSlider({ page, careers }) {
                                     height={2170}
                                     className="object-fill w-full h-9/10 clg:w-3/5 "
                                 />
+                                `
                             </div>
                         </div>
                     ))}

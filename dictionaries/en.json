@@ -91,6 +91,29 @@
             "Ensuring safe and comfortable treatment."
           ]
         }
+      },
+      "speechBalloon": {
+        "h1": "Patients Treated",
+        "h2": "Patients",
+        "balloons": [
+          { "nickname": "ShineBright", "message": "Fun Visit!" },
+          { "nickname": "CoolBreeze", "message": "Always fresh" },
+          { "nickname": "TrustMe", "message": "Family trusts" },
+          { "nickname": "BrightSmile", "message": "Brighter smile" },
+          { "nickname": "KindDoc", "message": "So kind" },
+          { "nickname": "CleanTooth", "message": "Teeth clean!" },
+          { "nickname": "Ease", "message": "Comfy treatment" },
+          { "nickname": "NoFear", "message": "Not scared" },
+          { "nickname": "StayHealthy", "message": "Keep health" },
+          { "nickname": "Weekend", "message": "Thx for weekends" },
+          { "nickname": "Confidence", "message": "Confidence UP" },
+          { "nickname": "PureHeart", "message": "Pure heart" },
+          { "nickname": "Minty", "message": "Love mint!" },
+          { "nickname": "ClearDay", "message": "Feels fresh" },
+          { "nickname": "ProperCare", "message": "Getting healthier" },
+          { "nickname": "Healing", "message": "It's healing" },
+          { "nickname": "NewDaySmile", "message": "Smile for today" }
+        ]
       }
 
     },
