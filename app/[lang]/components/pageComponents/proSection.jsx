@@ -23,37 +23,37 @@ export default function proSection({ page }) {
             cxl:w-85/100 cxl:h-410"
             >
                 <div className="w-full flex flex-col justify-center items-start lg:items-center clg:w-1/2">
-                    <h4 className="font-bold text-lg mb-4 sm:text-2xl lg:text-3xl lg:w-3/4 cxl:text-4xl">
+                    <h4 className="font-bold text-lg mb-4 sm:text-2xl lg:text-3xl lg:w-4/5 cxl:text-4xl">
                         {page.home.proSection.advancedTechAndEquipment.h4}
                     </h4>
                     {page.home.proSection.advancedTechAndEquipment.spans.map(
                         (span, index) => (
                             <span
                                 key={index}
-                                className="text-base mb-0.5 lg:mb-1 sm:text-lg lg:text-xl lg:w-3/4 cxl:text-2xl"
+                                className="text-base mb-0.5 lg:mb-1 sm:text-lg lg:text-xl lg:w-4/5 cxl:text-2xl"
                             >
                                 {span}
                             </span>
                         ),
                     )}
                 </div>
-                <div className="relative w-full h-72 rounded-3xl mt-4  cs:h-80 sm:h-96 cmd:h-410 clg:ml-6 clg:w-1/2 clg:mt-0 clg:h-full">
+                <div className="relative w-full h-72 rounded-3xl mt-4 cs:h-80 sm:h-96 cmd:h-410 clg:ml-6 clg:w-1/2 clg:mt-0 clg:h-full">
                     <Image className="rounded-3xl" src={pro1} alt="pro1" fill />
                 </div>
             </div>
             <div
-                className="w-9/10 flex flex-col justify-center items-center mt-12 clg:h-360 clg:min-w-940 clg:max-w-1250 clg:w-9/10 clg:flex-row
+                className="w-9/10 flex flex-col justify-center items-center mt-12 clg:mt-32 clg:h-360 clg:min-w-940 clg:max-w-1250 clg:w-9/10 clg:flex-row
             cxl:w-85/100 cxl:h-410"
             >
                 <div className="w-full flex flex-col justify-center items-start lg:items-center clg:w-1/2 clg:order-2">
-                    <h4 className="font-bold text-lg mb-4 sm:text-2xl lg:text-3xl lg:w-3/4 cxl:text-4xl">
+                    <h4 className="font-bold text-lg mb-4 sm:text-2xl lg:text-3xl lg:w-4/5 cxl:text-4xl">
                         {page.home.proSection.customizedTreatment.h4}
                     </h4>
                     {page.home.proSection.customizedTreatment.spans.map(
                         (span, index) => (
                             <span
                                 key={index}
-                                className="text-base mb-0.5 lg:mb-1 sm:text-lg lg:text-xl lg:w-3/4 cxl:text-2xl"
+                                className="text-base mb-0.5 lg:mb-1 sm:text-lg lg:text-xl lg:w-4/5 cxl:text-2xl"
                             >
                                 {span}
                             </span>
@@ -65,18 +65,18 @@ export default function proSection({ page }) {
                 </div>
             </div>
             <div
-                className="w-9/10 flex flex-col justify-center items-center mt-12 clg:h-360 clg:min-w-940 clg:max-w-1250 clg:w-9/10 clg:flex-row
+                className="w-9/10 flex flex-col justify-center items-center mt-12 clg:mt-32 clg:h-360 clg:min-w-940 clg:max-w-1250 clg:w-9/10 clg:flex-row
             cxl:w-85/100 cxl:h-410"
             >
                 <div className="w-full flex flex-col justify-center items-start lg:items-center clg:w-1/2">
-                    <h4 className="font-bold text-lg mb-4 sm:text-2xl lg:text-3xl lg:w-3/4 cxl:text-4xl">
+                    <h4 className="font-bold text-lg mb-4 sm:text-2xl lg:text-3xl lg:w-4/5 cxl:text-4xl">
                         {page.home.proSection.professionalMedicalTeam.h4}
                     </h4>
                     {page.home.proSection.professionalMedicalTeam.spans.map(
                         (span, index) => (
                             <span
                                 key={index}
-                                className="text-base mb-0.5 lg:mb-1 sm:text-lg lg:text-xl lg:w-3/4 cxl:text-2xl"
+                                className="text-base mb-0.5 lg:mb-1 sm:text-lg lg:text-xl lg:w-4/5 cxl:text-2xl"
                             >
                                 {span}
                             </span>

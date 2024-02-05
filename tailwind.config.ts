@@ -30,6 +30,7 @@ const config: Config = {
                 gray_300: '#D1D5DB',
                 gray_600: '#4B5563',
                 light_blue: '#2463EB',
+                dark_blue: '#020D43',
                 blue: '#A3CFCD',
                 green: '#4DD964',
                 hero: '#01123E',

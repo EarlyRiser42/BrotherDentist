@@ -45,7 +45,7 @@ export default function ImageSlider({ page, careers }) {
                     {careers.map(({ url, alt, title, details }, index) => (
                         <div
                             key={index}
-                            className="flex flex-row h-full min-w-full rounded-3xl sm:flex-row relative"
+                            className="flex flex-row h-full min-w-full rounded-3xl sm:flex-row relative bg-dark_blue"
                         >
                             <div className="w-4/6 h-full flex flex-col justify-center items-center cs:rounded-l-3xl absolute left-2 z-[2]">
                                 <div className="w-9/10 flex flex-col justify-center items-start mb-4">
@@ -55,8 +55,8 @@ export default function ImageSlider({ page, careers }) {
                                                 key={idx}
                                                 className={
                                                     idx === 0
-                                                        ? 'text-sm font-bold text-black dark:text-white  mb-2 cs:text-base sm:text-lg'
-                                                        : 'text-xs text-black dark:text-white cs:text-sm sm:text-base'
+                                                        ? 'text-sm font-bold text-white  mb-2 cs:text-base sm:text-lg'
+                                                        : 'text-xs text-white cs:text-sm sm:text-base'
                                                 }
                                             >
                                                 {text}
@@ -68,7 +68,7 @@ export default function ImageSlider({ page, careers }) {
                                         details.map((text, idx) => (
                                             <span
                                                 key={idx}
-                                                className="text-xxs text-black dark:text-white cs:text-xs cs:mb-1 sm:text-base sm:mb-2 cxl:mb-3"
+                                                className="text-xxs text-white cs:text-xs cs:mb-1 sm:text-base sm:mb-2 cxl:mb-3"
                                             >
                                                 {text}
                                             </span>
