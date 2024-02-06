@@ -185,7 +185,7 @@ const config: Config = {
                     '100%': { left: '100vw' },
                 },
                 fadeIn: {
-                    '0%': { opacity: '0' },
+                    '0%': { transform: 'translateY(150px)', opacity: '0' },
                     '100%': { opacity: '1' },
                 },
                 slideDown: {
@@ -200,15 +200,19 @@ const config: Config = {
                     '50%': { transform: 'scale(1.2)' },
                     '100%': { transform: 'scale(1)' },
                 },
+                scroll: {
+                    to: { transform: 'translate(calc(-50% - 0.5rem))' },
+                },
             },
             animation: {
                 navIn: 'navIn 0.3s ease-out',
                 navOut: 'navOut 0.3s ease-out',
                 slideDown: 'slideDown 0.3s ease-out forwards',
                 fadeIn: 'fadeIn 0.3s ease-out',
-                fadeInHome: 'fadeIn 1.5s ease-out',
+                fadeInHome: 'fadeIn 1.2s ease',
                 textClip: 'textClip 10s linear infinite',
                 balloonAppear: 'balloonAppear 0.7s ease-in-out forwards',
+                scroll: 'scroll 20s linear infinite',
             },
         },
     },

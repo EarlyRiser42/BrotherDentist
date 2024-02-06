@@ -76,8 +76,8 @@ export default function SpeechBalloon({ page }) {
             },
             {
                 root: null,
-                rootMargin: '0px',
-                threshold: 0.6,
+                rootMargin: '-20%',
+                threshold: 0.9,
             },
         );
 
@@ -105,7 +105,7 @@ export default function SpeechBalloon({ page }) {
                 },
                 {
                     root: null,
-                    rootMargin: '0px',
+                    rootMargin: '-20%',
                     threshold,
                 },
             );
@@ -123,9 +123,9 @@ export default function SpeechBalloon({ page }) {
 
         // 각 그룹별 다른 threshold 값
         const cleanupOne = createObserver(counterRef, setShowGroupOne, 0.1);
-        const cleanupTwo = createObserver(counterRef, setShowGroupTwo, 0.4);
-        const cleanupThree = createObserver(counterRef, setShowGroupThree, 0.7);
-        const cleanupFour = createObserver(counterRef, setShowGroupFour, 0.9);
+        const cleanupTwo = createObserver(counterRef, setShowGroupTwo, 1);
+        const cleanupThree = createObserver(counterRef, setShowGroupThree, 0.5);
+        const cleanupFour = createObserver(counterRef, setShowGroupFour, 0.5);
 
         return () => {
             cleanupOne();

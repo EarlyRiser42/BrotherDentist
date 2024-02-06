@@ -24,7 +24,7 @@ export default function PortraitSlider({ page, careers }) {
     return (
         <section
             aria-label="Image Slider"
-            className="relative flex flex-col justify-start items-center w-full h-410 mt-16
+            className="relative flex flex-col justify-start items-center w-full h-330 mt-16
             cs:h-410 cs:mt-24 sm:h-570 sm:mt-32 clg:h-490 cxl:h-570"
         >
             <div className="flex flex-col justify-center w-9/10 h-1/5 clg:min-w-940 clg:max-w-1250 cxl:w-85/100">
@@ -35,7 +35,7 @@ export default function PortraitSlider({ page, careers }) {
                     {page.home.ImageSlider_h4}
                 </h4>
             </div>
-            <div className="w-full h-3/5 flex overflow-hidden cs:w-9/10 sm:h-4/5 clg:w-88/100 clg:min-w-940 clg:max-w-1250 cxl:w-85/100">
+            <div className="w-full h-4/5 flex overflow-hidden cs:w-9/10 sm:h-4/5 clg:w-88/100 clg:min-w-940 clg:max-w-1250 cxl:w-85/100">
                 <div
                     className="flex w-full h-full rounded-3xl transition-transform duration-500 ease-in-out "
                     style={{
@@ -96,42 +96,42 @@ export default function PortraitSlider({ page, careers }) {
                         </div>
                     ))}
                 </div>
-            </div>
-            <button
-                onClick={showPrevImage}
-                className="block absolute top-12 bottom-0 left-0 sm:top-4 sm:left-2 cursor-pointer"
-                aria-label="View Previous Image"
-            >
-                <IoIosArrowBack
-                    className="stroke-white fill-black dark:fill-white w-6 h-6"
-                    aria-hidden
-                />
-            </button>
-            <button
-                onClick={showNextImage}
-                className="block absolute top-12 bottom-0 right-0 sm:top-4 sm:right-2 cursor-pointer"
-                aria-label="View Next Image"
-            >
-                <IoIosArrowForward
-                    className="stroke-white fill-black dark:fill-white w-6 h-6"
-                    aria-hidden
-                />
-            </button>
-            <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
-                {careers.map((_, index) => (
-                    <button
-                        key={index}
-                        className="block cursor-pointer"
-                        aria-label={`View Image ${index + 1}`}
-                        onClick={() => setImageIndex(index)}
-                    >
-                        {index === imageIndex ? (
-                            <div className="transition-all ease-out duration-300 w-6 h-3 rounded-full bg-black dark:bg-white"></div>
-                        ) : (
-                            <div className="transition-all ease-out duration-300 w-3 h-3 rounded-full border-black dark:border-white bg-white dark:bg-black border"></div>
-                        )}
-                    </button>
-                ))}
+                <button
+                    onClick={showPrevImage}
+                    className="block absolute top-1/2 left-0  sm:left-2 cxl:left-8  cursor-pointer"
+                    aria-label="View Previous Image"
+                >
+                    <IoIosArrowBack
+                        className="stroke-white fill-black dark:fill-white w-6 h-6"
+                        aria-hidden
+                    />
+                </button>
+                <button
+                    onClick={showNextImage}
+                    className="block absolute top-1/2 right-0 sm:right-2 cxl:right-8 cursor-pointer"
+                    aria-label="View Next Image"
+                >
+                    <IoIosArrowForward
+                        className="stroke-white fill-black dark:fill-white w-6 h-6"
+                        aria-hidden
+                    />
+                </button>
+                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+                    {careers.map((_, index) => (
+                        <button
+                            key={index}
+                            className="block cursor-pointer"
+                            aria-label={`View Image ${index + 1}`}
+                            onClick={() => setImageIndex(index)}
+                        >
+                            {index === imageIndex ? (
+                                <div className="transition-all ease-out duration-300 w-6 h-3 rounded-full bg-black dark:bg-white"></div>
+                            ) : (
+                                <div className="transition-all ease-out duration-300 w-3 h-3 rounded-full border-black dark:border-white bg-white dark:bg-black border"></div>
+                            )}
+                        </button>
+                    ))}
+                </div>
             </div>
         </section>
     );

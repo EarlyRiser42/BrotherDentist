@@ -34,7 +34,7 @@ export default function ParallexSection({ page }) {
         const observer = new IntersectionObserver(observerCallback, {
             root: null,
             rootMargin: '0px',
-            threshold: 0.6,
+            threshold: 0.5,
         });
 
         window.addEventListener('scroll', handleScroll);

@@ -43,12 +43,12 @@ export default function ProSection({ page }) {
         };
 
         // 각 그룹별 다른 threshold 값
-        const cleanupOne = createObserver(divRefOne, setIsVisibleOne, 0.3);
-        const cleanupTwo = createObserver(divRefTwo, setIsVisibleTwo, 0.3);
+        const cleanupOne = createObserver(divRefOne, setIsVisibleOne, 0.5);
+        const cleanupTwo = createObserver(divRefTwo, setIsVisibleTwo, 0.5);
         const cleanupThree = createObserver(
             divRefThree,
             setIsVisibleThree,
-            0.3,
+            0.5,
         );
 
         return () => {
