@@ -76,7 +76,7 @@ export default function SpeechBalloon({ page }) {
             },
             {
                 root: null,
-                rootMargin: '-30%',
+                rootMargin: '0px',
                 threshold: 0.6,
             },
         );
@@ -105,7 +105,7 @@ export default function SpeechBalloon({ page }) {
                 },
                 {
                     root: null,
-                    rootMargin: '-30%',
+                    rootMargin: '0px',
                     threshold,
                 },
             );
