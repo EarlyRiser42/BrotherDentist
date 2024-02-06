@@ -205,7 +205,7 @@ const config: Config = {
                 navIn: 'navIn 0.3s ease-out',
                 navOut: 'navOut 0.3s ease-out',
                 slideDown: 'slideDown 0.3s ease-out forwards',
-                fadeIn: 'fadeIn 0.2s ease-out',
+                fadeIn: 'fadeIn 0.3s ease-out',
                 fadeInHero: 'fadeIn 1.2s ease-out',
                 textClip: 'textClip 10s linear infinite',
                 balloonAppear: 'balloonAppear 0.5s ease-in-out forwards',

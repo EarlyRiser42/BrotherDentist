@@ -30,16 +30,23 @@
     "home": {
       "title": "Hyukplant Dental Clinic",
       "description": "Welcome to Hyukplant Dental Clinic Website",
-      "p0": "Implant Expertise",
-      "p1": "All About",
-      "p2": "Implants.",
-      "p3": "Vast Clinical Exp.",
-      "p4": "Treated Thousands",
-      "p5": "With Trust &",
-      "p6": "Experience, Best Care.",
-      "button1": "Reserve",
-      "button2": "Consult",
-      "button3": "Address",
+      "hero": {
+        "p0": "Implant Expertise",
+        "p1": "All About",
+        "p2": "Implants.",
+        "p3": "Vast Clinical Exp.",
+        "p4": "Treated Thousands",
+        "p5": "With Trust &",
+        "p6": "Experience, Best Care.",
+        "button1": "Reserve",
+        "button2": "Consult",
+        "button3": "Address"
+      },
+      "parallexSection": {
+        "h1": "Prioritizing safety and comfort in professional care.",
+        "h2": "Now, start the experience of dental treatment without fear.",
+        "h3": "With Hyukplant, every day is filled with brighter smiles."
+      },
       "ImageSlider_h1": "Meet Our Medical Team",
       "ImageSlider_h4": "Meet Your Primary Care Physician.",
       "portraitOneTitle": ["Principal Dentist", "Choi In-hyuk"],

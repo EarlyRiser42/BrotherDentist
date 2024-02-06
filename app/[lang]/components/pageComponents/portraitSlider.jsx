@@ -4,7 +4,7 @@ import { IoIosArrowForward } from 'react-icons/io';
 import { IoIosArrowBack } from 'react-icons/io';
 import Image from 'next/image';
 
-export default function ImageSlider({ page, careers }) {
+export default function PortraitSlider({ page, careers }) {
     const [imageIndex, setImageIndex] = useState(0);
 
     function showNextImage() {
@@ -35,7 +35,7 @@ export default function ImageSlider({ page, careers }) {
                     {page.home.ImageSlider_h4}
                 </h4>
             </div>
-            <div className="w-full h-4/5 flex overflow-hidden cs:w-9/10 clg:w-88/100 clg:min-w-940 clg:max-w-1250 cxl:w-85/100">
+            <div className="w-full h-3/5 flex overflow-hidden cs:w-9/10 sm:h-4/5 clg:w-88/100 clg:min-w-940 clg:max-w-1250 cxl:w-85/100">
                 <div
                     className="flex w-full h-full rounded-3xl transition-transform duration-500 ease-in-out "
                     style={{
@@ -47,7 +47,7 @@ export default function ImageSlider({ page, careers }) {
                             key={index}
                             className="flex flex-row h-full min-w-full cs:rounded-3xl sm:flex-row relative bg-dark_blue"
                         >
-                            <div className="w-4/6 h-full flex flex-col justify-center items-center cs:rounded-l-3xl absolute left-2 z-[2]">
+                            <div className=" w-4/6 h-full flex flex-col justify-center items-center cs:rounded-l-3xl absolute left-2 z-[2]">
                                 <div className="w-9/10 flex flex-col justify-center items-start mb-4">
                                     {title &&
                                         title.map((text, idx) => (
@@ -75,7 +75,16 @@ export default function ImageSlider({ page, careers }) {
                                         ))}
                                 </div>
                             </div>
-                            <div className="flex absolute right-0 justify-center items-end w-1/2 h-full cs:rounded-r-3xl bg-light_blue">
+                            <div className="flex absolute right-0 justify-center items-end w-2/5 h-full bg-light_blue cs:hidden">
+                                <Image
+                                    src={url[1]}
+                                    alt={alt}
+                                    width={1576}
+                                    height={1956}
+                                    className="object-fill w-full h-9/10"
+                                />
+                            </div>
+                            <div className="hidden absolute right-0 justify-center items-end w-1/2 h-full  cs:flex cs:rounded-r-3xl bg-light_blue">
                                 <Image
                                     src={url[0]}
                                     alt={alt}
@@ -83,7 +92,6 @@ export default function ImageSlider({ page, careers }) {
                                     height={2170}
                                     className="object-fill w-full h-9/10 clg:w-3/5 "
                                 />
-                                `
                             </div>
                         </div>
                     ))}

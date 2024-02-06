@@ -1,23 +1,23 @@
 'use client';
 import React, { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
-import pfp1 from '@/public/balloon (1).jpg';
-import pfp2 from '@/public/balloon (2).jpg';
-import pfp3 from '@/public/balloon (3).jpg';
-import pfp4 from '@/public/balloon (4).jpg';
-import pfp5 from '@/public/balloon (5).jpg';
-import pfp6 from '@/public/balloon (6).jpg';
-import pfp7 from '@/public/balloon (7).jpg';
-import pfp8 from '@/public/balloon (8).jpg';
-import pfp9 from '@/public/balloon (9).jpg';
-import pfp10 from '@/public/balloon (10).jpg';
-import pfp11 from '@/public/balloon (11).jpg';
-import pfp12 from '@/public/balloon (12).jpg';
-import pfp13 from '@/public/balloon (13).jpg';
-import pfp14 from '@/public/balloon (14).jpg';
-import pfp15 from '@/public/balloon (15).jpg';
-import pfp16 from '@/public/balloon (16).jpg';
-import pfp17 from '@/public/balloon (17).jpg';
+import pfp1 from '@/public/speechBalloon/balloon (1).jpg';
+import pfp2 from '@/public/speechBalloon/balloon (2).jpg';
+import pfp3 from '@/public/speechBalloon/balloon (3).jpg';
+import pfp4 from '@/public/speechBalloon/balloon (4).jpg';
+import pfp5 from '@/public/speechBalloon/balloon (5).jpg';
+import pfp6 from '@/public/speechBalloon/balloon (6).jpg';
+import pfp7 from '@/public/speechBalloon/balloon (7).jpg';
+import pfp8 from '@/public/speechBalloon/balloon (8).jpg';
+import pfp9 from '@/public/speechBalloon/balloon (9).jpg';
+import pfp10 from '@/public/speechBalloon/balloon (10).jpg';
+import pfp11 from '@/public/speechBalloon/balloon (11).jpg';
+import pfp12 from '@/public/speechBalloon/balloon (12).jpg';
+import pfp13 from '@/public/speechBalloon/balloon (13).jpg';
+import pfp14 from '@/public/speechBalloon/balloon (14).jpg';
+import pfp15 from '@/public/speechBalloon/balloon (15).jpg';
+import pfp16 from '@/public/speechBalloon/balloon (16).jpg';
+import pfp17 from '@/public/speechBalloon/balloon (17).jpg';
 
 export default function SpeechBalloon({ page }) {
     // 숫자 애니메이션

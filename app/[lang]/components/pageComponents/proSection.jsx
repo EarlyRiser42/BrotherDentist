@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
-import pro1 from '@/public/pro1.jpg';
-import pro2 from '@/public/pro2.jpg';
-import pro3 from '@/public/pro3.jpg';
+import pro1 from '@/public/proSection/pro1.jpg';
+import pro2 from '@/public/proSection/pro2.jpg';
+import pro3 from '@/public/proSection/pro3.jpg';
 
 export default function proSection({ page }) {
     return (

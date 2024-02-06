@@ -4,7 +4,7 @@ import ToggleLanguage from '@/app/[lang]/components/headerComponents/toggleLangu
 import ToggleDarkMode from '@/app/[lang]/components/headerComponents/toggleDarkMode';
 import Link from 'next/link';
 import Image from 'next/image';
-import kakaoTalkPng from '@/public/kakaotalk.png';
+import kakaoTalkPng from '@/public/hero/kakaotalk.png';
 import useOnClickOutside from '@/components/hooks/useOnclickOutsdie';
 import { LogoEn, LogoKo } from '@/components/Icons/Logos';
 
