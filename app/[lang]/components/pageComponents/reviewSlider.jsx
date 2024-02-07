@@ -37,7 +37,16 @@ export default function ReviewSlider({ page }) {
                     {page.home.reviewSlider.h1}
                 </h1>
                 <h4 className="font-medium w-full text-xl sm:text-2xl lg:text-3xl lg:w-4/5 cxl:text-4xl">
-                    {page.home.reviewSlider.h4}
+                    {page.home.reviewSlider.h4.split(' ').map((part, index) => (
+                        <span key={index}>
+                            {part}
+                            {index === 1 ? (
+                                <span className="block cmd:inline"> </span>
+                            ) : (
+                                ' '
+                            )}
+                        </span>
+                    ))}
                 </h4>
             </div>
             <div className="w-9/10 h-auto overflow-hidden clg:w-88/100 clg:min-w-940 clg:max-w-1250 cxl:w-85/100">

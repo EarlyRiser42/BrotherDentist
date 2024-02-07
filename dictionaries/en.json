@@ -100,8 +100,10 @@
         }
       },
       "speechBalloon": {
-        "h1": "Patients Treated",
-        "h2": "Patients",
+        "h1": "A Smile Perfected by Experience",
+        "h2": "The best choice for your smile, proven by experience.",
+        "h3": "Patients Treated",
+        "h4": "Patients",
         "balloons": [
           { "nickname": "ShineBright", "message": "Fun Visit!" },
           { "nickname": "CoolBreeze", "message": "Always fresh" },
@@ -122,6 +124,56 @@
           { "nickname": "NewDaySmile", "message": "Smile for today" }
         ]
       }
+,
+  "reviewSlider": {
+    "h1": "A Dentist Guaranteed by Reviews",
+    "h4": "Check out the reviews everyone is satisfied with at Hyukplant.",
+    "reviews": [
+      {
+        "nickname": "White Pebble",
+        "reviewCount": "Reviews 827",
+        "photoCount": "Photos 211",
+        "followerCount": "Followers 88",
+        "message": "This was the best dentist I have ever visited! I needed an implant treatment and from start to finish, they explained everything so kindly and the treatment was painless, I was moved. I had a lot of fear about going to the dentist, but now I have no more worries. This is a truly trustworthy dentist. I plan to visit again next time. Thank you!"
+      },
+      {
+        "nickname": "JungHyunMom241",
+        "reviewCount": "Reviews 172",
+        "photoCount": "Photos 220",
+        "followerCount": "Followers 94",
+        "message": "I had to visit a dentist urgently and chose this one based on its many good reviews on Naver. I was worried I made a mistake when I saw they had a review event, but after receiving the consultation and treatment, I felt like I made the right choice. They guided me through the treatment process so I could relax and be comfortable. From the head doctor to all the BarunChoice medical staff, everyone was kind and beautiful~^^"
+      },
+      {
+        "nickname": "CatHolic",
+        "reviewCount": "Reviews 12",
+        "photoCount": "Photos 10",
+        "followerCount": "Followers 4",
+        "message": "This dentist shows no weaknesses. Having weak teeth, I've visited various dentists, and most of them only talked about their specialties. This dentist, without overtreating, thoroughly checked and explained everything. The dentist spent so much time with me that I wondered if it was too much, which made me trust them. The nurses also played a big role in creating such an atmosphere. They were very kind and detailed in their guidance. I'm planning to settle here for regular check-ups."
+      },
+      {
+        "nickname": "LucomMish",
+        "reviewCount": "Reviews 12",
+        "photoCount": "Photos 2",
+        "followerCount": "Followers 1",
+        "message": "I looked around a lot for implant treatment, but no place was as satisfactory as here. The professional explanation and careful treatment process were impressive. I'm very satisfied with the results of the treatment, and I'm so thankful that the whole process was painless. Thanks to the kindness and professionalism of the staff, I plan to use this service regularly. Highly recommended!"
+      },
+      {
+        "nickname": "SaryongShin",
+        "reviewCount": "Reviews 12",
+        "photoCount": "Photos 2",
+        "followerCount": "Followers 1",
+        "message": "It was my first time receiving implant treatment, and thanks to the delicate touch and professional consultation of this dentist, I could receive treatment without much worry. They explained the treatment process in detail, so I could understand exactly what procedures were being carried out. Also, they thoroughly guided me on post-treatment care. I'm truly thankful and plan to keep using this service."
+      },
+      {
+        "nickname": "asdz891",
+        "reviewCount": "Reviews 91",
+        "photoCount": "Photos 21",
+        "followerCount": "Followers 4",
+        "message": "I visited this dentist on a friend's recommendation and it exceeded my expectations. Especially, the consultation based on their deep knowledge and experience with implants was impressive. The treatment process was more comfortable than I thought, and the results were very satisfying. The effort of all staff members to make patients comfortable was noticeable and appreciated, and the hygiene condition was very clean. I've decided to go here next time without a doubt!"
+      }
+    ]
+  }
+
 
     },
     "services": {

@@ -138,9 +138,28 @@ export default function SpeechBalloon({ page }) {
     return (
         <section
             aria-label="speechBalloon"
-            className="flex flex-col justify-start items-center w-full h-360 mt-20
-            cs:h-330 cs:mt-24 sm:h-410 sm:mt-32 clg:h-490 cxl:h-570"
+            className="flex flex-col justify-start items-center w-full h-330 mt-20
+            cs:h-380 cs:mt-24 sm:h-430 sm:mt-32 clg:h-510 cxl:h-586"
         >
+            <div className="flex flex-col justify-center w-9/10 h-auto mb-2 sm:mb-4 clg:min-w-940 clg:max-w-1250 cxl:w-85/100">
+                <h1 className="font-bold mb-1 w-full text-2xl sm:text-3xl lg:text-4xl lg:w-4/5 cxl:text-5xl">
+                    {page.home.speechBalloon.h1}
+                </h1>
+                <h2 className="font-medium w-full text-xl sm:text-2xl lg:text-3xl lg:w-4/5 cxl:text-4xl">
+                    {page.home.speechBalloon.h2
+                        .split(' ')
+                        .map((part, index) => (
+                            <span key={index}>
+                                {part}
+                                {index === 4 ? (
+                                    <span className="block cmd:inline"> </span>
+                                ) : (
+                                    ' '
+                                )}
+                            </span>
+                        ))}
+                </h2>
+            </div>
             <div
                 className="w-full h-full relative bg-light_blue cs:rounded-3xl flex justify-center items-center overflow-hidden
             cs:w-9/10 clg:w-88/100 clg:min-w-940 clg:max-w-1250 cxl:w-85/100"
@@ -149,19 +168,19 @@ export default function SpeechBalloon({ page }) {
                     ref={counterRef}
                     className="flex flex-col items-center z-[5]"
                 >
-                    <h1 className="text-white text-lg mb-2 font-bold cs:text-2xl sm:text-4xl lg:text-5xl cxl:text-7xl">
-                        {page.home.speechBalloon.h1}
-                    </h1>
-                    <h2 className="text-white text-center text-4xl font-bold cs:text-5xl sm:text-7xl lg:text-8xl cxl:text-9xl">
+                    <h3 className="text-white text-lg mb-2 font-bold cs:text-2xl sm:text-4xl lg:text-5xl cxl:text-7xl">
+                        {page.home.speechBalloon.h3}
+                    </h3>
+                    <h4 className="text-white text-center text-4xl font-bold cs:text-5xl sm:text-7xl lg:text-8xl cxl:text-9xl">
                         {countFront}
                         <span className="text-white text-lg font-bold cs:text-2xl sm:text-4xl lg:text-5xl cxl:text-7xl">
                             ,
                         </span>
                         {countBack}
                         <span className="text-white text-lg font-bold cs:text-2xl sm:text-4xl lg:text-5xl cxl:text-7xl">
-                            {page.home.speechBalloon.h2}
+                            {page.home.speechBalloon.h4}
                         </span>
-                    </h2>
+                    </h4>
                 </div>
                 <div
                     className={`${showGroupOne ? 'block w-full h-full' : 'hidden'} absolute`}
