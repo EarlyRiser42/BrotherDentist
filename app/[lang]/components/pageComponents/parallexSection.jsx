@@ -81,7 +81,7 @@ export default function ParallexSection({ page }) {
                 className="w-full h-full text-center flex flex-col justify-center items-center bg-light_gray dark:bg-gray"
             >
                 <h1
-                    className={`z-[2] font-bold mt-20 mb-4 text-xl sm:text-2xl lg:text-3xl lg:mb-6 cxl:mb-12 cxl:text-4xl animate-fadeInHome ${!isVisible ? 'hidden' : ''}`}
+                    className={`z-[2] font-bold mb-4 text-xl sm:text-2xl lg:text-3xl lg:mb-6 cxl:mb-12 cxl:text-4xl animate-fadeInHome ${!isVisible ? 'hidden' : ''}`}
                 >
                     {page.home.parallexSection.h1
                         .split(' ')
@@ -117,7 +117,7 @@ export default function ParallexSection({ page }) {
                         ))}
                 </h1>
                 <h1
-                    className={`z-[2] font-bold mb-20 text-xl sm:text-2xl lg:text-3xl lg:mb-6 cxl:mb-12 cxl:text-4xl animate-fadeInHome ${!isVisible ? 'hidden' : ''}`}
+                    className={`z-[2] font-bold text-xl sm:text-2xl lg:text-3xl  cxl:text-4xl animate-fadeInHome ${!isVisible ? 'hidden' : ''}`}
                 >
                     {page.home.parallexSection.h3
                         .split(' ')

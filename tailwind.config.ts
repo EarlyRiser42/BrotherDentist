@@ -51,6 +51,10 @@ const config: Config = {
                     'linear-gradient(to right, #F9FAFB, #0287FF)',
                 'light_gray-to-light_blue-bottom':
                     'linear-gradient(to bottom, #F9FAFB, #0287FF)',
+                'logoSlider-gradient-right':
+                    'linear-gradient(to right, rgba(255, 255, 255, 0), white)',
+                'logoSlider-gradient-left':
+                    'linear-gradient(to left, rgba(255, 255, 255, 0), white)',
             },
             backgroundSize: {
                 '400': '400%',
@@ -80,6 +84,10 @@ const config: Config = {
                 '100': '30rem',
             },
             width: {
+                '360': '22rem',
+                '330': '25rem',
+                '410': '30rem',
+                '490': '35rem',
                 '5/100': '5%',
                 '1/10': '10%',
                 '15/100': '15%',
@@ -200,8 +208,9 @@ const config: Config = {
                     '50%': { transform: 'scale(1.2)' },
                     '100%': { transform: 'scale(1)' },
                 },
-                scroll: {
-                    to: { transform: 'translate(calc(-50% - 0.5rem))' },
+                slide: {
+                    from: { transform: 'translateX(0%)' },
+                    to: { transform: 'translateX(-50%)' },
                 },
             },
             animation: {
@@ -212,7 +221,7 @@ const config: Config = {
                 fadeInHome: 'fadeIn 1.2s ease',
                 textClip: 'textClip 10s linear infinite',
                 balloonAppear: 'balloonAppear 0.7s ease-in-out forwards',
-                scroll: 'scroll 20s linear infinite',
+                slide: 'slide 45s infinite linear;',
             },
         },
     },

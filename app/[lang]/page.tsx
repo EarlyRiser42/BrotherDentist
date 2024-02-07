@@ -8,7 +8,7 @@ import ParallexSection from '@/app/[lang]/components/pageComponents/parallexSect
 import PortraitSlider from '@/app/[lang]/components/pageComponents/portraitSlider';
 import ProSection from '@/app/[lang]/components/pageComponents/proSection';
 import SpeechBalloon from '@/app/[lang]/components/pageComponents/speechBalloon';
-import LogoSlider from '@/app/[lang]/components/pageComponents/logoSlider';
+import ReviewSlider from '@/app/[lang]/components/pageComponents/reviewSlider';
 import portrait1 from '../../public/portraitSlider/portrait1.png';
 import portrait1_mobile from '../../public/portraitSlider/portrait1_mobile.png';
 import portrait2 from '../../public/portraitSlider/portrait2.png';
@@ -41,8 +41,8 @@ export default async function Home({
             <ParallexSection page={page} />
             <ProSection page={page} />
             <SpeechBalloon page={page} />
+            <ReviewSlider page={page} />
             <PortraitSlider page={page} careers={CAREERS} />
-            <LogoSlider />
             <Footer footer={footer} />
         </>
     );
