@@ -47,32 +47,6 @@
         "h2": "이제, 두려움 없는 치과 치료의 경험을 시작하세요.",
         "h3": "혁플란트와 함께면, 매일이 더 환하고 밝은 미소로 가득 찹니다."
       },
-      "ImageSlider_h1": "혁플란트의 전문 의료진",
-      "ImageSlider_h4": "당신의 주치의를 만나보세요.",
-      "portraitOneTitle": [
-        "대표원장", "최인혁"
-      ],
-      "portraitOneDetails": [
-        "서울대학교 치과대학",
-        "연세대학교 치과병원 보존과 수련",
-        "대한 임플란트학회 정회원",
-        "대한 치과보철학회 정회원",
-        "대한 심미보철학회 정회원",
-        "오스템 AIC Implant 고급과정 수료",
-        "오스템 AIC Implant Sinus Surgery Course",
-        "오스템 AIC OneGuide Advanced Course"
-      ],
-      "portraitTwoTitle": [
-        "부원장", "스티븐"
-      ],
-      "portraitTwoDetails": [
-        "서울대학교 치과대학 졸업",
-        "대한 임플란트학회 준회원",
-        "대한 치과보철학회 준회원",
-        "오스템 AIC Implant 고급과정 수료",
-        "오스템 AIC Implant Sinus Surgery Course",
-        "오스템 AIC OneGuide Advanced Course"
-      ],
       "proSection": {
         "proSection_h1": "혁플란트만의 특별함",
         "proSection_h4": "오직 혁플란트만이.",
@@ -174,6 +148,34 @@
             "followerCount": "팔로워 4",
             "message": "친구 추천으로 방문한 치과인데, 기대 이상이었습니다. 특히 임플란트에 대한 깊은 지식과 경험을 바탕으로 한 상담이 인상 깊었어요. 치료 과정이 생각보다 편안하고, 결과도 매우 만족스러웠습니다. 모든 직원분들이 환자를 편안하게 해주시려는 노력이 느껴져서 좋았고, 위생 상태도 매우 청결했습니다. 다음에도 무조건 여기로 결정했어요!"
           }
+        ]
+      },
+      "portraitSlider": {
+        "h1": "혁플란트의 전문 의료진",
+        "h4": "당신의 주치의를 만나보세요.",
+        "portraitOneTitle": [
+          "대표원장", "최인혁"
+        ],
+        "portraitOneDetails": [
+          "서울대학교 치과대학",
+          "연세대학교 치과병원 보존과 수련",
+          "대한 임플란트학회 정회원",
+          "대한 치과보철학회 정회원",
+          "대한 심미보철학회 정회원",
+          "오스템 AIC Implant 고급과정 수료",
+          "오스템 AIC Implant Sinus Surgery Course",
+          "오스템 AIC OneGuide Advanced Course"
+        ],
+        "portraitTwoTitle": [
+          "부원장", "스티븐"
+        ],
+        "portraitTwoDetails": [
+          "서울대학교 치과대학 졸업",
+          "대한 임플란트학회 준회원",
+          "대한 치과보철학회 준회원",
+          "오스템 AIC Implant 고급과정 수료",
+          "오스템 AIC Implant Sinus Surgery Course",
+          "오스템 AIC OneGuide Advanced Course"
         ]
       }
     },

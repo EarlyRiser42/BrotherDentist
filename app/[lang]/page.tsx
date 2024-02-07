@@ -9,9 +9,6 @@ import PortraitSlider from '@/app/[lang]/components/pageComponents/portraitSlide
 import ProSection from '@/app/[lang]/components/pageComponents/proSection';
 import SpeechBalloon from '@/app/[lang]/components/pageComponents/speechBalloon';
 import ReviewSlider from '@/app/[lang]/components/pageComponents/reviewSlider';
-import portrait1 from '../../public/portraitSlider/portrait1.png';
-import portrait1_mobile from '../../public/portraitSlider/portrait1_mobile.png';
-import portrait2 from '../../public/portraitSlider/portrait2.png';
 
 export default async function Home({
     params: { lang },
@@ -19,20 +16,6 @@ export default async function Home({
     params: { lang: Locale };
 }) {
     const { page, header, footer } = await getDictionary(lang);
-    const CAREERS = [
-        {
-            url: [portrait1, portrait1_mobile],
-            alt: 'portraitOne',
-            title: page.home.portraitOneTitle,
-            details: page.home.portraitOneDetails,
-        },
-        {
-            url: [portrait2, portrait2],
-            alt: 'portraitTwo',
-            title: page.home.portraitTwoTitle,
-            details: page.home.portraitTwoDetails,
-        },
-    ];
 
     return (
         <>
@@ -42,7 +25,7 @@ export default async function Home({
             <ProSection page={page} />
             <SpeechBalloon page={page} />
             <ReviewSlider page={page} />
-            <PortraitSlider page={page} careers={CAREERS} />
+            <PortraitSlider page={page} />
             <Footer footer={footer} />
         </>
     );

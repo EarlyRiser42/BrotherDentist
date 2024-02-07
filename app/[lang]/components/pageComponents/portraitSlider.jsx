@@ -3,20 +3,36 @@ import { useState } from 'react';
 import { IoIosArrowForward } from 'react-icons/io';
 import { IoIosArrowBack } from 'react-icons/io';
 import Image from 'next/image';
+import portrait1 from '@/public/portraitSlider/portrait1.png';
+import portrait1_mobile from '@/public/portraitSlider/portrait1_mobile.png';
+import portrait2 from '@/public/portraitSlider/portrait2.png';
 
-export default function PortraitSlider({ page, careers }) {
+export default function PortraitSlider({ page }) {
     const [imageIndex, setImageIndex] = useState(0);
-
+    const CAREERS = [
+        {
+            url: [portrait1, portrait1_mobile],
+            alt: 'portraitOne',
+            title: page.home.portraitSlider.portraitOneTitle,
+            details: page.home.portraitSlider.portraitOneDetails,
+        },
+        {
+            url: [portrait2, portrait2],
+            alt: 'portraitTwo',
+            title: page.home.portraitSlider.portraitTwoTitle,
+            details: page.home.portraitSlider.portraitTwoDetails,
+        },
+    ];
     function showNextImage() {
         setImageIndex((index) => {
-            if (index === careers.length - 1) return 0;
+            if (index === CAREERS.length - 1) return 0;
             return index + 1;
         });
     }
 
     function showPrevImage() {
         setImageIndex((index) => {
-            if (index === 0) return careers.length - 1;
+            if (index === 0) return CAREERS.length - 1;
             return index - 1;
         });
     }
@@ -29,10 +45,10 @@ export default function PortraitSlider({ page, careers }) {
         >
             <div className="flex flex-col justify-center w-9/10 h-1/5 clg:min-w-940 clg:max-w-1250 cxl:w-85/100">
                 <h1 className="font-bold mb-1 w-full text-2xl sm:text-3xl lg:text-4xl lg:w-4/5 cxl:text-5xl">
-                    {page.home.ImageSlider_h1}
+                    {page.home.portraitSlider.h1}
                 </h1>
                 <h4 className="font-medium w-full text-xl sm:text-2xl lg:text-3xl lg:w-4/5 cxl:text-4xl">
-                    {page.home.ImageSlider_h4}
+                    {page.home.portraitSlider.h4}
                 </h4>
             </div>
             <div className="w-full h-4/5 flex overflow-hidden cs:w-9/10 sm:h-4/5 clg:w-88/100 clg:min-w-940 clg:max-w-1250 cxl:w-85/100">
@@ -42,7 +58,7 @@ export default function PortraitSlider({ page, careers }) {
                         transform: `translateX(${-imageIndex * 100}%)`,
                     }}
                 >
-                    {careers.map(({ url, alt, title, details }, index) => (
+                    {CAREERS.map(({ url, alt, title, details }, index) => (
                         <div
                             key={index}
                             className="flex flex-row h-full min-w-full cs:rounded-3xl sm:flex-row relative bg-dark_blue"
@@ -117,7 +133,7 @@ export default function PortraitSlider({ page, careers }) {
                     />
                 </button>
                 <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
-                    {careers.map((_, index) => (
+                    {CAREERS.map((_, index) => (
                         <button
                             key={index}
                             className="block cursor-pointer"
