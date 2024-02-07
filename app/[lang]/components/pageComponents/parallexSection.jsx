@@ -54,7 +54,7 @@ export default function ParallexSection({ page }) {
     return (
         <section
             aria-label="ParallexSection"
-            className="w-full h-330 mt-16 sm:mt-18 sm:h-410 lg:h-410 cxl:h-490 cxl:mt-24 relative overflow-hidden"
+            className="w-full h-330  mt-16 sm:mt-20 lg:mt-24 cxl:mt-28 sm:h-410  lg:h-410 cxl:h-490 relative overflow-hidden"
         >
             {Icons.map((icon, index) => {
                 return (

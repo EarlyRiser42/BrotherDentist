@@ -24,6 +24,7 @@ export default function SpeechBalloon({ page }) {
     const [countFront, setCountFront] = useState(10);
     const [countBack, setCountBack] = useState(122);
     const counterRef = useRef(null);
+
     const speed = 20;
     const targetFront = 213;
     const targetBack = 289;
@@ -32,7 +33,10 @@ export default function SpeechBalloon({ page }) {
     const [showGroupOne, setShowGroupOne] = useState(false);
     const [showGroupTwo, setShowGroupTwo] = useState(false);
     const [showGroupThree, setShowGroupThree] = useState(false);
-    const [showGroupFour, setShowGroupFour] = useState(false);
+
+    // 텍스트 애니메이션
+    const textRef = useRef(null);
+    const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -41,7 +45,6 @@ export default function SpeechBalloon({ page }) {
                     if (entry.isIntersecting) {
                         let incrementFront = Math.floor(targetFront / speed);
                         let incrementBack = Math.floor(targetBack / speed);
-
                         // countFront를 업데이트하는 함수
                         const updateCountFront = () => {
                             setCountFront((prevCount) => {
@@ -54,7 +57,6 @@ export default function SpeechBalloon({ page }) {
                                 }
                             });
                         };
-
                         // countBack를 업데이트하는 함수
                         const updateCountBack = () => {
                             setCountBack((prevCount) => {
@@ -67,7 +69,6 @@ export default function SpeechBalloon({ page }) {
                                 }
                             });
                         };
-
                         updateCountBack();
                         updateCountFront();
                         observer.unobserve(entry.target);
@@ -105,15 +106,13 @@ export default function SpeechBalloon({ page }) {
                 },
                 {
                     root: null,
-                    rootMargin: '-20%',
+                    rootMargin: '0px',
                     threshold,
                 },
             );
-
             if (ref.current) {
                 observer.observe(ref.current);
             }
-
             return () => {
                 if (ref.current) {
                     observer.unobserve(ref.current);
@@ -123,51 +122,57 @@ export default function SpeechBalloon({ page }) {
 
         // 각 그룹별 다른 threshold 값
         const cleanupOne = createObserver(counterRef, setShowGroupOne, 0.1);
-        const cleanupTwo = createObserver(counterRef, setShowGroupTwo, 1);
-        const cleanupThree = createObserver(counterRef, setShowGroupThree, 0.5);
-        const cleanupFour = createObserver(counterRef, setShowGroupFour, 0.5);
-
+        const cleanupTwo = createObserver(counterRef, setShowGroupTwo, 0.5);
+        const cleanupThree = createObserver(counterRef, setShowGroupThree, 1);
+        const cleanupText = createObserver(textRef, setIsVisible, 0.1);
         return () => {
             cleanupOne();
             cleanupTwo();
             cleanupThree();
-            cleanupFour();
+            cleanupText();
         };
     }, []);
 
     return (
         <section
             aria-label="speechBalloon"
-            className="flex flex-col justify-start items-center w-full h-330 mt-20
-            cs:h-380 cs:mt-24 sm:h-430 sm:mt-32 clg:h-510 cxl:h-586"
+            className="flex flex-col justify-start items-center w-full h-330 mt-16 sm:mt-20 lg:mt-24 cxl:mt-28
+            cs:h-380 sm:h-430 clg:h-510 cxl:h-586"
         >
-            <div className="flex flex-col justify-center w-9/10 h-auto mb-2 sm:mb-4 clg:min-w-940 clg:max-w-1250 cxl:w-85/100">
-                <h1 className="font-bold mb-1 w-full text-2xl sm:text-3xl lg:text-4xl lg:w-4/5 cxl:text-5xl">
-                    {page.home.speechBalloon.h1}
-                </h1>
-                <h2 className="font-medium w-full text-xl sm:text-2xl lg:text-3xl lg:w-4/5 cxl:text-4xl">
-                    {page.home.speechBalloon.h2
-                        .split(' ')
-                        .map((part, index) => (
-                            <span key={index}>
-                                {part}
-                                {index === 4 ? (
-                                    <span className="block cmd:inline"> </span>
-                                ) : (
-                                    ' '
-                                )}
-                            </span>
-                        ))}
-                </h2>
+            <div
+                ref={textRef}
+                className="flex flex-col justify-center w-9/10 h-auto mb-2 sm:mb-4 clg:min-w-940 clg:max-w-1250 cxl:w-85/100 "
+            >
+                <div
+                    className={`animate-fadeInHome ${isVisible ? 'flex flex-col' : 'hidden'}`}
+                >
+                    <h1 className="font-bold mb-1 w-full text-2xl sm:text-3xl lg:text-4xl lg:w-4/5 cxl:text-5xl">
+                        {page.home.speechBalloon.h1}
+                    </h1>
+                    <h2 className="font-medium w-full text-xl sm:text-2xl lg:text-3xl lg:w-4/5 cxl:text-4xl">
+                        {page.home.speechBalloon.h2
+                            .split(' ')
+                            .map((part, index) => (
+                                <span key={index}>
+                                    {part}
+                                    {index === 4 ? (
+                                        <span className="block cmd:inline">
+                                            {' '}
+                                        </span>
+                                    ) : (
+                                        ' '
+                                    )}
+                                </span>
+                            ))}
+                    </h2>
+                </div>
             </div>
             <div
+                ref={counterRef}
                 className="w-full h-full relative bg-light_blue cs:rounded-3xl flex justify-center items-center overflow-hidden
             cs:w-9/10 clg:w-88/100 clg:min-w-940 clg:max-w-1250 cxl:w-85/100"
             >
-                <div
-                    ref={counterRef}
-                    className="flex flex-col items-center z-[5]"
-                >
+                <div className="flex flex-col items-center z-[5]">
                     <h3 className="text-white text-lg mb-2 font-bold cs:text-2xl sm:text-4xl lg:text-5xl cxl:text-7xl">
                         {page.home.speechBalloon.h3}
                     </h3>
@@ -205,15 +210,15 @@ export default function SpeechBalloon({ page }) {
                         balloon={page.home.speechBalloon.balloons[3]}
                         position={{ top: '17%', left: '65%' }}
                     />
-                </div>
-                <div
-                    className={`${showGroupTwo ? 'block w-full h-full' : 'hidden'} absolute`}
-                >
                     <Balloon
                         img={pfp5}
                         balloon={page.home.speechBalloon.balloons[4]}
                         position={{ top: '4%', left: '90%' }}
                     />
+                </div>
+                <div
+                    className={`${showGroupTwo ? 'block w-full h-full' : 'hidden'} absolute`}
+                >
                     <Balloon
                         img={pfp6}
                         balloon={page.home.speechBalloon.balloons[5]}
@@ -229,10 +234,6 @@ export default function SpeechBalloon({ page }) {
                         balloon={page.home.speechBalloon.balloons[7]}
                         position={{ top: '39%', left: '80%' }}
                     />
-                </div>
-                <div
-                    className={`${showGroupThree ? 'block w-full h-full' : 'hidden'} absolute`}
-                >
                     <Balloon
                         img={pfp9}
                         balloon={page.home.speechBalloon.balloons[8]}
@@ -250,7 +251,7 @@ export default function SpeechBalloon({ page }) {
                     />
                 </div>
                 <div
-                    className={`${showGroupFour ? 'hidden sm:block w-full h-full' : 'hidden'} absolute`}
+                    className={`${showGroupThree ? 'hidden sm:block w-full h-full' : 'hidden'} absolute`}
                 >
                     <Balloon
                         img={pfp12}

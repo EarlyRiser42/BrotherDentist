@@ -224,7 +224,7 @@ const config: Config = {
                 fadeInHome: 'fadeIn 1.2s ease',
                 textClip: 'textClip 10s linear infinite',
                 balloonAppear: 'balloonAppear 0.7s ease-in-out forwards',
-                slide: 'slide 45s infinite linear;',
+                slide: 'slide 120s infinite linear;',
             },
         },
     },

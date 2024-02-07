@@ -24,8 +24,8 @@ export default function PortraitSlider({ page, careers }) {
     return (
         <section
             aria-label="Image Slider"
-            className="relative flex flex-col justify-start items-center w-full h-330 mt-16
-            cs:h-410 cs:mt-24 sm:h-570 sm:mt-32 clg:h-490 cxl:h-570"
+            className="relative flex flex-col justify-start items-center w-full h-330 mt-16 sm:mt-20 lg:mt-24 cxl:mt-28
+            cs:h-410  sm:h-570  clg:h-490 cxl:h-570"
         >
             <div className="flex flex-col justify-center w-9/10 h-1/5 clg:min-w-940 clg:max-w-1250 cxl:w-85/100">
                 <h1 className="font-bold mb-1 w-full text-2xl sm:text-3xl lg:text-4xl lg:w-4/5 cxl:text-5xl">

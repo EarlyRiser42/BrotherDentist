@@ -30,7 +30,7 @@ export default function ReviewSlider({ page }) {
     return (
         <section
             aria-label="ReviewSlider"
-            className="w-full h-auto mt-20 sm:mt-24 cxl:mt-24 flex flex-col justify-start items-center"
+            className="w-full h-auto flex flex-col justify-start items-center mt-16 sm:mt-20 lg:mt-24 cxl:mt-28"
         >
             <div className="flex flex-col justify-center w-9/10 h-auto mb-2 sm:mb-4 clg:min-w-940 clg:max-w-1250 cxl:w-85/100">
                 <h1 className="font-bold mb-1 w-full text-2xl sm:text-3xl lg:text-4xl lg:w-4/5 cxl:text-5xl">
