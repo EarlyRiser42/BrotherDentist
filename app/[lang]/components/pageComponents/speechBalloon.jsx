@@ -77,7 +77,7 @@ export default function SpeechBalloon({ page }) {
             },
             {
                 root: null,
-                rootMargin: '-20%',
+                rootMargin: '0px',
                 threshold: 0.9,
             },
         );
