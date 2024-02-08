@@ -187,9 +187,11 @@ const config: Config = {
             zIndex: {
                 '2': '2',
                 '5': '5',
+                '200': '200',
             },
             boxShadow: {
                 speechBalloon: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
+                speechBalloonBlack: 'rgba(255, 255, 255, 0.55) 0px 5px 15px',
             },
             keyframes: {
                 navIn: {
@@ -202,6 +204,10 @@ const config: Config = {
                 },
                 fadeIn: {
                     '0%': { transform: 'translateY(100px)', opacity: '0' },
+                    '100%': { opacity: '1' },
+                },
+                fadeInOnlyOp: {
+                    '0%': { opacity: '0' },
                     '100%': { opacity: '1' },
                 },
                 slideDown: {
@@ -225,7 +231,7 @@ const config: Config = {
                 navIn: 'navIn 0.3s ease-out',
                 navOut: 'navOut 0.3s ease-out',
                 slideDown: 'slideDown 0.3s ease-out forwards',
-                fadeIn: 'fadeIn 0.3s ease-out',
+                fadeIn: 'fadeInOnlyOp 0.3s ease-out',
                 fadeInHome: 'fadeIn 1.2s ease',
                 textClip: 'textClip 10s linear infinite',
                 balloonAppear: 'balloonAppear 0.7s ease-in-out forwards',

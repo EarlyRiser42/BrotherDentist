@@ -31,7 +31,7 @@ export default function ClinicServices({ page }) {
             </div>
             <div className="grid grid-cols-10 grid-rows-10 gap-4 w-9/10 h-72 cs:h-80 sm:h-96 cmd:h-410 clg:min-w-940 clg:max-w-1250 cxl:w-85/100 lg:h-430 cxl:h-490">
                 <div
-                    className="col-span-7 row-span-6 bg-light_blue flex items-start justify-start rounded-2xl relative hover:font-bold hover:shadow-speechBalloon
+                    className="col-span-7 row-span-6 bg-light_blue flex items-start justify-start rounded-2xl relative hover:font-bold hover:shadow-speechBalloon dark:hover:shadow-speechBalloonBlack
                 cmd:col-span-6 cmd:row-span-4"
                 >
                     <span
@@ -45,7 +45,7 @@ export default function ClinicServices({ page }) {
                     </div>
                 </div>
                 <div
-                    className="col-span-3 row-span-6 bg-blue_600 flex items-start justify-start rounded-2xl relative hover:font-bold hover:shadow-speechBalloon
+                    className="col-span-3 row-span-6 bg-blue_600 flex items-start justify-start rounded-2xl relative hover:font-bold hover:shadow-speechBalloon dark:hover:shadow-speechBalloonBlack
                 cmd:col-span-2 cmd:row-span-4"
                 >
                     <span
@@ -62,7 +62,7 @@ export default function ClinicServices({ page }) {
                     <Image src={icon} alt="3d icon" fill />
                 </div>
                 <div
-                    className="col-span-5 row-span-4 bg-green_600 flex items-start justify-start rounded-2xl relative hover:font-bold hover:shadow-speechBalloon
+                    className="col-span-5 row-span-4 bg-green_600 flex items-start justify-start rounded-2xl relative hover:font-bold hover:shadow-speechBalloon dark:hover:shadow-speechBalloonBlack
                 cmd:col-span-4 cmd:row-span-4"
                 >
                     <span

@@ -30,7 +30,7 @@ export default function Header({ lang, header }: HeaderProps) {
 
     return (
         <nav
-            className="sticky inset-0 z-20 bg-white dark:bg-black py-3 flex items-center justify-between w-full border-gray-300 dark:border-white dark:border-opacity-30
+            className="sticky inset-0 z-[200] bg-white dark:bg-black py-3 flex items-center justify-between w-full border-gray-300 dark:border-white dark:border-opacity-30
     lg:justify-around lg:h-10vh"
         >
             <div className="h-1/20 w-7/12 flex items-center ml-4 lg:ml-0 lg:w-auto">
