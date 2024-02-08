@@ -182,9 +182,17 @@
         "h1": "Hyukplant's Specialized Medical Services",
         "h4": "Providing the Best Care You Need.",
         "specialOne": "Implants",
-        "specialTwo": "Prosthodontics",
-        "specialThree": "Cosmetic Dentistry"
+        "specialTwo": "Cosmetic Dentistry",
+        "specialThree": "Prosthodontics"
+      },
+      "mapSection": {
+        "h1": "We are here",
+        "address": "Biin Health Center, Biin-myeon, Seocheon-gun, Chungcheongnam-do, South Korea",
+        "hours": "Monday - Friday",
+        "saturday": "Saturday",
+        "sunday": "Sunday"
       }
+
     },
     "services": {
       "title": "Our Services",

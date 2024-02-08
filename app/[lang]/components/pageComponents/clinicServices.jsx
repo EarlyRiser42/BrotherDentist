@@ -45,7 +45,7 @@ export default function ClinicServices({ page }) {
                     </div>
                 </div>
                 <div
-                    className="col-span-3 row-span-6 bg-white_600 dark:bg-black_600 flex items-start justify-start rounded-2xl relative hover:font-bold hover:shadow-speechBalloon
+                    className="col-span-3 row-span-6 bg-blue_600 flex items-start justify-start rounded-2xl relative hover:font-bold hover:shadow-speechBalloon
                 cmd:col-span-2 cmd:row-span-4"
                 >
                     <span
@@ -62,7 +62,7 @@ export default function ClinicServices({ page }) {
                     <Image src={icon} alt="3d icon" fill />
                 </div>
                 <div
-                    className="col-span-5 row-span-4 bg-white_600 dark:bg-black_600 flex items-start justify-start rounded-2xl relative hover:font-bold hover:shadow-speechBalloon
+                    className="col-span-5 row-span-4 bg-green_600 flex items-start justify-start rounded-2xl relative hover:font-bold hover:shadow-speechBalloon
                 cmd:col-span-4 cmd:row-span-4"
                 >
                     <span
@@ -81,7 +81,7 @@ export default function ClinicServices({ page }) {
                 >
                     <Image src={logo_ko} alt="HyukPlant Logo" fill />
                 </div>
-                <div className="col-span-2 row-span-5 bg-white_600 dark:bg-black_600  hidden cmd:flex items-center justify-center rounded-2xl relative">
+                <div className="col-span-2 row-span-5 bg-white_600 hidden cmd:flex items-center justify-center rounded-2xl relative">
                     <Image src={support} alt="supporters" fill />
                 </div>
                 <div className="col-span-8 row-span-2 bg-white_600 dark:bg-black_600 hidden cmd:flex items-center justify-center rounded-2xl relative"></div>

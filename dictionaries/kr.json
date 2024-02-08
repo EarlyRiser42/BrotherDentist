@@ -182,8 +182,15 @@
         "h1": "혁플란트의 진료 전문 분야",
         "h4": "당신이 필요로 하는 최고의 치료를 제공합니다.",
         "specicalOne": "임플란트",
-        "specicalTwo": "보철",
-        "specicalThree": "치아성형"
+        "specicalTwo": "치아성형",
+        "specicalThree": "보철"
+      },
+      "mapSection": {
+        "h1": "저희는 여기 있습니다",
+        "address": "충남 서천군 비인면 비인보건지소, 대한민국",
+        "hours": "월 - 금",
+        "saturday": "토요일",
+        "sunday": "일요일"
       }
     },
     "services": {

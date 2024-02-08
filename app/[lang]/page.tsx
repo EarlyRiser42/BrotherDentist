@@ -29,7 +29,7 @@ export default async function Home({
             <ReviewSlider page={page} />
             <PortraitSlider page={page} />
             <ClinicServices page={page} />
-            <MapSection />
+            <MapSection page={page} />
             <Footer footer={footer} />
         </>
     );
