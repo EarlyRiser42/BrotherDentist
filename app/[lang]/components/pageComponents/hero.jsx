@@ -2,6 +2,9 @@ import { ArrowRight } from '@/components/Icons/Icons';
 import React from 'react';
 import VideoComponent from '@/app/[lang]/components/pageComponents/VideoComponent';
 import { Suspense } from 'react';
+import kakao from '@/public/hero/kakaotalk.png';
+import naver from '@/public/hero/naver.png';
+import Image from 'next/image';
 
 export default function Hero({ page }) {
     return (
@@ -64,29 +67,35 @@ export default function Hero({ page }) {
                     cs:min-h-120 cs:mt-4 cs:h-2/5 cs:min-w-cs sm:min-w-sm sm:min-h-170 sm:gap-x-4
                     clg:grid-cols-1 clg:grid-rows-3 clg:ml-6 clg:gap-y-6 clg:min-w-300 clg:mt-0 clg:h-9/10 clg:w-1/10"
             >
-                <div className="aspect-[4/3] rounded-2xl relative bg-green hover:font-bold cmd:aspect-auto ">
+                <div className="aspect-[4/3] rounded-2xl relative bg-green hover:font-bold hover:shadow-speechBalloon cmd:aspect-auto ">
                     <span
                         className="mt-2 ml-2 inline-block text-black dark:text-white cs:mt-4 cs:ml-4
                         sm:text-lg lg:text-xl xl:text-2xl"
                     >
                         {page.home.hero.button1}
                     </span>
+                    <div className="absolute right-2 top-1 w-8 aspect-square cs:top-3 sm:w-10 clg:w-10 cxl:w-12 cxl:top-2">
+                        <Image src={naver} alt="naverlogo" fill />
+                    </div>
                     <div className="absolute right-3 bottom-3">
                         <ArrowRight />
                     </div>
                 </div>
-                <div className="aspect-[4/3] rounded-2xl relative bg-yellow hover:font-bold cmd:aspect-auto">
+                <div className="aspect-[4/3] rounded-2xl relative bg-yellow hover:font-bold hover:shadow-speechBalloon cmd:aspect-auto">
                     <span
                         className="mt-2 ml-2 inline-block relative text-black dark:text-white cs:mt-4 cs:ml-4
                         sm:text-lg lg:text-xl xl:text-2xl"
                     >
                         {page.home.hero.button2}
                     </span>
+                    <div className="absolute right-2 top-1 w-8 aspect-square cs:top-3 sm:w-10 clg:w-10 cxl:w-12 cxl:top-2">
+                        <Image src={kakao} alt="kakaologo" fill />
+                    </div>
                     <div className="absolute right-3 bottom-3">
                         <ArrowRight />
                     </div>
                 </div>
-                <div className="aspect-[4/3] rounded-2xl relative bg-dark_gray dark:bg-gray hover:font-bold cmd:aspect-auto ">
+                <div className="aspect-[4/3] rounded-2xl relative bg-dark_gray dark:bg-gray hover:font-bold hover:shadow-speechBalloon cmd:aspect-auto ">
                     <span
                         className="mt-2 ml-2 inline-block relative text-black dark:text-white cs:mt-4 cs:ml-4
                         sm:text-lg lg:text-xl xl:text-2xl"

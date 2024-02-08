@@ -32,7 +32,7 @@ export default function ClinicServices({ page }) {
             <div className="grid grid-cols-10 grid-rows-10 gap-4 w-9/10 h-72 cs:h-80 sm:h-96 cmd:h-410 clg:min-w-940 clg:max-w-1250 cxl:w-85/100 lg:h-430 cxl:h-490">
                 <div
                     className="col-span-7 row-span-6 bg-light_blue flex items-start justify-start rounded-2xl relative hover:font-bold hover:shadow-speechBalloon
-                cmd:col-span-4 cmd:row-span-4"
+                cmd:col-span-6 cmd:row-span-4"
                 >
                     <span
                         className="mt-2 ml-2 inline-block relative text-black dark:text-white cs:mt-4 cs:ml-4
@@ -46,7 +46,7 @@ export default function ClinicServices({ page }) {
                 </div>
                 <div
                     className="col-span-3 row-span-6 bg-white_600 dark:bg-black_600 flex items-start justify-start rounded-2xl relative hover:font-bold hover:shadow-speechBalloon
-                cmd:col-span-4 cmd:row-span-4"
+                cmd:col-span-2 cmd:row-span-4"
                 >
                     <span
                         className="mt-2 ml-2 inline-block relative text-black dark:text-white cs:mt-4 cs:ml-4
