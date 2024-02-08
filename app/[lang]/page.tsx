@@ -5,10 +5,12 @@ import React from 'react';
 import Footer from '@/app/[lang]/components/footer';
 import Hero from '@/app/[lang]/components/pageComponents/hero';
 import ParallexSection from '@/app/[lang]/components/pageComponents/parallexSection';
-import PortraitSlider from '@/app/[lang]/components/pageComponents/portraitSlider';
 import ProSection from '@/app/[lang]/components/pageComponents/proSection';
 import SpeechBalloon from '@/app/[lang]/components/pageComponents/speechBalloon';
 import ReviewSlider from '@/app/[lang]/components/pageComponents/reviewSlider';
+import ClinicServices from '@/app/[lang]/components/pageComponents/clinicServices';
+import PortraitSlider from '@/app/[lang]/components/pageComponents/portraitSlider';
+import MapSection from '@/app/[lang]/components/pageComponents/mapSection';
 
 export default async function Home({
     params: { lang },
@@ -26,6 +28,8 @@ export default async function Home({
             <SpeechBalloon page={page} />
             <ReviewSlider page={page} />
             <PortraitSlider page={page} />
+            <ClinicServices page={page} />
+            <MapSection />
             <Footer footer={footer} />
         </>
     );

@@ -177,6 +177,13 @@
           "오스템 AIC Implant Sinus Surgery Course",
           "오스템 AIC OneGuide Advanced Course"
         ]
+      },
+      "specialties": {
+        "h1": "혁플란트의 진료 전문 분야",
+        "h4": "당신이 필요로 하는 최고의 치료를 제공합니다.",
+        "specicalOne": "임플란트",
+        "specicalTwo": "보철",
+        "specicalThree": "치아성형"
       }
     },
     "services": {

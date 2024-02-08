@@ -41,7 +41,7 @@ export default function ReviewSlider({ page }) {
                         <span key={index}>
                             {part}
                             {index === 1 ? (
-                                <span className="block cmd:inline"> </span>
+                                <span className="block sm:inline"> </span>
                             ) : (
                                 ' '
                             )}
@@ -79,10 +79,10 @@ const Card = ({ review, src, alt }) => {
                     />
                 </div>
                 <div className="pl-2 flex h-auto flex-col">
-                    <span className="text-base font-semibold cs:text-lg lg:text-xl ">
+                    <span className="text-base text-black font-semibold cs:text-lg lg:text-xl ">
                         {review.nickname}
                     </span>
-                    <span className="text-sm text-gray-500 cs:text-base lg:text-lg">
+                    <span className="text-sm text-gray_500 cs:text-base lg:text-lg">
                         {review.reviewCount} · {review.photoCount} ·
                         {review.followerCount}
                     </span>

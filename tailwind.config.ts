@@ -28,7 +28,10 @@ const config: Config = {
                 gray: '#333333',
                 dark_gray: '#F3F3F3',
                 gray_300: '#D1D5DB',
+                gray_500: '#6B7280',
                 gray_600: '#4B5563',
+                black_600: '#1C1A1E',
+                white_600: '#F8F8FF',
                 light_blue: '#2463EB',
                 dark_blue: '#020D43',
                 blue: '#A3CFCD',
@@ -196,7 +199,7 @@ const config: Config = {
                     '100%': { left: '100vw' },
                 },
                 fadeIn: {
-                    '0%': { transform: 'translateY(150px)', opacity: '0' },
+                    '0%': { transform: 'translateY(100px)', opacity: '0' },
                     '100%': { opacity: '1' },
                 },
                 slideDown: {

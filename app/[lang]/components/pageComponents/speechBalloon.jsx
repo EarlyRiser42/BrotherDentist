@@ -34,10 +34,6 @@ export default function SpeechBalloon({ page }) {
     const [showGroupTwo, setShowGroupTwo] = useState(false);
     const [showGroupThree, setShowGroupThree] = useState(false);
 
-    // 텍스트 애니메이션
-    const textRef = useRef(null);
-    const [isVisible, setIsVisible] = useState(false);
-
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
@@ -124,12 +120,10 @@ export default function SpeechBalloon({ page }) {
         const cleanupOne = createObserver(counterRef, setShowGroupOne, 0.1);
         const cleanupTwo = createObserver(counterRef, setShowGroupTwo, 0.5);
         const cleanupThree = createObserver(counterRef, setShowGroupThree, 1);
-        const cleanupText = createObserver(textRef, setIsVisible, 0.1);
         return () => {
             cleanupOne();
             cleanupTwo();
             cleanupThree();
-            cleanupText();
         };
     }, []);
 
@@ -139,33 +133,24 @@ export default function SpeechBalloon({ page }) {
             className="flex flex-col justify-start items-center w-full h-330 mt-16 sm:mt-20 lg:mt-24 cxl:mt-28
             cs:h-380 sm:h-430 clg:h-510 cxl:h-586"
         >
-            <div
-                ref={textRef}
-                className="flex flex-col justify-center w-9/10 h-auto mb-2 sm:mb-4 clg:min-w-940 clg:max-w-1250 cxl:w-85/100 "
-            >
-                <div
-                    className={`animate-fadeInHome ${isVisible ? 'flex flex-col' : 'hidden'}`}
-                >
-                    <h1 className="font-bold mb-1 w-full text-2xl sm:text-3xl lg:text-4xl lg:w-4/5 cxl:text-5xl">
-                        {page.home.speechBalloon.h1}
-                    </h1>
-                    <h2 className="font-medium w-full text-xl sm:text-2xl lg:text-3xl lg:w-4/5 cxl:text-4xl">
-                        {page.home.speechBalloon.h2
-                            .split(' ')
-                            .map((part, index) => (
-                                <span key={index}>
-                                    {part}
-                                    {index === 4 ? (
-                                        <span className="block cmd:inline">
-                                            {' '}
-                                        </span>
-                                    ) : (
-                                        ' '
-                                    )}
-                                </span>
-                            ))}
-                    </h2>
-                </div>
+            <div className="flex flex-col justify-center w-9/10 h-auto mb-2 sm:mb-4 clg:min-w-940 clg:max-w-1250 cxl:w-85/100 ">
+                <h1 className="font-bold mb-1 w-full text-2xl sm:text-3xl lg:text-4xl lg:w-4/5 cxl:text-5xl">
+                    {page.home.speechBalloon.h1}
+                </h1>
+                <h2 className="font-medium w-full text-xl sm:text-2xl lg:text-3xl lg:w-4/5 cxl:text-4xl">
+                    {page.home.speechBalloon.h2
+                        .split(' ')
+                        .map((part, index) => (
+                            <span key={index}>
+                                {part}
+                                {index === 4 ? (
+                                    <span className="block cmd:inline"> </span>
+                                ) : (
+                                    ' '
+                                )}
+                            </span>
+                        ))}
+                </h2>
             </div>
             <div
                 ref={counterRef}

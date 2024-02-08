@@ -177,6 +177,13 @@
           "Osstem AIC Implant Sinus Surgery Course",
           "Osstem AIC OneGuide Advanced Course"
         ]
+      },
+      "specialties": {
+        "h1": "Hyukplant's Specialized Medical Services",
+        "h4": "Providing the Best Care You Need.",
+        "specialOne": "Implants",
+        "specialTwo": "Prosthodontics",
+        "specialThree": "Cosmetic Dentistry"
       }
     },
     "services": {

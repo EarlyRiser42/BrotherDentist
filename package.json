@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@formatjs/intl-localematcher": "^0.5.2",
     "@vercel/blob": "^0.20.0",
     "negotiator": "^0.6.3",
     "next": "14.0.4",
