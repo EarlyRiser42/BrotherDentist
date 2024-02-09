@@ -94,52 +94,71 @@ export default function MapComponent({ page }) {
                         Toggle Interaction
                     </button>
                 </div>
-                <div className="w-full clg:w-1/2 h-72 clg:h-full flex flex-col items-start justify-between clg:justify-start clg:items-center">
-                    <div className="w-full clg:w-4/5 clg:mb-12">
-                        <h3 className="text-black dark:text-white text-lg clg:text-2xl font-bold mb-2">
-                            Address
-                        </h3>
-                        <p className="text-black dark:text-white">
-                            {page.home.mapSection.address}
-                        </p>
-                    </div>
-                    <div className="w-full clg:w-4/5 clg:mb-12">
-                        <h3 className="text-black dark:text-white text-lg clg:text-2xl font-bold mb-2">
-                            Business hours
-                        </h3>
-                        <div className="grid grid-cols-2 gap-1">
-                            <p className="text-black dark:text-white">
-                                {' '}
-                                {page.home.mapSection.hours}
-                            </p>
-                            <p className="text-black dark:text-white text-right">
-                                9am - 5pm
-                            </p>
-                            <p className="text-black dark:text-white">
-                                {' '}
-                                {page.home.mapSection.saturday}
-                            </p>
-                            <p className="text-black dark:text-white text-right">
-                                10am - 3pm
-                            </p>
-                            <p className="text-black dark:text-white">
-                                {' '}
-                                {page.home.mapSection.sunday}
-                            </p>
-                            <p className="text-black dark:text-white text-right">
-                                Closed
+                <div className="w-full clg:w-1/2 h-44 cmd:h-72 clg:h-full flex gap-x-2 clg:flex-col items-start justify-between clg:justify-start clg:items-center">
+                    <div className="w-1/2 h-full flex flex-col justify-between clg:w-4/5 clg:mb-12">
+                        <div className="w-full clg:w-4/5 clg:mb-12">
+                            <h3 className="text-lg clg:text-2xl text-black dark:text-white font-bold mb-2">
+                                Address
+                            </h3>
+                            {page.home.mapSection.address
+                                .split(' ')
+                                .map((part, index) => (
+                                    <span
+                                        key={index}
+                                        className="text-sm cs:text-base sm:text-lg cxl:text-xl text-black dark:text-white"
+                                    >
+                                        {part}
+                                        {index === 2 || index === 3 ? (
+                                            <span className="block sm:inline">
+                                                {' '}
+                                            </span>
+                                        ) : (
+                                            ' '
+                                        )}
+                                    </span>
+                                ))}
+                        </div>
+                        <div className="w-full clg:w-4/5 clg:mb-12">
+                            <h3 className="text-lg clg:text-2xl text-black dark:text-white font-bold mb-2">
+                                Phone
+                            </h3>
+                            <p className="text-sm cs:text-base sm:text-lg cxl:text-xl text-black dark:text-white">
+                                <a className="underline" href="#">
+                                    02-0000-0000
+                                </a>
                             </p>
                         </div>
                     </div>
-                    <div className="w-full clg:w-4/5 clg:mb-12">
-                        <h3 className="text-black dark:text-white text-lg clg:text-2xl font-bold mb-2">
-                            Phone
-                        </h3>
-                        <p className="text-black dark:text-white">
-                            <a className="underline" href="#">
-                                02-0000-0000
-                            </a>
-                        </p>
+                    <div className=" w-1/2 h-full clg:w-4/5">
+                        <div className="w-full h-full flex flex-col justify-between clg:w-4/5 clg:mb-12">
+                            <h3 className="text-black dark:text-white text-lg clg:text-2xl font-bold mb-2">
+                                Business hours
+                            </h3>
+                            <div className="flex justify-between">
+                                <p className="text-sm cs:text-base sm:text-lg cxl:text-xl text-black dark:text-white">
+                                    {page.home.mapSection.hours}
+                                </p>
+                                <p className="text-sm cs:text-base sm:text-lg cxl:text-xl text-black dark:text-white text-right">
+                                    9am - 5pm
+                                </p>
+                            </div>
+                            <div className="flex justify-between">
+                                <p className="text-sm cs:text-base sm:text-lg cxl:text-xl text-black dark:text-white">
+                                    {page.home.mapSection.saturday}
+                                </p>
+                                <p className="text-sm cs:text-base sm:text-lg cxl:text-xl text-black dark:text-white text-right">
+                                    10am - 3pm
+                                </p>
+                            </div>
+                            <div className="flex justify-between">
+                                <p className="text-sm cs:text-base sm:text-lg cxl:text-xl text-black dark:text-white">
+                                    {page.home.mapSection.sunday}
+                                </p>
+                                <p className="text-sm cs:text-base sm:text-lg cxl:text-xl text-black dark:text-white text-right">
+                                    Closed
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
