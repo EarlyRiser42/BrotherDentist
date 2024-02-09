@@ -59,7 +59,12 @@ export default function ClinicServices({ page }) {
                     </div>
                 </div>
                 <div className="col-span-2 row-span-5 bg-white_600 dark:bg-black_600 hidden cmd:flex items-center justify-center rounded-2xl relative">
-                    <Image src={icon} alt="3d icon" fill />
+                    <Image
+                        src={icon}
+                        alt="3d icon"
+                        fill
+                        sizes="(max-width: 1024px) 20vw, (max-width: 1440px) 20vw, 20vw"
+                    />
                 </div>
                 <div
                     className="col-span-5 row-span-4 bg-green_600 flex items-start justify-start rounded-2xl relative hover:font-bold hover:shadow-speechBalloon dark:hover:shadow-speechBalloonBlack
@@ -79,10 +84,20 @@ export default function ClinicServices({ page }) {
                     className="col-span-5 row-span-4 bg-white_600 dark:bg-black_600 flex items-center justify-center rounded-2xl relative
                 cmd:col-span-4 cmd:row-span-4"
                 >
-                    <Image src={logo_ko} alt="HyukPlant Logo" fill />
+                    <Image
+                        src={logo_ko}
+                        alt="HyukPlant Logo"
+                        fill
+                        sizes="(max-width: 1024px) 20vw, (max-width: 1440px) 20vw, 20vw"
+                    />
                 </div>
                 <div className="col-span-2 row-span-5 bg-white_600 hidden cmd:flex items-center justify-center rounded-2xl relative">
-                    <Image src={support} alt="supporters" fill />
+                    <Image
+                        src={support}
+                        alt="supporters"
+                        fill
+                        sizes="(max-width: 1024px) 20vw, (max-width: 1440px) 20vw, 20vw"
+                    />
                 </div>
                 <div className="col-span-8 row-span-2 bg-white_600 dark:bg-black_600 hidden cmd:flex items-center justify-center rounded-2xl relative"></div>
             </div>

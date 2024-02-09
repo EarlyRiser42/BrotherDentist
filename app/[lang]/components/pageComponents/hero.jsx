@@ -75,7 +75,12 @@ export default function Hero({ page }) {
                         {page.home.hero.button1}
                     </span>
                     <div className="absolute right-2 top-1 w-8 aspect-square cs:top-3 sm:w-10 clg:w-10 cxl:w-12 cxl:top-2">
-                        <Image src={naver} alt="naverlogo" fill />
+                        <Image
+                            src={naver}
+                            alt="naverlogo"
+                            fill
+                            sizes="(max-width: 1024px) 2rem, (max-width: 1440px) 2.5rem, 3rem"
+                        />
                     </div>
                     <div className="absolute right-3 bottom-3">
                         <ArrowRight />
@@ -89,7 +94,12 @@ export default function Hero({ page }) {
                         {page.home.hero.button2}
                     </span>
                     <div className="absolute right-2 top-1 w-8 aspect-square cs:top-3 sm:w-10 clg:w-10 cxl:w-12 cxl:top-2">
-                        <Image src={kakao} alt="kakaologo" fill />
+                        <Image
+                            src={kakao}
+                            alt="kakaologo"
+                            fill
+                            sizes="(max-width: 1024px) 2rem, (max-width: 1440px) 2.5rem, 3rem"
+                        />
                     </div>
                     <div className="absolute right-3 bottom-3">
                         <ArrowRight />
