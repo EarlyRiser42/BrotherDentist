@@ -25,14 +25,14 @@ const Navigation = ({ lang, navOpen, navAnimation, header }) => {
             <div className="w-11/12 mt-5 mx-auto h-1/20 lg:hidden">
                 {lang === 'ko' ? <LogoKo /> : <LogoEn />}
             </div>
-            <ul className="flex flex-col justify-start lg:justify-evenly w-11/12 h-4/5 lg:h-auto lg:w-3/5 ml-0 lg:flex-row text-2xl lg:text-lg">
+            <ul className="flex flex-col justify-start lg:justify-evenly w-11/12 h-4/5 lg:h-auto lg:w-4/5 ml-0 lg:flex-row text-2xl lg:text-lg">
                 <Link href={`/${lang}`}>
-                    <li className="md:mr-4 cursor-pointer text-black dark:text-white hover:font-bold mt-5 lg:mt-0 mb-10 lg:mb-0">
+                    <li className="cursor-pointer text-black dark:text-white hover:font-bold mt-5 lg:mt-0 mb-10 lg:mb-0">
                         {header.about}
                     </li>
                 </Link>
                 <li
-                    className={`md:mr-4 relative cursor-pointer text-black dark:text-white hover:font-bold ${isImplantOpen ? 'font-bold' : ''} mb-10 lg:mb-0 flex flex-col lg:flex-row items-start lg:items-center`}
+                    className={`relative cursor-pointer text-black dark:text-white hover:font-bold ${isImplantOpen ? 'font-bold' : ''} mb-10 lg:mb-0 flex flex-col lg:flex-row items-start lg:items-center`}
                     onClick={() => setIsImplantOpen(!isImplantOpen)}
                     ref={implantRef}
                 >
@@ -68,7 +68,7 @@ const Navigation = ({ lang, navOpen, navAnimation, header }) => {
                     )}
                 </li>
                 <li
-                    className={`md:mr-4 relative cursor-pointer text-black dark:text-white hover:font-bold ${isCommunityOpen ? 'font-bold' : ''} mb-10 lg:mb-0 flex flex-col lg:flex-row items-start lg:items-center`}
+                    className={`relative cursor-pointer text-black dark:text-white hover:font-bold ${isCommunityOpen ? 'font-bold' : ''} mb-10 lg:mb-0 flex flex-col lg:flex-row items-start lg:items-center`}
                     onClick={() => setIsCommunityOpen(!isCommunityOpen)}
                     ref={communityRef}
                 >
