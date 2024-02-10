@@ -2,7 +2,7 @@ import { Locale } from '@/i18n.config';
 import { getDictionary } from '@/dictionaries/dictionary';
 import Header from '@/app/[lang]/components/header';
 import React from 'react';
-import Footer from '@/app/[lang]/components/footer';
+import LoginForm from '@/app/[lang]/login/components/loginform';
 
 export default async function Login({
     params: { lang },
@@ -14,7 +14,7 @@ export default async function Login({
     return (
         <>
             <Header lang={lang} header={header} />
-            <Footer footer={footer} />
+            <LoginForm lang={lang} page={page} />
         </>
     );
 }

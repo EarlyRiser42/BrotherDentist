@@ -31,8 +31,8 @@ export default function Header({ lang, header }: HeaderProps) {
 
     return (
         <nav
-            className="sticky inset-0 z-[200] bg-white dark:bg-black py-3 flex items-center justify-between w-full border-gray-300 dark:border-white dark:border-opacity-30
-    lg:justify-around lg:h-10vh"
+            className="sticky inset-0 z-[200] bg-white dark:bg-black py-3 flex items-center justify-between w-full border-gray_300 dark:border-white dark:border-opacity-30
+    lg:justify-around h-10dvh border-b border-white_700 dark:border-gray"
         >
             <div className="h-1/20 w-7/12 flex items-center ml-4 cxl:ml-0 lg:w-44">
                 {lang === 'ko' ? <LogoKo /> : <LogoEn />}
@@ -49,8 +49,8 @@ export default function Header({ lang, header }: HeaderProps) {
                 header={header}
             />
             <div className="hidden lg:flex justify-between items-center w-44 mr-4 cxl:mr-0">
-                <Link href={`${lang}/login`}>
-                    <button className="bg-light_blue text-white dark:text-black rounded-3xl w-20 min-w-16 min-h-8 h-full ">
+                <Link href={`/${lang}/login`}>
+                    <button className="bg-light_blue text-black dark:text-white rounded-3xl w-20 min-w-16 min-h-8 h-full ">
                         {header.buttons.login}
                     </button>
                 </Link>

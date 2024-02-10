@@ -212,10 +212,19 @@
         }
       }
     },
-    "reservation": {
-      "title": "Make a Reservation",
-      "description": "Schedule your appointment with us."
-    }
+    "login": {
+      "title": "Login",
+      "description": "This is the login page for Hyukplant.",
+      "authButton1": "Sign in with Google",
+      "authButton2": "Sign in with NAVER",
+      "authButton3": "Sign in with KAKAO",
+      "span1": "OR",
+      "login": "LOGIN",
+      "button1": "Forgot password",
+      "button2": "Don't have an account",
+      "button3": "Sign Up"
+}
+
   },
   "footer": {
     "address" : "Address: Biin Health Center, Biin-myeon, Seocheon-gun, Chungnam",

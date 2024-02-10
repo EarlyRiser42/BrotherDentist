@@ -211,9 +211,18 @@
         }
       }
     },
-    "reservation": {
-      "title": "예약하기",
-      "description": "치과 예약을 위한 페이지입니다."
+    "login": {
+      "title": "로그인",
+      "description": "혁플란트 로그인을 위한 페이지입니다.",
+      "h1": "혁플란트에 로그인하기",
+      "authButton1": "Google 계정으로 로그인하기",
+      "authButton2": "NAVER로 로그인하기",
+      "authButton3": "KAKAO로 로그인하기",
+      "span1": "또는",
+      "login": "로그인",
+      "button1": "비밀번호를 잊으셨나요?",
+      "button2": "계정이 없으신가요?",
+      "button3": "가입하기"
     }
   },
   "footer": {

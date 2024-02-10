@@ -4,7 +4,6 @@ import Providers from '../../components/provider/Providers';
 import { Locale, i18n } from '@/i18n.config';
 import { NanumSquare, NanumSquareOTF } from '@/fonts/fonts';
 import { getDictionary } from '@/dictionaries/dictionary';
-import Head from 'next/head';
 
 export async function generateMetadata({
     params: { lang },

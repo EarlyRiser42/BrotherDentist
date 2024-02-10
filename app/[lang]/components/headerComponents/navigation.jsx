@@ -1,3 +1,4 @@
+'use client';
 import { useEffect, useRef, useState } from 'react';
 import { ArrowBottom } from '@/components/Icons/Icons';
 import ToggleLanguage from '@/app/[lang]/components/headerComponents/toggleLanguage';
@@ -5,6 +6,7 @@ import ToggleDarkMode from '@/app/[lang]/components/headerComponents/toggleDarkM
 import Link from 'next/link';
 import useOnClickOutside from '@/components/hooks/useOnclickOutsdie';
 import { LogoEn, LogoKo } from '@/components/Icons/Logos';
+import { useUser } from '@/components/firebase/auth';
 
 const Navigation = ({ lang, navOpen, navAnimation, header }) => {
     const [isImplantOpen, setIsImplantOpen] = useState(false);
@@ -15,6 +17,7 @@ const Navigation = ({ lang, navOpen, navAnimation, header }) => {
     const communityRef = useRef(null);
     useOnClickOutside(communityRef, () => setIsCommunityOpen(false));
 
+    const isLoggedIn = useUser();
     return (
         <div
             className={`flex flex-col lg:flex lg:flex-row justify-start lg:justify-evenly items-center w-screen lg:w-3/4 h-dvh lg:h-full absolute inset-0 lg:relative bg-white dark:bg-black ${navAnimation} ${navOpen ? 'block' : 'hidden'} lg:block lg:animate-none`}
@@ -43,17 +46,17 @@ const Navigation = ({ lang, navOpen, navAnimation, header }) => {
                         <ul
                             className={`bg-white dark:bg-black relative  lg:top-10 lg:absolute ${lang === 'en' ? 'w-100 lg:-left-40' : 'w-56 lg:-left-20'} h-auto lg:h-12 lg:rounded-3xl flex flex-col lg:flex-row lg:justify-evenly items-start lg:items-center lg:bg-black lg:dark:bg-white lg:animate-fadeIn animate-slideDown`}
                         >
-                            <Link href={`${lang}/implant`}>
+                            <Link href={`/${lang}/implant`}>
                                 <li className="cursor-pointer rounded-3xl lg:rounded-none bg-gray-300 dark:bg-gray-600 lg:bg-black lg:dark:bg-white text-black dark:text-white lg:text-white lg:dark:text-black hover:font-bold py-2 lg:py-0 px-4 lg:px-0 lg:bg-transparent font-normal mt-4 mb-4 lg:mt-0 lg:mb-0">
                                     {header.services.subServices.implant}
                                 </li>
                             </Link>
-                            <Link href={`${lang}/prosthodontics`}>
+                            <Link href={`/${lang}/prosthodontics`}>
                                 <li className="cursor-pointer rounded-3xl lg:rounded-none bg-gray-300 dark:bg-gray-600 lg:bg-black lg:dark:bg-white text-black dark:text-white lg:text-white lg:dark:text-black hover:font-bold py-2 lg:py-0 px-4 lg:px-0 font-normal mb-4 lg:mb-0">
                                     {header.services.subServices.prosthodontics}
                                 </li>
                             </Link>
-                            <Link href={`${lang}/cosmeticDentistry`}>
+                            <Link href={`/${lang}/cosmeticDentistry`}>
                                 <li className="cursor-pointer rounded-3xl lg:rounded-none bg-gray-300 dark:bg-gray-600 lg:bg-black lg:dark:bg-white text-black dark:text-white lg:text-white lg:dark:text-black hover:font-bold py-2 lg:py-0 px-4 lg:px-0 lg:bg-transparent font-normal mb-0">
                                     {
                                         header.services.subServices
@@ -79,12 +82,12 @@ const Navigation = ({ lang, navOpen, navAnimation, header }) => {
                         <ul
                             className={`bg-white dark:bg-black relative  lg:top-10 lg:absolute ${lang === 'en' ? 'w-100 lg:-left-40' : 'w-56 lg:-left-20'} h-auto lg:h-12 lg:rounded-3xl flex flex-col lg:flex-row lg:justify-evenly items-start lg:items-center lg:bg-black lg:dark:bg-white lg:animate-fadeIn animate-slideDown`}
                         >
-                            <Link href={`${lang}/beforeAfter`}>
+                            <Link href={`/${lang}/beforeAfter`}>
                                 <li className="cursor-pointer rounded-3xl lg:rounded-none bg-gray-300 dark:bg-gray-600 lg:bg-black lg:dark:bg-white text-black dark:text-white lg:text-white lg:dark:text-black hover:font-bold py-2 lg:py-0 px-4 lg:px-0 lg:bg-transparent font-normal mt-4 mb-4 lg:mt-0 lg:mb-0">
                                     {header.community.subCommunity.beforeAfter}
                                 </li>
                             </Link>
-                            <Link href={`${lang}/review`}>
+                            <Link href={`/${lang}/review`}>
                                 <li className="cursor-pointer rounded-3xl lg:rounded-none bg-gray-300 dark:bg-gray-600 lg:bg-black lg:dark:bg-white text-black dark:text-white lg:text-white lg:dark:text-black hover:font-bold py-2 lg:py-0 px-4 lg:px-0 font-normal mb-4 lg:mb-0">
                                     {header.community.subCommunity.review}
                                 </li>
@@ -96,13 +99,13 @@ const Navigation = ({ lang, navOpen, navAnimation, header }) => {
 
             <div className="flex justify-between items-center w-11/12 h-15/100 clg:hidden">
                 <div className="flex justify-start items-center w-4/5 h-2/5">
-                    <Link href={`${lang}/login`} className="mr-5%">
-                        <button className="bg-black dark:bg-white text-white dark:text-black rounded-3xl w-20 min-w-16 min-h-8 h-full ">
+                    <Link href={`/${lang}/login`} className="mr-5%">
+                        <button className="bg-light_blue text-black dark:text-white rounded-3xl w-20 min-w-16 min-h-8 h-full ">
                             {header.buttons.login}
                         </button>
                     </Link>
-                    <Link href={`${lang}/signup`}>
-                        <button className="bg-light_blue rounded-3xl w-2/5 min-w-28 max-w-28 min-h-8 h-full flex items-center justify-center">
+                    <Link href={`/${lang}/signup`}>
+                        <button className=" bg-black dark:bg-white rounded-3xl w-2/5 min-w-28 max-w-28 min-h-8 h-full flex items-center justify-center">
                             <span className="text-white  dark:text-black">
                                 {header.buttons.signUp}
                             </span>
