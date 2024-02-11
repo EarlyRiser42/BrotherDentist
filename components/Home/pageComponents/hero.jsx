@@ -1,6 +1,6 @@
 import { ArrowRight } from '@/components/Icons/Icons';
 import React from 'react';
-import VideoComponent from '@/app/[lang]/components/pageComponents/VideoComponent';
+import VideoComponent from '@/components/Home/pageComponents/VideoComponent';
 import { Suspense } from 'react';
 import kakao from '@/public/hero/kakaotalk.png';
 import naver from '@/public/hero/naver.png';

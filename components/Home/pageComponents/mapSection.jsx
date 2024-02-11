@@ -123,7 +123,10 @@ export default function MapComponent({ page }) {
                                 Phone
                             </h3>
                             <p className="text-sm cs:text-base sm:text-lg cxl:text-xl text-black dark:text-white">
-                                <a className="underline" href="#">
+                                <a
+                                    className="underline"
+                                    href="components/Home/pageComponents#"
+                                >
                                     02-0000-0000
                                 </a>
                             </p>

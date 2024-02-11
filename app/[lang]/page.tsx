@@ -1,16 +1,16 @@
 import { Locale } from '@/i18n.config';
 import { getDictionary } from '@/dictionaries/dictionary';
-import Header from '@/app/[lang]/components/header';
+import Header from '@/components/Home/header';
 import React from 'react';
-import Footer from '@/app/[lang]/components/footer';
-import Hero from '@/app/[lang]/components/pageComponents/hero';
-import ParallexSection from '@/app/[lang]/components/pageComponents/parallexSection';
-import ProSection from '@/app/[lang]/components/pageComponents/proSection';
-import SpeechBalloon from '@/app/[lang]/components/pageComponents/speechBalloon';
-import ReviewSlider from '@/app/[lang]/components/pageComponents/reviewSlider';
-import ClinicServices from '@/app/[lang]/components/pageComponents/clinicServices';
-import PortraitSlider from '@/app/[lang]/components/pageComponents/portraitSlider';
-import MapSection from '@/app/[lang]/components/pageComponents/mapSection';
+import Footer from '@/components/Home/footer';
+import Hero from '@/components/Home/pageComponents/hero';
+import ParallexSection from '@/components/Home/pageComponents/parallexSection';
+import ProSection from '@/components/Home/pageComponents/proSection';
+import SpeechBalloon from '@/components/Home/pageComponents/speechBalloon';
+import ReviewSlider from '@/components/Home/pageComponents/reviewSlider';
+import ClinicServices from '@/components/Home/pageComponents/clinicServices';
+import PortraitSlider from '@/components/Home/pageComponents/portraitSlider';
+import MapSection from '@/components/Home/pageComponents/mapSection';
 
 export default async function Home({
     params: { lang },

@@ -1,8 +1,8 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import { ArrowBottom } from '@/components/Icons/Icons';
-import ToggleLanguage from '@/app/[lang]/components/headerComponents/toggleLanguage';
-import ToggleDarkMode from '@/app/[lang]/components/headerComponents/toggleDarkMode';
+import ToggleLanguage from '@/components/Home/headerComponents/toggleLanguage';
+import ToggleDarkMode from '@/components/Home/headerComponents/toggleDarkMode';
 import Link from 'next/link';
 import useOnClickOutside from '@/components/hooks/useOnclickOutsdie';
 import { LogoEn, LogoKo } from '@/components/Icons/Logos';
