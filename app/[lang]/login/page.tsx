@@ -9,7 +9,7 @@ export default async function Login({
 }: {
     params: { lang: Locale };
 }) {
-    const { page, header, footer } = await getDictionary(lang);
+    const { page, header } = await getDictionary(lang);
 
     return (
         <>

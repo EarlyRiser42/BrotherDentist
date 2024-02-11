@@ -67,7 +67,7 @@ export default function LoginForm({ lang, page }) {
                         {page.login.authButton1}
                     </button>
                     <button
-                        className="relative border border-white_500 bg-green hover:bg-opacity-90 text-white font-bold py-2 px-4 rounded-3xl inline-flex justify-center items-center w-full h-12 mb-4"
+                        className="relative border border-white_500 bg-green hover:bg-opacity-90 text-black font-bold py-2 px-4 rounded-3xl inline-flex justify-center items-center w-full h-12 mb-4"
                         onClick={onSocialClick}
                     >
                         <div className="top-3 left-4 absolute">
@@ -81,7 +81,7 @@ export default function LoginForm({ lang, page }) {
                         {page.login.authButton2}
                     </button>
                     <button
-                        className="relative border border-white_500 bg-yellow hover:bg-opacity-90 text-white font-bold py-2 px-4 rounded-3xl inline-flex justify-center items-center w-full h-12 mb-4"
+                        className="relative border border-white_500 bg-yellow hover:bg-opacity-90 text-black font-bold py-2 px-4 rounded-3xl inline-flex justify-center items-center w-full h-12 mb-4"
                         onClick={onSocialClick}
                     >
                         <div className="top-3 left-4 absolute">

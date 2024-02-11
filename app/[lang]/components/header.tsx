@@ -32,9 +32,9 @@ export default function Header({ lang, header }: HeaderProps) {
     return (
         <nav
             className="sticky inset-0 z-[200] bg-white dark:bg-black py-3 flex items-center justify-between w-full border-gray_300 dark:border-white dark:border-opacity-30
-    lg:justify-around h-10dvh border-b border-white_700 dark:border-gray"
+    lg:justify-between h-10dvh border-b border-white_700 dark:border-gray"
         >
-            <div className="h-1/20 w-7/12 flex items-center ml-4 cxl:ml-0 lg:w-44">
+            <div className="h-1/20 w-7/12 flex items-center ml-4 lg:w-64">
                 {lang === 'ko' ? <LogoKo /> : <LogoEn />}
             </div>
             <div className="lg:hidden flex justify-center items-center w-1/6 z-50">
@@ -48,10 +48,15 @@ export default function Header({ lang, header }: HeaderProps) {
                 navAnimation={navAnimation}
                 header={header}
             />
-            <div className="hidden lg:flex justify-between items-center w-44 mr-4 cxl:mr-0">
+            <div className="hidden lg:flex justify-between items-center mr-4 w-64">
                 <Link href={`/${lang}/login`}>
                     <button className="bg-light_blue text-black dark:text-white rounded-3xl w-20 min-w-16 min-h-8 h-full ">
                         {header.buttons.login}
+                    </button>
+                </Link>
+                <Link href={`/${lang}/login`}>
+                    <button className="bg-black dark:bg-white text-white dark:text-black rounded-3xl w-24 min-h-8 h-full ">
+                        {header.buttons.signUp}
                     </button>
                 </Link>
                 <ToggleLanguage lang={lang} />

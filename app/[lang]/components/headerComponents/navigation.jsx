@@ -20,7 +20,7 @@ const Navigation = ({ lang, navOpen, navAnimation, header }) => {
     const isLoggedIn = useUser();
     return (
         <div
-            className={`flex flex-col lg:flex lg:flex-row justify-start lg:justify-evenly items-center w-screen lg:w-3/4 h-dvh lg:h-full absolute inset-0 lg:relative bg-white dark:bg-black ${navAnimation} ${navOpen ? 'block' : 'hidden'} lg:block lg:animate-none`}
+            className={`flex flex-col lg:flex lg:flex-row justify-start lg:justify-evenly items-center w-screen lg:w-1/2 h-dvh lg:h-full absolute inset-0 lg:relative bg-white dark:bg-black ${navAnimation} ${navOpen ? 'block' : 'hidden'} lg:block lg:animate-none`}
         >
             <div className="w-11/12 mt-5 mx-auto h-1/20 lg:hidden">
                 {lang === 'ko' ? <LogoKo /> : <LogoEn />}
@@ -105,7 +105,7 @@ const Navigation = ({ lang, navOpen, navAnimation, header }) => {
                         </button>
                     </Link>
                     <Link href={`/${lang}/signup`}>
-                        <button className=" bg-black dark:bg-white rounded-3xl w-2/5 min-w-28 max-w-28 min-h-8 h-full flex items-center justify-center">
+                        <button className=" bg-black dark:bg-white rounded-3xl w-2/5 min-w-24 max-w-24 min-h-8 h-full flex items-center justify-center">
                             <span className="text-white  dark:text-black">
                                 {header.buttons.signUp}
                             </span>
