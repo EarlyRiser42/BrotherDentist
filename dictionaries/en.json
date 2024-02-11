@@ -218,21 +218,35 @@
       "authButton1": "Sign in with Google",
       "authButton2": "Sign in with NAVER",
       "authButton3": "Sign in with KAKAO",
-      "span1": "OR",
-      "login": "LOGIN",
+      "span1": "or",
+      "login": "Sign In",
       "button1": "Forgot password",
       "button2": "Don't have an account",
       "button3": "Sign Up"
-}
+  },
+  "signUp": {
+    "title": "Sign Up",
+    "description": "This is the page for signing up to HyukPlant.",
+    "h1": "Signup HyukPlant",
+    "authButton1": "Sign up with Google",
+    "authButton2": "Sign up with NAVER",
+    "authButton3": "Sign up with KAKAO",
+    "span1": "or",
+    "login": "Create Account",
+    "button1": "Already have an account?",
+    "button2": "Sign In"
+  }
+
+
 
   },
-  "footer": {
-    "address" : "Address: Biin Health Center, Biin-myeon, Seocheon-gun, Chungnam",
-    "dentalName" : "Name: HyukPlant Dental Clinic",
-    "services": "Medical Services: Dental",
-    "owner": "Representative: Choi In-hyuk",
-    "BusinessRegistrationNumber" : "000-0000-0000",
-    "emailAddress": "EMAIL: hyukPlant@gmail.com",
-    "telephoneNumber": "TEL: 02) 000-0000"
-  }
+    "footer": {
+      "address" : "Address: Biin Health Center, Biin-myeon, Seocheon-gun, Chungnam",
+      "dentalName" : "Name: HyukPlant Dental Clinic",
+      "services": "Medical Services: Dental",
+      "owner": "Representative: Choi In-hyuk",
+      "BusinessRegistrationNumber" : "000-0000-0000",
+      "emailAddress": "EMAIL: hyukPlant@gmail.com",
+      "telephoneNumber": "TEL: 02) 000-0000"
+    }
 }

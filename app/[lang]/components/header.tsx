@@ -54,7 +54,7 @@ export default function Header({ lang, header }: HeaderProps) {
                         {header.buttons.login}
                     </button>
                 </Link>
-                <Link href={`/${lang}/login`}>
+                <Link href={`/${lang}/signup`}>
                     <button className="bg-black dark:bg-white text-white dark:text-black rounded-3xl w-24 min-h-8 h-full ">
                         {header.buttons.signUp}
                     </button>

@@ -223,6 +223,18 @@
       "button1": "비밀번호를 잊으셨나요?",
       "button2": "계정이 없으신가요?",
       "button3": "가입하기"
+    },
+    "signUp": {
+      "title": "회원가입",
+      "description": "혁플란트 회원가입을 위한 페이지입니다.",
+      "h1": "혁플란트에 가입하기",
+      "authButton1": "Google 계정으로 가입하기",
+      "authButton2": "NAVER로 가입하기",
+      "authButton3": "KAKAO로 가입하기",
+      "span1": "또는",
+      "login": "계정 만들기",
+      "button1": "이미 혁플란트에 가입하셨나요?",
+      "button2": "로그인"
     }
   },
   "footer": {
