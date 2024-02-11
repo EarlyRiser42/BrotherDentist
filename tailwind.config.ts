@@ -162,6 +162,7 @@ const config: Config = {
                 '70dvh': '70dvh',
                 '75dvh': '75dvh',
                 '90dvh': '90dvh',
+                '100dvh': '100dvh',
             },
             minHeight: {
                 '80': '80px',

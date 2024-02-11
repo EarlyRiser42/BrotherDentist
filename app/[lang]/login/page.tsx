@@ -1,10 +1,10 @@
+import React from 'react';
 import { Locale } from '@/i18n.config';
 import { getDictionary } from '@/dictionaries/dictionary';
 import Header from '@/components/Home/header';
-import React from 'react';
 import Login from '@/components/Login/login';
 
-export default async function Login({
+export default async function login({
     params: { lang },
 }: {
     params: { lang: Locale };

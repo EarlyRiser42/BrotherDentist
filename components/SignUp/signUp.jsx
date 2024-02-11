@@ -105,7 +105,6 @@ export default function SignUp({ lang, page }) {
                 <div className="w-9/10 cs:w-80">
                     <Link href={`/${lang}/signup/form`}>
                         <button
-                            type="submit"
                             className="inline-flex items-center justify-center w-full h-11 px-5 mb-4 py-2.5 text-sm font-medium rounded-3xl cursor-pointer no-underline
                             bg-light_blue text-white hover:bg-opacity-90"
                         >
@@ -118,7 +117,6 @@ export default function SignUp({ lang, page }) {
                     </div>
                     <Link href={`/${lang}/login`}>
                         <button
-                            type="submit"
                             className="inline-flex items-center justify-center w-full h-11 px-5 mb-4 py-2.5 text-sm font-medium rounded-3xl cursor-pointer no-underline
                             bg-white border border-white_500 text-black hover:bg-opacity-90"
                         >

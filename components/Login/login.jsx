@@ -1,12 +1,12 @@
 'use client';
 import React, { useRef, useState } from 'react';
 import Link from 'next/link';
-import { login, onSocialClick } from '@/loginAction/loginActions';
 import Image from 'next/image';
-import show from 'public/login/show.svg';
-import hide from 'public/login/hide.svg';
-import googleLogo from 'public/login/google_logo.svg';
-import NaverLogo from 'public/login/naver.png';
+import { login, onSocialClick } from '@/actions/loginActions';
+import show from '@/public/login/show.svg';
+import hide from '@/public/login/hide.svg';
+import googleLogo from '@/public/login/google_logo.svg';
+import NaverLogo from '@/public/login/naver.png';
 export default function Login({ lang, page }) {
     // 비밀번호 보이기 안보이기
     const [isShowPwChecked, setShowPwChecked] = useState(false);
