@@ -234,11 +234,21 @@
     "span1": "or",
     "login": "Create Account",
     "button1": "Already have an account?",
-    "button2": "Sign In"
+    "button2": "Sign In",
+    "form": {
+      "h1": "Sign Up HyukPlant",
+      "p": "Enter your information to create an account.",
+      "input1": "Last Name",
+      "input2": "First Name",
+      "input3": "Email",
+      "input4": "Date of Birth",
+      "input5": "Password",
+      "input6": "Re-enter Password",
+      "span": "Passwords do not match.",
+      "span2": "I agree to the Terms of Service and Privacy Policy."
+    }
+
   }
-
-
-
   },
     "footer": {
       "address" : "Address: Biin Health Center, Biin-myeon, Seocheon-gun, Chungnam",

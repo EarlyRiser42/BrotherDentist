@@ -1,22 +1,19 @@
 'use client';
 import { useEffect, useState } from 'react';
 import {
+    getAuth,
     User as FirebaseUser,
     signOut as firebaseSignOut,
-    browserLocalPersistence,
-    browserSessionPersistence,
     setPersistence,
     signInWithEmailAndPassword,
     onAuthStateChanged,
+    createUserWithEmailAndPassword,
+    browserLocalPersistence,
+    browserSessionPersistence,
 } from 'firebase/auth';
+import { authService as auth } from '@/components/firebase/config';
 
-import { auth } from '@/components/firebase/firebase';
-
-export async function signIn(
-    email: string,
-    password: string,
-    rememberMe: boolean = false,
-) {
+export async function signIn(email, password, rememberMe = false) {
     await setPersistence(
         auth,
         rememberMe ? browserLocalPersistence : browserSessionPersistence,
@@ -32,7 +29,14 @@ export function useUser() {
     const [user, setUser] = useState<FirebaseUser | null | false>(false);
 
     useEffect(() => {
-        return onAuthStateChanged(auth, (user) => setUser(user));
+        const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
+            if (firebaseUser) {
+                setUser(firebaseUser);
+            } else {
+                setUser(null);
+            }
+        });
+        return () => unsubscribe();
     }, []);
 
     return user;
