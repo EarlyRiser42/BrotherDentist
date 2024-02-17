@@ -8,13 +8,13 @@ import hide from '@/public/login/hide.svg';
 import googleLogo from '@/public/login/google_logo.svg';
 import NaverLogo from '@/public/login/naver.png';
 import KakaoLogo from '@/public/login/kakao.png';
-import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import { setDoc, collection } from 'firebase/firestore';
-import { dbService } from '@/components/firebase/config';
+import { dbService, authService } from '@/components/firebase/config';
 
 async function onSocialClick() {
     try {
-        const auth = getAuth();
+        const auth = authService;
         const provider = new GoogleAuthProvider();
         const result = await signInWithPopup(auth, provider);
         const user = result.user;

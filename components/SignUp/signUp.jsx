@@ -5,13 +5,13 @@ import Image from 'next/image';
 import googleLogo from '@/public/login/google_logo.svg';
 import NaverLogo from '@/public/login/naver.png';
 import KakaoLogo from '@/public/login/kakao.png';
-import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
-import { addDoc, collection } from 'firebase/firestore';
-import { dbService } from '@/components/firebase/config';
+import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+import { collection, setDoc } from 'firebase/firestore';
+import { dbService, authService } from '@/components/firebase/config';
 
 async function onSocialClick() {
     try {
-        const auth = getAuth();
+        const auth = authService;
         const provider = new GoogleAuthProvider();
         const result = await signInWithPopup(auth, provider);
         const user = result.user;
@@ -24,7 +24,7 @@ async function onSocialClick() {
             password: '',
         };
 
-        await addDoc(collection(dbService, 'users'), userObj);
+        await setDoc(collection(dbService, 'users'), userObj);
     } catch (error) {
         const errorMessage = error.message;
         console.log(errorMessage);
