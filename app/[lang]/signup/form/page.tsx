@@ -3,7 +3,7 @@ import { getDictionary } from '@/dictionaries/dictionary';
 import React from 'react';
 import SignUpForm from '@/components/SignUp/signupForm';
 
-export default async function form({
+export default async function Form({
     params: { lang },
 }: {
     params: { lang: Locale };

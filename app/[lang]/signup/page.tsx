@@ -4,7 +4,7 @@ import Header from '@/components/Home/header';
 import React from 'react';
 import SignUp from '@/components/SignUp/signUp';
 
-export default async function signup({
+export default async function Signup({
     params: { lang },
 }: {
     params: { lang: Locale };

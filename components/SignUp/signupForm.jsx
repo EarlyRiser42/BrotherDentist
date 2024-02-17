@@ -6,7 +6,7 @@ import Image from 'next/image';
 import show from '@/public/login/show.svg';
 import hide from '@/public/login/hide.svg';
 
-export default function SignupForm({ page }) {
+export default function SignupForm({ lang, page }) {
     // 폼 에러메시지 핸들
     const [state, formAction] = useFormState(signUpWithEmail, '');
     const [errorText, setErrorText] = useState('');

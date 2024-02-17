@@ -13,7 +13,11 @@ import {
 } from 'firebase/auth';
 import { authService as auth } from '@/components/firebase/config';
 
-export async function signIn(email, password, rememberMe = false) {
+export async function signIn(
+    email: string,
+    password: string,
+    rememberMe = false,
+) {
     await setPersistence(
         auth,
         rememberMe ? browserLocalPersistence : browserSessionPersistence,
