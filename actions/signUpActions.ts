@@ -6,6 +6,7 @@ interface UserInfo {
     first_name: string;
     last_name: string;
     email: string;
+    phoneNumber: string;
     birth_date: string;
     password: string;
 }
@@ -15,6 +16,7 @@ export async function signUpWithEmail(prevState: any, formData: FormData) {
         first_name: formData.get('first-name') as string,
         last_name: formData.get('last-name') as string,
         email: formData.get('email') as string,
+        phoneNumber: '',
         birth_date: formData.get('birth-date') as string,
         password: formData.get('password') as string,
     };

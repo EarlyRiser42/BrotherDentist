@@ -44,7 +44,7 @@ const config: Config = {
                 light_blue: '#2463EB',
                 dark_blue: '#020D43',
                 blue: '#A3CFCD',
-                green: '#4DD964',
+                green: '#07BD34',
                 hero: '#01123E',
                 beige: '#F3EEE9',
             },

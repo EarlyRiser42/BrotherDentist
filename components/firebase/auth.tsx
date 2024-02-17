@@ -1,13 +1,11 @@
 'use client';
 import { useEffect, useState } from 'react';
 import {
-    getAuth,
     User as FirebaseUser,
     signOut as firebaseSignOut,
     setPersistence,
     signInWithEmailAndPassword,
     onAuthStateChanged,
-    createUserWithEmailAndPassword,
     browserLocalPersistence,
     browserSessionPersistence,
 } from 'firebase/auth';
@@ -30,18 +28,17 @@ export async function signOut() {
 }
 
 export function useUser() {
-    const [user, setUser] = useState<FirebaseUser | null | false>(false);
-
+    const [userObj, setUserObj] = useState<FirebaseUser | null | false>(false);
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
             if (firebaseUser) {
-                setUser(firebaseUser);
+                setUserObj(firebaseUser);
             } else {
-                setUser(null);
+                setUserObj(null);
             }
         });
         return () => unsubscribe();
     }, []);
 
-    return user;
+    return userObj;
 }

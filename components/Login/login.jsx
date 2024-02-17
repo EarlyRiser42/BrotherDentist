@@ -2,11 +2,38 @@
 import React, { useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { login, onSocialClick } from '@/actions/loginActions';
+import { login } from '@/actions/loginActions';
 import show from '@/public/login/show.svg';
 import hide from '@/public/login/hide.svg';
 import googleLogo from '@/public/login/google_logo.svg';
 import NaverLogo from '@/public/login/naver.png';
+import KakaoLogo from '@/public/login/kakao.png';
+import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+import { setDoc, collection } from 'firebase/firestore';
+import { dbService } from '@/components/firebase/config';
+
+async function onSocialClick() {
+    try {
+        const auth = getAuth();
+        const provider = new GoogleAuthProvider();
+        const result = await signInWithPopup(auth, provider);
+        const user = result.user;
+        const userObj = {
+            first_name: user.displayName.split(' ')[0],
+            last_name: user.displayName.split(' ')[1],
+            email: user.email,
+            phoneNumber: user.phoneNumber,
+            birth_date: '',
+            password: '',
+        };
+
+        await setDoc(collection(dbService, 'users'), userObj);
+    } catch (error) {
+        const errorMessage = error.message;
+        console.log(errorMessage);
+    }
+}
+
 export default function Login({ lang, page }) {
     // 비밀번호 보이기 안보이기
     const [isShowPwChecked, setShowPwChecked] = useState(false);
@@ -67,15 +94,15 @@ export default function Login({ lang, page }) {
                         {page.login.authButton1}
                     </button>
                     <button
-                        className="relative  bg-green hover:bg-opacity-90 text-black font-bold py-2 px-4 rounded-3xl inline-flex justify-center items-center w-full h-11 mb-4"
+                        className="relative  bg-green hover:bg-opacity-90 text-white font-bold py-2 px-4 rounded-3xl inline-flex justify-center items-center w-full h-11 mb-4"
                         onClick={onSocialClick}
                     >
-                        <div className="top-3 left-4 absolute">
+                        <div className="top-2 left-3 absolute">
                             <Image
                                 src={NaverLogo}
                                 alt={`NaverLogo`}
-                                width={20}
-                                height={20}
+                                width={25}
+                                height={25}
                             />
                         </div>
                         {page.login.authButton2}
@@ -86,7 +113,7 @@ export default function Login({ lang, page }) {
                     >
                         <div className="top-3 left-4 absolute">
                             <Image
-                                src={NaverLogo}
+                                src={KakaoLogo}
                                 alt={`kakaoLogo`}
                                 width={20}
                                 height={20}

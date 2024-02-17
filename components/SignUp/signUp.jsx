@@ -1,10 +1,35 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { onSocialClick } from '@/actions/loginActions';
 import Image from 'next/image';
 import googleLogo from '@/public/login/google_logo.svg';
 import NaverLogo from '@/public/login/naver.png';
+import KakaoLogo from '@/public/login/kakao.png';
+import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+import { addDoc, collection } from 'firebase/firestore';
+import { dbService } from '@/components/firebase/config';
+
+async function onSocialClick() {
+    try {
+        const auth = getAuth();
+        const provider = new GoogleAuthProvider();
+        const result = await signInWithPopup(auth, provider);
+        const user = result.user;
+        const userObj = {
+            first_name: user.displayName.split(' ')[0],
+            last_name: user.displayName.split(' ')[1],
+            email: user.email,
+            phoneNumber: user.phoneNumber,
+            birth_date: '',
+            password: '',
+        };
+
+        await addDoc(collection(dbService, 'users'), userObj);
+    } catch (error) {
+        const errorMessage = error.message;
+        console.log(errorMessage);
+    }
+}
 
 export default function SignUp({ lang, page }) {
     return (
@@ -31,15 +56,15 @@ export default function SignUp({ lang, page }) {
                         {page.signUp.authButton1}
                     </button>
                     <button
-                        className="relative  bg-green hover:bg-opacity-90 text-black font-bold py-2 px-4 rounded-3xl inline-flex justify-center items-center w-full h-11 mb-4"
+                        className="relative  bg-green hover:bg-opacity-90 text-white font-bold py-2 px-4 rounded-3xl inline-flex justify-center items-center w-full h-11 mb-4"
                         onClick={onSocialClick}
                     >
-                        <div className="top-3 left-4 absolute">
+                        <div className="top-2 left-3 absolute">
                             <Image
                                 src={NaverLogo}
                                 alt={`NaverLogo`}
-                                width={20}
-                                height={20}
+                                width={25}
+                                height={25}
                             />
                         </div>
                         {page.signUp.authButton2}
@@ -50,7 +75,7 @@ export default function SignUp({ lang, page }) {
                     >
                         <div className="top-3 left-4 absolute">
                             <Image
-                                src={NaverLogo}
+                                src={KakaoLogo}
                                 alt={`kakaoLogo`}
                                 width={20}
                                 height={20}
