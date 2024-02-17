@@ -6,27 +6,31 @@ import Image from 'next/image';
 import show from '@/public/login/show.svg';
 import hide from '@/public/login/hide.svg';
 
-export default function SignupForm({ lang, page }) {
+export default function SignupForm({ page }) {
     // 폼 에러메시지 핸들
     const [state, formAction] = useFormState(signUpWithEmail, '');
     const [errorText, setErrorText] = useState('');
 
     useEffect(() => {
-        switch (state?.message?.code) {
+        if (!state || !state.message) {
+            return;
+        }
+
+        switch (state.message.code) {
             case 'auth/weak-password':
-                setErrorText('암호가 너무 약합니다.');
+                setErrorText(page.signUp.error.weak_password);
                 break;
             case 'auth/invalid-password':
-                setErrorText('잘못된 암호 형식입니다.');
+                setErrorText(page.signUp.error.invalid_password);
                 break;
             case 'auth/email-already-exists':
-                setErrorText('이미 존재하는 이메일입니다.');
+                setErrorText(page.signUp.error.email_already_exists);
                 break;
             case 'auth/invalid-email':
-                setErrorText('잘못된 이메일 형식입니다.');
+                setErrorText(page.signUp.error.invalid_email);
                 break;
             default:
-                setErrorText('서버 오류가 발생했습니다.');
+                setErrorText(page.signUp.error.default);
                 break;
         }
     }, [state]);
@@ -262,19 +266,6 @@ export default function SignupForm({ lang, page }) {
         </div>
     );
 }
-
-const StyledInput = ({ name, type, placeholder }) => {
-    return (
-        <input
-            className="inline-flex items-center justify-center w-full h-12 px-3 mb-4
-                            border border-white_500 text-black dark:text-white rounded-xl  text-lg"
-            name={name}
-            type={type}
-            placeholder={placeholder}
-            required
-        />
-    );
-};
 
 export const signalByEnter = (event, callback) => {
     if (event.key === 'Enter') {

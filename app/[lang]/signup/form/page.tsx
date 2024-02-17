@@ -12,7 +12,7 @@ export default async function Form({
 
     return (
         <>
-            <SignUpForm lang={lang} page={page} />
+            <SignUpForm page={page} />
         </>
     );
 }

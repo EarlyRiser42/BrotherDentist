@@ -247,6 +247,13 @@
         "input6": "비밀번호 재입력",
         "span": "비밀번호가 일치하지 않습니다.",
         "span2": "이용약관과 개인정보 처리방침에 동의합니다."
+      },
+      "error": {
+        "weak_password": "암호가 너무 약합니다.",
+        "invalid_password": "잘못된 암호 형식입니다.",
+        "email_already_exists": "이미 존재하는 이메일입니다.",
+        "invalid_email": "잘못된 이메일 형식입니다.",
+        "default": "서버 오류가 발생했습니다."
       }
     }
   },

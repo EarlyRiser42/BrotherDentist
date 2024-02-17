@@ -247,9 +247,15 @@
       "input6": "Re-enter Password",
       "span": "Passwords do not match.",
       "span2": "I agree to the Terms of Service and Privacy Policy."
+    },
+    "error": {
+      "weak_password": "The password is too weak.",
+      "invalid_password": "Invalid password format.",
+      "email-already-exists": "Email already exists.",
+      "invalid-email": "Invalid email format.",
+      "default": "A server error has occurred."
+      }
     }
-
-  }
   },
     "footer": {
       "address" : "Address: Biin Health Center, Biin-myeon, Seocheon-gun, Chungnam",
