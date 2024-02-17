@@ -1,48 +1,12 @@
 'use client';
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { login, onSocialClick } from '@/actions/loginActions';
+import { onSocialClick } from '@/actions/loginActions';
 import Image from 'next/image';
-import show from '@/public/login/show.svg';
-import hide from '@/public/login/hide.svg';
 import googleLogo from '@/public/login/google_logo.svg';
 import NaverLogo from '@/public/login/naver.png';
+
 export default function SignUp({ lang, page }) {
-    // 비밀번호 보이기 안보이기
-    const [isShowPwChecked, setShowPwChecked] = useState(false);
-    const passwordRef = useRef(null);
-
-    const handleShowPwChecked = async () => {
-        const password = await passwordRef.current;
-        if (password === null) return;
-
-        await setShowPwChecked(!isShowPwChecked);
-        if (!isShowPwChecked) {
-            password.type = 'text';
-        } else {
-            password.type = 'password';
-        }
-    };
-
-    const TogglePasswordVisibility = ({
-        isShowPwChecked,
-        handleShowPwChecked,
-    }) => {
-        return (
-            <button
-                onClick={handleShowPwChecked}
-                className="absolute flex items-center h-5 w-5 top-3 right-2"
-            >
-                <Image
-                    src={!isShowPwChecked ? show : hide}
-                    alt={!isShowPwChecked ? '비밀번호 보기' : '비밀번호 숨기기'}
-                    fill
-                    sizes="2.5rem"
-                />
-            </button>
-        );
-    };
-
     return (
         <div className="h-90dvh min-h-640 flex flex-col justify-center items-center">
             <div className="space-y-4 w-full flex flex-col justify-center items-center">
@@ -128,16 +92,3 @@ export default function SignUp({ lang, page }) {
         </div>
     );
 }
-
-const StyledInput = ({ name, type, placeholder }) => {
-    return (
-        <input
-            className="inline-flex items-center justify-center w-full h-12 px-3 mb-4
-                            border border-white_500 text-black dark:text-white rounded-xl  text-lg"
-            name={name}
-            type={type}
-            placeholder={placeholder}
-            required
-        />
-    );
-};

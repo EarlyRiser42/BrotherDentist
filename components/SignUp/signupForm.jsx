@@ -12,10 +12,31 @@ export default function SignupForm({ page }) {
     const [errorText, setErrorText] = useState('');
 
     useEffect(() => {
-        if (state?.message?.code) {
-            setErrorText('working');
+        switch (state?.message?.code) {
+            case 'auth/weak-password':
+                setErrorText('암호가 너무 약합니다.');
+                break;
+            case 'auth/invalid-password':
+                setErrorText('잘못된 암호 형식입니다.');
+                break;
+            case 'auth/email-already-exists':
+                setErrorText('이미 존재하는 이메일입니다.');
+                break;
+            case 'auth/invalid-email':
+                setErrorText('잘못된 이메일 형식입니다.');
+                break;
+            default:
+                setErrorText('서버 오류가 발생했습니다.');
+                break;
         }
     }, [state]);
+
+    useEffect(() => {
+        if (errorText) {
+            const timer = setTimeout(() => setErrorText(''), 3000);
+            return () => clearTimeout(timer);
+        }
+    }, [errorText]);
 
     // 비밀번호와 지연된 비밀번호 확인 값이 일치하는지 여부
     const [password, setPassword] = useState('');
@@ -87,20 +108,20 @@ export default function SignupForm({ page }) {
                 </div>
             )}
             <div className="space-y-4 w-full flex flex-col justify-center items-center">
-                <div className="w-9/10 cs:w-96 max-w-xl md:max-w-md text-black dark:text-white mb-2">
+                <div className="w-96/100 cs:w-96 max-w-xl md:max-w-md text-black dark:text-white mb-2">
                     <h1 className="text-2xl cs:text-3xl font-bold text-black dark:text-white mb-1">
                         {page.signUp.form.h1}
                     </h1>
-                    <p className="text-lg cs:text-xl font-medium text-black dark:text-white">
+                    <p className="text-base cs:text-xl font-medium text-black dark:text-white">
                         {page.signUp.form.p}
                     </p>
                 </div>
-                <div className="w-9/10 cs:w-80">
+                <div className="w-full cs:w-80">
                     <form
                         action={formAction}
                         className="w-full flex flex-col justify-center items-center"
                     >
-                        <div className="w-9/10 cs:w-96 max-w-xl grid grid-cols-2 gap-4 rounded-lg md:max-w-md  mb-2">
+                        <div className="w-96/100 cs:w-96 max-w-xl grid grid-cols-2 gap-4 rounded-lg md:max-w-md  mb-2">
                             <div className="space-y-2">
                                 <label htmlFor="first-name">
                                     {page.signUp.form.input1}
@@ -128,7 +149,7 @@ export default function SignupForm({ page }) {
                                 />
                             </div>
                         </div>
-                        <div className="w-9/10 cs:w-96 max-w-xl flex flex-col justify-between rounded-lg md:max-w-md space-y-2 mb-2">
+                        <div className="w-96/100 cs:w-96 max-w-xl flex flex-col justify-between rounded-lg md:max-w-md space-y-2 mb-2">
                             <label htmlFor="email">
                                 {page.signUp.form.input3}
                             </label>
@@ -142,7 +163,7 @@ export default function SignupForm({ page }) {
                                 type="email"
                             />
                         </div>
-                        <div className="w-9/10 cs:w-96 max-w-xl flex flex-col justify-between rounded-lg md:max-w-md space-y-2 mb-2">
+                        <div className="w-96/100 cs:w-96 max-w-xl flex flex-col justify-between rounded-lg md:max-w-md space-y-2 mb-2">
                             <label htmlFor="dob">
                                 {page.signUp.form.input4}
                             </label>
@@ -155,7 +176,7 @@ export default function SignupForm({ page }) {
                                 type="date"
                             />
                         </div>
-                        <div className="w-9/10 cs:w-96 max-w-xl flex flex-col justify-between rounded-lg md:max-w-md space-y-2 mb-2">
+                        <div className="w-96/100 cs:w-96 max-w-xl flex flex-col justify-between rounded-lg md:max-w-md space-y-2 mb-2">
                             <span className="text-black dark:text-white mb-1">
                                 {page.signUp.form.input5}
                             </span>
@@ -178,7 +199,7 @@ export default function SignupForm({ page }) {
                                 />
                             </div>
                         </div>
-                        <div className="w-9/10 cs:w-96 max-w-xl flex flex-col justify-between rounded-lg md:max-w-md mb-0.5">
+                        <div className="w-96/100 cs:w-96 max-w-xl flex flex-col justify-between rounded-lg md:max-w-md mb-0.5">
                             <span className="text-black dark:text-white mb-1">
                                 {page.signUp.form.input6}
                             </span>
@@ -205,7 +226,7 @@ export default function SignupForm({ page }) {
                                     handleShowPwChecked={handleShowPwChecked}
                                 />
                             </div>
-                            <div className="w-9/10 cs:w-96 h-4 max-w-xl flex flex-col justify-between rounded-lg md:max-w-md space-y-2 mb-4">
+                            <div className="w-96/100 cs:w-96 h-4 max-w-xl flex flex-col justify-between rounded-lg md:max-w-md space-y-2 mb-4">
                                 {!isMatching && (
                                     <span className="text-red text-sm">
                                         {page.signUp.form.span}
@@ -213,7 +234,7 @@ export default function SignupForm({ page }) {
                                 )}
                             </div>
                         </div>
-                        <div className="w-9/10 cs:w-96 max-w-xl flex flex-col justify-between rounded-lg md:max-w-md space-y-2 mb-2">
+                        <div className="w-96/100 cs:w-96 max-w-xl flex flex-col justify-between rounded-lg md:max-w-md space-y-2 mb-2">
                             <label className="flex items-center">
                                 <input
                                     type="checkbox"
@@ -229,7 +250,7 @@ export default function SignupForm({ page }) {
 
                         <button
                             type="submit"
-                            className="inline-flex items-center justify-center w-9/10 cs:w-96 max-w-xl md:max-w-md h-11  mb-4 py-2.5 text-sm font-medium rounded-3xl cursor-pointer no-underline
+                            className="inline-flex items-center justify-center w-96/100 cs:w-96 max-w-xl md:max-w-md h-11  mb-4 py-2.5 text-sm font-medium rounded-3xl cursor-pointer no-underline
                             bg-black dark:bg-white text-white dark:text-black hover:bg-opacity-90"
                             disabled={!isMatching}
                         >

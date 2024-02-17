@@ -23,7 +23,8 @@
     },
     "buttons": {
       "login": "로그인",
-      "signUp": "회원가입"
+      "signUp": "회원가입",
+      "signOut": "로그아웃"
     }
   },
   "page": {

@@ -1,6 +1,10 @@
 'use strict';
-import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
-import { authService } from '@/components/firebase/config';
+import {
+    getAuth,
+    createUserWithEmailAndPassword,
+    updateProfile,
+} from 'firebase/auth';
+import { authService, dbService } from '@/components/firebase/config';
 
 export async function signUpWithEmail(prevState: any, formData: FormData) {
     const rawFormData = {
@@ -12,19 +16,26 @@ export async function signUpWithEmail(prevState: any, formData: FormData) {
     };
 
     try {
+        // 사용자 생성
         const userCredential = await createUserWithEmailAndPassword(
             authService,
-            <string>rawFormData.email,
-            <string>rawFormData.password,
+            rawFormData.email as string,
+            rawFormData.password as string,
         );
         const user = userCredential.user;
-        console.log(user);
-        // 여기에 사용자 정보를 데이터베이스에 저장하는 로직 추가
-        // 예: 사용자 프로필 정보 저장
-        // revalidate cache 필요시 구현
+        updateProfile(user, {
+            displayName: `${rawFormData.first_name}${rawFormData.last_name}`,
+        }).catch((error) => {
+            console.log(error);
+            return {
+                message: error instanceof Error ? error.message : String(error),
+            };
+        });
+        await dbService.collection('users').add(rawFormData);
     } catch (error) {
+        // 오류 처리
         return {
-            message: error,
+            message: error instanceof Error ? error.message : String(error),
         };
     }
 }

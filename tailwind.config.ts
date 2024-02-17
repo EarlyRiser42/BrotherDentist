@@ -18,6 +18,8 @@ const config: Config = {
                 cmd: '800px',
                 clg: '1024px',
                 cxl: '1440px',
+                c2xl: '1920px',
+                c3xl: '2440px',
             },
             aspectRatio: {
                 '4/3': '4 / 3',

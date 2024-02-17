@@ -2,12 +2,13 @@
 import ToggleDarkMode from './headerComponents/toggleDarkMode';
 import ToggleLanguage from './headerComponents/toggleLanguage';
 import { Locale } from '@/i18n.config';
-
+import { signOut } from '@/components/firebase/auth';
 import Navigation from '@/components/Home/headerComponents/navigation';
 import NavigationIcon from '@/components/Home/headerComponents/navigationIcon';
 import { LogoEn, LogoKo } from '@/components/Icons/Logos';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { useUser } from '@/components/firebase/auth';
 
 interface HeaderProps {
     lang: Locale;
@@ -17,6 +18,8 @@ interface HeaderProps {
 export default function Header({ lang, header }: HeaderProps) {
     const [navOpen, setNavOpen] = useState(false);
     const [navAnimation, setAnimation] = useState('animate-navIn');
+    const isLoggedIn = useUser();
+
     const handleClick = () => {
         if (!navOpen) {
             setAnimation('animate-navIn');
@@ -48,17 +51,34 @@ export default function Header({ lang, header }: HeaderProps) {
                 navAnimation={navAnimation}
                 header={header}
             />
-            <div className="hidden lg:flex justify-between items-center mr-4 w-64">
-                <Link href={`/${lang}/login`}>
-                    <button className="bg-light_blue text-black dark:text-white rounded-3xl w-20 min-w-16 min-h-8 h-full ">
-                        {header.buttons.login}
-                    </button>
-                </Link>
-                <Link href={`/${lang}/signup`}>
-                    <button className="bg-black dark:bg-white text-white dark:text-black rounded-3xl w-24 min-h-8 h-full ">
-                        {header.buttons.signUp}
-                    </button>
-                </Link>
+            <div className="hidden lg:flex justify-between items-center mr-4 w-auto min-w-64">
+                {isLoggedIn && (
+                    <>
+                        <button className="bg-light_blue text-black dark:text-white rounded-3xl w-auto min-w-16 min-h-8 h-full ">
+                            {isLoggedIn.displayName + '님'}
+                        </button>
+                        <button
+                            className="bg-black dark:bg-white text-white dark:text-black rounded-3xl w-24 min-h-8 h-full "
+                            onClick={signOut}
+                        >
+                            {header.buttons.signOut}
+                        </button>
+                    </>
+                )}
+                {!isLoggedIn && (
+                    <>
+                        <Link href={`/${lang}/login`}>
+                            <button className="bg-light_blue text-black dark:text-white rounded-3xl w-20 min-w-16 min-h-8 h-full ">
+                                {header.buttons.login}
+                            </button>
+                        </Link>
+                        <Link href={`/${lang}/signup`}>
+                            <button className="bg-black dark:bg-white text-white dark:text-black rounded-3xl w-24 min-h-8 h-full ">
+                                {header.buttons.signUp}
+                            </button>
+                        </Link>
+                    </>
+                )}
                 <ToggleLanguage lang={lang} />
                 <ToggleDarkMode />
             </div>

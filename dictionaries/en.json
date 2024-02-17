@@ -23,7 +23,8 @@
     },
     "buttons": {
       "login": "Login",
-      "signUp": "Signup"
+      "signUp": "Signup",
+      "signOut": "LogOut"
     }
   },
   "page": {
