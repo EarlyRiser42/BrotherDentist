@@ -1,39 +1,39 @@
-'use strict';
-import {
-    getAuth,
-    createUserWithEmailAndPassword,
-    updateProfile,
-} from 'firebase/auth';
+import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
+import { doc, setDoc, collection, addDoc } from 'firebase/firestore';
 import { authService, dbService } from '@/components/firebase/config';
 
+interface UserInfo {
+    first_name: string;
+    last_name: string;
+    email: string;
+    birth_date: string;
+    password: string;
+}
+
 export async function signUpWithEmail(prevState: any, formData: FormData) {
-    const rawFormData = {
-        first_name: formData.get('first-name'),
-        last_name: formData.get('last-name'),
-        email: formData.get('email'),
-        birth_date: formData.get('birth-date'),
-        password: formData.get('password'),
+    const rawFormData: UserInfo = {
+        first_name: formData.get('first-name') as string,
+        last_name: formData.get('last-name') as string,
+        email: formData.get('email') as string,
+        birth_date: formData.get('birth-date') as string,
+        password: formData.get('password') as string,
     };
 
     try {
-        // 사용자 생성
         const userCredential = await createUserWithEmailAndPassword(
             authService,
-            rawFormData.email as string,
-            rawFormData.password as string,
+            rawFormData.email,
+            rawFormData.password,
         );
         const user = userCredential.user;
-        updateProfile(user, {
-            displayName: `${rawFormData.first_name}${rawFormData.last_name}`,
-        }).catch((error) => {
-            console.log(error);
-            return {
-                message: error instanceof Error ? error.message : String(error),
-            };
+
+        await updateProfile(user, {
+            displayName: `${rawFormData.first_name} ${rawFormData.last_name}`,
         });
-        await dbService.collection('users').add(rawFormData);
+
+        await addDoc(collection(dbService, 'users'), rawFormData);
     } catch (error) {
-        // 오류 처리
+        console.error('Error signing up:', error);
         return {
             message: error instanceof Error ? error.message : String(error),
         };
