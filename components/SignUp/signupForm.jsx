@@ -17,16 +17,16 @@ export default function SignupForm({ page }) {
         }
 
         switch (state.message.code) {
-            case 'auth/weak-password':
+            case 'Firebase: Error (auth/weak-password).':
                 setErrorText(page.signUp.error.weak_password);
                 break;
-            case 'auth/invalid-password':
+            case 'Firebase: Error (auth/invalid-password).':
                 setErrorText(page.signUp.error.invalid_password);
                 break;
-            case 'auth/email-already-exists':
+            case 'Firebase: Error (auth/email-already-exists).':
                 setErrorText(page.signUp.error.email_already_exists);
                 break;
-            case 'auth/invalid-email':
+            case 'Firebase: Error (auth/invalid-email).':
                 setErrorText(page.signUp.error.invalid_email);
                 break;
             default:

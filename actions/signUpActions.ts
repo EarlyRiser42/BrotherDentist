@@ -1,6 +1,6 @@
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { doc, setDoc, collection, addDoc } from 'firebase/firestore';
-import { authService, dbService } from '@/components/firebase/config';
+import { authService, dbService } from '@/lib/firebase/config';
 
 interface UserInfo {
     first_name: string;
@@ -35,9 +35,7 @@ export async function signUpWithEmail(prevState: any, formData: FormData) {
 
         await addDoc(collection(dbService, 'users'), rawFormData);
     } catch (error) {
-        console.error('Error signing up:', error);
-        return {
-            message: error instanceof Error ? error.message : String(error),
-        };
+        console.error('Error Sign up:', error);
+        return error;
     }
 }

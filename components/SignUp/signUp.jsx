@@ -7,7 +7,7 @@ import NaverLogo from '@/public/login/naver.png';
 import KakaoLogo from '@/public/login/kakao.png';
 import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import { collection, setDoc } from 'firebase/firestore';
-import { dbService, authService } from '@/components/firebase/config';
+import { dbService, authService } from '@/lib/firebase/config';
 
 async function onSocialClick() {
     try {

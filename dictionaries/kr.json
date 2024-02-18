@@ -223,7 +223,14 @@
       "login": "로그인",
       "button1": "비밀번호를 잊으셨나요?",
       "button2": "계정이 없으신가요?",
-      "button3": "가입하기"
+      "button3": "가입하기",
+      "error": {
+        "too_many_requests": "로그인 시도가 너무 많아 접근이 제한되었습니다.",
+        "invalid_password": "잘못된 암호 형식입니다.",
+        "invalid_credential": "이메일 또는 비밀번호가 틀렸습니다.",
+        "invalid_email": "잘못된 이메일 형식입니다.",
+        "default": "서버 오류가 발생했습니다."
+      }
     },
     "signUp": {
       "title": "회원가입",

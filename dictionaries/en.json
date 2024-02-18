@@ -223,7 +223,14 @@
       "login": "Sign In",
       "button1": "Forgot password",
       "button2": "Don't have an account",
-      "button3": "Sign Up"
+      "button3": "Sign Up",
+      "error": {
+        "too_many_requests": "Too many attempts have been made.",
+        "invalid_password": "Invalid password format.",
+        "invalid_credential": "Email or password is incorrect.",
+        "invalid_email": "Invalid email format.",
+        "default": "A server error has occurred."
+      }
   },
   "signUp": {
     "title": "Sign Up",

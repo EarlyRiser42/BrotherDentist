@@ -2,13 +2,12 @@
 import ToggleDarkMode from './headerComponents/toggleDarkMode';
 import ToggleLanguage from './headerComponents/toggleLanguage';
 import { Locale } from '@/i18n.config';
-import { signOut } from '@/components/firebase/auth';
+import { signOut, useUser } from '@/lib/firebase/auth';
 import Navigation from '@/components/Home/headerComponents/navigation';
 import NavigationIcon from '@/components/Home/headerComponents/navigationIcon';
 import { LogoEn, LogoKo } from '@/components/Icons/Logos';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { useUser } from '@/components/firebase/auth';
 
 interface HeaderProps {
     lang: Locale;

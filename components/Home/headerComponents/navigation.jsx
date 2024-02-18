@@ -6,7 +6,6 @@ import ToggleDarkMode from '@/components/Home/headerComponents/toggleDarkMode';
 import Link from 'next/link';
 import useOnClickOutside from '@/components/hooks/useOnclickOutsdie';
 import { LogoEn, LogoKo } from '@/components/Icons/Logos';
-import { useUser } from '@/components/firebase/auth';
 
 const Navigation = ({ lang, navOpen, navAnimation, header }) => {
     const [isImplantOpen, setIsImplantOpen] = useState(false);
@@ -17,7 +16,6 @@ const Navigation = ({ lang, navOpen, navAnimation, header }) => {
     const communityRef = useRef(null);
     useOnClickOutside(communityRef, () => setIsCommunityOpen(false));
 
-    const isLoggedIn = useUser();
     return (
         <div
             className={`flex flex-col lg:flex lg:flex-row justify-start lg:justify-evenly items-center w-screen lg:w-1/2 h-dvh lg:h-full absolute inset-0 lg:relative bg-white dark:bg-black ${navAnimation} ${navOpen ? 'block' : 'hidden'} lg:block lg:animate-none`}
