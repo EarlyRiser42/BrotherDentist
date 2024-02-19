@@ -28,7 +28,7 @@ export default async function Home({
             <SpeechBalloon page={page} />
             <ReviewSlider page={page} />
             <PortraitSlider page={page} />
-            <ClinicServices page={page} />
+            <ClinicServices lang={lang} page={page} />
             <MapSection page={page} />
             <Footer footer={footer} />
         </>

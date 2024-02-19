@@ -3,10 +3,9 @@ import { ArrowRight } from '@/components/Icons/Icons';
 import Image from 'next/image';
 import icon from '@/public/services/3d.png';
 import support from '@/public/services/support.png';
-import logo_ko from '@/public/services/service.png';
-import logo_en from '@/public/services/service_en.png';
+import Link from 'next/link';
 
-export default function ClinicServices({ page }) {
+export default function ClinicServices({ lang, page }) {
     return (
         <section
             aria-label="ClinicServices"
@@ -30,34 +29,38 @@ export default function ClinicServices({ page }) {
                 </h2>
             </div>
             <div className="grid grid-cols-10 grid-rows-10 gap-4 w-9/10 h-72 cs:h-80 sm:h-96 cmd:h-410 clg:min-w-940 clg:max-w-1250 cxl:w-85/100 lg:h-430 cxl:h-490">
-                <div
-                    className="col-span-7 row-span-6 bg-light_blue flex items-start justify-start rounded-2xl relative hover:font-bold hover:shadow-speechBalloon dark:hover:shadow-speechBalloonBlack
+                <Link href={`/${lang}/implant`}>
+                    <div
+                        className="col-span-7 row-span-6 bg-light_blue flex items-start justify-start rounded-2xl relative hover:font-bold hover:shadow-speechBalloon dark:hover:shadow-speechBalloonBlack
                 cmd:col-span-6 cmd:row-span-4"
-                >
-                    <span
-                        className="mt-2 ml-2 inline-block relative text-black dark:text-white cs:mt-4 cs:ml-4
-                        sm:text-lg lg:text-xl xl:text-2xl"
                     >
-                        {page.home.specialties.specicalOne}
-                    </span>
-                    <div className="absolute right-3 bottom-3">
-                        <ArrowRight />
+                        <span
+                            className="mt-2 ml-2 inline-block relative text-black dark:text-white cs:mt-4 cs:ml-4
+                        sm:text-lg lg:text-xl xl:text-2xl"
+                        >
+                            {page.home.specialties.specicalOne}
+                        </span>
+                        <div className="absolute right-3 bottom-3">
+                            <ArrowRight />
+                        </div>
                     </div>
-                </div>
-                <div
-                    className="col-span-3 row-span-6 bg-blue_600 flex items-start justify-start rounded-2xl relative hover:font-bold hover:shadow-speechBalloon dark:hover:shadow-speechBalloonBlack
+                </Link>
+                <Link href={`/${lang}/prosthodontics`}>
+                    <div
+                        className="col-span-3 row-span-6 bg-blue_600 flex items-start justify-start rounded-2xl relative hover:font-bold hover:shadow-speechBalloon dark:hover:shadow-speechBalloonBlack
                 cmd:col-span-2 cmd:row-span-4"
-                >
-                    <span
-                        className="mt-2 ml-2 inline-block relative text-black dark:text-white cs:mt-4 cs:ml-4
-                        sm:text-lg lg:text-xl xl:text-2xl"
                     >
-                        {page.home.specialties.specicalTwo}
-                    </span>
-                    <div className="absolute right-3 bottom-3">
-                        <ArrowRight />
+                        <span
+                            className="mt-2 ml-2 inline-block relative text-black dark:text-white cs:mt-4 cs:ml-4
+                        sm:text-lg lg:text-xl xl:text-2xl"
+                        >
+                            {page.home.specialties.specicalTwo}
+                        </span>
+                        <div className="absolute right-3 bottom-3">
+                            <ArrowRight />
+                        </div>
                     </div>
-                </div>
+                </Link>
                 <div className="col-span-2 row-span-5 bg-white_600 dark:bg-black_600 hidden cmd:flex items-center justify-center rounded-2xl relative">
                     <Image
                         src={icon}
@@ -66,34 +69,38 @@ export default function ClinicServices({ page }) {
                         sizes="(max-width: 1024px) 20vw, (max-width: 1440px) 20vw, 20vw"
                     />
                 </div>
-                <div
-                    className="col-span-5 row-span-4 bg-green_600 flex items-start justify-start rounded-2xl relative hover:font-bold hover:shadow-speechBalloon dark:hover:shadow-speechBalloonBlack
+                <Link href={`/${lang}/laminate`}>
+                    <div
+                        className="col-span-5 row-span-4 bg-green_600 flex items-start justify-start rounded-2xl relative hover:font-bold hover:shadow-speechBalloon dark:hover:shadow-speechBalloonBlack
                 cmd:col-span-4 cmd:row-span-4"
-                >
-                    <span
-                        className="mt-2 ml-2 inline-block relative text-black dark:text-white cs:mt-4 cs:ml-4
-                        sm:text-lg lg:text-xl xl:text-2xl"
                     >
-                        {page.home.specialties.specicalThree}
-                    </span>
-                    <div className="absolute right-3 bottom-3">
-                        <ArrowRight />
+                        <span
+                            className="mt-2 ml-2 inline-block relative text-black dark:text-white cs:mt-4 cs:ml-4
+                        sm:text-lg lg:text-xl xl:text-2xl"
+                        >
+                            {page.home.specialties.specicalThree}
+                        </span>
+                        <div className="absolute right-3 bottom-3">
+                            <ArrowRight />
+                        </div>
                     </div>
-                </div>
-                <div
-                    className="col-span-5 row-span-4 bg-white_600 flex items-start justify-start rounded-2xl relative hover:font-bold hover:shadow-speechBalloon dark:hover:shadow-speechBalloonBlack
+                </Link>
+                <Link href={`/${lang}/cosmeticDentistry`}>
+                    <div
+                        className="col-span-5 row-span-4 bg-white_600 flex items-start justify-start rounded-2xl relative hover:font-bold hover:shadow-speechBalloon dark:hover:shadow-speechBalloonBlack
                 cmd:col-span-4 cmd:row-span-4"
-                >
-                    <span
-                        className="mt-2 ml-2 inline-block relative text-black dark:text-white cs:mt-4 cs:ml-4
-                        sm:text-lg lg:text-xl xl:text-2xl"
                     >
-                        {page.home.specialties.specialFour}
-                    </span>
-                    <div className="absolute right-3 bottom-3">
-                        <ArrowRight />
+                        <span
+                            className="mt-2 ml-2 inline-block relative text-black dark:text-white cs:mt-4 cs:ml-4
+                        sm:text-lg lg:text-xl xl:text-2xl"
+                        >
+                            {page.home.specialties.specialFour}
+                        </span>
+                        <div className="absolute right-3 bottom-3">
+                            <ArrowRight />
+                        </div>
                     </div>
-                </div>
+                </Link>
                 <div className="col-span-2 row-span-5 bg-white_600 hidden cmd:flex items-center justify-center rounded-2xl relative">
                     <Image
                         src={support}
