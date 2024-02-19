@@ -81,15 +81,18 @@ export default function ClinicServices({ page }) {
                     </div>
                 </div>
                 <div
-                    className="col-span-5 row-span-4 bg-white_600 dark:bg-black_600 flex items-center justify-center rounded-2xl relative
+                    className="col-span-5 row-span-4 bg-white_600 flex items-start justify-start rounded-2xl relative hover:font-bold hover:shadow-speechBalloon dark:hover:shadow-speechBalloonBlack
                 cmd:col-span-4 cmd:row-span-4"
                 >
-                    <Image
-                        src={logo_ko}
-                        alt="HyukPlant Logo"
-                        fill
-                        sizes="(max-width: 1024px) 20vw, (max-width: 1440px) 20vw, 20vw"
-                    />
+                    <span
+                        className="mt-2 ml-2 inline-block relative text-black dark:text-white cs:mt-4 cs:ml-4
+                        sm:text-lg lg:text-xl xl:text-2xl"
+                    >
+                        {page.home.specialties.specialFour}
+                    </span>
+                    <div className="absolute right-3 bottom-3">
+                        <ArrowRight />
+                    </div>
                 </div>
                 <div className="col-span-2 row-span-5 bg-white_600 hidden cmd:flex items-center justify-center rounded-2xl relative">
                     <Image

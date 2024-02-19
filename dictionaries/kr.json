@@ -10,8 +10,9 @@
       "title": "진료 과목",
       "subServices": {
         "implant": "임플란트",
-        "prosthodontics": "보철",
-        "cosmeticDentistry": "치아성형"
+        "prosthodontics": "충치치료",
+        "laminate": "라미네이트",
+        "cosmeticDentistry": "치아미백"
       }
     },
     "community": {
@@ -183,8 +184,9 @@
         "h1": "혁플란트의 진료 전문 분야",
         "h4": "당신이 필요로 하는 최고의 치료를 제공합니다.",
         "specicalOne": "임플란트",
-        "specicalTwo": "치아성형",
-        "specicalThree": "보철"
+        "specicalTwo": "충치치료",
+        "specicalThree": "라미네이트",
+        "specialFour": "치아미백"
       },
       "mapSection": {
         "h1": "저희는 여기 있습니다",
@@ -205,6 +207,11 @@
         "prosthodontics": {
           "title": "보철",
           "description": "보철 치료에 대한 정보를 제공합니다."
+        },
+
+        "laminate": {
+          "title": "라미네이트",
+          "description": "라미네이트에 대한 정보를 제공합니다."
         },
         "cosmeticDentistry": {
           "title": "치아성형",

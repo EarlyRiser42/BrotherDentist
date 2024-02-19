@@ -45,20 +45,25 @@ const Navigation = ({ lang, navOpen, navAnimation, header }) => {
                     </div>
                     {isImplantOpen && (
                         <ul
-                            className={`bg-white dark:bg-black relative  lg:top-10 lg:absolute ${lang === 'en' ? 'w-100 lg:-left-40' : 'w-56 lg:-left-20'} h-auto lg:h-12 lg:rounded-3xl flex flex-col lg:flex-row lg:justify-evenly items-start lg:items-center lg:bg-black lg:dark:bg-white lg:animate-fadeIn animate-slideDown`}
+                            className={`bg-white dark:bg-black relative  lg:top-10 lg:absolute ${lang === 'en' ? 'w-410 lg:-left-48' : 'w-96 lg:-left-36'} h-auto lg:h-12 lg:rounded-3xl flex flex-col lg:flex-row lg:justify-evenly items-start lg:items-center lg:bg-black lg:dark:bg-white lg:animate-fadeIn animate-slideDown`}
                         >
                             <Link href={`/${lang}/implant`}>
-                                <li className="cursor-pointer rounded-3xl lg:rounded-none bg-gray-300 dark:bg-gray-600 lg:bg-black lg:dark:bg-white text-black dark:text-white lg:text-white lg:dark:text-black hover:font-bold py-2 lg:py-0 px-4 lg:px-0 lg:bg-transparent font-normal mt-4 mb-4 lg:mt-0 lg:mb-0">
+                                <li className="cursor-pointer rounded-3xl lg:rounded-none bg-gray_300 dark:bg-gray_600 lg:bg-black lg:dark:bg-white text-black dark:text-white lg:text-white lg:dark:text-black hover:font-bold py-2 lg:py-0 px-4 lg:px-0 lg:bg-transparent font-normal mt-4 mb-4 lg:mt-0 lg:mb-0">
                                     {header.services.subServices.implant}
                                 </li>
                             </Link>
                             <Link href={`/${lang}/prosthodontics`}>
-                                <li className="cursor-pointer rounded-3xl lg:rounded-none bg-gray-300 dark:bg-gray-600 lg:bg-black lg:dark:bg-white text-black dark:text-white lg:text-white lg:dark:text-black hover:font-bold py-2 lg:py-0 px-4 lg:px-0 font-normal mb-4 lg:mb-0">
+                                <li className="cursor-pointer rounded-3xl lg:rounded-none bg-gray_300 dark:bg-gray_600 lg:bg-black lg:dark:bg-white text-black dark:text-white lg:text-white lg:dark:text-black hover:font-bold py-2 lg:py-0 px-4 lg:px-0 font-normal mb-4 lg:mb-0">
                                     {header.services.subServices.prosthodontics}
                                 </li>
                             </Link>
                             <Link href={`/${lang}/cosmeticDentistry`}>
-                                <li className="cursor-pointer rounded-3xl lg:rounded-none bg-gray-300 dark:bg-gray-600 lg:bg-black lg:dark:bg-white text-black dark:text-white lg:text-white lg:dark:text-black hover:font-bold py-2 lg:py-0 px-4 lg:px-0 lg:bg-transparent font-normal mb-0">
+                                <li className="cursor-pointer rounded-3xl lg:rounded-none bg-gray_300 dark:bg-gray_600 lg:bg-black lg:dark:bg-white text-black dark:text-white lg:text-white lg:dark:text-black hover:font-bold py-2 lg:py-0 px-4 lg:px-0 font-normal mb-4 lg:mb-0">
+                                    {header.services.subServices.laminate}
+                                </li>
+                            </Link>
+                            <Link href={`/${lang}/cosmeticDentistry`}>
+                                <li className="cursor-pointer rounded-3xl lg:rounded-none bg-gray_300 dark:bg-gray_600 lg:bg-black lg:dark:bg-white text-black dark:text-white lg:text-white lg:dark:text-black hover:font-bold py-2 lg:py-0 px-4 lg:px-0 lg:bg-transparent font-normal mb-0">
                                     {
                                         header.services.subServices
                                             .cosmeticDentistry
@@ -81,15 +86,15 @@ const Navigation = ({ lang, navOpen, navAnimation, header }) => {
                     </div>
                     {isCommunityOpen && (
                         <ul
-                            className={`bg-white dark:bg-black relative  lg:top-10 lg:absolute ${lang === 'en' ? 'w-100 lg:-left-40' : 'w-56 lg:-left-20'} h-auto lg:h-12 lg:rounded-3xl flex flex-col lg:flex-row lg:justify-evenly items-start lg:items-center lg:bg-black lg:dark:bg-white lg:animate-fadeIn animate-slideDown`}
+                            className={`bg-white dark:bg-black relative  lg:top-10 lg:absolute ${lang === 'en' ? 'w-96 lg:-left-32' : 'w-56 lg:-left-20'} h-auto lg:h-12 lg:rounded-3xl flex flex-col lg:flex-row lg:justify-evenly items-start lg:items-center lg:bg-black lg:dark:bg-white lg:animate-fadeIn animate-slideDown`}
                         >
                             <Link href={`/${lang}/beforeAfter`}>
-                                <li className="cursor-pointer rounded-3xl lg:rounded-none bg-gray-300 dark:bg-gray-600 lg:bg-black lg:dark:bg-white text-black dark:text-white lg:text-white lg:dark:text-black hover:font-bold py-2 lg:py-0 px-4 lg:px-0 lg:bg-transparent font-normal mt-4 mb-4 lg:mt-0 lg:mb-0">
+                                <li className="cursor-pointer rounded-3xl lg:rounded-none bg-gray_300 dark:bg-gray_600 lg:bg-black lg:dark:bg-white text-black dark:text-white lg:text-white lg:dark:text-black hover:font-bold py-2 lg:py-0 px-4 lg:px-0 lg:bg-transparent font-normal mt-4 mb-4 lg:mt-0 lg:mb-0">
                                     {header.community.subCommunity.beforeAfter}
                                 </li>
                             </Link>
                             <Link href={`/${lang}/review`}>
-                                <li className="cursor-pointer rounded-3xl lg:rounded-none bg-gray-300 dark:bg-gray-600 lg:bg-black lg:dark:bg-white text-black dark:text-white lg:text-white lg:dark:text-black hover:font-bold py-2 lg:py-0 px-4 lg:px-0 font-normal mb-4 lg:mb-0">
+                                <li className="cursor-pointer rounded-3xl lg:rounded-none bg-gray_300 dark:bg-gray_600 lg:bg-black lg:dark:bg-white text-black dark:text-white lg:text-white lg:dark:text-black hover:font-bold py-2 lg:py-0 px-4 lg:px-0 font-normal mb-4 lg:mb-0">
                                     {header.community.subCommunity.review}
                                 </li>
                             </Link>

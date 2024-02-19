@@ -10,8 +10,9 @@
       "title": "Services",
       "subServices": {
         "implant": "Implant",
-        "prosthodontics": "Prosthodontics",
-        "cosmeticDentistry": "Cosmetic Dentistry"
+        "prosthodontics": "Cavity Treatment",
+        "laminate": "Laminate",
+        "cosmeticDentistry": "Teeth Whitening"
       }
     },
     "community": {
@@ -182,9 +183,11 @@
       "specialties": {
         "h1": "Hyukplant's Specialized Medical Services",
         "h4": "Providing the Best Care You Need.",
-        "specialOne": "Implants",
-        "specialTwo": "Cosmetic Dentistry",
-        "specialThree": "Prosthodontics"
+        "specicalOne": "Implant",
+        "specicalTwo": "Cavity Treatment",
+        "specicalThree": "Laminate",
+        "specialFour": "Teeth Whitening"
+
       },
       "mapSection": {
         "h1": "We are here",
@@ -206,6 +209,10 @@
         "prosthodontics": {
           "title": "Prosthodontics",
           "description": "Information about our prosthodontics treatments."
+        },
+        "laminate": {
+          "title": "laminate",
+          "description": "Explore our laminate services."
         },
         "cosmeticDentistry": {
           "title": "Cosmetic Dentistry",
