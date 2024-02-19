@@ -6,6 +6,7 @@ import ToggleDarkMode from '@/components/Home/headerComponents/toggleDarkMode';
 import Link from 'next/link';
 import useOnClickOutside from '@/components/hooks/useOnclickOutsdie';
 import { LogoEn, LogoKo } from '@/components/Icons/Logos';
+import { signOut, useUser } from '@/lib/firebase/auth';
 
 const Navigation = ({ lang, navOpen, navAnimation, header }) => {
     const [isImplantOpen, setIsImplantOpen] = useState(false);
@@ -15,6 +16,8 @@ const Navigation = ({ lang, navOpen, navAnimation, header }) => {
     const [isCommunityOpen, setIsCommunityOpen] = useState(false);
     const communityRef = useRef(null);
     useOnClickOutside(communityRef, () => setIsCommunityOpen(false));
+
+    const isLoggedIn = useUser();
 
     return (
         <div
@@ -97,18 +100,33 @@ const Navigation = ({ lang, navOpen, navAnimation, header }) => {
 
             <div className="flex justify-between items-center w-11/12 h-15/100 clg:hidden">
                 <div className="flex justify-start items-center w-4/5 h-2/5">
-                    <Link href={`/${lang}/login`} className="mr-5%">
-                        <button className="bg-light_blue text-black dark:text-white rounded-3xl w-20 min-w-16 min-h-8 h-full ">
-                            {header.buttons.login}
-                        </button>
-                    </Link>
-                    <Link href={`/${lang}/signup`}>
-                        <button className=" bg-black dark:bg-white rounded-3xl w-2/5 min-w-24 max-w-24 min-h-8 h-full flex items-center justify-center">
-                            <span className="text-white  dark:text-black">
-                                {header.buttons.signUp}
-                            </span>
-                        </button>
-                    </Link>
+                    {isLoggedIn && (
+                        <>
+                            <button className="bg-light_blue text-white rounded-3xl px-3 w-auto min-w-16 mr-2 min-h-8 h-full ">
+                                {isLoggedIn.displayName + '님'}
+                            </button>
+                            <button
+                                className="bg-black dark:bg-white text-white dark:text-black rounded-3xl  w-24 mr-2 min-h-8 h-full "
+                                onClick={signOut}
+                            >
+                                {header.buttons.signOut}
+                            </button>
+                        </>
+                    )}
+                    {!isLoggedIn && (
+                        <>
+                            <Link href={`/${lang}/login`}>
+                                <button className="bg-light_blue text-white rounded-3xl w-20 min-w-16 mr-2 min-h-8 h-full ">
+                                    {header.buttons.login}
+                                </button>
+                            </Link>
+                            <Link href={`/${lang}/signup`}>
+                                <button className="bg-black dark:bg-white text-white dark:text-black rounded-3xl w-24 mr-2 min-h-8 h-full ">
+                                    {header.buttons.signUp}
+                                </button>
+                            </Link>
+                        </>
+                    )}
                 </div>
                 <div className="flex justify-between items-center w-1/5 max-w-20">
                     <ToggleLanguage lang={lang} />
