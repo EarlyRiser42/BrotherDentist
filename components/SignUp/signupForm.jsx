@@ -1,6 +1,6 @@
 'use client';
 import React, { useDeferredValue, useEffect, useRef, useState } from 'react';
-import { signUpWithEmail } from '@/actions/signUpActions';
+import { signUpWithEmail } from '@/actions/actions';
 import { useFormState } from 'react-dom';
 import Image from 'next/image';
 import show from '@/public/login/show.svg';

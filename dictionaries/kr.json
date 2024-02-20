@@ -1,8 +1,8 @@
 {
   "metadata": {
     "icon" : "/favicon.ico",
-    "open_graph" : "https://firebasestorage.googleapis.com/v0/b/loginform-6747a.appspot.com/o/og_ko.png?alt=media&token=da47aa9d-d745-4121-89fb-58c8992bb9c7",
-    "open_graph_alt" : "https://firebasestorage.googleapis.com/v0/b/loginform-6747a.appspot.com/o/og_ko.png?alt=media&token=da47aa9d-d745-4121-89fb-58c8992bb9c7"
+    "open_graph" : "https://firebasestorage.googleapis.com/v0/b/hyukplant.appspot.com/o/public%2Fog_ko.png?alt=media&token=9d3fa8e9-312f-4367-b37d-48270bd95e8b",
+    "open_graph_alt" : "https://firebasestorage.googleapis.com/v0/b/hyukplant.appspot.com/o/public%2Fog_ko_alt.png?alt=media&token=9284758f-6356-4a18-b2e6-9ec2c676dfde"
   },
   "header": {
     "about": "소개",
@@ -269,6 +269,11 @@
         "invalid_email": "잘못된 이메일 형식입니다.",
         "default": "서버 오류가 발생했습니다."
       }
+    },
+    "beforeAfter": {
+      "h2": "님 전후사진",
+      "span": "혁플란트",
+      "button1": "전체"
     }
   },
   "footer": {

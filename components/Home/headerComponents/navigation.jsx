@@ -88,12 +88,12 @@ const Navigation = ({ lang, navOpen, navAnimation, header }) => {
                         <ul
                             className={`bg-white dark:bg-black relative  lg:top-10 lg:absolute ${lang === 'en' ? 'w-96 lg:-left-32' : 'w-56 lg:-left-20'} h-auto lg:h-12 lg:rounded-3xl flex flex-col lg:flex-row lg:justify-evenly items-start lg:items-center lg:bg-black lg:dark:bg-white lg:animate-fadeIn animate-slideDown`}
                         >
-                            <Link href={`/${lang}/beforeAfter`}>
+                            <Link href={`/${lang}/beforeAfter/1`}>
                                 <li className="cursor-pointer rounded-3xl lg:rounded-none bg-gray_300 dark:bg-gray_600 lg:bg-black lg:dark:bg-white text-black dark:text-white lg:text-white lg:dark:text-black hover:font-bold py-2 lg:py-0 px-4 lg:px-0 lg:bg-transparent font-normal mt-4 mb-4 lg:mt-0 lg:mb-0">
                                     {header.community.subCommunity.beforeAfter}
                                 </li>
                             </Link>
-                            <Link href={`/${lang}/review`}>
+                            <Link href={`/${lang}/reviews`}>
                                 <li className="cursor-pointer rounded-3xl lg:rounded-none bg-gray_300 dark:bg-gray_600 lg:bg-black lg:dark:bg-white text-black dark:text-white lg:text-white lg:dark:text-black hover:font-bold py-2 lg:py-0 px-4 lg:px-0 font-normal mb-4 lg:mb-0">
                                     {header.community.subCommunity.review}
                                 </li>

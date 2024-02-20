@@ -39,7 +39,7 @@ export default function Header({ lang, header }: HeaderProps) {
             <div className="h-1/20 w-7/12 flex items-center ml-4 lg:w-64">
                 {lang === 'ko' ? <LogoKo /> : <LogoEn />}
             </div>
-            <div className="lg:hidden flex justify-center items-center w-1/6 z-50">
+            <div className="lg:hidden flex justify-end items-center w-1/6 z-50 mr-4">
                 <button onClick={() => handleClick()}>
                     <NavigationIcon navOpen={navOpen} />
                 </button>

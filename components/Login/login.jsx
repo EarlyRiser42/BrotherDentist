@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { loginWithEmail } from '@/actions/loginActions';
+import { loginWithEmail } from '@/actions/actions';
 import show from '@/public/login/show.svg';
 import hide from '@/public/login/hide.svg';
 import googleLogo from '@/public/login/google_logo.svg';
@@ -12,7 +12,6 @@ import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import { setDoc, collection } from 'firebase/firestore';
 import { dbService, authService } from '@/lib/firebase/config';
 import { useFormState } from 'react-dom';
-import { signUpWithEmail } from '@/actions/signUpActions';
 
 async function onSocialClick() {
     try {

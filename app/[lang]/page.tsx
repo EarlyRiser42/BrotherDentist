@@ -12,7 +12,7 @@ import ClinicServices from '@/components/Home/pageComponents/clinicServices';
 import PortraitSlider from '@/components/Home/pageComponents/portraitSlider';
 import MapSection from '@/components/Home/pageComponents/mapSection';
 
-export default async function Home({
+export default async function Page({
     params: { lang },
 }: {
     params: { lang: Locale };

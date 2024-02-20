@@ -8,10 +8,10 @@ export default async function VideoComponent() {
             muted
             playsInline
             className="absolute block left-1/2 top-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2 object-cover overflow-clip rounded-3xl"
-            poster="https://firebasestorage.googleapis.com/v0/b/loginform-6747a.appspot.com/o/1.webp?alt=media&token=763f4314-465e-4551-9c9c-e77012b27209"
+            poster="https://firebasestorage.googleapis.com/v0/b/hyukplant.appspot.com/o/public%2Fhero.webp?alt=media&token=7e8ff63b-ea5e-4e5e-9160-1a9f8ecb5434"
         >
             <source
-                src="https://firebasestorage.googleapis.com/v0/b/loginform-6747a.appspot.com/o/dental_hero_final.mp4?alt=media&token=0c8b3fee-71ef-451a-8650-61e0167a2bb7"
+                src="https://firebasestorage.googleapis.com/v0/b/hyukplant.appspot.com/o/public%2Fhero.mp4?alt=media&token=10a65782-5f44-4e0a-935d-2ac8395a9857"
                 type="video/mp4"
             />
             Your browser does not support the video tag.

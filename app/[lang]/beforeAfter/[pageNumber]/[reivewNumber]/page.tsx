@@ -2,19 +2,18 @@ import React from 'react';
 import { Locale } from '@/i18n.config';
 import { getDictionary } from '@/dictionaries/dictionary';
 import Header from '@/components/Home/header';
-import Login from '@/components/Login/login';
-
+import ReviewDetail from '@/components/beforeAfter/reivewDetail';
 export default async function Page({
-    params: { lang },
+    params: { lang, reviewNumber },
 }: {
-    params: { lang: Locale };
+    params: { lang: Locale; reviewNumber: string };
 }) {
     const { page, header } = await getDictionary(lang);
 
     return (
         <>
             <Header lang={lang} header={header} />
-            <Login lang={lang} page={page} />
+            <ReviewDetail page={page} />
         </>
     );
 }

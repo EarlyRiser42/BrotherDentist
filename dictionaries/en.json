@@ -1,8 +1,8 @@
 {
   "metadata": {
     "icon" : "/en/favicon.ico",
-    "open_graph" : "https://firebasestorage.googleapis.com/v0/b/loginform-6747a.appspot.com/o/og_en.png?alt=media&token=754c7252-9792-4722-bce8-60f017af0dda",
-    "open_graph_alt" : "https://firebasestorage.googleapis.com/v0/b/loginform-6747a.appspot.com/o/og_en_alt.png?alt=media&token=1187a9df-b189-4d96-bd89-bc02c09acbe3"
+    "open_graph" : "https://firebasestorage.googleapis.com/v0/b/hyukplant.appspot.com/o/public%2Fog_en.png?alt=media&token=f858f244-d689-4f95-8738-cb7d9410ccb8",
+    "open_graph_alt" : "https://firebasestorage.googleapis.com/v0/b/hyukplant.appspot.com/o/public%2Fog_en_alt.png?alt=media&token=7dedc523-3f1b-4c52-a7fe-26fd5d583bcf"
   },
   "header": {
     "about": "About",
@@ -269,6 +269,11 @@
       "invalid-email": "Invalid email format.",
       "default": "A server error has occurred."
       }
+    },
+    "beforeAfter": {
+      "h2": " before&after",
+      "span": "HyukPlant",
+      "button1": "All"
     }
   },
     "footer": {
