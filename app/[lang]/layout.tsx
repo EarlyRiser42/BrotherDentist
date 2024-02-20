@@ -1,6 +1,6 @@
 import '../globals.css';
 import React from 'react';
-import Providers from '../../components/provider/Providers';
+import Providers from '../../provider/Providers';
 import { Locale, i18n } from '@/i18n.config';
 import { NanumSquare, NanumSquareOTF } from '@/fonts/fonts';
 import { getDictionary } from '@/dictionaries/dictionary';
