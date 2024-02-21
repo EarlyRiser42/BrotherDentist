@@ -110,6 +110,7 @@ const config: Config = {
                 '9/10': '90%',
                 '96/100': '96%',
                 '20vw': '20vw',
+                '40vw': '40vw',
                 '50vw': '50vw',
             },
             minWidth: {
@@ -237,6 +238,10 @@ const config: Config = {
                     from: { transform: 'translateX(0%)' },
                     to: { transform: 'translateX(-50%)' },
                 },
+                spin: {
+                    from: { transform: 'rotate(0deg)' },
+                    to: { transform: 'rotate(360deg)' },
+                },
             },
             animation: {
                 navIn: 'navIn 0.3s ease-out',
@@ -247,6 +252,7 @@ const config: Config = {
                 textClip: 'textClip 10s linear infinite',
                 balloonAppear: 'balloonAppear 0.7s ease-in-out forwards',
                 slide: 'slide 120s infinite linear;',
+                spin: 'spin 0.7s ease-in-out infinite',
             },
         },
     },

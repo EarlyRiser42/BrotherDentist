@@ -106,6 +106,7 @@ export default function PortraitSlider({ page }) {
                                     alt={alt}
                                     width={1830}
                                     height={2170}
+                                    placeholder="blur"
                                     className="object-fill w-full h-9/10 clg:h-full clg:w-3/5 "
                                 />
                             </div>

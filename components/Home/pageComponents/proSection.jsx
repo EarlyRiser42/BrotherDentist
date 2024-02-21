@@ -114,6 +114,7 @@ export default function ProSection({ page }) {
                             src={pro1}
                             alt="pro1"
                             fill
+                            placeholder="blur"
                             sizes="(max-width: 1024px) 50vw, 100vw"
                         />
                     </div>
@@ -149,6 +150,7 @@ export default function ProSection({ page }) {
                             src={pro2}
                             alt="pro1"
                             fill
+                            placeholder="blur"
                             sizes="(max-width: 1024px) 50vw, 100vw"
                         />
                     </div>
@@ -183,6 +185,7 @@ export default function ProSection({ page }) {
                             src={pro3}
                             alt="pro1"
                             fill
+                            placeholder="blur"
                             sizes="(max-width: 1024px) 50vw, 100vw"
                         />
                     </div>

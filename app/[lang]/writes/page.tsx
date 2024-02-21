@@ -4,6 +4,7 @@ import Writes from '@/components/writes/writes';
 import { getDictionary } from '@/dictionaries/dictionary';
 import { Locale } from '@/i18n.config';
 import { Suspense } from 'react';
+import Loading from '@/components/loading/loading';
 export default async function Page({
     params: { lang },
 }: {
@@ -14,7 +15,7 @@ export default async function Page({
     return (
         <>
             <Header lang={lang} header={header} />
-            <Suspense fallback={<div className="bg-white"></div>}>
+            <Suspense fallback={<Loading />}>
                 <Writes />
             </Suspense>
         </>

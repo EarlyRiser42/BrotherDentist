@@ -1,7 +1,8 @@
 import { Locale } from '@/i18n.config';
 import { getDictionary } from '@/dictionaries/dictionary';
-import React from 'react';
+import React, { Suspense } from 'react';
 import SignUpForm from '@/components/SignUp/signupForm';
+import Loading from '@/components/loading/loading';
 
 export default async function Form({
     params: { lang },
@@ -12,7 +13,9 @@ export default async function Form({
 
     return (
         <>
-            <SignUpForm page={page} />
+            <Suspense fallback={<Loading />}>
+                <SignUpForm page={page} />
+            </Suspense>
         </>
     );
 }
