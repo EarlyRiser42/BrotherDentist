@@ -28,12 +28,23 @@ export default async function Page({
     );
 }
 
+function serializeData(data) {
+    const newData = { ...data };
+
+    // date 필드가 있고, toDate 메서드를 가진 경우 ISO 문자열로 변환
+    if (newData.date?.toDate) {
+        newData.date = newData.date.toDate().toISOString();
+    }
+
+    return newData;
+}
+
 async function getWrites() {
     const querySnapshot = await getDocs(collection(dbService, 'beforeAfter'));
     const documents = [];
 
     for (const doc of querySnapshot.docs) {
-        const data = doc.data();
+        const data = serializeData(doc.data());
 
         // 각 이미지에 대한 블러 이미지 URL을 생성
         const photosWithBlur = await getBase64(data.photos[1]);
@@ -41,7 +52,7 @@ async function getWrites() {
         documents.push({
             id: doc.id,
             ...data,
-            photos: [...data.photos, photosWithBlur],
+            photos: [...data.photos, photosWithBlur], // 기존 이미지 배열에 블러 이미지 URL 추가
         });
     }
 

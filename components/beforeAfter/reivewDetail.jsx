@@ -16,8 +16,6 @@ export default function ReviewDetail({ page }) {
         }
     }
 
-    console.log(currentPost);
-
     return (
         <section
             aria-label="beforeAfter"

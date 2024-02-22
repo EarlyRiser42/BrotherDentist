@@ -12,9 +12,7 @@ export default function BeforeAfter({ lang, page, pageNumber, writes }) {
         category === 'all'
             ? writes
             : writes.filter((item) =>
-                  item.selectedServices.some(
-                      (service) => service.toLowerCase() === category,
-                  ),
+                  item.selectedServices.some((service) => service === category),
               );
 
     // 페이지 번호와 페이지 당 항목 수를 기반으로 시작 및 종료 인덱스 계산
@@ -23,12 +21,9 @@ export default function BeforeAfter({ lang, page, pageNumber, writes }) {
     const endIndex = startIndex + itemsPerPage;
 
     // 페이지 번호 생성
-    const totalPages = Math.ceil(writes.length / itemsPerPage);
+    const totalPages = Math.ceil(filteredWrites.length / itemsPerPage);
     const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
-    console.log(
-        auth?.currentUser?.email,
-        process.env.NEXT_PUBLIC_ADMIN_MAIL_ADDRESS,
-    );
+
     const itemsToShow = filteredWrites
         .slice(startIndex, endIndex)
         .map((item, index) => (
@@ -39,7 +34,7 @@ export default function BeforeAfter({ lang, page, pageNumber, writes }) {
                     query: { writeObj: JSON.stringify(item) },
                 }}
             >
-                <div className="flex justify-between border border-white_700 dark:border-gray py-4 px-1 cs:px-4">
+                <div className="flex justify-between border-b cxl:border border-white_700 dark:border-gray w-full py-4 px-2 cs:px-4">
                     <div className="flex flex-col justify-between items-start w-50vw">
                         <h2 className="text-lg cs:text-xl font-semibold mb-2">
                             {replaceMiddleWithAsterisk(
@@ -61,11 +56,7 @@ export default function BeforeAfter({ lang, page, pageNumber, writes }) {
                         <div className="text-xs cs:text-sm text-gray-500 flex justify-evenly mb-1 gap-x-1">
                             <span>{page.beforeAfter.span}</span>
                             <span>|</span>
-                            <span>
-                                {timeStampToDate(
-                                    new Date(item.date.seconds * 1000),
-                                )}
-                            </span>
+                            <span>{timeStampToDate(item.date)}</span>
                         </div>
                     </div>
                     <div className="w-40vw h-auto cs:w-48  relative">
@@ -112,19 +103,19 @@ export default function BeforeAfter({ lang, page, pageNumber, writes }) {
                         {page.home.specialties.specicalOne}
                     </button>
                     <button
-                        className={`${category === 'prosthodontics' ? 'bg-light_blue text-white border-none' : 'border-black dark:border-white'}  
+                        className={`${category === 'cavityTreatment' ? 'bg-light_blue text-white border-none' : 'border-black dark:border-white'}  
                 border whitespace-nowrap border-black dark:border-white rounded-3xl p-1 cs:p-2 text-xs cs:text-sm`}
                         onClick={() => {
-                            setCategory('prosthodontics');
+                            setCategory('cavityTreatment');
                         }}
                     >
                         {page.home.specialties.specicalTwo}
                     </button>
                     <button
-                        className={`${category === 'cosmeticDentistry' ? 'bg-light_blue text-white border-none' : 'border-black dark:border-white'}  
+                        className={`${category === 'teethWhitening' ? 'bg-light_blue text-white border-none' : 'border-black dark:border-white'}  
                 border whitespace-nowrap border-black dark:border-white rounded-3xl p-1 cs:p-2 text-xs cs:text-sm`}
                         onClick={() => {
-                            setCategory('cosmeticDentistry');
+                            setCategory('teethWhitening');
                         }}
                     >
                         {page.home.specialties.specialFour}
@@ -163,7 +154,7 @@ export default function BeforeAfter({ lang, page, pageNumber, writes }) {
             <div className="flex flex-col justify-center w-full h-auto mb-2 sm:mb-4 clg:min-w-940 clg:max-w-1250 cxl:w-85/100">
                 {itemsToShow}
             </div>
-            <div className="flex gap-x-4 mt-12 mb-8 cs:mt-20 mb-12">
+            <div className="flex gap-x-4 mt-8 mb-8 cs:mt-8 mb-16">
                 {pageNumbers.map((number) => (
                     <Link key={number} href={`/${lang}/beforeAfter/${number}`}>
                         <button
@@ -212,8 +203,15 @@ function translateService(service, lang) {
     return serviceNames[service] ? serviceNames[service][lang] : service;
 }
 
-function timeStampToDate(date) {
-    return (
-        date.getFullYear() + '/' + (date.getMonth() + 1) + '/' + date.getDate()
-    );
+function timeStampToDate(isoString) {
+    // ISO 문자열로부터 Date 객체 생성
+    const date = new Date(isoString);
+
+    const year = date.getFullYear();
+    // getMonth()는 0부터 시작하므로 1을 더해주고, 두 자리 수를 유지하기 위해 앞에 0을 추가
+    const month = ('0' + (date.getMonth() + 1)).slice(-2);
+    // getDate()로 얻은 일 수에 대해서도 두 자리 수를 유지하기 위해 앞에 0을 추가
+    const day = ('0' + date.getDate()).slice(-2);
+
+    return `${year}/${month}/${day}`;
 }
