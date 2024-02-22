@@ -5,16 +5,7 @@ import Header from '@/components/Home/header';
 import BeforeAfter from '@/components/beforeAfter/beforeAfter';
 import { collection, getDocs } from 'firebase/firestore';
 import { dbService } from '@/lib/firebase/config';
-import Loading from '@/components/loading/loading';
-import dynamic from 'next/dynamic';
 import getBase64 from '@/lib/plaiceholder/getBase64';
-
-const DynamicBeforeAfter = dynamic(
-    () => import('@/components/beforeAfter/beforeAfter'),
-    {
-        loading: () => <Loading />,
-    },
-);
 
 export default async function Page({
     params: { lang, pageNumber },
@@ -27,7 +18,7 @@ export default async function Page({
     return (
         <>
             <Header lang={lang} header={header} />
-            <DynamicBeforeAfter
+            <BeforeAfter
                 lang={lang}
                 page={page}
                 pageNumber={pageNumber}
@@ -35,11 +26,6 @@ export default async function Page({
             />
         </>
     );
-}
-
-interface Document {
-    id: string;
-    [key: string]: any;
 }
 
 async function getWrites() {

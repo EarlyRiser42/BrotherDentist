@@ -1,4 +1,4 @@
-export default async function Loading() {
+export default function Loading() {
     return (
         <div
             className={`flex justify-center items-start w-full h-full animation-[hideLoadingScreen_10s_linear_forwards]`}

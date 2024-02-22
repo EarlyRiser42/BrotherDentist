@@ -1,10 +1,13 @@
 import React from 'react';
 import Header from '@/components/Home/header';
-import Writes from '@/components/writes/writes';
 import { getDictionary } from '@/dictionaries/dictionary';
 import { Locale } from '@/i18n.config';
-import { Suspense } from 'react';
-import Loading from '@/components/loading/loading';
+import dynamic from 'next/dynamic';
+
+const DynamicWrites = dynamic(() => import('@/components/writes/writes'), {
+    ssr: false,
+});
+
 export default async function Page({
     params: { lang },
 }: {
@@ -15,9 +18,7 @@ export default async function Page({
     return (
         <>
             <Header lang={lang} header={header} />
-            <Suspense fallback={<Loading />}>
-                <Writes />
-            </Suspense>
+            <DynamicWrites />
         </>
     );
 }

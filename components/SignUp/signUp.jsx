@@ -22,6 +22,7 @@ async function onSocialClick() {
             phoneNumber: user.phoneNumber,
             birth_date: '',
             password: '',
+            role: 'user',
         };
 
         await setDoc(collection(dbService, 'users'), userObj);

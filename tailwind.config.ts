@@ -40,6 +40,7 @@ const config: Config = {
                 white_600: '#F9F8FF',
                 white_700: '#EEEEEE',
                 green_600: '#008A65',
+                blue_500: '#dbebfb',
                 blue_600: '#7B99FF',
                 light_blue: '#2463EB',
                 dark_blue: '#020D43',

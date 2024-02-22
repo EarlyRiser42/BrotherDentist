@@ -25,7 +25,10 @@ export default function BeforeAfter({ lang, page, pageNumber, writes }) {
     // 페이지 번호 생성
     const totalPages = Math.ceil(writes.length / itemsPerPage);
     const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
-
+    console.log(
+        auth?.currentUser?.email,
+        process.env.NEXT_PUBLIC_ADMIN_MAIL_ADDRESS,
+    );
     const itemsToShow = filteredWrites
         .slice(startIndex, endIndex)
         .map((item, index) => (
@@ -91,7 +94,7 @@ export default function BeforeAfter({ lang, page, pageNumber, writes }) {
             >
                 <div className="flex flex-wrap justify-start pl-2 gap-x-2 gap-y-1 cs:gap-x-4 ">
                     <button
-                        className={`${category === 'all' ? 'border-light_blue text-light_blue' : 'border-black dark:border-white'} 
+                        className={`${category === 'all' ? 'bg-light_blue text-white border-none' : 'border-black dark:border-white'} 
                     border whitespace-nowrap rounded-3xl px-2 cs:px-4 text-xs cs:text-sm`}
                         onClick={() => {
                             setCategory('all');
@@ -100,7 +103,7 @@ export default function BeforeAfter({ lang, page, pageNumber, writes }) {
                         {page.beforeAfter.button1}
                     </button>
                     <button
-                        className={`${category === 'implant' ? 'border-light_blue text-light_blue' : 'border-black dark:border-white'}  
+                        className={`${category === 'implant' ? 'bg-light_blue text-white border-none' : 'border-black dark:border-white'}  
                 border whitespace-nowrap border-black dark:border-white rounded-3xl p-1 cs:p-2 text-xs cs:text-sm`}
                         onClick={() => {
                             setCategory('implant');
@@ -109,7 +112,7 @@ export default function BeforeAfter({ lang, page, pageNumber, writes }) {
                         {page.home.specialties.specicalOne}
                     </button>
                     <button
-                        className={`${category === 'prosthodontics' ? 'border-light_blue text-light_blue' : 'border-black dark:border-white'}  
+                        className={`${category === 'prosthodontics' ? 'bg-light_blue text-white border-none' : 'border-black dark:border-white'}  
                 border whitespace-nowrap border-black dark:border-white rounded-3xl p-1 cs:p-2 text-xs cs:text-sm`}
                         onClick={() => {
                             setCategory('prosthodontics');
@@ -118,7 +121,7 @@ export default function BeforeAfter({ lang, page, pageNumber, writes }) {
                         {page.home.specialties.specicalTwo}
                     </button>
                     <button
-                        className={`${category === 'cosmeticDentistry' ? 'border-light_blue text-light_blue' : 'border-black dark:border-white'}  
+                        className={`${category === 'cosmeticDentistry' ? 'bg-light_blue text-white border-none' : 'border-black dark:border-white'}  
                 border whitespace-nowrap border-black dark:border-white rounded-3xl p-1 cs:p-2 text-xs cs:text-sm`}
                         onClick={() => {
                             setCategory('cosmeticDentistry');
@@ -127,7 +130,7 @@ export default function BeforeAfter({ lang, page, pageNumber, writes }) {
                         {page.home.specialties.specialFour}
                     </button>
                     <button
-                        className={`${category === 'laminate' ? 'border-light_blue text-light_blue' : 'border-black dark:border-white'}  
+                        className={`${category === 'laminate' ? 'bg-light_blue text-white border-none' : 'border-black dark:border-white'}  
                 border whitespace-nowrap border-black dark:border-white rounded-3xl p-1 cs:p-2 text-xs cs:text-sm`}
                         onClick={() => {
                             setCategory('laminate');
@@ -136,30 +139,26 @@ export default function BeforeAfter({ lang, page, pageNumber, writes }) {
                         {page.home.specialties.specicalThree}
                     </button>
                 </div>
-                {auth.currentUser === process.env.NEXT_ADMIN_MAIL_ADDRESS && (
+                {auth?.currentUser?.email ===
+                    process.env.NEXT_PUBLIC_ADMIN_MAIL_ADDRESS && (
                     <Link href={'/writes'}>
-                        <button className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-light_blue text-white px-3 py-2 rounded-3xl text-xs cs:text-sm">
-                            글쓰기
-                        </button>
+                        <div className="fixed sm:absolute bottom-0 right-0 mb-3 mr-3 bg-light_blue text-white rounded-full w-16 h-16 sm:px-2 sm:w-20 sm:h-auto z-[2] sm:top-1/2 sm:right-4 sm:transform sm:-translate-y-1/2 sm:mb-0 sm:mr-0 sm:rounded-3xl">
+                            <div className="sm:hidden w-full h-full flex justify-center items-center">
+                                <Image
+                                    src={writeIcon}
+                                    alt="Write Icon"
+                                    width={50}
+                                    height={50}
+                                />
+                            </div>
+                            <div className="hidden h-full sm:flex justify-center items-center">
+                                <span className="text-xs cs:text-base">
+                                    글쓰기
+                                </span>
+                            </div>
+                        </div>
                     </Link>
                 )}
-                <Link href={'/writes'}>
-                    <button className="hidden sm:absolute top-1/2 right-0 transform -translate-y-1/2 bg-light_blue text-white px-3 py-2 rounded-3xl text-sm">
-                        글쓰기
-                    </button>
-                </Link>
-                <Link href={'/writes'}>
-                    <div className="fixed bottom-0 right-0 mb-3 mr-3 bg-light_blue text-white rounded-full w-16 h-16 z-[2]">
-                        <div className="w-full h-full flex justify-center items-center">
-                            <Image
-                                src={writeIcon}
-                                alt="Write Icon"
-                                width={50}
-                                height={50}
-                            />
-                        </div>
-                    </div>
-                </Link>
             </div>
             <div className="flex flex-col justify-center w-full h-auto mb-2 sm:mb-4 clg:min-w-940 clg:max-w-1250 cxl:w-85/100">
                 {itemsToShow}

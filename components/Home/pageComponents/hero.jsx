@@ -1,7 +1,6 @@
 import { ArrowRight } from '@/components/Icons/Icons';
 import React from 'react';
 import VideoComponent from '@/components/Home/pageComponents/VideoComponent';
-import { Suspense } from 'react';
 import kakao from '@/public/hero/kakaotalk.png';
 import naver from '@/public/hero/naver.png';
 import Image from 'next/image';
@@ -57,9 +56,7 @@ export default function Hero({ page }) {
                     className="w-full h-full rounded-3xl relative inline-block
                     sm:min-h-480"
                 >
-                    <Suspense fallback={<div className="bg-white"></div>}>
-                        <VideoComponent />
-                    </Suspense>
+                    <VideoComponent />
                 </div>
             </div>
             <div

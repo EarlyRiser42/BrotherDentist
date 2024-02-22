@@ -14,6 +14,7 @@ interface UserInfo {
     phoneNumber: string;
     birth_date: string;
     password: string;
+    role: string;
 }
 
 interface loginInfo {
@@ -29,6 +30,7 @@ export async function signUpWithEmail(prevState: any, formData: FormData) {
         phoneNumber: '',
         birth_date: formData.get('birth-date') as string,
         password: formData.get('password') as string,
+        role: 'user',
     };
 
     try {
