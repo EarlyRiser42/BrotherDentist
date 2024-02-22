@@ -8,12 +8,12 @@ export default async function Page({
 }: {
     params: { lang: Locale; reviewNumber: string };
 }) {
-    const { page, header } = await getDictionary(lang);
+    const { header } = await getDictionary(lang);
 
     return (
         <>
             <Header lang={lang} header={header} />
-            <ReviewDetail page={page} />
+            <ReviewDetail reviewNumber={reviewNumber} />
         </>
     );
 }
