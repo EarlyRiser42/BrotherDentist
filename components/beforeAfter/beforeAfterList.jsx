@@ -155,7 +155,7 @@ function BeforeAfterList({ lang, page, pageNumber, writes }) {
                     </Link>
                 )}
             </div>
-            <div className="flex flex-col justify-center w-full h-auto mb-2 sm:mb-4 clg:min-w-940 clg:max-w-1250 cxl:w-85/100">
+            <div className="flex flex-col justify-center w-full h-auto mb-2 sm:mb-4 clg:min-w-940 clg:max-w-1250 cxl:w-85/100 c2xl:w-1900 c3xl:w-2400">
                 {itemsToShow}
             </div>
             <div className="flex gap-x-4 mt-8 mb-8 cs:mt-8 mb-16">

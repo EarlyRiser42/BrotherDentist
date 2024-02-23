@@ -79,12 +79,12 @@ export default function MapComponent({ page }) {
             aria-label="Contact Us"
             className="w-full h-auto flex flex-col justify-start items-center mt-16 mb-12 sm:mt-20 lg:mt-24 cxl:mt-28"
         >
-            <div className="flex flex-col justify-center w-9/10 mb-2 sm:mb-4 clg:min-w-940 clg:max-w-1250 cxl:w-85/100">
+            <div className="flex flex-col justify-center w-9/10 mb-2 sm:mb-4 clg:min-w-940 clg:max-w-1250 cxl:w-85/100 c2xl:w-1900 c3xl:w-2400">
                 <h1 className="text-black dark:text-white font-bold mb-1 w-full text-2xl sm:text-3xl lg:text-4xl lg:w-4/5 cxl:text-5xl">
                     {page.home.mapSection.h1}
                 </h1>
             </div>
-            <div className="w-9/10 flex flex-col h-auto clg:h-410 cxl:h-490 mb-2 sm:mb-4 clg:flex-row clg:min-w-940 clg:max-w-1250 cxl:h-490 cxl:w-85/100">
+            <div className="w-9/10 flex flex-col h-auto clg:h-410 cxl:h-490 mb-2 sm:mb-4 clg:flex-row clg:min-w-940 clg:max-w-1250 cxl:h-490 cxl:w-85/100 c2xl:w-1900 c3xl:w-2400">
                 <div className="w-full clg:w-1/2 h-72 sm:h-96 clg:h-full overflow-hidden rounded-3xl mb-2">
                     <div id="map" className="w-full h-full rounded-3xl "></div>
                     <button

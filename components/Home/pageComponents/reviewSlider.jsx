@@ -32,7 +32,7 @@ export default function ReviewSlider({ page }) {
             aria-label="ReviewSlider"
             className="w-full h-auto flex flex-col justify-start items-center mt-16 sm:mt-20 lg:mt-24 cxl:mt-28"
         >
-            <div className="flex flex-col justify-center w-9/10 h-auto mb-2 sm:mb-4 clg:min-w-940 clg:max-w-1250 cxl:w-85/100">
+            <div className="flex flex-col justify-center w-9/10 h-auto mb-2 sm:mb-4 clg:min-w-940 clg:max-w-1250 cxl:w-85/100 c2xl:w-1900 c3xl:w-2400">
                 <h1 className="font-bold mb-1 w-full text-2xl sm:text-3xl lg:text-4xl lg:w-4/5 cxl:text-5xl">
                     {page.home.reviewSlider.h1}
                 </h1>
@@ -49,7 +49,7 @@ export default function ReviewSlider({ page }) {
                     ))}
                 </h4>
             </div>
-            <div className="w-9/10 h-auto overflow-hidden clg:w-88/100 clg:min-w-940 clg:max-w-1250 cxl:w-85/100">
+            <div className="w-9/10 h-auto overflow-hidden clg:w-88/100 clg:min-w-940 clg:max-w-1250 cxl:w-85/100 c2xl:w-1900 c3xl:w-2400">
                 <div className="w-max flex flex-nowrap gap-4 p-4 animate-slide hover:[animation-play-state:paused]">
                     {doubledLogos.map((logo, index) => (
                         <Card

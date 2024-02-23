@@ -38,7 +38,7 @@ export default function Writes() {
 
     return (
         <section className="w-full h-90dvh min-h-640 flex flex-col justify-center items-center">
-            <div className="w-full h-auto clg:min-w-940 clg:max-w-1250 cxl:w-85/100 py-4 flex flex-col">
+            <div className="w-full h-auto clg:min-w-940 clg:max-w-1250 cxl:w-85/100 c2xl:w-1900 c3xl:w-2400 py-4 flex flex-col">
                 <form
                     action={async (formData) => {
                         await updateWriteAction(formData);

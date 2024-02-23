@@ -11,7 +11,7 @@ export default function ClinicServices({ lang, page }) {
             aria-label="ClinicServices"
             className="w-full h-auto flex flex-col justify-start items-center mt-16 sm:mt-20 lg:mt-24 cxl:mt-28"
         >
-            <div className="flex flex-col justify-center w-9/10 h-auto mb-2 sm:mb-4 clg:min-w-940 clg:max-w-1250 cxl:w-85/100">
+            <div className="flex flex-col justify-center w-9/10 h-auto mb-2 sm:mb-4 clg:min-w-940 clg:max-w-1250 cxl:w-85/100 c2xl:w-1900 c3xl:w-2400">
                 <h1 className="text-black dark:text-white font-bold mb-1 w-full text-2xl sm:text-3xl lg:text-4xl lg:w-4/5 cxl:text-5xl">
                     {page.home.specialties.h1}
                 </h1>
@@ -28,7 +28,7 @@ export default function ClinicServices({ lang, page }) {
                     ))}
                 </h2>
             </div>
-            <div className="grid grid-cols-10 grid-rows-10 gap-4 w-9/10 h-72 cs:h-80 sm:h-96 cmd:h-410 clg:min-w-940 clg:max-w-1250 cxl:w-85/100 lg:h-430 cxl:h-490">
+            <div className="grid grid-cols-10 grid-rows-10 gap-4 w-9/10 h-72 cs:h-80 sm:h-96 cmd:h-410 clg:min-w-940 clg:max-w-1250 cxl:w-85/100 c2xl:w-1900 c3xl:w-2400 lg:h-430 cxl:h-490 c2xl:h-510 c3xl:h-590">
                 <Link
                     href={`/${lang}/implant`}
                     className="col-span-7 row-span-6 bg-light_blue flex items-start justify-start rounded-2xl relative hover:font-bold hover:shadow-speechBalloon dark:hover:shadow-speechBalloonBlack

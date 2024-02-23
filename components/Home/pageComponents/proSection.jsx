@@ -71,7 +71,7 @@ export default function ProSection({ page }) {
         >
             <div
                 ref={textRef}
-                className="flex flex-col items-start w-9/10 clg:min-w-970 clg:max-w-1250 cxl:w-85/100"
+                className="flex flex-col items-start w-9/10 clg:min-w-970 clg:max-w-1250 cxl:w-85/100 c2xl:w-1900 c3xl:w-2400"
             >
                 <div
                     className={`animate-fadeInHome w-full ${isVisible ? 'flex flex-col' : 'hidden'}`}
@@ -88,7 +88,7 @@ export default function ProSection({ page }) {
             <div
                 ref={divRefOne}
                 className="w-9/10 mt-12 clg:h-360 clg:min-w-940 clg:max-w-1250 clg:w-9/10
-            cxl:w-85/100 cxl:h-410"
+            cxl:w-85/100 cxl:h-410 c2xl:w-1900 c2xl:h-490 c3xl:w-2400 c3xl:h-510"
             >
                 <div
                     className={`w-full h-full animate-fadeInHome flex flex-col justify-center items-center clg:flex-row ${!isVisibleOne ? 'hidden' : ''}`}
@@ -124,7 +124,7 @@ export default function ProSection({ page }) {
             <div
                 ref={divRefTwo}
                 className="w-9/10 flex flex-col justify-center items-center mt-12 clg:mt-32 clg:h-360 clg:min-w-940 clg:max-w-1250 clg:w-9/10 clg:flex-row
-            cxl:w-85/100 cxl:h-410"
+            cxl:w-85/100 cxl:h-410 c2xl:w-1900 c2xl:h-490 c3xl:w-2400 c3xl:h-510"
             >
                 <div
                     className={`w-full h-full animate-fadeInHome flex flex-col justify-center items-center clg:flex-row ${!isVisibleTwo ? 'hidden' : ''}`}
@@ -159,7 +159,7 @@ export default function ProSection({ page }) {
             <div
                 ref={divRefThree}
                 className="w-9/10 flex flex-col justify-center items-center mt-12 clg:mt-32 clg:h-360 clg:min-w-940 clg:max-w-1250 clg:w-9/10 clg:flex-row
-            cxl:w-85/100 cxl:h-410"
+            cxl:w-85/100 cxl:h-410 c2xl:w-1900 c2xl:h-490 c3xl:w-2400 c3xl:h-510"
             >
                 <div
                     className={`w-full h-full animate-fadeInHome flex flex-col justify-center items-center clg:flex-row ${!isVisibleThree ? 'hidden' : ''}`}

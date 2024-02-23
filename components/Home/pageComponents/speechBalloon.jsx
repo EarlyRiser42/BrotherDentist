@@ -133,7 +133,7 @@ export default function SpeechBalloon({ page }) {
             className="flex flex-col justify-start items-center w-full h-330 mt-16 sm:mt-20 lg:mt-24 cxl:mt-28
             cs:h-380 sm:h-430 clg:h-510 cxl:h-586"
         >
-            <div className="flex flex-col justify-center w-9/10 h-auto mb-2 sm:mb-4 clg:min-w-940 clg:max-w-1250 cxl:w-85/100 ">
+            <div className="flex flex-col justify-center w-9/10 h-auto mb-2 sm:mb-4 clg:min-w-940 clg:max-w-1250 cxl:w-85/100 c2xl:w-1900 c3xl:w-2400">
                 <h1 className="font-bold mb-1 w-full text-2xl sm:text-3xl lg:text-4xl lg:w-4/5 cxl:text-5xl">
                     {page.home.speechBalloon.h1}
                 </h1>
@@ -155,7 +155,7 @@ export default function SpeechBalloon({ page }) {
             <div
                 ref={counterRef}
                 className="w-full h-full relative bg-light_blue cs:rounded-3xl flex justify-center items-center overflow-hidden
-            cs:w-9/10 clg:w-88/100 clg:min-w-940 clg:max-w-1250 cxl:w-85/100"
+            cs:w-9/10 clg:w-88/100 clg:min-w-940 clg:max-w-1250 cxl:w-85/100 c2xl:w-1900 c3xl:w-2400"
             >
                 <div className="flex flex-col items-center z-[5]">
                     <h3 className="text-white text-lg mb-2 font-bold cs:text-2xl sm:text-4xl lg:text-5xl cxl:text-7xl">
