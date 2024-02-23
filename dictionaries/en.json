@@ -274,7 +274,13 @@
       "h2": " before&after",
       "span": "HyukPlant",
       "button1": "All"
+    },
+    "reviews": {
+      "h2": " Review",
+      "modalButton": "Confirm",
+      "alert": "Available after login."
     }
+
   },
     "footer": {
       "address" : "Address: Biin Health Center, Biin-myeon, Seocheon-gun, Chungnam",

@@ -93,7 +93,7 @@ const Navigation = ({ lang, navOpen, navAnimation, header }) => {
                                     {header.community.subCommunity.beforeAfter}
                                 </li>
                             </Link>
-                            <Link href={`/${lang}/reviews`}>
+                            <Link href={`/${lang}/reviews/1`}>
                                 <li className="cursor-pointer rounded-3xl lg:rounded-none bg-gray_300 dark:bg-gray_600 lg:bg-black lg:dark:bg-white text-black dark:text-white lg:text-white lg:dark:text-black hover:font-bold py-2 lg:py-0 px-4 lg:px-0 font-normal mb-4 lg:mb-0">
                                     {header.community.subCommunity.review}
                                 </li>

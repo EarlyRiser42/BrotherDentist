@@ -4,8 +4,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { authService as auth } from '../../lib/firebase/config';
 import writeIcon from '../../public/writeIcon.svg';
-
-function BeforeAfterList({ lang, page, pageNumber, writes }) {
+import { useUser } from '@/lib/firebase/auth';
+import { IoMdLock } from 'react-icons/io';
+function ReviewList({ lang, page, pageNumber, writes }) {
+    const isLoggedIn = useUser();
     // 보여줄 카테고리 종류(전체, 임플란트 ...)
     const [category, setCategory] = useState('all');
     const filteredWrites =
@@ -30,7 +32,7 @@ function BeforeAfterList({ lang, page, pageNumber, writes }) {
             <Link
                 key={index}
                 href={{
-                    pathname: `/${lang}/beforeAfter/${pageNumber}/${index}`,
+                    pathname: `/${lang}/reviews/${pageNumber}/${index}`,
                     query: {
                         writeObj: encodeURIComponent(JSON.stringify(item)),
                     },
@@ -42,7 +44,7 @@ function BeforeAfterList({ lang, page, pageNumber, writes }) {
                             {replaceMiddleWithAsterisk(
                                 item.first_name + item.last_name,
                             )}
-                            {page.beforeAfter.h2}
+                            {page.reviews.h2}
                         </h2>
                         <div className="flex justify-start flex-wrap gap-x-2 gap-y-1 mb-2">
                             {item.selectedServices.map((service, index) => (
@@ -64,15 +66,24 @@ function BeforeAfterList({ lang, page, pageNumber, writes }) {
                         </div>
                     </div>
                     <div className="w-40vw h-auto cs:w-48  relative">
-                        <Image
-                            className="rounded-3xl"
-                            alt="beforeAfter Preview"
-                            src={item.photos[1]}
-                            fill
-                            sizes="(max-width: 412px) 12rem,  40vw"
-                            placeholder="blur"
-                            blurDataURL={item.photos[2]}
-                        />
+                        {isLoggedIn ? (
+                            <Image
+                                className="rounded-3xl"
+                                alt="beforeAfter Preview"
+                                src={item.photos[0]}
+                                fill
+                                sizes="(max-width: 412px) 12rem, 40vw"
+                                placeholder="blur"
+                                blurDataURL={item.photos[1]}
+                            />
+                        ) : (
+                            <div className="rounded-3xl w-full h-full bg-light_gray dark:bg-gray flex flex-col justify-center items-center">
+                                <IoMdLock className="mb-3" />
+                                <span className="text-xs cs:text-sm">
+                                    {page.reviews.alert}
+                                </span>
+                            </div>
+                        )}
                     </div>
                 </div>
             </Link>
@@ -160,7 +171,7 @@ function BeforeAfterList({ lang, page, pageNumber, writes }) {
             </div>
             <div className="flex gap-x-4 mt-8 mb-8 cs:mt-8 mb-16">
                 {pageNumbers.map((number) => (
-                    <Link key={number} href={`/${lang}/beforeAfter/${number}`}>
+                    <Link key={number} href={`/${lang}/reviews/${number}`}>
                         <button
                             className={`${number == pageNumber ? 'font-bold' : 'font-normal'}`}
                         >
@@ -173,7 +184,7 @@ function BeforeAfterList({ lang, page, pageNumber, writes }) {
     );
 }
 
-export default React.memo(BeforeAfterList);
+export default React.memo(ReviewList);
 
 export function replaceMiddleWithAsterisk(name) {
     // 가운데 부분의 시작과 끝 인덱스를 계산

@@ -115,6 +115,7 @@ const config: Config = {
                 '20vw': '20vw',
                 '40vw': '40vw',
                 '50vw': '50vw',
+                '80vw': '80vw',
             },
             minWidth: {
                 cs: '400px',
@@ -157,6 +158,7 @@ const config: Config = {
                 '40vh': '40vh',
                 '50vh': '50vh',
                 '60vh': '60vh',
+
                 '90vh': '90vh',
                 '10dvh': '10dvh',
                 '20dvh': '20dvh',
@@ -168,6 +170,7 @@ const config: Config = {
                 '65dvh': '65dvh',
                 '70dvh': '70dvh',
                 '75dvh': '75dvh',
+                '80dvh': '80dvh',
                 '90dvh': '90dvh',
                 '100dvh': '100dvh',
             },
