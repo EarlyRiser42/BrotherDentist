@@ -34,7 +34,6 @@ export default function BeforeAfterDetail({ page, lang, reviewNumber }) {
                             {replaceMiddleWithAsterisk(
                                 currentPost.first_name + currentPost.last_name,
                             )}
-
                             {page.beforeAfter.h2}
                         </h1>
                     </div>

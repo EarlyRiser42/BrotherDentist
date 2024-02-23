@@ -24,7 +24,6 @@ export default function Layout({
     }, [isLoggedIn]);
 
     const handleModalClose = () => {
-        setShowModal(false);
         router.push(`/${params.lang}/reviews/1`);
     };
 

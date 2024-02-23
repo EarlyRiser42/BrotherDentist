@@ -35,7 +35,7 @@ export default function ReviewDetail({ page, lang, reviewNumber }) {
                                 currentPost.first_name + currentPost.last_name,
                             )}
 
-                            {page.beforeAfter.reviewH2}
+                            {page.reviews.h2}
                         </h1>
                     </div>
                     <div>
