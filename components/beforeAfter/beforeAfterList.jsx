@@ -56,9 +56,11 @@ function BeforeAfterList({ lang, page, pageNumber, writes }) {
                         </div>
                         <div></div>
                         <div className="text-xs cs:text-sm text-gray-500 flex justify-evenly mb-1 gap-x-1">
-                            <span>{page.beforeAfter.span}</span>
-                            <span>|</span>
-                            <span>{timeStampToDate(item.date)}</span>
+                            <span> {page.beforeAfter.span} </span>
+                            <span className="text-gray_500 dark:text-white dark:text-opacity-30">
+                                |
+                            </span>
+                            <span> {timeStampToDate(item.date)} </span>
                         </div>
                     </div>
                     <div className="w-40vw h-auto cs:w-48  relative">
@@ -83,7 +85,7 @@ function BeforeAfterList({ lang, page, pageNumber, writes }) {
         >
             <div
                 className={`${pageNumber === '1' ? 'relative ' : 'hidden'}
-                w-full h-auto clg:min-w-940 clg:max-w-1250 cxl:w-85/100 py-4 cs:py-6 bg-dark_gray dark:bg-gray`}
+                w-full h-auto clg:min-w-940 clg:max-w-1250 cxl:w-85/100 c2xl:w-1900 c3xl:w-2400 py-4 cs:py-6 bg-dark_gray dark:bg-gray`}
             >
                 <div className="flex flex-wrap justify-start pl-2 gap-x-2 gap-y-1 cs:gap-x-4 ">
                     <button
@@ -173,7 +175,7 @@ function BeforeAfterList({ lang, page, pageNumber, writes }) {
 
 export default React.memo(BeforeAfterList);
 
-function replaceMiddleWithAsterisk(name) {
+export function replaceMiddleWithAsterisk(name) {
     // 가운데 부분의 시작과 끝 인덱스를 계산
     let middleStart, middleEnd;
     if (name.length % 2 === 0) {
@@ -194,7 +196,7 @@ function replaceMiddleWithAsterisk(name) {
     );
 }
 
-function translateService(service, lang) {
+export function translateService(service, lang) {
     // 서비스 이름을 영어와 한국어로 매핑
     const serviceNames = {
         implant: { en: 'Implant', ko: '임플란트' },
@@ -207,7 +209,7 @@ function translateService(service, lang) {
     return serviceNames[service] ? serviceNames[service][lang] : service;
 }
 
-function timeStampToDate(isoString) {
+export function timeStampToDate(isoString) {
     // ISO 문자열로부터 Date 객체 생성
     const date = new Date(isoString);
 

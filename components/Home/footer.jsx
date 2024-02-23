@@ -9,8 +9,7 @@ export default function footer({ footer }) {
                                 {footer.owner}
                             </span>
                             <span className="text-gray_300 dark:text-gray_600">
-                                {' '}
-                                |{' '}
+                                |
                             </span>
                             <span className="text-xs text-gray_600 dark:text-gray_300 lg:text-sm">
                                 {footer.dentalName}
@@ -22,8 +21,7 @@ export default function footer({ footer }) {
                                 {footer.services}
                             </span>
                             <span className="text-gray_300 dark:text-gray_600">
-                                {' '}
-                                |{' '}
+                                |
                             </span>
                             <span className="text-xs text-gray_600 dark:text-gray_300 lg:text-sm">
                                 {footer.BusinessRegistrationNumber}
@@ -34,8 +32,7 @@ export default function footer({ footer }) {
                                 {footer.telephoneNumber}
                             </span>
                             <span className="text-gray_300 dark:text-gray_600">
-                                {' '}
-                                |{' '}
+                                |
                             </span>
                             <span className="text-xs text-gray_600 dark:text-gray_300 lg:text-sm">
                                 {footer.emailAddress}
