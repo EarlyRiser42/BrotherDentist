@@ -20,7 +20,7 @@ export default function Hero({ page }) {
                 <div
                     className="before:block before:w-6 before:h-6 before:absolute before:top-0 before:-right-6 before:bg-[url('../public/hero/lava_before.svg')] before:dark:bg-[url('../public/hero/lava_before_dark.svg')] before:bg-no-repeat before:bg-center before:bg-100%auto
                         after:block after:bg-transparent after:w-6 after:h-6 after:absolute after:-bottom-6 after:left-0 after:bg-[url('../public/hero/lava_before.svg')] after:dark:bg-[url('../public/hero/lava_before_dark.svg')] after:bg-no-repeat after:bg-center after:bg-100%auto
-                        top-0 absolute flex justify-start items-start w-2/4 h-15/100 text-center bg-white dark:bg-black rounded-br-3xl
+                        top-0 absolute flex justify-start items-start w-2/4 h-15/100 text-center bg-white dark:bg-black  rounded-br-3xl
                         cs:w-1/2 cs:h-15/100 sm:w-2/5 sm:h-1/10 z-10"
                 >
                     <div className="flex justify-center items-center w-96/100 h-4/5 bg-black dark:bg-white rounded-3xl">

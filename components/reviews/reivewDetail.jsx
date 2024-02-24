@@ -69,6 +69,8 @@ export default function ReviewDetail({ page, lang, reviewNumber }) {
                         alt="reviewPhoto"
                         width={800}
                         height={1024}
+                        placeholder="blur"
+                        blurDataURL={currentPost.photos[1]}
                         className="rounded-3xl px-2"
                     />
                 </div>
