@@ -1,7 +1,7 @@
 import { LogoEn, LogoKo } from '@/components/Icons/Logos';
 export default function Modal({ lang, onClose }) {
     return (
-        <div className="w-screen h-100dvh bg-light_gray dark:bg-gray flex justify-center items-center">
+        <div className="w-screen h-100dvh bg-gray_800 dark:bg-gray flex justify-center items-center">
             <div className="w-96/100 h-80 bg-white dark:bg-black sm:w-586 sm:h-72 rounded-3xl flex flex-col justify-between items-center">
                 <div className="w-11/12 mt-5 mx-auto h-1/20 flex justify-center">
                     {lang === 'ko' ? <LogoKo /> : <LogoEn />}

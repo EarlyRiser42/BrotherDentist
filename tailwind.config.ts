@@ -34,6 +34,7 @@ const config: Config = {
                 gray_400: '#3B3B3B',
                 gray_600: '#4B5563',
                 gray_700: '#85898C',
+                gray_800: '#999999',
                 black_600: '#1C1A1E',
                 black_700: '#111111',
                 white_500: '#CCCCCC',
