@@ -63,7 +63,7 @@ export default function PortraitSlider({ page }) {
                             key={index}
                             className="flex flex-row h-full min-w-full cs:rounded-3xl sm:flex-row relative bg-dark_blue"
                         >
-                            <div className=" w-4/6 h-full flex flex-col justify-center items-center cs:rounded-l-3xl absolute left-2 z-[2]">
+                            <div className=" w-3/5 h-full flex flex-col justify-center items-center cs:rounded-l-3xl absolute left-2 z-[2]">
                                 <div className="w-9/10 flex flex-col justify-center items-start mb-4">
                                     {title &&
                                         title.map((text, idx) => (
@@ -91,7 +91,7 @@ export default function PortraitSlider({ page }) {
                                         ))}
                                 </div>
                             </div>
-                            <div className="flex absolute right-0 justify-center items-end w-2/5 h-full bg-light_blue cs:hidden">
+                            <div className="flex absolute right-0 justify-center items-end w-1/2 h-full bg-light_blue cs:hidden">
                                 <Image
                                     src={url[1]}
                                     alt={alt}
@@ -120,7 +120,7 @@ export default function PortraitSlider({ page }) {
                     aria-label="View Previous Image"
                 >
                     <IoIosArrowBack
-                        className="stroke-white fill-black dark:fill-white w-6 h-6"
+                        className="stroke-white fill-white  w-6 h-6"
                         aria-hidden
                     />
                 </button>
@@ -130,7 +130,7 @@ export default function PortraitSlider({ page }) {
                     aria-label="View Next Image"
                 >
                     <IoIosArrowForward
-                        className="stroke-white fill-black dark:fill-white w-6 h-6"
+                        className="stroke-white fill-white  w-6 h-6"
                         aria-hidden
                     />
                 </button>
