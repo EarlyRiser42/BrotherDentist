@@ -17,6 +17,15 @@ const Navigation = ({ lang, navOpen, navAnimation, header }) => {
     const communityRef = useRef(null);
     useOnClickOutside(communityRef, () => setIsCommunityOpen(false));
 
+    // 모달, 팝업 창 열릴시 부모 요소 스크롤 차단
+    useEffect(() => {
+        if (navOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+    }, [navOpen]);
+
     const isLoggedIn = useUser();
 
     return (
