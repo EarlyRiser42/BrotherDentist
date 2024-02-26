@@ -80,7 +80,7 @@
         }
       },
       "speechBalloon": {
-        "h1": "A Smile Perfected by Experience",
+        "h1": "Experience-Perfected Smile",
         "h2": "The best choice for your smile, proven by experience.",
         "h3": "Patients Treated",
         "h4": "Patients",
@@ -105,7 +105,7 @@
         ]
       },
       "reviewSlider": {
-        "h1": "A Dentist Guaranteed by Reviews",
+        "h1": "Guaranteed by Reviews",
         "h4": "Check out the reviews everyone is satisfied with at Hyukplant.",
         "reviews": [
           {
@@ -153,7 +153,7 @@
         ]
       },
       "portraitSlider": {
-        "h1": "Hyukplant's Medical Specialists",
+        "h1": "Medical Specialists",
         "h4": "Meet Your Personal Dentist.",
         "portraitOneTitle": [
           "Chief Doctor", "Choi Inhyuk"
@@ -181,7 +181,7 @@
         ]
       },
       "specialties": {
-        "h1": "Hyukplant's Specialized Medical Services",
+        "h1": "Specialized Medical Services",
         "h4": "Providing the Best Care You Need.",
         "specicalOne": "Implant",
         "specicalTwo": "Cavity Treatment",
