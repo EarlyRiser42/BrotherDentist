@@ -53,16 +53,16 @@ export default function Header({ lang, header }: HeaderProps) {
             <div className="hidden lg:flex justify-between items-center mr-4 w-auto min-w-64">
                 {isLoggedIn === undefined ? (
                     <>
-                        <button className="bg-light_blue text-white rounded-3xl px-3 w-auto min-w-20 mr-2 min-h-8 h-full animate-pulse"></button>
-                        <button className="bg-black dark:bg-white text-white dark:text-black rounded-3xl  w-24 mr-2 min-h-8 h-full animate-pulse"></button>
+                        <button className="bg-light_blue text-white rounded-3xl px-3 w-auto min-w-20 mr-2 h-8 animate-pulse"></button>
+                        <button className="bg-black dark:bg-white text-white dark:text-black rounded-3xl  w-24 mr-2 h-8 animate-pulse"></button>
                     </>
                 ) : isLoggedIn ? (
                     <>
-                        <button className="bg-light_blue text-white rounded-3xl px-3 w-auto min-w-16 mr-2 min-h-8 h-full ">
+                        <button className="bg-light_blue text-white rounded-3xl px-3 w-auto min-w-16 mr-2 h-8">
                             {isLoggedIn.displayName + '님'}
                         </button>
                         <button
-                            className="bg-black dark:bg-white text-white dark:text-black rounded-3xl  w-24 mr-2 min-h-8 h-full "
+                            className="bg-black dark:bg-white text-white dark:text-black rounded-3xl  w-24 mr-2 h-8"
                             onClick={signOut}
                         >
                             {header.buttons.signOut}
@@ -71,12 +71,12 @@ export default function Header({ lang, header }: HeaderProps) {
                 ) : (
                     <>
                         <Link href={`/${lang}/login`}>
-                            <button className="bg-light_blue text-white rounded-3xl w-20 min-w-16 mr-2 min-h-8 h-full ">
+                            <button className="bg-light_blue text-white rounded-3xl w-20 min-w-16 mr-2 h-8">
                                 {header.buttons.login}
                             </button>
                         </Link>
                         <Link href={`/${lang}/signup`}>
-                            <button className="bg-black dark:bg-white text-white dark:text-black rounded-3xl w-24 mr-2 min-h-8 h-full ">
+                            <button className="bg-black dark:bg-white text-white dark:text-black rounded-3xl w-24 mr-2 h-8">
                                 {header.buttons.signUp}
                             </button>
                         </Link>

@@ -9,7 +9,7 @@ import googleLogo from '@/public/login/google_logo.svg';
 import NaverLogo from '@/public/login/naver.png';
 import KakaoLogo from '@/public/login/kakao.png';
 import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
-import { setDoc, collection } from 'firebase/firestore';
+import { setDoc, doc } from 'firebase/firestore';
 import { dbService, authService } from '@/lib/firebase/config';
 import { useFormState } from 'react-dom';
 import Spinner from '@/components/loading/spinner';
@@ -22,14 +22,18 @@ async function onSocialClick() {
         const result = await signInWithPopup(auth, provider);
         const user = result.user;
         const userObj = {
-            first_name: user.displayName.split(' ')[0],
-            last_name: user.displayName.split(' ')[1],
+            first_name: user.displayName,
+            last_name: '',
             email: user.email,
             phoneNumber: user.phoneNumber,
             birth_date: '',
             password: '',
         };
-        await setDoc(collection(dbService, 'users'), userObj);
+
+        // 사용자의 UID로 DocumentReference를 생성
+        const userRef = doc(dbService, 'users', user.uid);
+        await setDoc(userRef, userObj);
+        console.log(user, ' Sign in');
     } catch (error) {
         const errorMessage = error.message;
         console.log(errorMessage);
@@ -121,7 +125,7 @@ export default function Login({ lang, page }) {
             {pending ? (
                 <Spinner />
             ) : (
-                <div className="h-90dvh min-h-710 flex flex-col justify-center items-center">
+                <div className="h-90dvh min-h-640 flex flex-col justify-center items-center">
                     <div className="space-y-4 w-full flex flex-col justify-center items-center">
                         <div className="w-9/10 cs:w-80 text-black dark:text-white mb-2">
                             <h1 className="text-2xl cs:text-3xl font-bold text-black dark:text-white">
@@ -211,13 +215,13 @@ export default function Login({ lang, page }) {
                                 <button
                                     type="submit"
                                     className="inline-flex items-center justify-center w-full h-11 px-5 mb-4 py-2.5 text-sm font-medium rounded-3xl cursor-pointer no-underline
-                            border border-white_500 bg-black text-white hover:bg-opacity-90"
+                            border border-white_500 bg-black dark:bg-white text-white dark:text-black hover:bg-opacity-90"
                                 >
                                     {page.login.login}
                                 </button>
                                 <button
                                     className="inline-flex items-center justify-center w-full h-11 px-5 py-2.5 text-sm font-medium rounded-3xl cursor-pointer no-underline
-                            border border-white_500 bg-white text-black hover:bg-opacity-90 "
+                            border border-white_500 bg-white dark:bg-black text-black dark:text-white hover:bg-opacity-90 "
                                 >
                                     {page.login.button1}
                                 </button>
