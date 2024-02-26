@@ -6,7 +6,7 @@ import googleLogo from '@/public/login/google_logo.svg';
 import NaverLogo from '@/public/login/naver.png';
 import KakaoLogo from '@/public/login/kakao.png';
 import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
-import { collection, setDoc } from 'firebase/firestore';
+import { doc, setDoc } from 'firebase/firestore';
 import { dbService, authService } from '@/lib/firebase/config';
 
 async function onSocialClick() {
@@ -16,16 +16,18 @@ async function onSocialClick() {
         const result = await signInWithPopup(auth, provider);
         const user = result.user;
         const userObj = {
-            first_name: user.displayName.split(' ')[0],
-            last_name: user.displayName.split(' ')[1],
+            first_name: user.displayName,
+            last_name: '',
             email: user.email,
             phoneNumber: user.phoneNumber,
             birth_date: '',
             password: '',
-            role: 'user',
         };
 
-        await setDoc(collection(dbService, 'users'), userObj);
+        // 사용자의 UID로 DocumentReference를 생성
+        const userRef = doc(dbService, 'users', user.uid);
+        await setDoc(userRef, userObj);
+        console.log(user, ' Sign in');
     } catch (error) {
         const errorMessage = error.message;
         console.log(errorMessage);
