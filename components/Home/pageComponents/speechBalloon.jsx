@@ -183,7 +183,7 @@ export default function SpeechBalloon({ page }) {
                     <Balloon
                         img={pfp2}
                         balloon={page.home.speechBalloon.balloons[1]}
-                        position={{ top: '22%', left: '10%' }}
+                        position={{ top: '16%', left: '8%' }}
                     />
                     <Balloon
                         img={pfp3}
@@ -207,7 +207,7 @@ export default function SpeechBalloon({ page }) {
                     <Balloon
                         img={pfp6}
                         balloon={page.home.speechBalloon.balloons[5]}
-                        position={{ top: '60%', left: '-15%' }}
+                        position={{ top: '64%', left: '-15%' }}
                     />
                     <Balloon
                         img={pfp7}
@@ -246,7 +246,7 @@ export default function SpeechBalloon({ page }) {
                     <Balloon
                         img={pfp13}
                         balloon={page.home.speechBalloon.balloons[12]}
-                        position={{ top: '62%', left: '16%' }}
+                        position={{ top: '67%', left: '16%' }}
                     />
                     <Balloon
                         img={pfp14}

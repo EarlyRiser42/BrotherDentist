@@ -243,8 +243,11 @@ const config: Config = {
                     '100%': { 'background-position': '400%' },
                 },
                 balloonAppear: {
-                    '0%': { transform: 'scale(1)' },
-                    '50%': { transform: 'scale(1.2)' },
+                    '0%': { transform: 'scale(0)' },
+                    '30%': { transform: 'scale(0.3)' },
+                    '35%': { transform: 'scale(0.5)' },
+                    '50%': { transform: 'scale(0.9)' },
+                    '70%': { transform: 'scale(1.2)' },
                     '100%': { transform: 'scale(1)' },
                 },
                 slide: {
@@ -263,7 +266,7 @@ const config: Config = {
                 fadeIn: 'fadeInOnlyOp 0.3s ease-out',
                 fadeInHome: 'fadeIn 1.2s ease',
                 textClip: 'textClip 10s linear infinite',
-                balloonAppear: 'balloonAppear 0.7s ease-in-out forwards',
+                balloonAppear: 'balloonAppear 0.4s linear',
                 slide: 'slide 120s infinite linear;',
                 spin: 'spin 0.7s ease-in-out infinite',
             },
