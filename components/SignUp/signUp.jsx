@@ -36,7 +36,7 @@ async function onSocialClick() {
 
 export default function SignUp({ lang, page }) {
     return (
-        <div className="h-90dvh min-h-640 flex flex-col justify-center items-center">
+        <div className="h-90dvh min-h-590 flex flex-col justify-center items-center">
             <div className="space-y-4 w-full flex flex-col justify-center items-center">
                 <div className="w-9/10 cs:w-80 text-black dark:text-white mb-2">
                     <h1 className="text-2xl cs:text-3xl font-bold text-black dark:text-white">

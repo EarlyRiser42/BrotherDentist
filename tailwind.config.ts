@@ -22,7 +22,10 @@ const config: Config = {
                 c3xl: '2440px',
             },
             aspectRatio: {
+                '5/2': '5 / 2',
                 '4/3': '4 / 3',
+                '3/2': '3 / 2',
+                '2/1': '2 / 1',
             },
             colors: {
                 yellow: '#FAE100',
@@ -165,7 +168,7 @@ const config: Config = {
                 '40vh': '40vh',
                 '50vh': '50vh',
                 '60vh': '60vh',
-
+                '80vh': '80vh',
                 '90vh': '90vh',
                 '10dvh': '10dvh',
                 '20dvh': '20dvh',
@@ -192,6 +195,7 @@ const config: Config = {
                 '420': '420px',
                 '480': '480px',
                 '560': '560px',
+                '590': '590px',
                 '640': '640px',
                 '710': '710px',
             },

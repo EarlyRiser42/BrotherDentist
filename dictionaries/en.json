@@ -195,8 +195,13 @@
         "hours": "Monday - Friday",
         "saturday": "Saturday",
         "sunday": "Sunday"
+      },
+      "cosmeticDentistry": {
+        "h1_1": "Brighten Your Smile",
+        "h1_2": "Once Again.",
+        "h2_1": "At Hyukplant Now,",
+        "h2_2": "In Just One Day."
       }
-
     },
     "services": {
       "title": "Our Services",

@@ -15,7 +15,7 @@ export default function Hero({ page }) {
         >
             <div
                 className="flex items-center justify-start w-9/10 h-9/10 rounded-3xl relative
-                    cs:min-w-cs sm:min-w-sm clg:w-7/10 clg:min-w-clg"
+                    cs:min-w-cs sm:min-w-sm clg:w-7/10 clg:min-w-clg c2xl:w-1900 c3xl:w-2400"
             >
                 <div
                     className="before:block before:w-6 before:h-6 before:absolute before:top-0 before:-right-6 before:bg-[url('../public/hero/lava_before.svg')] before:dark:bg-[url('../public/hero/lava_before_dark.svg')] before:bg-no-repeat before:bg-center before:bg-100%auto
