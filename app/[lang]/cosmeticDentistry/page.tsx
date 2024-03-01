@@ -2,7 +2,8 @@ import React from 'react';
 import { Locale } from '@/i18n.config';
 import { getDictionary } from '@/dictionaries/dictionary';
 import Header from '@/components/Home/header';
-import CosmeticDentistry from '@/components/cosmeticDentistry/cosmeticDentistry';
+import Hero from '@/components/cosmeticDentistry/hero';
+import ProSection from '@/components/cosmeticDentistry/proSection';
 
 export default async function Page({
     params: { lang },
@@ -14,7 +15,10 @@ export default async function Page({
     return (
         <>
             <Header lang={lang} header={header} />
-            <CosmeticDentistry lang={lang} page={page} />
+            <Hero lang={lang} page={page} />
+            <div className="mt-16 sm:mt-20 lg:mt-24 cxl:mt-28">
+                <ProSection lang={lang} page={page} />
+            </div>
         </>
     );
 }
