@@ -146,6 +146,10 @@ const config: Config = {
                 '970': '970px',
                 '1250': '1250px',
             },
+            maxWidth: {
+                '150': '140px',
+                '490': '35rem',
+            },
             height: {
                 '360': '22rem',
                 '330': '25rem',

@@ -16,7 +16,7 @@ export default function ClinicServices({ lang, page }) {
                 <h1 className="text-black dark:text-white font-bold mb-1 w-full text-2xl sm:text-3xl lg:text-4xl lg:w-4/5 cxl:text-5xl">
                     {page.home.specialties.h1}
                 </h1>
-                <h2 className="text-black dark:text-white font-medium w-full text-xl sm:text-2xl lg:text-3xl lg:w-4/5 cxl:text-4xl">
+                <h2 className="text-black dark:text-white font-medium w-full mt-2 text-xl sm:text-2xl lg:text-3xl lg:w-4/5 cxl:text-4xl">
                     {page.home.specialties.h4.split(' ').map((part, index) => (
                         <span key={index}>
                             {part}

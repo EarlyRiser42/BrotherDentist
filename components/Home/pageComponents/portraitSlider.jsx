@@ -47,7 +47,7 @@ export default function PortraitSlider({ page }) {
                 <h1 className="font-bold mb-1 w-full text-2xl sm:text-3xl lg:text-4xl lg:w-4/5 cxl:text-5xl">
                     {page.home.portraitSlider.h1}
                 </h1>
-                <h4 className="font-medium w-full text-xl sm:text-2xl lg:text-3xl lg:w-4/5 cxl:text-4xl">
+                <h4 className="font-medium w-full mt-2 text-xl sm:text-2xl lg:text-3xl lg:w-4/5 cxl:text-4xl">
                     {page.home.portraitSlider.h4}
                 </h4>
             </div>
@@ -120,7 +120,7 @@ export default function PortraitSlider({ page }) {
                     aria-label="View Previous Image"
                 >
                     <IoIosArrowBack
-                        className="stroke-white fill-white  w-6 h-6"
+                        className="stroke-white fill-white cs:fill-black cs:stroke-black  w-6 h-6"
                         aria-hidden
                     />
                 </button>
@@ -130,7 +130,7 @@ export default function PortraitSlider({ page }) {
                     aria-label="View Next Image"
                 >
                     <IoIosArrowForward
-                        className="stroke-white fill-white  w-6 h-6"
+                        className="stroke-white fill-white cs:fill-black cs:stroke-black w-6 h-6"
                         aria-hidden
                     />
                 </button>

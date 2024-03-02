@@ -200,11 +200,48 @@
     "cosmeticDentistry": {
       "h1_1": "Brighten Smile",
       "h1_2": "Once Again.",
-      "h2_1": "At Hyukplant Now,",
+      "h2_1": "At Hyukplant,",
       "h2_2": "In Just One Day.",
-      "pro1": "Up to 5 hours of treatment time. Long-lasting with just one treatment.Fast and effective whitening"
-
+      "textFill": "Up to 5 hours of treatment time. Long-lasting with just one session. Fast and effective. Hyukplant whitening",
+      "proSection": {
+        "proSection_h1": "Simply, Quickly, Effectively.",
+        "proSection_h4": "Have You Seen Whitening Like This?",
+        "advancedTechAndEquipment": {
+          "h4": "In the Blink of an Eye",
+          "spans": [
+            "With treatments taking up to 5 hours,",
+            "Regain your smile in just one day.",
+            "Using the latest whitening technology,",
+            "We provide immediate results."
+          ],
+          "spanBox1": "Time is gold, and we race against the clock!",
+          "spanBox2": "Custom treatments that value your time."
+        },
+        "customizedTreatment": {
+          "h4": "Only With Safe Materials",
+          "spans": [
+            "Using only the highest quality whitening materials proven for safety,",
+            "We minimize side effects like sensitivity.",
+            "Beyond a bright smile,",
+            "We offer a healthy smile."
+          ],
+          "spanBox1": "Whiteners certified by the FDA and KFDA",
+          "spanBox2": "We use globally recognized materials only."
+        },
+        "professionalMedicalTeam": {
+          "h4": "Satisfaction for Everyone",
+          "spans": [
+            "To satisfy each and every patient,",
+            "We provide the most suitable whitening solution.",
+            "Surpassing expectations with astonishing satisfaction,",
+            "We promise the best results."
+          ],
+          "spanBox1": "The most ideal whitening solutions",
+          "spanBox2": "Your smile is our satisfaction."
+        }
+      }
     },
+
     "services": {
       "title": "Our Services",
       "description": "Discover the variety of services we offer at our clinic.",

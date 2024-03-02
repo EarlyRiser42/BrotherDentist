@@ -29,7 +29,7 @@ export default function Hero({ page }) {
                         </span>
                     </div>
                 </div>
-                <div className="flex flex-col justify-evenly w-50vw h-3/5 absolute left-2 top-12 cs:left-4 cs:top-16 sm:top-20 sm:left-8 clg:left-8 clg:top-24 z-10 ">
+                <div className="flex flex-col justify-evenly w-50vw h-3/5 absolute left-2 top-12 cs:left-4 cs:top-16 sm:top-20 sm:left-8 clg:left-8 clg:top-24 z-10">
                     <div className="w-full">
                         <h1 className="text-2xl cs:text-3xl sm:text-5xl lg:text-7xl font-bold  font-bold text-white">
                             {page.home.hero.p1}

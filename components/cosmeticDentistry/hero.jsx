@@ -18,7 +18,7 @@ export default function Hero({ lang, page }) {
             <div className="relative w-9/10 aspect-[3/2] clg:aspect-[5/2] mb-2 sm:mb-4 clg:min-w-940 clg:max-w-1250 cxl:w-85/100 c2xl:w-1900 c3xl:w-2400">
                 <MaskContainer>
                     <ColorImage>
-                        <div className="absolute top-1/2 right-0 transform -translate-x-1/4 -translate-y-1/2 cxl:-translate-x-1/3 z-[2]">
+                        <div className="absolute top-1/2 transform -translate-y-1/2 right-4 cs:right-8 sm:right-12 cmd:right-16 clg:right-24 cxl:right-32 z-[2]">
                             <div className="flex flex-col justify-evenly h-auto ">
                                 <div className=" w-full h-auto text-2xl cs:text-3xl sm:text-5xl cmd:text-6xl lg:text-7xl cxl:text-8xl font-bold font-bold text-white">
                                     <h1>{page.cosmeticDentistry.h1_1}</h1>
