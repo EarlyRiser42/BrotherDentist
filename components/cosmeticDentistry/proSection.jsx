@@ -111,7 +111,7 @@ export default function ProSection({ page }) {
                                     alt="thunder"
                                     fill
                                     sizes="2.5rem"
-                                    className=" aspect-square scale-125"
+                                    className=" aspect-square scale-75"
                                     placeholder="blur"
                                 />
                             </div>

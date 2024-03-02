@@ -44,7 +44,7 @@ export default function TextFillSection({ page }) {
                     className="w-full rounded-3xl py-20 cs:py-24 clg:py-32 text-center flex flex-col justify-center items-center bg-light_blue"
                 >
                     <p
-                        className={`z-[2] word-break-keep font-bold text-xl cs:text-2xl sm:text-4xl lg:text-5xl cxl:text-6xl text-transparent bg-cosmeticDentistry-pro bg-auto-200 bg-clip-text ${isVisible ? 'animate-textFillUp' : ''}`}
+                        className={`z-[2] word-break-keep font-bold text-2xl cs:text-3xl sm:text-4xl lg:text-5xl cxl:text-6xl c2xl:text-7xl text-transparent bg-cosmeticDentistry-pro bg-auto-200 bg-clip-text ${isVisible ? 'animate-textFillUp' : ''}`}
                     >
                         {page.cosmeticDentistry.textFill
                             .split('.')
