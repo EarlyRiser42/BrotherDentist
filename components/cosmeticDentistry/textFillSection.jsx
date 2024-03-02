@@ -41,10 +41,10 @@ export default function TextFillSection({ page }) {
             <div className="relative w-9/10 mb-2 sm:mb-4 clg:min-w-940 clg:max-w-1250 cxl:w-85/100 c2xl:w-1900 c3xl:w-2400">
                 <div
                     ref={textRef}
-                    className="w-full rounded-3xl py-20 cs:py-24 clg:py-32 text-center flex flex-col justify-center items-center bg-light_blue"
+                    className="w-full rounded-3xl py-20 cs:py-24 clg:py-28 text-center flex flex-col justify-center items-center bg-light_blue"
                 >
                     <p
-                        className={`z-[2] word-break-keep font-bold text-2xl cs:text-3xl sm:text-4xl lg:text-5xl cxl:text-6xl c2xl:text-7xl text-transparent bg-cosmeticDentistry-pro bg-auto-200 bg-clip-text ${isVisible ? 'animate-textFillUp' : ''}`}
+                        className={`z-[2] word-break-keep font-bold text-3xl cs:text-4xl sm:text-5xl lg:text-6xl cxl:text-7xl c2xl:text-8xl text-transparent bg-cosmeticDentistry-pro bg-auto-200 bg-clip-text ${isVisible ? 'animate-textFillUp' : ''}`}
                     >
                         {page.cosmeticDentistry.textFill
                             .split('.')
