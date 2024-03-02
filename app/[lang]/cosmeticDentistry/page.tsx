@@ -5,7 +5,7 @@ import Header from '@/components/Home/header';
 import Hero from '@/components/cosmeticDentistry/hero';
 import TextFillSection from '@/components/cosmeticDentistry/textFillSection';
 import ProSection from '@/components/cosmeticDentistry/proSection';
-
+import CategoryText from '@/components/cosmeticDentistry/categoryText';
 export default async function Page({
     params: { lang },
 }: {
@@ -17,12 +17,9 @@ export default async function Page({
         <>
             <Header lang={lang} header={header} />
             <Hero page={page} />
-            <div className="mt-16 sm:mt-20 lg:mt-24 cxl:mt-28">
-                <TextFillSection page={page} />
-            </div>
-            <div className="mt-16 sm:mt-20 lg:mt-24 cxl:mt-28">
-                <ProSection page={page} />
-            </div>
+            <TextFillSection page={page} />
+            <ProSection page={page} />
+            <CategoryText page={page} />
         </>
     );
 }

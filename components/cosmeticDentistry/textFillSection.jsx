@@ -36,7 +36,7 @@ export default function TextFillSection({ page }) {
     return (
         <section
             aria-label="cosmeticDentistry"
-            className="w-full flex flex-col justify-start items-center"
+            className="w-full flex flex-col justify-start items-center py-16 sm:py-20 lg:py-24 cxl:py-28"
         >
             <div className="relative w-9/10 mb-2 sm:mb-4 clg:min-w-940 clg:max-w-1250 cxl:w-85/100 c2xl:w-1900 c3xl:w-2400">
                 <div
