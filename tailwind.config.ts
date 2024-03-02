@@ -229,8 +229,8 @@ const config: Config = {
                 '200': '200',
             },
             boxShadow: {
-                speechBalloon: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
-                speechBalloonBlack: 'rgba(255, 255, 255, 0.55) 0px 5px 15px',
+                speechBalloon: 'rgba(0, 0, 0, 0.35) 0px 5px 25px',
+                speechBalloonBlack: 'rgba(255, 255, 255, 0.35) 0px 5px 25px',
             },
             keyframes: {
                 navIn: {

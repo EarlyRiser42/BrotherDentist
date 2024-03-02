@@ -100,7 +100,7 @@ export default function ProSection({ page }) {
                     </div>
                     <div
                         ref={divRefOne}
-                        className="bg-white flex flex-col justify-evenly items-center w-full h-52 rounded-3xl mt-4 cs:h-60 sm:h-80 cmd:h-96 clg:w-490 clg:mt-0 clg:h-80  shadow-speechBalloon dark:speechBalloonBlack"
+                        className="bg-white flex flex-col justify-evenly items-center w-full h-52 rounded-3xl mt-4 cs:h-60 sm:h-80 cmd:h-96 clg:w-490 clg:mt-0 clg:h-80  shadow-speechBalloon dark:shadow-speechBalloonBlack"
                     >
                         <div className="relative aspect-square w-12 cs:w-16 clg:w-20">
                             <div
@@ -160,7 +160,7 @@ export default function ProSection({ page }) {
                     <div className="w-full cmd:w-1/2">
                         <div
                             ref={divRefTwo}
-                            className="bg-white flex flex-col justify-evenly items-center w-full h-52 rounded-3xl mt-4 cs:h-60 sm:h-80 clg:max-w-490 clg:mt-0 clg:h-80  shadow-speechBalloon dark:speechBalloonBlack"
+                            className="bg-white flex flex-col justify-evenly items-center w-full h-52 rounded-3xl mt-4 cs:h-60 sm:h-80 clg:max-w-490 clg:mt-0 clg:h-80  shadow-speechBalloon dark:shadow-speechBalloonBlack"
                         >
                             <div className="relative aspect-square w-12 cs:w-16 clg:w-20">
                                 <AnimatedCheckBox isVisibleTwo={isVisibleTwo} />
@@ -209,7 +209,7 @@ export default function ProSection({ page }) {
                     </div>
                     <div
                         ref={divRefThree}
-                        className="bg-white flex flex-col justify-evenly items-center w-full h-52 rounded-3xl mt-4 cs:h-60 sm:h-80 clg:w-490 clg:mt-0 clg:h-80  shadow-speechBalloon dark:speechBalloonBlack"
+                        className="bg-white flex flex-col justify-evenly items-center w-full h-52 rounded-3xl mt-4 cs:h-60 sm:h-80 clg:w-490 clg:mt-0 clg:h-80  shadow-speechBalloon dark:shadow-speechBalloonBlack"
                     >
                         <div className="relative aspect-square w-12 cs:w-16 clg:w-20">
                             <LikeContainer isVisibleThree={isVisibleThree} />

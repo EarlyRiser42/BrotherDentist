@@ -17,8 +17,8 @@ export default function TextFillSection({ page }) {
             },
             {
                 root: null,
-                rootMargin: '50px',
-                threshold: 0.8,
+                rootMargin: '0px',
+                threshold: 1,
             },
         );
 
