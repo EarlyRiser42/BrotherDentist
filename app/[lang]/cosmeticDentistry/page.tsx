@@ -16,12 +16,12 @@ export default async function Page({
     return (
         <>
             <Header lang={lang} header={header} />
-            <Hero lang={lang} page={page} />
+            <Hero page={page} />
             <div className="mt-16 sm:mt-20 lg:mt-24 cxl:mt-28">
-                <TextFillSection lang={lang} page={page} />
+                <TextFillSection page={page} />
             </div>
             <div className="mt-16 sm:mt-20 lg:mt-24 cxl:mt-28">
-                <ProSection lang={lang} page={page} />
+                <ProSection page={page} />
             </div>
         </>
     );

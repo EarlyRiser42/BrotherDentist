@@ -8,7 +8,7 @@ import {
     translateService,
 } from '@/components/beforeAfter/beforeAfterList';
 
-export default function BeforeAfterDetail({ page, lang, reviewNumber }) {
+export default function BeforeAfterDetail({ page, lang }) {
     const searchParams = useSearchParams();
     const writeObjParam = searchParams.get('writeObj');
 

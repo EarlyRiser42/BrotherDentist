@@ -1,13 +1,6 @@
 import React from 'react';
-import { Locale } from '@/i18n.config';
 
-export default function Layout({
-    children,
-    params,
-}: {
-    children: React.ReactNode;
-    params: { lang: Locale };
-}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
     return (
         <>
             <main>{children}</main>

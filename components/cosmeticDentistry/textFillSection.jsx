@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 
-export default function TextFillSection({ lang, page }) {
+export default function TextFillSection({ page }) {
     const textRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
 

@@ -9,7 +9,7 @@ import mask from '@/public/cosmeticDentistry/mask.png';
 import maskLg from '@/public/cosmeticDentistry/maskLg.png';
 import Image from 'next/image';
 import { useMediaQuery } from 'react-responsive';
-export default function Hero({ lang, page }) {
+export default function Hero({ page }) {
     return (
         <section
             aria-label="cosmeticDentistry"

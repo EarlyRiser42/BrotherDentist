@@ -4,20 +4,16 @@ import { getDictionary } from '@/dictionaries/dictionary';
 import Header from '@/components/Home/header';
 import BeforeAfterDetail from '@/components/beforeAfter/beforeAfterDetail';
 export default async function Page({
-    params: { lang, reviewNumber },
+    params: { lang },
 }: {
-    params: { lang: Locale; reviewNumber: string };
+    params: { lang: Locale };
 }) {
     const { page, header } = await getDictionary(lang);
 
     return (
         <>
             <Header lang={lang} header={header} />
-            <BeforeAfterDetail
-                page={page}
-                lang={lang}
-                reviewNumber={reviewNumber}
-            />
+            <BeforeAfterDetail page={page} lang={lang} />
         </>
     );
 }
