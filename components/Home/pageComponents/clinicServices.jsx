@@ -105,7 +105,6 @@ export default function ClinicServices({ lang, page }) {
                         <ArrowRightForService />
                     </div>
                 </Link>
-
                 <div className="col-span-10 row-span-2 bg-purple hidden cmd:flex items-center justify-center rounded-2xl relative"></div>
             </div>
         </section>

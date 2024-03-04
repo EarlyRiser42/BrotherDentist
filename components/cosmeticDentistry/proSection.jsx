@@ -117,14 +117,14 @@ export default function ProSection({ page }) {
                             </div>
                         </div>
                         <div className="text-center">
-                            <span className="text-black font-medium cs:text-lg sm:text-2xl cmd:text-xl clg:text-2xl ">
+                            <span className="text-black font-semibold cs:text-lg sm:text-2xl cmd:text-xl clg:text-2xl ">
                                 {
                                     page.cosmeticDentistry.proSection
                                         .advancedTechAndEquipment.spanBox1
                                 }
                             </span>
                             <br />
-                            <span className="mt-2 block text-black font-medium cs:text-lg sm:text-2xl cmd:text-xl clg:text-2xl">
+                            <span className="mt-2 block text-black font-semibold cs:text-lg sm:text-2xl cmd:text-xl clg:text-2xl">
                                 {
                                     page.cosmeticDentistry.proSection
                                         .advancedTechAndEquipment.spanBox2
@@ -166,14 +166,14 @@ export default function ProSection({ page }) {
                                 <AnimatedCheckBox isVisibleTwo={isVisibleTwo} />
                             </div>
                             <div className="text-center">
-                                <span className="text-black font-medium cs:text-lg sm:text-2xl cmd:text-xl clg:text-2xl ">
+                                <span className="text-black font-semibold cs:text-lg sm:text-2xl cmd:text-xl clg:text-2xl ">
                                     {
                                         page.cosmeticDentistry.proSection
                                             .customizedTreatment.spanBox1
                                     }
                                 </span>
                                 <br />
-                                <span className="mt-2 block text-black font-medium cs:text-lg sm:text-2xl cmd:text-xl clg:text-2xl">
+                                <span className="mt-2 block text-black font-semibold cs:text-lg sm:text-2xl cmd:text-xl clg:text-2xl">
                                     {
                                         page.cosmeticDentistry.proSection
                                             .customizedTreatment.spanBox2
@@ -215,14 +215,14 @@ export default function ProSection({ page }) {
                             <LikeContainer isVisibleThree={isVisibleThree} />
                         </div>
                         <div className="text-center">
-                            <span className="text-black font-medium cs:text-lg sm:text-2xl cmd:text-xl clg:text-2xl ">
+                            <span className="text-black font-semibold cs:text-lg sm:text-2xl cmd:text-xl clg:text-2xl ">
                                 {
                                     page.cosmeticDentistry.proSection
                                         .professionalMedicalTeam.spanBox1
                                 }
                             </span>
                             <br />
-                            <span className="mt-2 block text-black font-medium cs:text-lg sm:text-2xl cmd:text-xl clg:text-2xl">
+                            <span className="mt-2 block text-black font-semibold cs:text-lg sm:text-2xl cmd:text-xl clg:text-2xl">
                                 {
                                     page.cosmeticDentistry.proSection
                                         .professionalMedicalTeam.spanBox2

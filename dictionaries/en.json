@@ -247,6 +247,33 @@
         "h4_2": "At-Home Whitening",
         "p1": "Professional whitening is a premium whitening service conducted at dental clinics, utilizing the latest technologies such as the Zoom2 Whitening System and the BEAUTIS One-Day Whitening System. The Zoom2 system uses a high-concentration whitening agent and a professional laser to effectively remove discoloration from teeth, allowing for a noticeably brighter smile in just one visit. The BEAUTIS system activates the whitening gel using visible light, offering quick and excellent whitening results while minimizing gum irritation and sensitivity. These professional whitening methods are ideal for modern individuals who desire quick results without the constraints of time.",
         "p2": "At-home whitening is a convenient whitening method that can be performed at home, provided through the Opalescence At-Home Whitening Kit. This kit includes trays custom-made to fit the individual's teeth and a high-viscosity whitening gel that can be applied directly by the user. The Opalescence whitening gel does not easily drip from the tray, minimizing irritation to the teeth and gums and reducing sensitivity. The whitening effects of at-home whitening typically become apparent after a week, and continued use can gradually make the teeth brighter. At-home whitening is an efficient choice in terms of time and cost, recommended for those who wish to maintain the whitening effect after professional whitening."
+        ,
+        "section1": {
+          "h1": "Rapid Whitening",
+          "h2": "Experience dazzling changes in just one day.",
+          "span1": "From soon-to-be married couples",
+          "span2": "to hardworking professionals,",
+          "span3": "it's the perfect choice for everyone.",
+          "span4": "With the latest whitening technology,",
+          "span5": "we promise a radiant smile in no time."
+        },
+        "section2": {
+          "h1": "Double Shot Whitening",
+          "h2": "Twice, for clearer changes!",
+          "span1": "For those seeking the ultimate whitening,",
+          "span2": "experience a powerful combo with two focused whitening care sessions and laser treatment.",
+          "span3": "A step beyond rapid whitening for higher-level results.",
+          "span4": ""
+        },
+        "section3": {
+          "h1": "At-Home Whitening",
+          "h2": "Easily bright smiles at home",
+          "span1": "Expert whitening meets the comfort of your home.",
+          "span2": "With custom trays and high-efficiency whitening gel,",
+          "span3": "achieve dazzling smiles comfortably.",
+          "span4": "Even in a busy life,",
+          "span5": "maintain bright and clear teeth."
+        }
       }
     },
 
