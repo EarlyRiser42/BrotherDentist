@@ -198,6 +198,8 @@
       }
     },
     "cosmeticDentistry": {
+      "title": "HyukPlant Orthodontic Tooth Whitening",
+      "description": "This is the introduction page for orthodontic tooth whitening.",
       "h1_1": "Brighten Smile",
       "h1_2": "Once Again.",
       "h2_1": "At Hyukplant,",
@@ -300,7 +302,7 @@
       }
     },
     "login": {
-      "title": "Login",
+      "title": "Login for HyukPlant",
       "description": "This is the login page for Hyukplant.",
       "authButton1": "Sign in with Google",
       "authButton2": "Login with NAVER",
@@ -319,7 +321,7 @@
       }
   },
   "signUp": {
-    "title": "Sign Up",
+    "title": "Sign Up for HyukPlant",
     "description": "This is the page for signing up to HyukPlant.",
     "h1": "Signup HyukPlant",
     "authButton1": "Sign up with Google",
@@ -350,11 +352,15 @@
       }
     },
     "beforeAfter": {
+      "title": "Before and After Photos of HyukPlant",
+      "description": "These are the before and after photos of actual patients who received orthodontic treatment.",
       "h2": " before&after",
       "span": "HyukPlant",
       "button1": "All"
     },
     "reviews": {
+      "title": "Handwritten Reviews of HyukPlant",
+      "description": "These are handwritten reviews from actual patients who received orthodontic treatment.",
       "h2": " Review",
       "modalButton": "Confirm",
       "alert": "Available after login."
