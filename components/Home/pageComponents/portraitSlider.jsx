@@ -120,7 +120,7 @@ export default function PortraitSlider({ page }) {
                     aria-label="View Previous Image"
                 >
                     <IoIosArrowBack
-                        className="stroke-white fill-white cs:fill-black cs:stroke-black  w-6 h-6"
+                        className="stroke-white fill-white cs:dark:fill-white cs:dark:stroke-white cs:fill-black cs:stroke-black  w-6 h-6"
                         aria-hidden
                     />
                 </button>
@@ -130,7 +130,7 @@ export default function PortraitSlider({ page }) {
                     aria-label="View Next Image"
                 >
                     <IoIosArrowForward
-                        className="stroke-white fill-white cs:fill-black cs:stroke-black w-6 h-6"
+                        className="stroke-white fill-white cs:dark:fill-white cs:dark:stroke-white cs:fill-black cs:stroke-black w-6 h-6"
                         aria-hidden
                     />
                 </button>
