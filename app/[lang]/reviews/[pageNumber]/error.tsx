@@ -17,7 +17,7 @@ export default function Error({
                 <div className="flex gap-x-4">
                     <button
                         onClick={() => router.push('/')}
-                        className="rounded-3xl bg-black dark:bg-white text-white px-4 py-2"
+                        className="rounded-3xl bg-black dark:bg-white dark:text-black text-white px-4 py-2"
                     >
                         Home
                     </button>
