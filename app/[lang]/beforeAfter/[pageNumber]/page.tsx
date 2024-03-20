@@ -1,9 +1,8 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { Locale } from '@/i18n.config';
 import { getDictionary } from '@/dictionaries/dictionary';
 import Header from '@/components/Home/header';
 import BeforeAfter from '@/components/beforeAfter/beforeAfter';
-import Spinner from '@/components/loading/spinner';
 
 export async function generateMetadata({
     params: { lang },
@@ -76,9 +75,7 @@ export default async function Page({
     return (
         <>
             <Header lang={lang} header={header} />
-            <Suspense fallback={<Spinner />}>
-                <BeforeAfter lang={lang} page={page} pageNumber={pageNumber} />
-            </Suspense>
+            <BeforeAfter lang={lang} page={page} pageNumber={pageNumber} />
         </>
     );
 }

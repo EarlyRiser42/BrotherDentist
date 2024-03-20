@@ -70,8 +70,6 @@ function BeforeAfterList({ lang, page, pageNumber, writes }) {
                             src={item.photos[1]}
                             fill
                             sizes="(max-width: 412px) 12rem,  40vw"
-                            placeholder="blur"
-                            blurDataURL={item.photos[2]}
                         />
                     </div>
                 </div>

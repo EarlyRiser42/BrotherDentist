@@ -60,8 +60,6 @@ const ReactCompareSlider = ({ beforeImage, afterImage, blurImage }) => {
                     fill
                     className="object-cover"
                     sizes="50vw"
-                    placeholder="blur"
-                    blurDataURL={blurImage}
                 />
             </div>
             <div className="absolute top-2 right-2 z-[2] rounded-3xl bg-light_blue text-white w-auto px-2 text-sm cs:text-base sm:text-lg">
@@ -76,8 +74,6 @@ const ReactCompareSlider = ({ beforeImage, afterImage, blurImage }) => {
                 alt="After"
                 fill
                 className=" top-0 left-0 object-cover"
-                placeholder="blur"
-                blurDataURL={blurImage}
             />
             <div
                 className="absolute inset-y-0 bg-white bg-opacity-30 cursor-col-resize"

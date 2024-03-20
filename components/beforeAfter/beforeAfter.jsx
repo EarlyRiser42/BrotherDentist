@@ -1,39 +1,47 @@
-import React from 'react';
+'use client';
+import React, { useEffect, useState } from 'react';
 import { dbService } from '@/lib/firebase/config';
 import { collection, getDocs } from 'firebase/firestore';
-import getBase64 from '@/lib/plaiceholder/getBase64';
 import BeforeAfterList from '@/components/beforeAfter/beforeAfterList';
+import Spinner from '@/components/loading/spinner';
 
-export default async function BeforeAfter({ lang, page, pageNumber }) {
-    const WRITES = await getWrites();
+export default function BeforeAfter({ lang, page, pageNumber }) {
+    const [writes, setWrites] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
-    return (
-        <BeforeAfterList
-            lang={lang}
-            page={page}
-            pageNumber={pageNumber}
-            writes={WRITES}
-        />
-    );
-}
+    useEffect(() => {
+        const fetchWrites = async () => {
+            const querySnapshot = await getDocs(
+                collection(dbService, 'beforeAfter'),
+            );
+            const documents = [];
 
-async function getWrites() {
-    const querySnapshot = await getDocs(collection(dbService, 'beforeAfter'));
-    const documents = [];
+            for (const doc of querySnapshot.docs) {
+                const data = doc.data();
+                documents.push({
+                    id: doc.id,
+                    ...data,
+                    date: data.date.toDate().toISOString(),
+                    photos: data.photos,
+                });
+            }
+            setIsLoading(false);
+            setWrites(documents);
+        };
 
-    for (const doc of querySnapshot.docs) {
-        const data = doc.data();
+        fetchWrites().catch(console.error);
+    }, []);
 
-        // 각 이미지에 대한 블러 이미지 URL을 생성
-        const photosWithBlur = await getBase64(data.photos[1]);
-
-        documents.push({
-            id: doc.id,
-            ...data,
-            date: data.date.toDate().toISOString(),
-            photos: [...data.photos, photosWithBlur], // 기존 이미지 배열에 블러 이미지 URL 추가
-        });
+    if (isLoading) {
+        return <Spinner />;
+    } else {
+        return (
+            <BeforeAfterList
+                lang={lang}
+                page={page}
+                pageNumber={pageNumber}
+                writes={writes}
+            />
+        );
     }
-
-    return documents;
 }
