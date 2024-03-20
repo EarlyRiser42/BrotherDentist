@@ -73,8 +73,6 @@ function ReviewList({ lang, page, pageNumber, writes }) {
                                 src={item.photos[0]}
                                 fill
                                 sizes="(max-width: 412px) 12rem, 40vw"
-                                placeholder="blur"
-                                blurDataURL={item.photos[1]}
                             />
                         ) : (
                             <div className="rounded-3xl w-full h-full bg-light_gray dark:bg-gray flex flex-col justify-center items-center">
