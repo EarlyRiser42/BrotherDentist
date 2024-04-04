@@ -29,3 +29,4 @@ Continuous Integration : Dev의 에러가 없을 경우 main으로 자동 통합
 
 ### Vercel 사용
 Continuous Delivery : main 브랜치 자동 배포
+link: https://hyukplant.com/
